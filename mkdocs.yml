@@ -11,18 +11,27 @@ strict: true
 
 nav:
   - Home: index.md
-  - hardware.md
+  - Getting Started: getting-started.md
   - Installation:
     - ESP32 Installation: ESP32.md
     - ESP8266 Installation: ESP8266.md
     - Wi-Fi Setup: wifi-setup.md
-  - commands.md
+  - Configuration:
+    - configuration/http.md
+    - configuration/wifi.md
+    - configuration/mqtt.md
+    - configuration/hasp.md
+    - configuration/display.md
+    - configuration/gpio.md
+    - configuration/debug.md
+    - styling.md
   - Design:
     - pages.md
     - objects.md
-    - styling.md
     - fonts.md
+    - styling.md
   - example-pages.md
+  - commands.md
   - FAQ: faq.md
   - firmware-update.md
   - Displays:

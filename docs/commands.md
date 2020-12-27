@@ -41,7 +41,8 @@ Example: `light on` acepted
 
 Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.
 
-?> The `dim`and `light` command depends on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.
+!!! important 
+    `dim`and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
 
 `wakeup`
 
@@ -90,7 +91,7 @@ Clear the filesystem and EEPROM and reboot the device in its initial state.
 !!! danger "There is no confirmation prompt nor an undo function!"
 
 ## System Commands
-`output<x>` where `<x>` is number of the group
+`output<x>` where `<x>` is number of the group    
 values: `0` or `1`
 
 Set **all** GPIO's assigned to Group &lt;x> in **Configuration -> GPIO Configuration** to "0" or "1". 

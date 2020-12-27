@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Hardware - HASP - Open Hardware edition</title>
+    <title>Stm32 - HASP - Open Hardware edition</title>
     <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../css/base.css" rel="stylesheet">
@@ -32,15 +32,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Recommended Boards", url: "#_top", children: [
+          {title: "Experimental MCUs", url: "#_top", children: [
           ]},
-          {title: "Recommended Display", url: "#recommended-display", children: [
-              {title: "Lolin TFT 2.4\"", url: "#lolin-tft-24" },
-              {title: "Compatible ESP boards", url: "#compatible-esp-boards" },
-          ]},
-          {title: "Alternative SPI Display", url: "#alternative-spi-display", children: [
-          ]},
-          {title: "Experimental MCUs", url: "#experimental-mcus", children: [
+          {title: "Recommended Boards", url: "#recommended-boards", children: [
           ]},
         ];
 
@@ -60,39 +54,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
-    
-      
-    
 
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../ESP32/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../ESP32/" class="btn btn-xs btn-link">
-        ESP32 Installation
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href=".." class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href=".." class="btn btn-xs btn-link">
-        Home
-      </a>
-    </div>
-    
-  </div>
-
-    
-
-    <h1>Hardware</h1>
-
-<p>hasp-lvgl supports the ESP32, ESP8266 and STM32F4 families of microcontrollers.
-It needs a compatible micro-controller with drivers supporting the attached display, touch controller, storage and network.</p>
-<p>Below is a list of recommended development boards and a TFT touchscreen to get you up-and-running in no time.</p>
+    <h2 id="experimental-mcus">Experimental MCUs<a class="headerlink" href="#experimental-mcus" title="Permanent link">~</a></h2>
 <h2 id="recommended-boards">Recommended Boards<a class="headerlink" href="#recommended-boards" title="Permanent link">~</a></h2>
 <style>
 table th:first-of-type {
@@ -180,9 +143,9 @@ table th:last-of-type {
 </tr>
 <tr>
 <td align="left">Dev. Board*</td>
-<td align="center"><a href="https://www.aliexpress.com/item/32643142716.html">D1 mini ESP8266</a></td>
-<td align="center"><a href="https://www.aliexpress.com/item/32815530502.html">D1 mini ESP32</a></td>
-<td align="center"><a href="https://www.aliexpress.com/item/32977375539.html">TTGO T7 v1.4 Mini32</a></td>
+<td align="center">[D1 mini ESP8266][3]</td>
+<td align="center">[D1 mini ESP32][4]</td>
+<td align="center">[TTGO T7 v1.4 Mini32][5]</td>
 <td align="center">STM32F407VET/ZGT Black</td>
 </tr>
 <tr>
@@ -194,59 +157,6 @@ table th:last-of-type {
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title"> </p>
-<p><em>Due to the large number of possible hardware options a selection of 3 popular ESP development boards has been made for the precompiled binaries.</em></p>
-</div>
-<div class="admonition warning">
-<p>Advanced users can <a href="../compiling">build and compile</a> custom configurations using PlatformIO, however this is not currently supported.</p>
-</div>
-<h2 id="recommended-display">Recommended Display<a class="headerlink" href="#recommended-display" title="Permanent link">~</a></h2>
-<h3 id="lolin-tft-24">Lolin TFT 2.4"<a class="headerlink" href="#lolin-tft-24" title="Permanent link">~</a></h3>
-<p><img alt="TFT-LED PWM dimming" src="../assets/images/lolin24tft.png" /></p>
-<p>ILI9341 SPI touchscreens with backlight dimming via PWM are quite cheap to get.
-An ILI9341 TFT display with SPI is required when using a pre-built binary.
-The touch controller needs to be the XPT2046 Resistive Touch driver.</p>
-<p>The Lolin TFT 2.4" is <strong>plug-and-play</strong> with the 3 recommended ESP development boards.
-If you have another ESP or MCU, you can still use this display using jumper cables.
-You can also solder a row of headers at the bottom of the display to plug it into a breadboard.
-Therefor the Lolin TFT 2.4 Touch Shield is used as the development display of choice.</p>
-<h5>Backlight Control</h5>
-<p>To use PWM dimming on the Lolin TFT 2.4" you must solder the TFT-LED pin to either D1, D2 or D4.
-<strong>D1 is recommended</strong> for backlight control and configured by default.</p>
-<p><img alt="TFT-LED PWM dimming" src="../assets/images/tft-led-pwm.png" /></p>
-<div class="admonition danger">
-<p class="admonition-title"><i class="fa fa-exclamation-triangle"></i> Do <em>not</em> use D3 for backlight control because it is already in use for touch!</p>
-</div>
-<div class="admonition warning">
-<p>It is <em>not</em> recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.</p>
-</div>
-<h3 id="compatible-esp-boards">Compatible ESP boards<a class="headerlink" href="#compatible-esp-boards" title="Permanent link">~</a></h3>
-<p><img alt="TFT-LED PWM dimming" src="../assets/images/esp_boards.png" /></p>
-<p>The Lolin TFT 2.4" header is <strong>plug-and-play</strong> compatible with these development boards,
-no need to use any jumper cables:</p>
-<p><strong>ESP32:</strong></p>
-<ul>
-<li>Wemos D1 Mini ESP32 <em>(</em><em>only</em><em> solder the inner row of pin headers)</em></li>
-<li>TTGO T7 V1.4 MINI32 ESP32 <em>(</em><em>only</em><em> solder the inner row of pin headers)</em></li>
-<li>LOLIN D32 Pro V2.0.0 <em>using an </em><em>additional</em><em> TFT cable</em></li>
-</ul>
-<p><strong>ESP8266:</strong></p>
-<ul>
-<li>Wemos D1 Mini ESP8266</li>
-<li>Lolin D1 Mini Pro ESP8266 V2.0.0</li>
-</ul>
-<div class="admonition note">
-<p>If you have a Lolin TFT 2.4" Display and a compatible ESP development board, you have all the hardware that is needed.
-In that case you can skip ahead to the <a href="../installation/">Firmware Installation</a>.</p>
-</div>
-<h2 id="alternative-spi-display">Alternative SPI Display<a class="headerlink" href="#alternative-spi-display" title="Permanent link">~</a></h2>
-<p>Any common ILI9341 320x240 4-wire SPI touchscreen with XPT2046 Resistive Touch driver can be used, like:
-- 2.4" SKU: MSP2402
-- 2.8" SKU: MSP2807
-- 3.2" SKU: MSP3218</p>
-<p>You will need to connect the GPIO pins using jumper wires.</p>
-<h2 id="experimental-mcus">Experimental MCUs<a class="headerlink" href="#experimental-mcus" title="Permanent link">~</a></h2>
 <h4>STM32F407xxT Black Combo</h4>
 <p>There are several cheap STM32F407xx Black boards available on the market with a TFT display header
 and accompanying 3.2" ILI9341 FSMC screen (320x240). This hardware is experimental and not fully supported.</p>
@@ -297,39 +207,12 @@ The pinout of each header &amp; display is different and are <strong>not</strong
   <br>
     
 
-    
-    
-      
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../ESP32/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../ESP32/" class="btn btn-xs btn-link">
-        ESP32 Installation
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href=".." class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href=".." class="btn btn-xs btn-link">
-        Home
-      </a>
-    </div>
-    
-  </div>
-
     <br>
 </div>
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/hardware.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/stm32.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

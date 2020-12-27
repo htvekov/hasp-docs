@@ -13,7 +13,9 @@ Here is a list of all the recognized command keywords:
 `page`     
 value: `[0-11]`
 
-Switches the display to show the objects from a different page. 
+Switches the display to show the objects from a different page and return the page number in `state/page`.
+
+Calling the `page` command without a parameter will return the value of the current page in `state/page`.
 
 `clearpage`     
 value: `[0-11,254]`
@@ -89,6 +91,12 @@ Reports the status of the MCU. The response will be posted to the state topic:
 `reboot` or `restart`
 
 Saves any changes in the configuration file and reboots the device.
+
+`update`
+
+value: [url]
+
+Update the firmware from the url provided. Reboots when update was successful.
 
 `factoryreset`
 

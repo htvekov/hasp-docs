@@ -32,6 +32,25 @@
       var is_top_frame = false;
         
         var pageToc = [
+          {title: "Common Properties", url: "#_top", children: [
+          ]},
+          {title: "Object Types", url: "#object-types", children: [
+              {title: "Cheatsheet", url: "#cheatsheet" },
+              {title: "Button", url: "#button" },
+              {title: "Checkbox", url: "#checkbox" },
+              {title: "Text Label", url: "#text-label" },
+              {title: "Arc", url: "#arc" },
+              {title: "Spinner", url: "#spinner" },
+              {title: "Colorpicker", url: "#colorpicker" },
+              {title: "Slider", url: "#slider" },
+              {title: "Double Slider", url: "#double-slider" },
+              {title: "Gauge", url: "#gauge" },
+              {title: "Progress Bar", url: "#progress-bar" },
+              {title: "Switch", url: "#switch" },
+              {title: "LED Indicator", url: "#led-indicator" },
+              {title: "Dropdown List", url: "#dropdown-list" },
+              {title: "Roller", url: "#roller" },
+          ]},
         ];
 
     </script>
@@ -78,17 +97,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1>Objects<h1>
+    <h1>Objects</h1>
 
-There are two ways to create an object on the screen:
-
-- Uploading a pages.jsonl file onto the internal flash
-- Use the `jsonl` command *(via MQTT, serial or telnet console)*
-
-## Common Properties
-
-These are the common properties shared among all objects:
-
+<p>There are two ways to create an object on the screen:</p>
+<ul>
+<li>Uploading a pages.jsonl file onto the internal flash</li>
+<li>Use the <code>jsonl</code> command <em>(via MQTT, serial or telnet console)</em></li>
+</ul>
+<h2 id="common-properties">Common Properties<a class="headerlink" href="#common-properties" title="Permanent link">~</a></h2>
+<p>These are the common properties shared among all objects:</p>
 <style>
 table th:first-of-type {
     width: 12%;
@@ -107,55 +124,162 @@ table th:last-of-type {
 }
 </style>
 
-| Property | Value      | Required | Default | Description |
-|:---------|:----------:|:--------:|:-------:|:------------|
-| id       | 0-255      | yes      | n/a     | ID of the object on this page |
-| objid    | 0-255      | yes      | n/a     | ID of the object type *(see below)* |
-| page     | 0-255      | no       | n/a     | ID of the page the object appears on |
-| x        | int16      | no       | 0       | horizontal position on the page |
-| y        | int16      | no       | 0       | vertical position on the page |
-| w        | int16      | no       | 0       | width of the object |
-| h        | int16      | no       | 0       | height of the object |
-| enabled  | true/false | no       | true    | object is clickable |
-| hidden   | true/false | no       | false   | object is hidden |
-| opacity  | 0-255      | no       | 255     | how much the the object is opaque |
-
-If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
-
-The maximum number of pages and objects is limited by the memory available in the MCU.
-
-`"page":254` indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
-You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.
-
-
-## Object Types
-
-Each object type is an ID that indicates which object type that line represents.
-Besides the common properties listed above, each object type can have specific properties.
-
-### Cheatsheet
-
-| objid | Type       |
-|:-----:|:-----------|
-| 10    | [Button](13-objects?id=button)     |
-| 11    | [Checkbox](13-objects?id=checkbox)     |
-| 12    | [Label](13-objects?id=text-label)     |
-| 20    | [Colorpicker](13-objects?id=colorpicker)     |
-| 21    | [Spinner](13-objects?id=spinner)     |
-| 22    | [Arc](13-objects?id=arc)     |
-| 30    | [Slider](13-objects?id=slider)     |
-| 31    | [Gauge](13-objects?id=gauge)     |
-| 32    | [Progressbar](13-objects?id=progressbar)     |
-| 40    | [Switch](13-objects?id=switch)     |
-| 41    | [LED](13-objects?id=led-indicator)     |
-| 50    | [Dropdown List](13-objects?id=dropdown-list)     |
-| 51    | [Roller](13-objects?id=roller)     |
-
-### Button
-**objid:10**
-
-![lv_btn](assets/images/objects/lv_ex_btn_1.png)
-
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Value</th>
+<th align="center">Required</th>
+<th align="center">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="center">0-255</td>
+<td align="center">yes</td>
+<td align="center">n/a</td>
+<td align="left">ID of the object on this page</td>
+</tr>
+<tr>
+<td align="left">objid</td>
+<td align="center">0-255</td>
+<td align="center">yes</td>
+<td align="center">n/a</td>
+<td align="left">ID of the object type <em>(see below)</em></td>
+</tr>
+<tr>
+<td align="left">page</td>
+<td align="center">0-255</td>
+<td align="center">no</td>
+<td align="center">n/a</td>
+<td align="left">ID of the page the object appears on</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="center">int16</td>
+<td align="center">no</td>
+<td align="center">0</td>
+<td align="left">horizontal position on the page</td>
+</tr>
+<tr>
+<td align="left">y</td>
+<td align="center">int16</td>
+<td align="center">no</td>
+<td align="center">0</td>
+<td align="left">vertical position on the page</td>
+</tr>
+<tr>
+<td align="left">w</td>
+<td align="center">int16</td>
+<td align="center">no</td>
+<td align="center">0</td>
+<td align="left">width of the object</td>
+</tr>
+<tr>
+<td align="left">h</td>
+<td align="center">int16</td>
+<td align="center">no</td>
+<td align="center">0</td>
+<td align="left">height of the object</td>
+</tr>
+<tr>
+<td align="left">enabled</td>
+<td align="center">true/false</td>
+<td align="center">no</td>
+<td align="center">true</td>
+<td align="left">object is clickable</td>
+</tr>
+<tr>
+<td align="left">hidden</td>
+<td align="center">true/false</td>
+<td align="center">no</td>
+<td align="center">false</td>
+<td align="left">object is hidden</td>
+</tr>
+<tr>
+<td align="left">opacity</td>
+<td align="center">0-255</td>
+<td align="center">no</td>
+<td align="center">255</td>
+<td align="left">how much the the object is opaque</td>
+</tr>
+</tbody>
+</table>
+<p>If the <code>page</code> parameter is not present, the object is placed on the same page as the <em>previous object</em>. If <code>page</code> is not specified for the first object either, the <em>current page</em> being displayed is used.</p>
+<p>The maximum number of pages and objects is limited by the memory available in the MCU.</p>
+<p><code>"page":254</code> indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
+You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.</p>
+<h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">~</a></h2>
+<p>Each object type is an ID that indicates which object type that line represents.
+Besides the common properties listed above, each object type can have specific properties.</p>
+<h3 id="cheatsheet">Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permanent link">~</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">objid</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">10</td>
+<td align="left"><a href="13-objects?id=button">Button</a></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left"><a href="13-objects?id=checkbox">Checkbox</a></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left"><a href="13-objects?id=text-label">Label</a></td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="left"><a href="13-objects?id=colorpicker">Colorpicker</a></td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="left"><a href="13-objects?id=spinner">Spinner</a></td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="left"><a href="13-objects?id=arc">Arc</a></td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="left"><a href="13-objects?id=slider">Slider</a></td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="left"><a href="13-objects?id=gauge">Gauge</a></td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td align="left"><a href="13-objects?id=progressbar">Progressbar</a></td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td align="left"><a href="13-objects?id=switch">Switch</a></td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td align="left"><a href="13-objects?id=led-indicator">LED</a></td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td align="left"><a href="13-objects?id=dropdown-list">Dropdown List</a></td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td align="left"><a href="13-objects?id=roller">Roller</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="button">Button<a class="headerlink" href="#button" title="Permanent link">~</a></h3>
+<p><strong>objid:10</strong></p>
+<p><img alt="lv_btn" src="../assets/images/objects/lv_ex_btn_1.png" /></p>
 <details open=""><summary>Show Jsonl Code (Click to expand)</summary>
 
 <pre><code class="language-json">{&quot;page&quot;:0,&quot;comment&quot;:&quot;---------- Page 0 ----------&quot;}
@@ -164,188 +288,515 @@ Besides the common properties listed above, each object type can have specific p
 
 </details>
 
-
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------
-| toggle   | boolean    | no       | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
-| val      | int16      | no       | 0       | The value: 1 for toggled, 0 for untoggled
-| txt      | string     | no       | ""      | The text of the label
-| mode     | string     | no       | expand  | The wrapping mode of long text labels (expand, break, dots, scroll and loop)
-
-Normal Switches send touch events out as they occur. The possible events are:
-
-- DOWN: Occurs when a button goes from depressed to pressed
-- SHORT: The button was released within a short time i.e. a short click has occurred
-- LONG: Event is send when the button is *still* being pressed after the threshold time
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toggle</td>
+<td>boolean</td>
+<td>no</td>
+<td>false</td>
+<td>When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The value: 1 for toggled, 0 for untoggled</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td>The text of the label</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>no</td>
+<td>expand</td>
+<td>The wrapping mode of long text labels (expand, break, dots, scroll and loop)</td>
+</tr>
+</tbody>
+</table>
+<p>Normal Switches send touch events out as they occur. The possible events are:</p>
+<ul>
+<li>DOWN: Occurs when a button goes from depressed to pressed</li>
+<li>SHORT: The button was released within a short time i.e. a short click has occurred</li>
+<li>LONG: Event is send when the button is <em>still</em> being pressed after the threshold time</li>
+</ul>
 <!-- - HOLD: The HOLD event is repeated every 400ms while the button is still pressed -->
-- UP: The button is released after being pressing for a LONG threshold time.
-- LOST: This event occurs when the object looses the focus while the screen is still being touched
-
-Toggle Switches only send out their new value (0 or 1) when toggled.
-
-### Checkbox
-**objid:11**
-
-![lv_checkbox](assets/images/objects/lv_ex_checkbox_1.png){: align=center }
-
-| Property | Value      | Required | Default    | Description
-|----------|------------|----------|------------|--------------
-| val      | int16      | no       | 0          | The value: 1 for checked, 0 for unchecked
-| txt      | string     | no       | "Checkbox" | The label of the checkbox
-
-### Text Label
-**objid:12**
-
-![lv_label](assets/images/objects/lv_ex_label_1.png){: align=center }
-
-| Property | Value      | Required | Default    | Description
-|----------|------------|----------|------------|--------------
-| txt      | string     | no       | "Text"     | The text of the label
-| mode     | string     | no       | expand     | The wrapping mode of long text labels
-
-Possible wrapping modes are: expand, break, dots, scroll and loop
-
-
+<ul>
+<li>UP: The button is released after being pressing for a LONG threshold time.</li>
+<li>LOST: This event occurs when the object looses the focus while the screen is still being touched</li>
+</ul>
+<p>Toggle Switches only send out their new value (0 or 1) when toggled.</p>
+<h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
+<p><strong>objid:11</strong></p>
+<p><img align="center" alt="lv_checkbox" src="../assets/images/objects/lv_ex_checkbox_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The value: 1 for checked, 0 for unchecked</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>"Checkbox"</td>
+<td>The label of the checkbox</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text-label">Text Label<a class="headerlink" href="#text-label" title="Permanent link">~</a></h3>
+<p><strong>objid:12</strong></p>
+<p><img align="center" alt="lv_label" src="../assets/images/objects/lv_ex_label_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>"Text"</td>
+<td>The text of the label</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>no</td>
+<td>expand</td>
+<td>The wrapping mode of long text labels</td>
+</tr>
+</tbody>
+</table>
+<p>Possible wrapping modes are: expand, break, dots, scroll and loop</p>
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
 </code></pre>
-
-
-### Arc
-**objid:22**
-
-![lv_arc](assets/images/objects/lv_ex_arc_1.png){: align=center }
-
-| Property  | Value      | Required | Default | Description
-|-----------|------------|----------|---------|--------------
-| min       | int16      | no       | 0       |
-| max       | int16      | no       | 100     |
-| val       | int16      | no       | 0       |
-| rotation  | int16      | no       | 0       |
-| type      | int16      | no       | normal  | normal, reverse, symmetrical
-
-
-### Spinner
-**objid:21**
-
-![lv_spinner](assets/images/objects/lv_ex_spinner_1.png){: align=center }
-
-| Property  | Value      | Required | Default | Description
-|-----------|------------|----------|---------|--------------
-| speed     | int16      | no       | 1000    | The time for 1 turn in ms
-| direction | int16      | no       | 100     | 0 for clockwise, 1 for counter-clockwise
-| thickness | int16      | no       | dep. on theme | The width of the arc line
-
-### Colorpicker
-**objid:20**
-
-![lv_cpicker](assets/images/objects/lv_ex_cpicker_1.png){: align=center }
-
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------
-| val      | uint16     | no       | 0       | The selected color in RBG565 format
-| color    | hex string | no       | 0       | The selected color in html format #rrggbb
-| rect     | boolean    | no       | false   | True if the color picker has a rectangular shape like a slider. False for a circular shape.
-
-
-### Slider
-**objid:30**
-
-![lv_slider](assets/images/objects/lv_ex_slider_1.png){: align=center }
-
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
-
-### Double Slider
-**objid:30**
-
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
-
-
-### Gauge
-**objid:31**
-
-![lv_gauge](assets/images/objects/lv_ex_gauge_1.png){: align=center }
-
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
-
-
-### Progress Bar
-**objid:32**
-
-![lv_bar](assets/images/objects/lv_ex_bar_1.png){: align=center }
-
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
-
-
-### Switch
-**objid:40**
-
-![lv_switch](assets/images/objects/lv_ex_switch_1.png){: align=center }
-
-| Property   | Value      | Required | Default | Description
-|------------|------------|----------|---------|---------------
-| val      | int16        | no       | 0       | The value: 1 for on, 0 for off
-
-### LED Indicator
-**objid:41**
-
-![lv_led](assets/images/objects/lv_ex_led_1.png){: align=center }
-
-| Property   | Value      | Required | Default | Description
-|------------|------------|----------|---------|---------------
-| val        | byte       | no       | 0       | The brightness of the indicator 0-255
-
-### Dropdown List
-**objid:50**
-
-![lv_dropdown](assets/images/objects/lv_ex_dropdown_1.png){: align=center }
-
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | The items separated by \n
-| val      | int16      | no       | 0       | The number of the selected item
-| txt      | string     | no       | ""      | *Read-only* The text of the selected item
-
-To change the currently selected item, use the `val` attribute.    
-To change the items in the list, use the `options` attribute.
-
-When the item is changed both `val` and `txt` of the newly selected item are send out.
-
-
-### Roller
-**objid:51**
-
-![lv_roller](assets/images/objects/lv_ex_roller_1.png){: align=center }
-
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | The items separated by \n
-| val      | int16      | no       | 0       | The number of the selected item
-| txt      | string     | no       | ""      | *Read-only* The text of the selected item
-| rows     | int8       | no       | 3       | The number ow rows that are visible
-
-!!! note "Note"
-    A roller does not use the `h` attribute to set its height but uses the `rows` attribute instead.
-
-To change the currently selected item, use the `val` attribute.    
-To change the items in the list, use the `options` attribute.
-
-When the item is changed both `val` and `txt` of the newly selected item are send out.
+<h3 id="arc">Arc<a class="headerlink" href="#arc" title="Permanent link">~</a></h3>
+<p><strong>objid:22</strong></p>
+<p><img align="center" alt="lv_arc" src="../assets/images/objects/lv_ex_arc_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+<td></td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>int16</td>
+<td>no</td>
+<td>normal</td>
+<td>normal, reverse, symmetrical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spinner">Spinner<a class="headerlink" href="#spinner" title="Permanent link">~</a></h3>
+<p><strong>objid:21</strong></p>
+<p><img align="center" alt="lv_spinner" src="../assets/images/objects/lv_ex_spinner_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>int16</td>
+<td>no</td>
+<td>1000</td>
+<td>The time for 1 turn in ms</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+<td>0 for clockwise, 1 for counter-clockwise</td>
+</tr>
+<tr>
+<td>thickness</td>
+<td>int16</td>
+<td>no</td>
+<td>dep. on theme</td>
+<td>The width of the arc line</td>
+</tr>
+</tbody>
+</table>
+<h3 id="colorpicker">Colorpicker<a class="headerlink" href="#colorpicker" title="Permanent link">~</a></h3>
+<p><strong>objid:20</strong></p>
+<p><img align="center" alt="lv_cpicker" src="../assets/images/objects/lv_ex_cpicker_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>uint16</td>
+<td>no</td>
+<td>0</td>
+<td>The selected color in RBG565 format</td>
+</tr>
+<tr>
+<td>color</td>
+<td>hex string</td>
+<td>no</td>
+<td>0</td>
+<td>The selected color in html format #rrggbb</td>
+</tr>
+<tr>
+<td>rect</td>
+<td>boolean</td>
+<td>no</td>
+<td>false</td>
+<td>True if the color picker has a rectangular shape like a slider. False for a circular shape.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slider">Slider<a class="headerlink" href="#slider" title="Permanent link">~</a></h3>
+<p><strong>objid:30</strong></p>
+<p><img align="center" alt="lv_slider" src="../assets/images/objects/lv_ex_slider_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="double-slider">Double Slider<a class="headerlink" href="#double-slider" title="Permanent link">~</a></h3>
+<p><strong>objid:30</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gauge">Gauge<a class="headerlink" href="#gauge" title="Permanent link">~</a></h3>
+<p><strong>objid:31</strong></p>
+<p><img align="center" alt="lv_gauge" src="../assets/images/objects/lv_ex_gauge_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="progress-bar">Progress Bar<a class="headerlink" href="#progress-bar" title="Permanent link">~</a></h3>
+<p><strong>objid:32</strong></p>
+<p><img align="center" alt="lv_bar" src="../assets/images/objects/lv_ex_bar_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="switch">Switch<a class="headerlink" href="#switch" title="Permanent link">~</a></h3>
+<p><strong>objid:40</strong></p>
+<p><img align="center" alt="lv_switch" src="../assets/images/objects/lv_ex_switch_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The value: 1 for on, 0 for off</td>
+</tr>
+</tbody>
+</table>
+<h3 id="led-indicator">LED Indicator<a class="headerlink" href="#led-indicator" title="Permanent link">~</a></h3>
+<p><strong>objid:41</strong></p>
+<p><img align="center" alt="lv_led" src="../assets/images/objects/lv_ex_led_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>byte</td>
+<td>no</td>
+<td>0</td>
+<td>The brightness of the indicator 0-255</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dropdown-list">Dropdown List<a class="headerlink" href="#dropdown-list" title="Permanent link">~</a></h3>
+<p><strong>objid:50</strong></p>
+<p><img align="center" alt="lv_dropdown" src="../assets/images/objects/lv_ex_dropdown_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td>The items separated by \n</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The number of the selected item</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td><em>Read-only</em> The text of the selected item</td>
+</tr>
+</tbody>
+</table>
+<p>To change the currently selected item, use the <code>val</code> attribute.  <br />
+To change the items in the list, use the <code>options</code> attribute.</p>
+<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
+<h3 id="roller">Roller<a class="headerlink" href="#roller" title="Permanent link">~</a></h3>
+<p><strong>objid:51</strong></p>
+<p><img align="center" alt="lv_roller" src="../assets/images/objects/lv_ex_roller_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td>The items separated by \n</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The number of the selected item</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td><em>Read-only</em> The text of the selected item</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>int8</td>
+<td>no</td>
+<td>3</td>
+<td>The number ow rows that are visible</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A roller does not use the <code>h</code> attribute to set its height but uses the <code>rows</code> attribute instead.</p>
+</div>
+<p>To change the currently selected item, use the <code>val</code> attribute.  <br />
+To change the items in the list, use the <code>options</code> attribute.</p>
+<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
 
   <br>
     

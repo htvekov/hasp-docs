@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Francis Van Roie">
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Fonts - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Built-in Fonts", url: "#_top", children: [
+          ]},
+          {title: "Built-in Icons", url: "#built-in-icons", children: [
+          ]},
+          {title: "Custom Fonts", url: "#custom-fonts", children: [
+          ]},
+          {title: "FontAwesame Icons", url: "#fontawesame-icons", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../styling/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../styling/" class="btn btn-xs btn-link">
+        Styling
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1>Fonts</h1>
+
+<h2 id="built-in-fonts">Built-in Fonts<a class="headerlink" href="#built-in-fonts" title="Permanent link">~</a></h2>
+<p>The ESP8266 firmware only has 1 built-in font: Unscii with font size 8pt.</p>
+<p>The ESP32 additionally contains the Monserrat font in these font size: 12, 16, 22 and 28pt.</p>
+<p>The fonts can be set by using the pointsize as parameter:</p>
+<ul>
+<li>p[0].b[1].text_font=16</li>
+<li>p[0].b[1].value_font=8</li>
+</ul>
+<h2 id="built-in-icons">Built-in Icons<a class="headerlink" href="#built-in-icons" title="Permanent link">~</a></h2>
+<p>These icons are included in the built-in font sizes:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Symbol</th>
+<th align="center">UTF-8</th>
+<th>Desciption</th>
+<th align="center">Symbol</th>
+<th align="center">UTF-8</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><i class="fa fa-music"></i></td>
+<td align="center">F001</td>
+<td>music</td>
+<td align="center"><i class="fa fa-random"></i></td>
+<td align="center">F074</td>
+<td>random</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-film"></i></td>
+<td align="center">F008</td>
+<td>film</td>
+<td align="center"><i class="fa fa-chevron-up"></i></td>
+<td align="center">F077</td>
+<td>chevron-up</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-th-list"></i></td>
+<td align="center">F00B</td>
+<td>th-list</td>
+<td align="center"><i class="fa fa-chevron-down"></i></td>
+<td align="center">F078</td>
+<td>chevron-down</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-check"></i></td>
+<td align="center">F00C</td>
+<td>check</td>
+<td align="center"><i class="fa fa-retweet"></i></td>
+<td align="center">F079</td>
+<td>retweet</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-times"></i></td>
+<td align="center">F00D</td>
+<td>times</td>
+<td align="center"><i class="fa fa-folder"></i></td>
+<td align="center">F07B</td>
+<td>folder</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-power-off"></i></td>
+<td align="center">F011</td>
+<td>power-off</td>
+<td align="center"><i class="fa fa-upload"></i></td>
+<td align="center">F093</td>
+<td>upload</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-cog"></i></td>
+<td align="center">F013</td>
+<td>cog</td>
+<td align="center"><i class="fa fa-phone"></i></td>
+<td align="center">F095</td>
+<td>phone</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-home"></i></td>
+<td align="center">F015</td>
+<td>home</td>
+<td align="center"><i class="fa fa-cut"></i></td>
+<td align="center">F0C4</td>
+<td>cut</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-download"></i></td>
+<td align="center">F019</td>
+<td>download</td>
+<td align="center"><i class="fa fa-copy"></i></td>
+<td align="center">F0C5</td>
+<td>copy</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-inbox"></i></td>
+<td align="center">F01C</td>
+<td>inbox</td>
+<td align="center"><i class="fa fa-save"></i></td>
+<td align="center">F0C7</td>
+<td>save</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-sync"></i></td>
+<td align="center">F021</td>
+<td>sync</td>
+<td align="center"><i class="fa fa-bolt"></i></td>
+<td align="center">F0E7</td>
+<td>bolt</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-volume-off"></i></td>
+<td align="center">F026</td>
+<td>volume-off</td>
+<td align="center"><i class="fa fa-paste"></i></td>
+<td align="center">F0EA</td>
+<td>paste</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-volume-down"></i></td>
+<td align="center">F027</td>
+<td>volume-down</td>
+<td align="center"><i class="fa fa-bell"></i></td>
+<td align="center">F0F3</td>
+<td>bell</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-volume-up"></i></td>
+<td align="center">F028</td>
+<td>volume-up</td>
+<td align="center"><i class="fa fa-keyboard"></i></td>
+<td align="center">F11C</td>
+<td>keyboard</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-image"></i></td>
+<td align="center">F03E</td>
+<td>image</td>
+<td align="center"><i class="fa fa-location-arrow"></i></td>
+<td align="center">F124</td>
+<td>location-arrow</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-step-backward"></i></td>
+<td align="center">F048</td>
+<td>step-backward</td>
+<td align="center"><i class="fa fa-file"></i></td>
+<td align="center">F15B</td>
+<td>file</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-play"></i></td>
+<td align="center">F04B</td>
+<td>play</td>
+<td align="center"><i class="fa fa-wifi"></i></td>
+<td align="center">F1EB</td>
+<td>wifi</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-pause"></i></td>
+<td align="center">F04C</td>
+<td>pause</td>
+<td align="center"><i class="fa fa-battery-full"></i></td>
+<td align="center">F240</td>
+<td>battery-full</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-stop"></i></td>
+<td align="center">F04D</td>
+<td>stop</td>
+<td align="center"><i class="fa fa-battery-three-quarters"></i></td>
+<td align="center">F241</td>
+<td>battery-three-quarters</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-step-forward"></i></td>
+<td align="center">F051</td>
+<td>step-forward</td>
+<td align="center"><i class="fa fa-battery-half"></i></td>
+<td align="center">F242</td>
+<td>battery-half</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-eject"></i></td>
+<td align="center">F052</td>
+<td>eject</td>
+<td align="center"><i class="fa fa-battery-quarter"></i></td>
+<td align="center">F243</td>
+<td>battery-quarter</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-chevron-left"></i></td>
+<td align="center">F053</td>
+<td>chevron-left</td>
+<td align="center"><i class="fa fa-battery-empty"></i></td>
+<td align="center">F244</td>
+<td>battery-empty</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-chevron-right"></i></td>
+<td align="center">F054</td>
+<td>chevron-right</td>
+<td align="center"><i class="fa fa-usb"></i></td>
+<td align="center">F287</td>
+<td>usb</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-plus"></i></td>
+<td align="center">F067</td>
+<td>plus</td>
+<td align="center"><i class="fa fa-bluetooth"></i></td>
+<td align="center">F293</td>
+<td>bluetooth</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-minus"></i></td>
+<td align="center">F068</td>
+<td>minus</td>
+<td align="center"><i class="fa fa-pen"></i></td>
+<td align="center">F304</td>
+<td>pen</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-eye"></i></td>
+<td align="center">F06E</td>
+<td>eye</td>
+<td align="center"><i class="fa fa-trash-alt"></i></td>
+<td align="center">F2ED</td>
+<td>trash-alt</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-eye-slash"></i></td>
+<td align="center">F070</td>
+<td>eye-slash</td>
+<td align="center"><i class="fa fa-backspace"></i></td>
+<td align="center">F55A</td>
+<td>backspace</td>
+</tr>
+<tr>
+<td align="center"><i class="fa fa-exclamation-triangle"></i></td>
+<td align="center">F071</td>
+<td>exclamation-triangle</td>
+<td align="center"><i class="fa fa-sd-card"></i></td>
+<td align="center">F7C2</td>
+<td>sd-card</td>
+</tr>
+</tbody>
+</table>
+<p>To use an icon in a text you need to prefix the UTF-8 value with <code>\u</code>.
+To ensure proper decoding the payload should be used with a <code>json</code> or <code>jsonl</code> command.</p>
+<p>Example:</p>
+<p><i class="fa fa-exclamation-triangle"></i></p>
+<h2 id="custom-fonts">Custom Fonts<a class="headerlink" href="#custom-fonts" title="Permanent link">~</a></h2>
+<p>You can add a custom font by uploading it to the internal flash.
+Apply it as the default font on the Configuration &gt; HASP Settings page.</p>
+<h2 id="fontawesame-icons">FontAwesame Icons<a class="headerlink" href="#fontawesame-icons" title="Permanent link">~</a></h2>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../styling/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../styling/" class="btn btn-xs btn-link">
+        Styling
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/fonts.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

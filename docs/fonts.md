@@ -8,8 +8,11 @@ The ESP32 additionally contains the Monserrat font in these font size: 12, 16, 2
 
 The fonts can be set by using the pointsize as parameter:
 
-- p[0].b[1].text_font=16
-- p[0].b[1].value_font=8
+for example:
+```
+p[0].b[1].text_font=16
+p[0].b[1].value_font=8
+```
 
 ## Built-in Icons
 
@@ -49,9 +52,15 @@ These icons are included in the built-in font sizes:
 To use an icon in a text you need to prefix the UTF-8 value with `\u`.
 To ensure proper decoding the payload should be used with a `json` or `jsonl` command.
 
-Example:
+`jsonl` example:
+```
+{"objid":12,"id":10,"x":0,"y":0,"w":70,"h":50,"parentid":5,"txt":"\uf00c OK"}
+```
 
-<i class="fa fa-exclamation-triangle"></i>
+`json` example:
+```
+["p[0].b[10].txt=\uf00c OK"]
+```
 
 ## Custom Fonts
 

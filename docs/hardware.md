@@ -46,7 +46,7 @@ table th:last-of-type {
     *Due to the large number of possible hardware options a selection of 3 popular ESP development boards has been made for the precompiled binaries.*
 
 !!! warning ""
-    Advanced users can build and compile custom configurations using PlatformIO, however this is not currently supported.
+    Advanced users can [build and compile](../compiling) custom configurations using PlatformIO, however this is not currently supported.
 
 
 ## Recommended Display
@@ -70,7 +70,7 @@ To use PWM dimming on the Lolin TFT 2.4" you must solder the TFT-LED pin to eith
 
 ![TFT-LED PWM dimming](assets/images/tft-led-pwm.png)
 
-!!! danger "Do *not* use D3 for backlight control because it is already in use for touch!"
+!!! danger "<i class="fa fa-exclamation-triangle"></i> Do *not* use D3 for backlight control because it is already in use for touch!"
 
 !!! warning ""
     It is *not* recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.

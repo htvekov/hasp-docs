@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Styling - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Styling Properties", url: "#_top", children: [
+          ]},
+          {title: "Object Types", url: "#object-types", children: [
+          ]},
+          {title: "Button", url: "#button", children: [
+          ]},
+          {title: "Attribute Groups", url: "#attribute-groups", children: [
+              {title: "Padding and Margin", url: "#padding-and-margin" },
+              {title: "Background", url: "#background" },
+              {title: "Border", url: "#border" },
+              {title: "Shadow", url: "#shadow" },
+              {title: "Value", url: "#value" },
+              {title: "Text", url: "#text" },
+              {title: "Line", url: "#line" },
+              {title: "Image", url: "#image" },
+              {title: "Outline", url: "#outline" },
+              {title: "Pattern", url: "#pattern" },
+              {title: "Transitions", url: "#transitions" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../objects/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="styling-properties">Styling Properties<a class="headerlink" href="#styling-properties" title="Permanent link">~</a></h2>
+<p>You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.</p>
+<h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">~</a></h2>
+<p>Each object type is an ID that indicates which object type that line represents.
+Besides the common properties listed above, each object type can have specific properties.</p>
+<h2 id="button">Button<a class="headerlink" href="#button" title="Permanent link">~</a></h2>
+<p><strong>objid:10</strong></p>
+<p>A button can have 3 states. All the following parameters can be appended by a number to change the appearance of that state only:</p>
+<ul>
+<li>0: Released</li>
+<li>1: Pressed</li>
+<li>2: Disabled</li>
+</ul>
+<p>Or if the postfix index is ommited, then the default state 0 or Pressed is used.</p>
+<p>A button can accept the attributes of the following groups:</p>
+<ul>
+<li>Background</li>
+<li>Border</li>
+<li>Outline</li>
+<li>Shadow</li>
+<li>Value</li>
+</ul>
+<h2 id="attribute-groups">Attribute Groups<a class="headerlink" href="#attribute-groups" title="Permanent link">~</a></h2>
+<h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
+<p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
+<p>Objects use them to set spacing. See the documentation of the objects for the details.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pad_top</td>
+<td>int</td>
+<td>Set the padding on the top</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_bottom</td>
+<td>int</td>
+<td>Set the padding on the bottom</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_left</td>
+<td>int</td>
+<td>Set the padding on the left</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_right</td>
+<td>int</td>
+<td>Set the padding on the right</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_inner</td>
+<td>int</td>
+<td>Set the padding inside the object between children</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_top</td>
+<td>int</td>
+<td>Set the margin on the top</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_bottom</td>
+<td>int</td>
+<td>Set the margin on the bottom</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_left</td>
+<td>int</td>
+<td>Set the margin on the left</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_right</td>
+<td>int</td>
+<td>Set the margin on the right</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">~</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bg_opa</td>
+<td>byte</td>
+<td>no</td>
+<td>""</td>
+<td>The background opacity level</td>
+</tr>
+<tr>
+<td>bg_color</td>
+<td>color</td>
+<td>no</td>
+<td>true</td>
+<td>The background color</td>
+</tr>
+<tr>
+<td>bg_grad_color</td>
+<td>color</td>
+<td>no</td>
+<td>0</td>
+<td>The background gradient color</td>
+</tr>
+<tr>
+<td>bg_grad_dir</td>
+<td>[0..2]</td>
+<td>no</td>
+<td>expand</td>
+<td>0 = None, 1 = Horizontal, 2 = Vertical</td>
+</tr>
+<tr>
+<td>bg_grad_stop</td>
+<td>byte</td>
+<td>no</td>
+<td>expand</td>
+<td>Specifies where the gradient should stop. 0: at left/top most position, 255: at right/bottom most position. Default value: 255.</td>
+</tr>
+<tr>
+<td>bg_main_stop</td>
+<td>byte</td>
+<td>no</td>
+<td>expand</td>
+<td>Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position. Default value: 0.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="border">Border<a class="headerlink" href="#border" title="Permanent link">~</a></h3>
+<p>The border is drawn on top of the background. It has radius rounding.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border_color</td>
+<td>color</td>
+<td>Specifies the color of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_opa</td>
+<td>byte</td>
+<td>Specifies opacity of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_width</td>
+<td>byte</td>
+<td>Set the width of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_side</td>
+<td>byte</td>
+<td>Specifies which sides of the border to draw. Can be 0=LV_BORDER_SIDE_NONE/1=LEFT/2=RIGHT/4=TOP/8=BOTTOM/15=FULL. A sum of these values is also possible to select specific sides.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_post</td>
+<td>bool</td>
+<td>If <code>true</code> the border will be drawn after all children have been drawn.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="shadow">Shadow<a class="headerlink" href="#shadow" title="Permanent link">~</a></h3>
+<p>The shadow is a blurred area under the object.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shadow_color</td>
+<td>color</td>
+<td>Specifies the color of the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_opa</td>
+<td>byte</td>
+<td>Specifies opacity of the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_width</td>
+<td>int16</td>
+<td>Set the width (blur size) of the outline</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_ofs_x</td>
+<td>int16</td>
+<td>Set the an X offset for the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_ofs_y</td>
+<td>int16</td>
+<td>Set the an Y offset for the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_spread</td>
+<td>byte</td>
+<td>make the shadow larger than the background in every direction by this value</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">~</a></h3>
+<p>Value is an arbitrary text drawn to the background. It can be a lightweight replacement for creating label objects.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value_str</td>
+<td>string</td>
+<td>Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_color</td>
+<td>color</td>
+<td>Color of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_opa</td>
+<td>byte</td>
+<td>Opacity level of the text [0-255]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_font</td>
+<td>byte</td>
+<td>The font ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_letter_space</td>
+<td>int</td>
+<td>Letter space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_line_space</td>
+<td>int</td>
+<td>Line space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_align</td>
+<td>align</td>
+<td>Alignment of the text. Can be LV_ALIGN_.... Default value: LV_ALIGN_CENTER.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_ofs_x</td>
+<td>int</td>
+<td>X offset from the original position of the alignment</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_ofs_y</td>
+<td>int</td>
+<td>Y offset from the original position of the alignment</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">~</a></h3>
+<p>Properties for textual object.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text_color</td>
+<td>color</td>
+<td>Color of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_opa</td>
+<td>byte</td>
+<td>Opacity level of the text [0-255]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_font</td>
+<td>byte</td>
+<td>Font ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_letter_space</td>
+<td>int</td>
+<td>Letter space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_line_space</td>
+<td>int</td>
+<td>Line space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_decor</td>
+<td>byte</td>
+<td>Add text decoration. 0=None, 1=Underline, 2=Strikethrough, 3=Underline&amp;Strikethrough</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_sel_color</td>
+<td>color</td>
+<td>Set background color of text selection</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="line">Line<a class="headerlink" href="#line" title="Permanent link">~</a></h3>
+<p>n/a</p>
+<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link">~</a></h3>
+<p>n/a</p>
+<h3 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">~</a></h3>
+<p>n/a</p>
+<h3 id="pattern">Pattern<a class="headerlink" href="#pattern" title="Permanent link">~</a></h3>
+<p>n/a</p>
+<h3 id="transitions">Transitions<a class="headerlink" href="#transitions" title="Permanent link">~</a></h3>
+<p>n/a</p>
+<p>ected item are send out.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../objects/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/styling.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

@@ -45,8 +45,8 @@ Switches the backlight on or off, independent of the set dim level. Turning the 
 
 Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.
 
-!!! note "Note"
-    The `dim` and `light` commands depend on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.
+!!! important 
+    `dim`and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
 
 `wakeup`
 

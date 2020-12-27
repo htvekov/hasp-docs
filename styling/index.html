@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -32,24 +32,17 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Styling Properties", url: "#_top", children: [
+          {title: "Padding and Margin", url: "#_top", children: [
           ]},
-          {title: "Object Types", url: "#object-types", children: [
+          {title: "Background", url: "#background", children: [
           ]},
-          {title: "Button", url: "#button", children: [
+          {title: "Border", url: "#border", children: [
           ]},
-          {title: "Attribute Groups", url: "#attribute-groups", children: [
-              {title: "Padding and Margin", url: "#padding-and-margin" },
-              {title: "Background", url: "#background" },
-              {title: "Border", url: "#border" },
-              {title: "Shadow", url: "#shadow" },
-              {title: "Value", url: "#value" },
-              {title: "Text", url: "#text" },
-              {title: "Line", url: "#line" },
-              {title: "Image", url: "#image" },
-              {title: "Outline", url: "#outline" },
-              {title: "Pattern", url: "#pattern" },
-              {title: "Transitions", url: "#transitions" },
+          {title: "Shadow", url: "#shadow", children: [
+          ]},
+          {title: "Value", url: "#value", children: [
+          ]},
+          {title: "Text", url: "#text", children: [
           ]},
         ];
 
@@ -97,29 +90,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="styling-properties">Styling Properties<a class="headerlink" href="#styling-properties" title="Permanent link">~</a></h2>
+    <h1>Styling Properties</h1>
+
 <p>You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.</p>
-<h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">~</a></h2>
-<p>Each object type is an ID that indicates which object type that line represents.
-Besides the common properties listed above, each object type can have specific properties.</p>
-<h2 id="button">Button<a class="headerlink" href="#button" title="Permanent link">~</a></h2>
-<p><strong>objid:10</strong></p>
-<p>A button can have 3 states. All the following parameters can be appended by a number to change the appearance of that state only:</p>
-<ul>
-<li>0: Released</li>
-<li>1: Pressed</li>
-<li>2: Disabled</li>
-</ul>
-<p>Or if the postfix index is ommited, then the default state 0 or Pressed is used.</p>
-<p>A button can accept the attributes of the following groups:</p>
-<ul>
-<li>Background</li>
-<li>Border</li>
-<li>Outline</li>
-<li>Shadow</li>
-<li>Value</li>
-</ul>
-<h2 id="attribute-groups">Attribute Groups<a class="headerlink" href="#attribute-groups" title="Permanent link">~</a></h2>
 <h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
 <p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
 <p>Objects use them to set spacing. See the documentation of the objects for the details.</p>
@@ -200,6 +173,7 @@ Besides the common properties listed above, each object type can have specific p
 </tbody>
 </table>
 <h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">~</a></h3>
+<p>The color and gradient used for drawing the background of an object.</p>
 <table>
 <thead>
 <tr>
@@ -363,7 +337,7 @@ Besides the common properties listed above, each object type can have specific p
 </tbody>
 </table>
 <h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">~</a></h3>
-<p>Value is an arbitrary text drawn to the background. It can be a lightweight replacement for creating label objects.</p>
+<p>Value is an arbitrary text drawn on top of an object. It can be a lightweight replacement for creating label objects.</p>
 <table>
 <thead>
 <tr>
@@ -504,17 +478,28 @@ Besides the common properties listed above, each object type can have specific p
 </tr>
 </tbody>
 </table>
-<h3 id="line">Line<a class="headerlink" href="#line" title="Permanent link">~</a></h3>
-<p>n/a</p>
-<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link">~</a></h3>
-<p>n/a</p>
-<h3 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">~</a></h3>
-<p>n/a</p>
-<h3 id="pattern">Pattern<a class="headerlink" href="#pattern" title="Permanent link">~</a></h3>
-<p>n/a</p>
-<h3 id="transitions">Transitions<a class="headerlink" href="#transitions" title="Permanent link">~</a></h3>
-<p>n/a</p>
-<p>ected item are send out.</p>
+<!--
+### Line
+
+n/a
+
+### Image
+
+n/a
+
+### Outline
+
+n/a
+
+### Pattern
+
+n/a
+
+### Transitions
+
+n/a
+
+-->
 
   <br>
     
@@ -551,7 +536,7 @@ Besides the common properties listed above, each object type can have specific p
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/styling.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/styling.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -32,7 +32,13 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Cloning from GitHub", url: "#_top", children: [
+          {title: "Clone from GitHub", url: "#_top", children: [
+          ]},
+          {title: "Open in PlatformIO", url: "#open-in-platformio", children: [
+          ]},
+          {title: "Create a configuration", url: "#create-a-configuration", children: [
+          ]},
+          {title: "Compile Environment", url: "#compile-environment", children: [
           ]},
         ];
 
@@ -80,7 +86,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h2 id="cloning-from-github">Cloning from GitHub<a class="headerlink" href="#cloning-from-github" title="Permanent link">~</a></h2>
+    <h1>Compiling</h1>
+
+<h2 id="clone-from-github">Clone from GitHub<a class="headerlink" href="#clone-from-github" title="Permanent link">~</a></h2>
 <p>Make sure to add the <code>--recursive</code> parameter when cloning the project from GitHub. Otherwise git will not download the required submodules in the <code>/lib</code> subdirectory.</p>
 <pre><code class="language-bash">git clone --recursive https://github.com/fvanroie/hasp-lvgl
 </code></pre>
@@ -93,6 +101,10 @@ cd hasp-lvgl
 git checkout 0.2.0
 git submodule update --init --recursive
 </code></pre>
+<h2 id="open-in-platformio">Open in PlatformIO<a class="headerlink" href="#open-in-platformio" title="Permanent link">~</a></h2>
+<p>Open the project folder in Visual Studio Code. This will automatically install all PlatformIO dependencies and the compiler frameworks needed.</p>
+<h2 id="create-a-configuration">Create a configuration<a class="headerlink" href="#create-a-configuration" title="Permanent link">~</a></h2>
+<h2 id="compile-environment">Compile Environment<a class="headerlink" href="#compile-environment" title="Permanent link">~</a></h2>
 
   <br>
     
@@ -129,7 +141,7 @@ git submodule update --init --recursive
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/compiling.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/compiling.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -88,7 +88,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>hasp-lvgl supports the ESP32, ESP8266 and STM32F4 families of microcontrollers.
+    <h1>Hardware</h1>
+
+<p>hasp-lvgl supports the ESP32, ESP8266 and STM32F4 families of microcontrollers.
 It needs a compatible micro-controller with drivers supporting the attached display, touch controller, storage and network.</p>
 <p>Below is a list of recommended development boards and a TFT touchscreen to get you up-and-running in no time.</p>
 <h2 id="recommended-boards">Recommended Boards<a class="headerlink" href="#recommended-boards" title="Permanent link">~</a></h2>
@@ -112,7 +114,7 @@ table th:last-of-type {
 <table>
 <thead>
 <tr>
-<th align="left"></th>
+<th align="left">&nbsp;</th>
 <th align="center">Basic</th>
 <th align="center">Standard</th>
 <th align="center">Pro</th>
@@ -213,10 +215,10 @@ Therefor the Lolin TFT 2.4 Touch Shield is used as the development display of ch
 <p>To use PWM dimming on the Lolin TFT 2.4" you must solder the TFT-LED pin to either D1, D2 or D4.
 <strong>D1 is recommended</strong> for backlight control and configured by default.</p>
 <p><img alt="TFT-LED PWM dimming" src="../assets/images/tft-led-pwm.png" /></p>
-<div class="admonition warning">
+<div class="admonition danger">
 <p class="admonition-title">Do <em>not</em> use D3 for backlight control because it is already in use for touch!</p>
 </div>
-<div class="admonition danger">
+<div class="admonition warning">
 <p>It is <em>not</em> recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.</p>
 </div>
 <h3 id="compatible-esp-boards">Compatible ESP boards<a class="headerlink" href="#compatible-esp-boards" title="Permanent link">~</a></h3>
@@ -333,7 +335,7 @@ The pinout of each header &amp; display is different and are <strong>not</strong
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/hardware.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/hardware.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

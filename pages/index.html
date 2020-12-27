@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -86,10 +86,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>The initial layout of the pages is defined by creating a special file on the SPIFFS file system.</p>
+    <h1>Pages</h1>
+
+<p>The initial layout of the pages is defined by creating a special file on the SPIFFS file system.</p>
 <p>This layout is displayed each time HASP starts up.</p>
 <p>Upload this file <em>(and other resource assets like fonts and images)</em> in the web interface <strong>Configuration -&gt; HASP Settings</strong> menu.</p>
-<h3 id="pagesjsonl">pages.jsonl<a class="headerlink" href="#pagesjsonl" title="Permanent link">~</a></h3>
+<h2 id="pagesjsonl">pages.jsonl<a class="headerlink" href="#pagesjsonl" title="Permanent link">~</a></h2>
 <p>The location of this file is <code>/pages.jsonl</code> in the root of the filesystem. 
 It uses the <a href="http://www.jsonlines.org">JSON Lines format</a> with one json object per line. 
 Each line should contain exactly <strong>one</strong> valid json object and end with a line-break <code>\n</code> <em>(not a comma)</em>.</p>
@@ -102,7 +104,7 @@ You probably have a typo in the following line which blocks parsing the rest of 
 <p>Each individual line however must be a valid json object.
 The file extension is <code>.jsonl</code> and not <code>.json</code>.</p>
 </div>
-<h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">~</a></h3>
+<h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">~</a></h2>
 <p>Each line in <code>pages.jsonl</code> creates <strong>one object</strong> on a page and has to be in the json format.
 The order of objects dictates the layer on the page from bottom to top.</p>
 <p>Example Objects</p>
@@ -124,7 +126,9 @@ p[2].b[2].hidden=true
 <pre><code class="language-json">{&quot;page&quot;:3,&quot;comment&quot;:&quot; ---- My Awesome Color Picker Layout ----&quot;}
 </code></pre>
 <p>If you then omit the <code>page</code> parameter in the lines below this comment, those objects will appear by default on page <code>3</code>.</p>
-<p>?&gt; If the line is not valid json, the parsing of the rest of the file is also stopped.</p>
+<div class="admonition danger">
+<p>If the line is not valid json, the parsing of the rest of the file is also stopped.</p>
+</div>
 <h2 id="blank-lines">Blank Lines<a class="headerlink" href="#blank-lines" title="Permanent link">~</a></h2>
 <p>Blank lines are allowed for readability and are ignored.</p>
 
@@ -163,7 +167,7 @@ p[2].b[2].hidden=true
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/pages.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/pages.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

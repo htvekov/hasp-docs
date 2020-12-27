@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Littlev Graphics Library on the MCU to drive a cheap commodity display">
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="./img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -34,12 +34,15 @@
       var is_top_frame = (window === window.parent);
         
         var pageToc = [
-          {title: "HASP - Open Hardware edition", url: "#_top", children: [
-              {title: "Demo Screens", url: "#demo-screens" },
-              {title: "Features", url: "#features" },
-              {title: "Cloning", url: "#cloning" },
-              {title: "Getting Started", url: "#getting-started" },
-              {title: "Support", url: "#support" },
+          {title: "Demo Screens", url: "#_top", children: [
+          ]},
+          {title: "Features", url: "#features", children: [
+          ]},
+          {title: "Cloning", url: "#cloning", children: [
+          ]},
+          {title: "Getting Started", url: "#getting-started", children: [
+          ]},
+          {title: "Support", url: "#support", children: [
           ]},
         ];
 
@@ -100,7 +103,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   
     <ul class="wm-toctree wm-toc-repo">
       <li class="wm-toc-li wm-toc-lev1">
-      <a class="wm-article-link wm-toc-text" href="https://github.com/fvanroie/hasp-lvgl/">
+      <a class="wm-article-link wm-toc-text" href="https://github.com/fvanroie/hasp-docs/">
         <i class="fa fa-github"></i>
 
         GitHub
@@ -180,15 +183,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="hasp-open-hardware-edition">HASP - Open Hardware edition<a class="headerlink" href="#hasp-open-hardware-edition" title="Permanent link">~</a></h1>
+    <h1>HASP - Open Hardware edition</h1>
+
 <p>This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
 The <a href="https://github.com/aderusha/HASwitchPlate">original HASwitchPlate</a> project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
 This rewrite removes the Nextion/TJC requirement by using the <a href="https://github.com/littlevgl/lvgl">Littlev Graphics Library</a> on the MCU to drive a cheap commodity display.</p>
 <p>This version also adds ESP32 and STM32F4 support to take advantage of the additional hardware capabilities.</p>
 <h2 id="demo-screens">Demo Screens<a class="headerlink" href="#demo-screens" title="Permanent link">~</a></h2>
-<p><img alt="Screenshot" src="https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/sliders.png" /> &nbsp; 
-<img alt="Screenshot" src="https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/buttons.png" /> &nbsp; 
-<img alt="Screenshot" src="https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/mediaplayer.png" /></p>
+<p><img alt="Screenshot" src="/assets/images/screenshots/home-sliders.png" /> &nbsp; 
+<img alt="Screenshot" src="/assets/images/screenshots/home-buttons.png" /> &nbsp; 
+<img alt="Screenshot" src="/assets/images/screenshots/home-mediaplayer.png" /></p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">~</a></h2>
 <table>
 <thead>
@@ -313,7 +317,7 @@ git submodule update --init --recursive
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/index.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/index.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
@@ -323,5 +327,5 @@ Edit on GitHub</a>
 </html>
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-12-27 02:10:15.471725+00:00
+Build Date UTC : 2020-12-27 15:51:06.870281+00:00
 -->

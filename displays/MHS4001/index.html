@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -84,7 +84,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>6 GPIOs are required to drive the SPI display. One additional GPIO is needed for the XPT2046 touch sensor. Including the Vcc and Gnd pins, a total of 12 connections need to be made to the MCU:</p>
+    <h1>MHS4001</h1>
+
+<p>6 GPIOs are required to drive the SPI display. One additional GPIO is needed for the XPT2046 touch sensor. Including the Vcc and Gnd pins, a total of 12 connections need to be made to the MCU:</p>
 <h2 id="pin-configuration">Pin Configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">~</a></h2>
 <table>
 <thead>
@@ -120,9 +122,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 <tr>
 <td>4</td>
-<td>~~LED Backlight PWM <em>5V</em>~~</td>
+<td><s>LED Backlight PWM <em>5V</em></s></td>
 <td></td>
-<td>~~TFT_BCKL~~</td>
+<td><s>TFT_BCKL</s></td>
 <td>5V</td>
 </tr>
 <tr>
@@ -232,7 +234,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 </tbody>
 </table>
-<p>~~By default, pin 4 is normally connected to 5V. This turns the display backlight LED on all time. In order to control the backlight you can drive pin 4 of the display using a PNP transistor. The electronics circuit needed is not part of this diagram.~~</p>
+<p><s>By default, pin 4 is normally connected to 5V. This turns the display backlight LED on all time. In order to control the backlight you can drive pin 4 of the display using a PNP transistor. The electronics circuit needed is not part of this diagram.</s></p>
 <p>SPI MISO, MOSI and SCLK are shared between the touch controller and the lcd controller.</p>
 <h2 id="lcd-configuration">LCD Configuration<a class="headerlink" href="#lcd-configuration" title="Permanent link">~</a></h2>
 <p>The <code>lcd_config.ini</code> file specifies the different properties of the display, except for the actual pin configuration:</p>
@@ -297,7 +299,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/displays/MHS4001.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/displays/MHS4001.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <meta name="author" content="Francis Van Roie">
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -38,7 +38,7 @@
           ]},
           {title: "System Commands", url: "#system-commands", children: [
           ]},
-          {title: "System Commands", url: "#system-commands_1", children: [
+          {title: "Output Commands (GPIO)", url: "#output-commands-gpio", children: [
           ]},
           {title: "Configuration Settings", url: "#configuration-settings", children: [
               {title: "Wi-FI", url: "#wi-fi" },
@@ -93,7 +93,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>Commands are not related to an object, but can get or set global properties or invoke system commands on the device.</p>
+    <h1>Commands</h1>
+
+<p>Commands are not related to an object on the screen but can get or set global properties or invoke system commands on the device.</p>
 <p>Commands can be issued via the Serial Commandline, Telnet Commandline or MQTT.</p>
 <p>For MQTT, use the <code>hasp/&lt;hostname&gt;/command</code> topic with payload <code>&lt;keyword&gt; &lt;parameter(s)&gt;</code></p>
 <p>Here is a list of all the recognized command keywords:</p>
@@ -106,26 +108,32 @@ value: <code>[0-11,254]</code></p>
 <p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
 <p>To delete individual objects, you can issue the <code>p[x].b[y].delete</code> command.</p>
 <h2 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h2>
-<p><code>dim</code> or <code>brightness</code>   <br />
+<p><code>dim</code> <br />
 values: <code>[0-100]</code></p>
 <p>Sets the level of the backlight from 0 to 100%, where 0% is off and 100% is full brightness.</p>
 <div class="admonition example">
+<p class="admonition-title">Example</p>
 <p><code>dim 50</code> sets the display to half the brightness.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">This can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity.</p>
+<p class="admonition-title">Tip</p>
+<p>This can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity.</p>
 </div>
 <p><code>light</code>   <br />
 values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, <code>0</code>/<code>1</code>, <code>yes</code>/<code>no</code></p>
 <p>Switches the backlight on or off, independent of the set dim level. Turning the backlight on will restore the brightness to the previous dim level.</p>
-<p>Example: <code>light on</code> acepted </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>light on</code> Turn the backlight on </p>
+</div>
 <p>Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><code>dim</code>and <code>light</code> commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.</p>
 </div>
 <p><code>wakeup</code></p>
-<p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message. It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
+<p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message.</p>
+<p>It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
 <h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h2>
 <p><code>calibrate</code></p>
 <p>Start on-screen touch calibration.</p>
@@ -152,12 +160,14 @@ This can be handy for bug reporting or documentation.</p>
 <p><code>factoryreset</code></p>
 <p>Clear the filesystem and EEPROM and reboot the device in its initial state.</p>
 <div class="admonition danger">
-<p class="admonition-title">There is no confirmation prompt nor an undo function!</p>
+<p class="admonition-title">Warning</p>
+<p>There is no confirmation prompt nor an undo function!</p>
 </div>
-<h2 id="system-commands_1">System Commands<a class="headerlink" href="#system-commands_1" title="Permanent link">~</a></h2>
-<p><code>output&lt;x&gt;</code> where <code>&lt;x&gt;</code> is number of the group  <br />
-values: <code>0</code> or <code>1</code></p>
-<p>Set <strong>all</strong> GPIO's assigned to Group &lt;x&gt; in <strong>Configuration -&gt; GPIO Configuration</strong> to "0" or "1". </p>
+<h2 id="output-commands-gpio">Output Commands (GPIO)<a class="headerlink" href="#output-commands-gpio" title="Permanent link">~</a></h2>
+<p><code>output&lt;x&gt;</code> where <code>&lt;x&gt;</code> is number of the group</p>
+<p>values: <code>1</code> or <code>0</code>, <code>on</code> or <code>off</code>, <code>true</code> or <code>false</code></p>
+<p>Sets <strong>all</strong> GPIO's assigned to the group number &lt;x&gt; in <strong>Configuration -&gt; GPIO Configuration</strong> to "0" or "1".</p>
+<p>GUI objects that are assigned to that group will also change state accordingly.</p>
 <h2 id="configuration-settings">Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permanent link">~</a></h2>
 <h3 id="wi-fi">Wi-FI<a class="headerlink" href="#wi-fi" title="Permanent link">~</a></h3>
 <p><code>ssid</code></p>
@@ -195,6 +205,10 @@ config/debug
 <pre><code class="language-json">[&quot;page 5&quot;,&quot;dim 50&quot;,&quot;light on&quot;,&quot;statusupdate&quot;]
 </code></pre>
 <p>The commands are interpreted and processed sequentially.</p>
+<p><code>jsonl</code> (json lines)</p>
+<p>This command is used to create new objects on a page.</p>
+<p>Each line in the <code>jsonl</code> payload defines one object and has to be in the json format.</p>
+<p><em>For details see Pages and Objects</em></p>
 
   <br>
     
@@ -231,7 +245,7 @@ config/debug
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/commands.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/commands.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

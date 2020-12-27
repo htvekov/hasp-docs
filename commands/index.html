@@ -120,7 +120,10 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 <p>Switches the backlight on or off, independent of the set dim level. Turning the backlight on will restore the brightness to the previous dim level.</p>
 <p>Example: <code>light on</code> acepted </p>
 <p>Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.</p>
-<p>?&gt; The <code>dim</code>and <code>light</code> command depends on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>dim</code>and <code>light</code> commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.</p>
+</div>
 <p><code>wakeup</code></p>
 <p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message. It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
 <h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h2>
@@ -152,7 +155,7 @@ This can be handy for bug reporting or documentation.</p>
 <p class="admonition-title">There is no confirmation prompt nor an undo function!</p>
 </div>
 <h2 id="system-commands_1">System Commands<a class="headerlink" href="#system-commands_1" title="Permanent link">~</a></h2>
-<p><code>output&lt;x&gt;</code> where <code>&lt;x&gt;</code> is number of the group
+<p><code>output&lt;x&gt;</code> where <code>&lt;x&gt;</code> is number of the group  <br />
 values: <code>0</code> or <code>1</code></p>
 <p>Set <strong>all</strong> GPIO's assigned to Group &lt;x&gt; in <strong>Configuration -&gt; GPIO Configuration</strong> to "0" or "1". </p>
 <h2 id="configuration-settings">Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permanent link">~</a></h2>

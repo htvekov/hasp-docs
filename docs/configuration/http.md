@@ -2,7 +2,7 @@
 
 To restrict access to the web user interface you can set a Username and Password.
 
-![HTTP configuration](assets/images/settings/configuration.png "HTTP configuration")
+![HTTP configuration](../assets/images/settings/configuration.png)
 
 Click 'Save Settings' to activate.
 

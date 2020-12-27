@@ -24,7 +24,6 @@ nav:
     - configuration/display.md
     - configuration/gpio.md
     - configuration/debug.md
-    - styling.md
   - Design:
     - pages.md
     - objects.md

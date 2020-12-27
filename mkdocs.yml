@@ -12,15 +12,18 @@ strict: true
 nav:
   - Home: index.md
   - hardware.md
-  - installation.md
-  - Wi-Fi Setup: wifi-setup.md
+  - Installation:
+    - ESP32 Installation: ESP32.md
+    - ESP8266 Installation: ESP8266.md
+    - Wi-Fi Setup: wifi-setup.md
   - commands.md
-  - FAQ: faq.md
-  - pages.md
-  - objects.md
-  - styling.md
-  - fonts.md
+  - Design:
+    - pages.md
+    - objects.md
+    - styling.md
+    - fonts.md
   - example-pages.md
+  - FAQ: faq.md
   - firmware-update.md
   - Displays:
     - displays/MHS4001.md

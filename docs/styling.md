@@ -1,33 +1,9 @@
 
-## Styling Properties
+<h1>Styling Properties</h1>
 
 You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
 
-## Object Types
 
-Each object type is an ID that indicates which object type that line represents.
-Besides the common properties listed above, each object type can have specific properties.
-
-## Button
-**objid:10**
-
-A button can have 3 states. All the following parameters can be appended by a number to change the appearance of that state only:
-
-- 0: Released
-- 1: Pressed
-- 2: Disabled
-
-Or if the postfix index is ommited, then the default state 0 or Pressed is used.
-
-A button can accept the attributes of the following groups:
-
-- Background
-- Border
-- Outline
-- Shadow
-- Value
-
-## Attribute Groups
 
 ### Padding and Margin
 
@@ -48,6 +24,8 @@ Objects use them to set spacing. See the documentation of the objects for the de
 | margin_right | int | Set the margin on the right
 
 ### Background
+
+The color and gradient used for drawing the background of an object.
 
 | Property | Type      | Required | Default | Description
 |----------|------------|----------|---------|--------------
@@ -85,7 +63,7 @@ The shadow is a blurred area under the object.
 
 ### Value
 
-Value is an arbitrary text drawn to the background. It can be a lightweight replacement for creating label objects.
+Value is an arbitrary text drawn on top of an object. It can be a lightweight replacement for creating label objects.
 
 | Property | Type      | Required | Default | Description
 |----------|------------|----------|---------|--------------
@@ -113,6 +91,7 @@ Properties for textual object.
 | text_decor | byte | Add text decoration. 0=None, 1=Underline, 2=Strikethrough, 3=Underline&Strikethrough
 | text_sel_color | color | Set background color of text selection
 
+<!--
 ### Line
 
 n/a
@@ -133,7 +112,4 @@ n/a
 
 n/a
 
-
-
-
-ected item are send out.
+-->

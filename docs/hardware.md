@@ -1,3 +1,5 @@
+<h1>Hardware</h1>
+
 hasp-lvgl supports the ESP32, ESP8266 and STM32F4 families of microcontrollers.
 It needs a compatible micro-controller with drivers supporting the attached display, touch controller, storage and network.
 
@@ -22,18 +24,18 @@ table th:last-of-type {
     width: 22%;
 }
 </style>
-|            | Basic       | Standard     | Pro          | Experimental |
-|:-----------|:-----------:|:------------:|:------------:|:------------:|
-| MCU        | ESP8266     | ESP32-WROOM  | ESP32-WROVER | STM32F4      |
-| CPU Freq.  | 80Mhz       | 240Mhz       | 240Mhz       | 168 MHz      |
-| Ram        | 80Kb        | 520Kb        | 520Kb        | 192Kb        |
-| PSRam      | no          | no           | yes          | no           |
-| Minimal Flash | 4MB         | 4MB          | 4MB          | 512Kb        |
-| Display    | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI  | ILI9341 FSMC |
-| Touch      | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI  | XPT2046 SPI  |
-| Network    | Wi-Fi        | Wi-Fi         | Wi-Fi         | Ethernet / Wi-Fi |
-| Dev. Board*|[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]| STM32F407VET/ZGT Black |
-| Firmware   | [Download][1] | [Download][1]  | [Download][1]  |        |
+|&nbsp;      | Basic       | Standard     | Pro          | Experimental 
+|:-----------|:-----------:|:------------:|:------------:|:------------:
+| MCU        | ESP8266     | ESP32-WROOM  | ESP32-WROVER | STM32F4      
+| CPU Freq.  | 80Mhz       | 240Mhz       | 240Mhz       | 168 MHz      
+| Ram        | 80Kb        | 520Kb        | 520Kb        | 192Kb        
+| PSRam      | no          | no           | yes          | no           
+| Minimal Flash | 4MB         | 4MB          | 4MB          | 512Kb     
+| Display    | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI  | ILI9341 FSMC 
+| Touch      | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI  | XPT2046 SPI  
+| Network    | Wi-Fi        | Wi-Fi         | Wi-Fi         | Ethernet / Wi-Fi
+| Dev. Board*|[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]| STM32F407VET/ZGT Black
+| Firmware   | [Download][1] | [Download][1]  | [Download][1]  |
 
 [1]: ./installation.md
 [3]: https://www.aliexpress.com/item/32643142716.html
@@ -68,9 +70,9 @@ To use PWM dimming on the Lolin TFT 2.4" you must solder the TFT-LED pin to eith
 
 ![TFT-LED PWM dimming](assets/images/tft-led-pwm.png)
 
-!!! warning "Do *not* use D3 for backlight control because it is already in use for touch!"
+!!! danger "Do *not* use D3 for backlight control because it is already in use for touch!"
 
-!!! danger "" 
+!!! warning ""
     It is *not* recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.
 
 ### Compatible ESP boards

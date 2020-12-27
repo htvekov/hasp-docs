@@ -1,4 +1,6 @@
-## Cloning from GitHub
+<h1>Compiling</h1>
+
+## Clone from GitHub
 
 Make sure to add the `--recursive` parameter when cloning the project from GitHub. Otherwise git will not download the required submodules in the `/lib` subdirectory.
 
@@ -20,3 +22,11 @@ cd hasp-lvgl
 git checkout 0.2.0
 git submodule update --init --recursive
 ```
+
+## Open in PlatformIO
+
+Open the project folder in Visual Studio Code. This will automatically install all PlatformIO dependencies and the compiler frameworks needed.
+
+## Create a configuration
+
+## Compile Environment

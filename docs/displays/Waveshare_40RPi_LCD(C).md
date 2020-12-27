@@ -1,3 +1,5 @@
+<h1>Waveshare 4.0" RPi LCD (C)</h1>
+
 6 GPIOs are required to drive the SPI display. One additional GPIO is needed for the XPT2046 touch sensor and one extra GPIO for backlight dimming.
 Including the VCC and GND pins, a total of 13 connections need to be made to the MCU:
 

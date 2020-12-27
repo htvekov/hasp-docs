@@ -1,4 +1,4 @@
-# HASP - Open Hardware edition
+<h1>HASP - Open Hardware edition</h1>
 
 This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
 The [original HASwitchPlate][1] project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
@@ -8,9 +8,9 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 
 ## Demo Screens
 
-![Screenshot](https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/sliders.png) &nbsp; 
-![Screenshot](https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/buttons.png) &nbsp; 
-![Screenshot](https://raw.githubusercontent.com/fvanroie/hasp-lvgl/0.0.11/docs/img/mediaplayer.png)
+![Screenshot](/assets/images/screenshots/home-sliders.png) &nbsp; 
+![Screenshot](/assets/images/screenshots/home-buttons.png) &nbsp; 
+![Screenshot](/assets/images/screenshots/home-mediaplayer.png)
 
 ## Features
 

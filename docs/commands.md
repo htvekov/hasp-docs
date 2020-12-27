@@ -1,4 +1,6 @@
-Commands are not related to an object, but can get or set global properties or invoke system commands on the device.
+<h1>Commands</h1>
+
+Commands are not related to an object on the screen but can get or set global properties or invoke system commands on the device.
 
 Commands can be issued via the Serial Commandline, Telnet Commandline or MQTT.
 
@@ -22,30 +24,35 @@ To delete individual objects, you can issue the `p[x].b[y].delete` command.
 
 ## Backlight
 
-`dim` or `brightness`     
+`dim`   
 values: `[0-100]`
 
 Sets the level of the backlight from 0 to 100%, where 0% is off and 100% is full brightness.
 
-!!! example ""
+!!! example "Example"
     `dim 50` sets the display to half the brightness.
 
-!!! note "This can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity."
+!!! note "Tip"
+    This can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity.
 
 `light`     
 values: `on`/`off`, `true`/`false`, `0`/`1`, `yes`/`no`
 
 Switches the backlight on or off, independent of the set dim level. Turning the backlight on will restore the brightness to the previous dim level.
 
-Example: `light on` acepted 
+!!! example "Example"
+    `light on` Turn the backlight on 
 
 Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.
 
-?> The `dim`and `light` command depends on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.
+!!! note "Note"
+    The `dim` and `light` commands depend on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.
 
 `wakeup`
 
-Clears the idle state of the device and publishes a `state/idle = OFF` status message. It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.
+Clears the idle state of the device and publishes a `state/idle = OFF` status message.
+
+It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.
 
 ## System Commands
 
@@ -87,13 +94,18 @@ Saves any changes in the configuration file and reboots the device.
 
 Clear the filesystem and EEPROM and reboot the device in its initial state.
 
-!!! danger "There is no confirmation prompt nor an undo function!"
+!!! danger "Warning"
+    There is no confirmation prompt nor an undo function!
 
-## System Commands
+## Output Commands (GPIO)
+
 `output<x>` where `<x>` is number of the group
-values: `0` or `1`
 
-Set **all** GPIO's assigned to Group &lt;x> in **Configuration -> GPIO Configuration** to "0" or "1". 
+values: `1` or `0`, `on` or `off`, `true` or `false`
+
+Sets **all** GPIO's assigned to the group number &lt;x> in **Configuration -> GPIO Configuration** to "0" or "1".
+
+GUI objects that are assigned to that group will also change state accordingly.
 
 ## Configuration Settings
 
@@ -160,3 +172,11 @@ Each command is an element in this array of strings:
 ```
 
 The commands are interpreted and processed sequentially.
+
+`jsonl` (json lines)
+
+This command is used to create new objects on a page.
+
+Each line in the `jsonl` payload defines one object and has to be in the json format.
+
+*For details see Pages and Objects*

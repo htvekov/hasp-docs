@@ -1,6 +1,9 @@
-There are 2 ways to create an object on the screen:
+<h1>Objects<h1>
+
+There are two ways to create an object on the screen:
+
 - Uploading a pages.jsonl file onto the internal flash
-- Use the `jsonl` command, via MQTT, serial or telnet console
+- Use the `jsonl` command *(via MQTT, serial or telnet console)*
 
 ## Common Properties
 
@@ -254,7 +257,8 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
 | rows     | int8       | no       | 3       | The number ow rows that are visible
 
-!> A roller does not use the `h` attribute to set its height but uses the `rows` attribute instead.
+!!! note "Note"
+    A roller does not use the `h` attribute to set its height but uses the `rows` attribute instead.
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.

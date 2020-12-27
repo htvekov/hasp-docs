@@ -1,10 +1,12 @@
+<h1>Pages</h1>
+
 The initial layout of the pages is defined by creating a special file on the SPIFFS file system.
 
 This layout is displayed each time HASP starts up.
 
 Upload this file *(and other resource assets like fonts and images)* in the web interface **Configuration -> HASP Settings** menu.
 
-### pages.jsonl
+## pages.jsonl
 
 The location of this file is `/pages.jsonl` in the root of the filesystem. 
 It uses the [JSON Lines format](http://www.jsonlines.org) with one json object per line. 
@@ -20,7 +22,7 @@ You probably have a typo in the following line which blocks parsing the rest of 
     Each individual line however must be a valid json object.
     The file extension is `.jsonl` and not `.json`.
     
-### Objects
+## Objects
 Each line in `pages.jsonl` creates **one object** on a page and has to be in the json format.
 The order of objects dictates the layer on the page from bottom to top.
 
@@ -56,7 +58,8 @@ Example 2: Set the default `page` for next object(s) to `3` besides adding a com
 
 If you then omit the `page` parameter in the lines below this comment, those objects will appear by default on page `3`.
 
-?> If the line is not valid json, the parsing of the rest of the file is also stopped.
+!!! danger ""
+    If the line is not valid json, the parsing of the rest of the file is also stopped.
 
 ## Blank Lines
 Blank lines are allowed for readability and are ignored.

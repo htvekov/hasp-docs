@@ -1,7 +1,8 @@
+<h1>License</h1>
 
-The MIT License (MIT)
+### The MIT License (MIT)
 
-Hasp-lvgl is Copyright (c) 2019-2020 fvanroie, netwize.be and contributors
+Hasp-lvgl is Copyright© 2019-2021 fvanroie, netwize.be and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,6 +23,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -------------------------------------------
+### Components
+
 Hasp-lvgl is based on the existing work of the following open source developers:
 
 - [HASwitchPlate](https://github.com/aderusha/HASwitchPlate), the original Arduino project,
@@ -71,9 +74,6 @@ Hasp-lvgl is based on the existing work of the following open source developers:
   and [MIT License](http://opensource.org/licenses/MIT).
 
 - The bootscreen uses the [MaterialDesign Icons](https://materialdesignicons.com/) font,
-  Copyright© 2014, Austin Andrews (http://materialdesignicons.com/),
+  Copyright© 2014, Austin Andrews.
   MaterialDesign Icons font is licensed under the SIL Open Font License, Version 1.1.
 
-- This website is created with [Docsify](https://docsify.js.org/),
-  Copyright© 2016 - present cinwell.li
-  [MIT License](http://opensource.org/licenses/MIT).

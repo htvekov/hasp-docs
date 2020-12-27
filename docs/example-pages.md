@@ -1,4 +1,6 @@
 
+<h1>Example Pages</h1>
+
 ## Code
 
 This is a real-world example of a `pages.jsonl` file:

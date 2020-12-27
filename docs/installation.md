@@ -1,3 +1,5 @@
+<h1>Installation</h1>
+
 ## Download the firmware
 
 Go to the [releases](https://github.com/fvanroie/hasp-lvgl/releases) page on GitHub to download the latest hasp-lvgl binaries.

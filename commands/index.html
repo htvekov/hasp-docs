@@ -102,7 +102,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h2 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">~</a></h2>
 <p><code>page</code>   <br />
 value: <code>[0-11]</code></p>
-<p>Switches the display to show the objects from a different page. </p>
+<p>Switches the display to show the objects from a different page and return the page number in <code>state/page</code>.</p>
+<p>Calling the <code>page</code> command without a parameter will return the value of the current page in <code>state/page</code>.</p>
 <p><code>clearpage</code>   <br />
 value: <code>[0-11,254]</code></p>
 <p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
@@ -157,6 +158,9 @@ This can be handy for bug reporting or documentation.</p>
 </code></pre>
 <p><code>reboot</code> or <code>restart</code></p>
 <p>Saves any changes in the configuration file and reboots the device.</p>
+<p><code>update</code></p>
+<p>value: [url]</p>
+<p>Update the firmware from the url provided. Reboots when update was successful.</p>
 <p><code>factoryreset</code></p>
 <p>Clear the filesystem and EEPROM and reboot the device in its initial state.</p>
 <div class="admonition danger">

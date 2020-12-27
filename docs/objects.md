@@ -55,21 +55,21 @@ Besides the common properties listed above, each object type can have specific p
 
 ### Cheatsheet
 
-| objid | Type       |
-|:-----:|:-----------|
-| 10    | [Button](13-objects?id=button)     |
-| 11    | [Checkbox](13-objects?id=checkbox)     |
-| 12    | [Label](13-objects?id=text-label)     |
-| 20    | [Colorpicker](13-objects?id=colorpicker)     |
-| 21    | [Spinner](13-objects?id=spinner)     |
-| 22    | [Arc](13-objects?id=arc)     |
-| 30    | [Slider](13-objects?id=slider)     |
-| 31    | [Gauge](13-objects?id=gauge)     |
-| 32    | [Progressbar](13-objects?id=progressbar)     |
-| 40    | [Switch](13-objects?id=switch)     |
-| 41    | [LED](13-objects?id=led-indicator)     |
-| 50    | [Dropdown List](13-objects?id=dropdown-list)     |
-| 51    | [Roller](13-objects?id=roller)     |
+| objid | Type
+|:-----:|:-----------
+| 10    | [Button](#button)
+| 11    | [Checkbox](#checkbox)
+| 12    | [Label](#text-label)
+| 20    | [Colorpicker](#colorpicker)
+| 21    | [Spinner](#spinner)
+| 22    | [Arc](#arc)
+| 30    | [Slider](#slider)
+| 31    | [Gauge](#gauge)
+| 32    | [Progress Bar](#progress-bar)
+| 40    | [Switch](#switch)
+| 41    | [LED](#led-indicator)
+| 50    | [Dropdown List](#dropdown-list)
+| 51    | [Roller](#roller)
 
 ### Button
 **objid:10**

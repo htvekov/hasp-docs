@@ -2,6 +2,7 @@
 <h1>Styling Properties</h1>
 
 You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
+Some objects allow for more complex syling, effectively changing its appearance or its sub-components.
 
 
 

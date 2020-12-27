@@ -1,4 +1,4 @@
-<h1>Objects<h1>
+<h1>Objects</h1>
 
 There are two ways to create an object on the screen:
 

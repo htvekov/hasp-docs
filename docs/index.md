@@ -8,9 +8,9 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 
 ## Demo Screens
 
-![Screenshot](/assets/images/screenshots/home-sliders.png) &nbsp; 
-![Screenshot](/assets/images/screenshots/home-buttons.png) &nbsp; 
-![Screenshot](/assets/images/screenshots/home-mediaplayer.png)
+![Screenshot](assets/images/screenshots/home-sliders.png) &nbsp; 
+![Screenshot](assets/images/screenshots/home-buttons.png) &nbsp; 
+![Screenshot](assets/images/screenshots/home-mediaplayer.png)
 
 ## Features
 

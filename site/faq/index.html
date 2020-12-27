@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>FAQ - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "The font looks tiny", url: "#_top", children: [
+          ]},
+          {title: "How to use Fontawesome icons?", url: "#how-to-use-fontawesome-icons", children: [
+          ]},
+          {title: "Is there a file browser built-in?", url: "#is-there-a-file-browser-built-in", children: [
+          ]},
+          {title: "How to delete files from flash?", url: "#how-to-delete-files-from-flash", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../pages/" class="btn btn-xs btn-link">
+        Pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../commands/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../commands/" class="btn btn-xs btn-link">
+        Commands
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h4 id="the-font-looks-tiny"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> The font looks tiny<a class="headerlink" href="#the-font-looks-tiny" title="Permanent link">#</a></h4>
+<p>On ESP8266, the out-of-the box font is Unscii 8pt because this font takes up very little space in memory and on flash.
+This default font is just intended to get the device setup, then you can Upload your own .zi font.</p>
+<p>On ESP32, the default font is Monserrat 12.</p>
+<h4 id="how-to-use-fontawesome-icons"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> How to use Fontawesome icons?<a class="headerlink" href="#how-to-use-fontawesome-icons" title="Permanent link">#</a></h4>
+<p>Upload another .zi file named fontawesome<em>xx</em>.zi of the same point size as the normal text .zi font.
+e.g. If your custom font is <code>arial24.zi´, you should also add a</code>fontawesome24.zi` file.</p>
+<h4 id="is-there-a-file-browser-built-in"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> Is there a file browser built-in?<a class="headerlink" href="#is-there-a-file-browser-built-in" title="Permanent link">#</a></h4>
+<p><em>A:</em> There is no native file browser included yet, as this currently is low on the priority list.</p>
+<p>However, you can upload the <code>edit.htm.gz</code> (3kB) file to the SPIFFS partition from the ESP32 FSBrowser repository.
+Download it from: https://github.com/espressif/arduino-esp32/blob/master/libraries/WebServer/examples/FSBrowser/data/edit.htm.gz</p>
+<p>When the <code>edit.htm.gz</code> file is present on Spiffs you will see an additional File Browser button on the Main Webpage:</p>
+<p><img alt="HTTP configuration" src="../assets/images/faq/faq_file_browser.png" title="File Browser" /></p>
+<p>Using that webpage, you can right-click and delete files:</p>
+<p><img alt="HTTP configuration" src="../assets/images/faq/faq_file_delete.png" title="Delete file" /></p>
+<h4 id="how-to-delete-files-from-flash"><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2753.png" title=":question:" /> How to delete files from flash?<a class="headerlink" href="#how-to-delete-files-from-flash" title="Permanent link">#</a></h4>
+<p><em>See: Is there a file browser built-in?</em></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../pages/" class="btn btn-xs btn-link">
+        Pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../commands/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../commands/" class="btn btn-xs btn-link">
+        Commands
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/faq.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

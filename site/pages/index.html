@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Pages - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "pages.jsonl", url: "#_top", children: [
+          ]},
+          {title: "Objects", url: "#objects", children: [
+          ]},
+          {title: "Comments", url: "#comments", children: [
+          ]},
+          {title: "Blank Lines", url: "#blank-lines", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../objects/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../faq/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../faq/" class="btn btn-xs btn-link">
+        FAQ
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>The initial layout of the pages is defined by creating a special file on the SPIFFS file system.
+This layout is displayed each time HASP starts up.
+You can upload this file <em>(and other resource assets like fonts and images)</em> in the web interface Configuration &gt; HASP Settings.</p>
+<h3 id="pagesjsonl">pages.jsonl<a class="headerlink" href="#pagesjsonl" title="Permanent link">#</a></h3>
+<p>The location of this file is <code>/pages.jsonl</code> in the root of the filesystem.
+It uses the <a href="http://www.jsonlines.org">JSON Lines format</a> with one json object per line.
+Each line should contain exactly <strong>one</strong> valid json object and end with a line-break <code>\n</code> <em>(not a comma)</em>.</p>
+<p>The file is interpreted <strong>line-by-line</strong>.
+When a malformed line is encountered, the processing of the rest of the file stops.
+If you are missing objects, check the logs to see which line was processed last.
+You probably have a typo in the following line which blocks parsing the rest of the file.</p>
+<p>?&gt; The complete file in its entirety is <em>not</em> a valid json file.
+?&gt; Each individual line however must be a valid json object.
+?&gt; The file extension is <code>.jsonl</code> and not <code>.json</code>.</p>
+<h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">#</a></h3>
+<p>Each line in <code>pages.jsonl</code> creates <strong>one object</strong> on a page and has to be in the json format.
+The order of objects dictates the layer on the page from bottom to top.</p>
+<p>Example Objects</p>
+<pre><code class="json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;x&quot;:5,&quot;y&quot;:20,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:&quot;true&quot;,&quot;hidden&quot;:&quot;false&quot;}
+{&quot;page&quot;:2,&quot;id&quot;:2,&quot;objid&quot;:50,&quot;x&quot;:5,&quot;y&quot;:120,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:&quot;false&quot;,&quot;hidden&quot;:&quot;false&quot;}
+</code></pre>
+
+<p>Once the object is created, you can reference it with <code>p[x].b[y]</code> where <code>x</code> is the pagenumber and <code>y</code> is the id of the object.</p>
+<p>for example:</p>
+<pre><code>p[2].b[1].w=100
+p[2].b[2].hidden=true
+</code></pre>
+
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">#</a></h2>
+<p>If any of the required <code>id</code> or <code>objid</code> properties are missing -<em>and the line is still valid json</em>- then it is interpreted as a comment.</p>
+<p>You can also use the <code>page</code> parameter in a comment to set the default page for new objects that don't have a <code>page</code> parameter.</p>
+<p>Example 1: Add a comment on a single line that is ignored.</p>
+<pre><code class="json">{&quot;comment&quot;:&quot; ----------- Page 2 layout ------------&quot;}
+</code></pre>
+
+<p>Example 2: Set the default <code>page</code> for next object(s) to <code>3</code> besides adding a comment as well.</p>
+<pre><code class="json">{&quot;page&quot;:3,&quot;comment&quot;:&quot; ---- My Awesome Color Picker Layout ----&quot;}
+</code></pre>
+
+<p>If you then omit the <code>page</code> parameter in the lines below this comment, those objects will appear by default on page <code>3</code>.</p>
+<p>?&gt; If the line is not valid json, the parsing of the rest of the file is also stopped.</p>
+<h2 id="blank-lines">Blank Lines<a class="headerlink" href="#blank-lines" title="Permanent link">#</a></h2>
+<p>Blank lines are allowed for readability and are ignored.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../objects/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../faq/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../faq/" class="btn btn-xs btn-link">
+        FAQ
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/pages.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

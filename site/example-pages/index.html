@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Example pages - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Example file", url: "#_top", children: [
+          ]},
+          {title: "Result", url: "#result", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../compiling/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../compiling/" class="btn btn-xs btn-link">
+        Compiling
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../styling/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../styling/" class="btn btn-xs btn-link">
+        Styling
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="example-file">Example file<a class="headerlink" href="#example-file" title="Permanent link">#</a></h2>
+<p>This is a real-world example of a <code>pages.jsonl</code> file:</p>
+<details>
+<summary>Show Jsonl Code (Click to expand)</summary>
+
+<pre><code class="json">{&quot;page&quot;:0,&quot;comment&quot;:&quot;---------- Page 0 ----------&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;TRUE&quot;,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
+{&quot;objid&quot;:11,&quot;id&quot;:2,&quot;x&quot;:10,&quot;y&quot;:100,&quot;w&quot;:220,&quot;h&quot;:55,&quot;txt&quot;:&quot;A Checkbox&quot;}
+{&quot;objid&quot;:12,&quot;id&quot;:3,&quot;x&quot;:10,&quot;y&quot;:10,&quot;w&quot;:220,&quot;h&quot;:30,&quot;txt&quot;:&quot;My Label&quot;,&quot;align&quot;:1,&quot;padh&quot;:50}
+{&quot;objid&quot;:40,&quot;id&quot;:4,&quot;x&quot;:70,&quot;y&quot;:205,&quot;w&quot;:100,&quot;h&quot;:55}
+{&quot;objid&quot;:41,&quot;id&quot;:5,&quot;x&quot;:10,&quot;y&quot;:205,&quot;w&quot;:55,&quot;h&quot;:55}
+{&quot;objid&quot;:50,&quot;id&quot;:6,&quot;x&quot;:10,&quot;y&quot;:150,&quot;w&quot;:150,&quot;options&quot;:&quot;\uf007 Line 1\n\uf007 Line 2\n\uf007 Line 3&quot;}
+{&quot;objid&quot;:21,&quot;id&quot;:7,&quot;x&quot;:165,&quot;y&quot;:140,&quot;w&quot;:70,&quot;h&quot;:70}
+
+{&quot;page&quot;:1,&quot;comment&quot;:&quot;---------- Page 1 ----------&quot;}
+{&quot;objid&quot;:30,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:170,&quot;w&quot;:200,&quot;h&quot;:50}
+{&quot;objid&quot;:31,&quot;id&quot;:3,&quot;x&quot;:13,&quot;y&quot;:10,&quot;w&quot;:100,&quot;h&quot;:100}
+{&quot;objid&quot;:32,&quot;id&quot;:4,&quot;x&quot;:10,&quot;y&quot;:110,&quot;w&quot;:200,&quot;h&quot;:50}
+{&quot;objid&quot;:33,&quot;id&quot;:5,&quot;x&quot;:127,&quot;y&quot;:10,&quot;w&quot;:100,&quot;h&quot;:100}
+{&quot;objid&quot;:12,&quot;id&quot;:10,&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:70,&quot;h&quot;:50,&quot;parentid&quot;:5,&quot;txt&quot;:&quot;\uf00c OK&quot;}
+
+{&quot;comment&quot;:&quot;---------- Page 2 ----------&quot;}
+{&quot;objid&quot;:20,&quot;id&quot;:1,&quot;page&quot;:2,&quot;x&quot;:20,&quot;y&quot;:0,&quot;w&quot;:200,&quot;h&quot;:200}
+{&quot;objid&quot;:20,&quot;id&quot;:2,&quot;page&quot;:2,&quot;x&quot;:20,&quot;y&quot;:210,&quot;w&quot;:200,&quot;h&quot;:50,&quot;rect&quot;:&quot;TRUE&quot;}
+
+{&quot;page&quot;:3,&quot;comment&quot;:&quot;---------- Page 3 ----------&quot;}
+{&quot;objid&quot;:50,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:10,&quot;w&quot;:220,&quot;options&quot;:&quot;Spring\nSummer\nAutumn\nWinter&quot;}
+{&quot;objid&quot;:51,&quot;id&quot;:2,&quot;x&quot;:40,&quot;y&quot;:50,&quot;w&quot;:160,&quot;rows&quot;:3,&quot;options&quot;:&quot;2020\n2021\n2022\n2023\n2024&quot;}
+
+{&quot;page&quot;:254,&quot;comment&quot;:&quot;---------- Page 254 ----------&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;x&quot;:0,&quot;y&quot;:270,&quot;w&quot;:75,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF053 Prev&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:2,&quot;x&quot;:75,&quot;y&quot;:270,&quot;w&quot;:90,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF015 Home&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:3,&quot;x&quot;:165,&quot;y&quot;:270,&quot;w&quot;:75,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;Next \uF054&quot;}
+</code></pre>
+
+
+</details>
+
+<h2 id="result">Result<a class="headerlink" href="#result" title="Permanent link">#</a></h2>
+<p>Page 0</p>
+<p>Page 1</p>
+<p>Page 2</p>
+<p>Page 3</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../compiling/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../compiling/" class="btn btn-xs btn-link">
+        Compiling
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../styling/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../styling/" class="btn btn-xs btn-link">
+        Styling
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/example-pages.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

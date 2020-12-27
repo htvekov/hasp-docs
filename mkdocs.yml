@@ -1,0 +1,41 @@
+site_name: 'HASP - Open Hardware edition'
+site_description: 'Littlev Graphics Library on the MCU to drive a cheap commodity display'
+site_author: ''
+
+repo_url: https://github.com/fvanroie/hasp-lvgl
+
+theme: 
+  name: windmill
+
+strict: true
+
+nav:
+  - Home: index.md
+  - hardware.md
+  - installation.md
+  - Wi-Fi Setup: wifi-setup.md
+  - commands.md
+  - FAQ: faq.md
+  - pages.md
+  - objects.md
+  - styling.md
+  - example-pages.md
+  - firmware-update.md
+  - Displays:
+    - displays/MHS4001.md
+    - displays/MRB3511.md
+    - displays/Waveshare_40RPi_LCD(C).md
+  - compiling.md
+  - license.md
+
+markdown_extensions:
+  - toc:
+     permalink: "~"
+     toc_depth: 3
+  - admonition
+  - pymdownx.emoji
+  - attr_list
+
+extra:
+  history_buttons: false
+  version: v0.31

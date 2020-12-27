@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>MRB3511 - HASP - Open Hardware edition</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pin Configuration", url: "#_top", children: [
+          ]},
+          {title: "LCD Configuration", url: "#lcd-configuration", children: [
+          ]},
+          {title: "HASP build_flags", url: "#hasp-build_flags", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../Waveshare_40RPi_LCD%28C%29/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Waveshare_40RPi_LCD%28C%29/" class="btn btn-xs btn-link">
+        Waveshare 40RPi LCD(C)
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../MHS4001/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../MHS4001/" class="btn btn-xs btn-link">
+        MHS4001
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>14 GPIOs are required to drive the 8-bit parallel display. Another 3 GPIOs are needed for the I²C touch sensor. Including the Vcc, Gnd an Rst pins, a total of 23 connections need to be made to the MCU:</p>
+<h2 id="pin-configuration">Pin Configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th>ESP32 Pin</th>
+<th>Config Name</th>
+<th>Display Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Chip select control pin</td>
+<td>GPIO33</td>
+<td>TFT_CS</td>
+<td>CS</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data Command control pin</td>
+<td>GPIO15</td>
+<td>TFT_DC</td>
+<td>RS</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Write control pin</td>
+<td>GPIO04</td>
+<td>TFT_WR</td>
+<td>WR</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Read control pin</td>
+<td>GPIO02</td>
+<td>TFT_RD</td>
+<td>RD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>LCD Reset pin</td>
+<td>GPIO32</td>
+<td>TFT_RST</td>
+<td>RST</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>GPIO12</td>
+<td>TFT_D0</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td>GPIO13</td>
+<td>TFT_D1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>GPIO26</td>
+<td>TFT_D2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8-bit parallel data</td>
+<td>GPIO25</td>
+<td>TFT_D3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td>GPIO17</td>
+<td>TFT_D4</td>
+<td>D4</td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td>GPIO16</td>
+<td>TFT_D5</td>
+<td>D5</td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td>GPIO27</td>
+<td>TFT_D6</td>
+<td>D6</td>
+</tr>
+<tr>
+<td>13</td>
+<td></td>
+<td>GPIO14</td>
+<td>TFT_D7</td>
+<td>D7</td>
+</tr>
+<tr>
+<td>14-21</td>
+<td>Not used, don't connect</td>
+<td>NC</td>
+<td></td>
+<td>D8-15</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Module Ground</td>
+<td>GND</td>
+<td></td>
+<td>GND</td>
+</tr>
+<tr>
+<td>23</td>
+<td>LED Backlight PWM</td>
+<td>GPIO5</td>
+<td>TFT_BCKL</td>
+<td>BL</td>
+</tr>
+<tr>
+<td>24-25</td>
+<td>Module Power</td>
+<td>-</td>
+<td></td>
+<td>VDD</td>
+</tr>
+<tr>
+<td>26-27</td>
+<td>Module Ground</td>
+<td>GND</td>
+<td></td>
+<td>GND</td>
+</tr>
+<tr>
+<td>28-29</td>
+<td>Not connected</td>
+<td></td>
+<td></td>
+<td>NC</td>
+</tr>
+<tr>
+<td>30</td>
+<td>IO, I²C SDA</td>
+<td>GPIO21</td>
+<td>TOUCH_SDA</td>
+<td>SDA</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Touch Chip Interrupt</td>
+<td>GPIO34</td>
+<td>TOUCH_IRQ</td>
+<td>INT</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Not connected</td>
+<td></td>
+<td></td>
+<td>NC</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Touch IC Reset</td>
+<td>3.3V</td>
+<td></td>
+<td>CRST</td>
+</tr>
+<tr>
+<td>34</td>
+<td>IO, I²C SCL</td>
+<td>GPIO22</td>
+<td>TOUCH_SCL</td>
+<td>SCL</td>
+</tr>
+</tbody>
+</table>
+<p>You need to desolder the 0R resistor on the back side of the panel from the 16-bit position. Then resolder the 0R resistor in the 8-bit position.</p>
+<p>There are no pins shared between the touch controller and the lcd controller.</p>
+<h2 id="lcd-configuration">LCD Configuration<a class="headerlink" href="#lcd-configuration" title="Permanent link">#</a></h2>
+<p>The <code>lcd_config.ini</code> file specifies the different properties of the display, except for the actual pin configuration:</p>
+<pre><code class="ini">mrb3511 =
+    -D ESP32_PARALLEL=1
+    -D ILI9488_DRIVER=1
+    -D TFT_WIDTH=320
+    -D TFT_HEIGHT=480
+    -D TFT_ROTATION=0 ; 0=0, 1=90, 2=180 or 3=270 degree
+    -D USER_SETUP_LOADED=1
+    -D TOUCH_DRIVER=911 ; GT911 Capacitive touch panel driver
+    -D SUPPORT_TRANSACTIONS
+</code></pre>
+
+<h2 id="hasp-build_flags">HASP build_flags<a class="headerlink" href="#hasp-build_flags" title="Permanent link">#</a></h2>
+<p>Specify the LCD Configuration to use and define the 17 GPIOs in the environment build flags:</p>
+<pre><code>build_flags =
+    ${flags.esp32_flags}
+; -- TFT_eSPI build options ------------------------
+    ${lcd.mrb3511}
+    -D TFT_BCKL=5  ;None, configurable via web UI (e.g. 2 for D4)
+    -D TFT_CS=33  ; Chip select control pin
+    -D TFT_DC=15  ; =RS; Data Command control pin - must use a pin in the range 0-31
+    -D TFT_RST=32 ; Reset pin
+    -D TFT_WR=4   ; Write strobe control pin - must use a pin in the range 0-31
+    -D TFT_RD=2
+    -D TFT_D0=12  ; Must use pins in the range 0-31 for the data bus
+    -D TFT_D1=13  ; so a single register write sets/clears all bits
+    -D TFT_D2=26
+    -D TFT_D3=25
+    -D TFT_D4=17
+    -D TFT_D5=16
+    -D TFT_D6=27
+    -D TFT_D7=14
+    -D TOUCH_SDA=21
+    -D TOUCH_SCL=22
+    -D TOUCH_IRQ=34   ; use 34-39 as these are input only pins
+    -D TOUCH_RST=-1   ; not used, connected to 3.3V
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../Waveshare_40RPi_LCD%28C%29/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Waveshare_40RPi_LCD%28C%29/" class="btn btn-xs btn-link">
+        Waveshare 40RPi LCD(C)
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../MHS4001/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../MHS4001/" class="btn btn-xs btn-link">
+        MHS4001
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/displays/MRB3511.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

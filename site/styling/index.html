@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Styling - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Styling Properties", url: "#_top", children: [
+          ]},
+          {title: "Object Types", url: "#object-types", children: [
+          ]},
+          {title: "Button", url: "#button", children: [
+          ]},
+          {title: "Attribute groups", url: "#attribute-groups", children: [
+              {title: "Padding and Margin", url: "#padding-and-margin" },
+              {title: "Background", url: "#background" },
+              {title: "Border", url: "#border" },
+              {title: "Shadow", url: "#shadow" },
+              {title: "Value", url: "#value" },
+              {title: "Text", url: "#text" },
+              {title: "Line", url: "#line" },
+              {title: "Image", url: "#image" },
+              {title: "Outline", url: "#outline" },
+              {title: "Pattern", url: "#pattern" },
+              {title: "Transitions", url: "#transitions" },
+              {title: "Checkbox", url: "#checkbox" },
+              {title: "Text Label", url: "#text-label" },
+              {title: "Spinner", url: "#spinner" },
+              {title: "Colorpicker", url: "#colorpicker" },
+              {title: "Slider", url: "#slider" },
+              {title: "Double Slider", url: "#double-slider" },
+              {title: "Gauge", url: "#gauge" },
+              {title: "Progressbar", url: "#progressbar" },
+              {title: "Switch", url: "#switch" },
+              {title: "LED Indicator", url: "#led-indicator" },
+              {title: "Dropdown List", url: "#dropdown-list" },
+              {title: "Roller", url: "#roller" },
+          ]},
+          {title: "Example file", url: "#example-file", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../objects/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h2 id="styling-properties">Styling Properties<a class="headerlink" href="#styling-properties" title="Permanent link">#</a></h2>
+<p>You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.</p>
+<h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">#</a></h2>
+<p>Each object type is an ID that indicates which object type that line represents.
+Besides the common properties listed above, each object type can have specific properties.</p>
+<h2 id="button">Button<a class="headerlink" href="#button" title="Permanent link">#</a></h2>
+<p><strong>objid:10</strong></p>
+<p>A button can have 3 states. All the following parameters can be appended by a number to change the appearance of that state only:
+- 0: Released
+- 1: Pressed
+- 2: Disabled</p>
+<p>Or if the postfix index is ommited, then the default state 0 or Pressed is used.</p>
+<p>A button can accept the attributes of the following groups:
+- Background
+- Border
+- Outline
+- Shadow
+- Value</p>
+<h2 id="attribute-groups">Attribute groups<a class="headerlink" href="#attribute-groups" title="Permanent link">#</a></h2>
+<h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">#</a></h3>
+<p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space".Padding inner set the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
+<p>Objects use them to set spacing. See the documentation of the objects for the details.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pad_top</td>
+<td>int</td>
+<td>Set the padding on the top</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_bottom</td>
+<td>int</td>
+<td>Set the padding on the bottom</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_left</td>
+<td>int</td>
+<td>Set the padding on the left</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_right</td>
+<td>int</td>
+<td>Set the padding on the right</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pad_inner</td>
+<td>int</td>
+<td>Set the padding inside the object between children</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_top</td>
+<td>int</td>
+<td>Set the margin on the top</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_bottom</td>
+<td>int</td>
+<td>Set the margin on the bottom</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_left</td>
+<td>int</td>
+<td>Set the margin on the left</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>margin_right</td>
+<td>int</td>
+<td>Set the margin on the right</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bg_opa</td>
+<td>byte</td>
+<td>no</td>
+<td>""</td>
+<td>The background opacity level</td>
+</tr>
+<tr>
+<td>bg_color</td>
+<td>color</td>
+<td>no</td>
+<td>true</td>
+<td>The background color</td>
+</tr>
+<tr>
+<td>bg_grad_color</td>
+<td>color</td>
+<td>no</td>
+<td>0</td>
+<td>The background gradient color</td>
+</tr>
+<tr>
+<td>bg_grad_dir</td>
+<td>[0..2]</td>
+<td>no</td>
+<td>expand</td>
+<td>0 = None, 1 = Horizontal, 2 = Vertical</td>
+</tr>
+<tr>
+<td>bg_grad_stop</td>
+<td>byte</td>
+<td>no</td>
+<td>expand</td>
+<td>Specifies where the gradient should stop. 0: at left/top most position, 255: at right/bottom most position. Default value: 255.</td>
+</tr>
+<tr>
+<td>bg_main_stop</td>
+<td>byte</td>
+<td>no</td>
+<td>expand</td>
+<td>Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position. Default value: 0.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="border">Border<a class="headerlink" href="#border" title="Permanent link">#</a></h3>
+<p>The border is drawn on top of the background. It has radius rounding.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border_color</td>
+<td>color</td>
+<td>Specifies the color of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_opa</td>
+<td>byte</td>
+<td>Specifies opacity of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_width</td>
+<td>byte</td>
+<td>Set the width of the border</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_side</td>
+<td>byte</td>
+<td>Specifies which sides of the border to draw. Can be 0=LV_BORDER_SIDE_NONE/1=LEFT/2=RIGHT/4=TOP/8=BOTTOM/15=FULL. A sum of these values is also possible to select specific sides.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>border_post</td>
+<td>bool</td>
+<td>If <code>true</code> the border will be drawn after all children have been drawn.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="shadow">Shadow<a class="headerlink" href="#shadow" title="Permanent link">#</a></h3>
+<p>The shadow is a blurred area under the object.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shadow_color</td>
+<td>color</td>
+<td>Specifies the color of the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_opa</td>
+<td>byte</td>
+<td>Specifies opacity of the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_width</td>
+<td>int16</td>
+<td>Set the width (blur size) of the outline</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_ofs_x</td>
+<td>int16</td>
+<td>Set the an X offset for the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_ofs_y</td>
+<td>int16</td>
+<td>Set the an Y offset for the shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shadow_spread</td>
+<td>byte</td>
+<td>make the shadow larger than the background in every direction by this value</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">#</a></h3>
+<p>Value is an arbitrary text drawn to the background. It can be a lightweighted replacement of creating label objects.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value_str</td>
+<td>string</td>
+<td>Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_color</td>
+<td>color</td>
+<td>Color of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_opa</td>
+<td>byte</td>
+<td>Opacity level of the text [0-255]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_font</td>
+<td>byte</td>
+<td>The font ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_letter_space</td>
+<td>int</td>
+<td>Letter space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_line_space</td>
+<td>int</td>
+<td>Line space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_align</td>
+<td>align</td>
+<td>Alignment of the text. Can be LV_ALIGN_.... Default value: LV_ALIGN_CENTER.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_ofs_x</td>
+<td>int</td>
+<td>X offset from the original position of the alignment</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value_ofs_y</td>
+<td>int</td>
+<td>Y offset from the original position of the alignment</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">#</a></h3>
+<p>Properties for textual object.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text_color</td>
+<td>color</td>
+<td>Color of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_opa</td>
+<td>byte</td>
+<td>Opacity level of the text [0-255]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_font</td>
+<td>byte</td>
+<td>Font ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_letter_space</td>
+<td>int</td>
+<td>Letter space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_line_space</td>
+<td>int</td>
+<td>Line space of the text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_decor</td>
+<td>byte</td>
+<td>Add text decoration. 0=None, 1=Underline, 2=Strikethrough, 3=Underline&amp;Strikethrough</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text_sel_color</td>
+<td>color</td>
+<td>Set background color of text selection</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="line">Line<a class="headerlink" href="#line" title="Permanent link">#</a></h3>
+<p>n/a</p>
+<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link">#</a></h3>
+<p>n/a</p>
+<h3 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">#</a></h3>
+<p>n/a</p>
+<h3 id="pattern">Pattern<a class="headerlink" href="#pattern" title="Permanent link">#</a></h3>
+<p>n/a</p>
+<h3 id="transitions">Transitions<a class="headerlink" href="#transitions" title="Permanent link">#</a></h3>
+<p>n/a</p>
+<h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">#</a></h3>
+<p><strong>objid:11</strong></p>
+<p><img alt="lv_checkbox" src="../assets/images/objects/lv_ex_checkbox_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The value: 1 for checked, 0 for unchecked</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>"Checkbox"</td>
+<td>The label of the checkbox</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text-label">Text Label<a class="headerlink" href="#text-label" title="Permanent link">#</a></h3>
+<p><strong>objid:12</strong></p>
+<p><img alt="lv_label" src="../assets/images/objects/lv_ex_label_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>"Text"</td>
+<td>The text of the label</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>no</td>
+<td>expand</td>
+<td>The wrapping mode of long text labels</td>
+</tr>
+</tbody>
+</table>
+<p>Possible wrapping modes are: expand, break, dots, scroll and loop</p>
+<pre><code class="json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
+</code></pre>
+
+<h3 id="spinner">Spinner<a class="headerlink" href="#spinner" title="Permanent link">#</a></h3>
+<p><strong>objid:21</strong></p>
+<p><img alt="lv_spinner" src="../assets/images/objects/lv_ex_spinner_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>int16</td>
+<td>no</td>
+<td>1000</td>
+<td>The time for 1 furn in ms</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+<td>0 for clockwise, 1 for counter-clockwise</td>
+</tr>
+<tr>
+<td>thickness</td>
+<td>int16</td>
+<td>no</td>
+<td>dep. on theme</td>
+<td>The width of the arcline</td>
+</tr>
+</tbody>
+</table>
+<h3 id="colorpicker">Colorpicker<a class="headerlink" href="#colorpicker" title="Permanent link">#</a></h3>
+<p><strong>objid:20</strong></p>
+<p><img alt="lv_cpicker" src="../assets/images/objects/lv_ex_cpicker_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>uint16</td>
+<td>no</td>
+<td>0</td>
+<td>The selected color in RBG565 format</td>
+</tr>
+<tr>
+<td>color</td>
+<td>hex string</td>
+<td>no</td>
+<td>0</td>
+<td>The selected color in html format #rrggbb</td>
+</tr>
+<tr>
+<td>rect</td>
+<td>boolean</td>
+<td>no</td>
+<td>false</td>
+<td>True if the color picker has a rectangular shape like a slider. False for a circular shape.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slider">Slider<a class="headerlink" href="#slider" title="Permanent link">#</a></h3>
+<p><strong>objid:30</strong></p>
+<p><img alt="lv_slider" src="../assets/images/objects/lv_ex_slider_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="double-slider">Double Slider<a class="headerlink" href="#double-slider" title="Permanent link">#</a></h3>
+<p><strong>objid:30</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gauge">Gauge<a class="headerlink" href="#gauge" title="Permanent link">#</a></h3>
+<p><strong>objid:31</strong></p>
+<p><img alt="lv_gauge" src="../assets/images/objects/lv_ex_gauge_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="progressbar">Progressbar<a class="headerlink" href="#progressbar" title="Permanent link">#</a></h3>
+<p><strong>objid:32</strong></p>
+<p><img alt="lv_bar" src="../assets/images/objects/lv_ex_bar_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="switch">Switch<a class="headerlink" href="#switch" title="Permanent link">#</a></h3>
+<p><strong>objid:40</strong></p>
+<p><img alt="lv_switch" src="../assets/images/objects/lv_ex_switch_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The value: 1 for on, 0 for off</td>
+</tr>
+</tbody>
+</table>
+<h3 id="led-indicator">LED Indicator<a class="headerlink" href="#led-indicator" title="Permanent link">#</a></h3>
+<p><strong>objid:41</strong></p>
+<p><img alt="lv_led" src="../assets/images/objects/lv_ex_led_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>val</td>
+<td>byte</td>
+<td>no</td>
+<td>0</td>
+<td>The brightness of the indicator 0-255</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dropdown-list">Dropdown List<a class="headerlink" href="#dropdown-list" title="Permanent link">#</a></h3>
+<p><strong>objid:50</strong></p>
+<p><img alt="lv_dropdown" src="../assets/images/objects/lv_ex_dropdown_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td>The items separated by \n</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The number of the selected item</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td><em>Read-only</em> The text of the selected item</td>
+</tr>
+</tbody>
+</table>
+<p>To change the currently selected item, use the <code>val</code> attribute.
+To change the items in the list, use the <code>options</code> attribute.</p>
+<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
+<h3 id="roller">Roller<a class="headerlink" href="#roller" title="Permanent link">#</a></h3>
+<p><strong>objid:51</strong></p>
+<p><img alt="lv_roller" src="../assets/images/objects/lv_ex_roller_1.png" />{: .align-center}</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td>The items separated by \n</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>The number of the selected item</td>
+</tr>
+<tr>
+<td>txt</td>
+<td>string</td>
+<td>no</td>
+<td>""</td>
+<td><em>Read-only</em> The text of the selected item</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>int8</td>
+<td>no</td>
+<td>3</td>
+<td>The number ow rows that are visible</td>
+</tr>
+</tbody>
+</table>
+<p>?&gt; A roller does not use the <code>h</code> attribute to set its height, but uses the rows to set the visible number of rows instead.</p>
+<p>To change the currently selected item, use the <code>val</code> attribute.
+To change the items in the list, use the <code>options</code> attribute.</p>
+<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
+<h2 id="example-file">Example file<a class="headerlink" href="#example-file" title="Permanent link">#</a></h2>
+<p>This is a real-world demo <code>pages.jsonl</code> file:</p>
+<pre><code class="json">{&quot;comment&quot;:&quot;---------- Page 0 ----------&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;page&quot;:0,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;TRUE&quot;,&quot;txt&quot;:&quot;Toggle Me \uf0a6&quot;}
+{&quot;objid&quot;:11,&quot;id&quot;:2,&quot;page&quot;:0,&quot;x&quot;:10,&quot;y&quot;:100,&quot;w&quot;:220,&quot;h&quot;:55,&quot;txt&quot;:&quot;Checkbox 1&quot;}
+{&quot;objid&quot;:12,&quot;id&quot;:3,&quot;page&quot;:0,&quot;x&quot;:10,&quot;y&quot;:10,&quot;w&quot;:220,&quot;h&quot;:30,&quot;txt&quot;:&quot;Text Label 1&quot;,&quot;align&quot;:1,&quot;padh&quot;:50}
+{&quot;objid&quot;:40,&quot;id&quot;:4,&quot;page&quot;:0,&quot;x&quot;:70,&quot;y&quot;:205,&quot;w&quot;:100,&quot;h&quot;:55}
+{&quot;objid&quot;:41,&quot;id&quot;:5,&quot;page&quot;:0,&quot;x&quot;:10,&quot;y&quot;:205,&quot;w&quot;:55,&quot;h&quot;:55}
+{&quot;objid&quot;:50,&quot;id&quot;:6,&quot;page&quot;:0,&quot;x&quot;:10,&quot;y&quot;:150,&quot;w&quot;:150,&quot;txt&quot;:&quot;\uf007 Option 1\n\uf007 Option 2\n\uf007 Option 3&quot;}
+{&quot;objid&quot;:21,&quot;id&quot;:7,&quot;page&quot;:0,&quot;x&quot;:165,&quot;y&quot;:140,&quot;w&quot;:70,&quot;h&quot;:70}
+{&quot;comment&quot;:&quot;---------- Page 1 ----------&quot;}
+{&quot;objid&quot;:30,&quot;id&quot;:1,&quot;page&quot;:1,&quot;x&quot;:10,&quot;y&quot;:170,&quot;w&quot;:200,&quot;h&quot;:50}
+{&quot;objid&quot;:31,&quot;id&quot;:3,&quot;page&quot;:1,&quot;x&quot;:13,&quot;y&quot;:10,&quot;w&quot;:100,&quot;h&quot;:100}
+{&quot;objid&quot;:32,&quot;id&quot;:4,&quot;page&quot;:1,&quot;x&quot;:10,&quot;y&quot;:110,&quot;w&quot;:200,&quot;h&quot;:50}
+{&quot;objid&quot;:33,&quot;id&quot;:5,&quot;page&quot;:1,&quot;x&quot;:127,&quot;y&quot;:10,&quot;w&quot;:100,&quot;h&quot;:100}
+{&quot;objid&quot;:12,&quot;id&quot;:10,&quot;page&quot;:1,&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:70,&quot;h&quot;:50,&quot;parentid&quot;:5,&quot;txt&quot;:&quot;\uf00c OK&quot;}
+{&quot;comment&quot;:&quot;---------- Page 2 ----------&quot;}
+{&quot;objid&quot;:20,&quot;id&quot;:1,&quot;page&quot;:2,&quot;x&quot;:20,&quot;y&quot;:0,&quot;w&quot;:200,&quot;h&quot;:200}
+{&quot;objid&quot;:20,&quot;id&quot;:2,&quot;page&quot;:2,&quot;x&quot;:20,&quot;y&quot;:210,&quot;w&quot;:200,&quot;h&quot;:50,&quot;rect&quot;:&quot;TRUE&quot;}
+{&quot;comment&quot;:&quot;---------- Page 3 ----------&quot;}
+{&quot;objid&quot;:50,&quot;id&quot;:1,&quot;page&quot;:3,&quot;x&quot;:10,&quot;y&quot;:10,&quot;w&quot;:220,&quot;txt&quot;:&quot;Spring\nSummer\nAutumn\nWinter&quot;}
+{&quot;objid&quot;:51,&quot;id&quot;:2,&quot;page&quot;:3,&quot;x&quot;:40,&quot;y&quot;:50,&quot;w&quot;:160,&quot;txt&quot;:&quot;2018\n2019\n2020\n2021\n2022\n2023\n2024&quot;,&quot;rows&quot;:4}
+{&quot;comment&quot;:&quot;---------- Page 254 ----------&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;page&quot;:254,&quot;x&quot;:0,&quot;y&quot;:270,&quot;w&quot;:75,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF053 Prev&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:2,&quot;page&quot;:254,&quot;x&quot;:75,&quot;y&quot;:270,&quot;w&quot;:90,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF015 Home&quot;}
+{&quot;objid&quot;:10,&quot;id&quot;:3,&quot;page&quot;:254,&quot;x&quot;:165,&quot;y&quot;:270,&quot;w&quot;:75,&quot;h&quot;:50,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;Next \uF054&quot;}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../example-pages/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../example-pages/" class="btn btn-xs btn-link">
+        Example pages
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../objects/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../objects/" class="btn btn-xs btn-link">
+        Objects
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/styling.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+static_templates: [404.html]
+search_index_only: false
+include_search_page: false

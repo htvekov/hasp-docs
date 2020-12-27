@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Commands - HASP - Open Hardware edition</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pages", url: "#_top", children: [
+          ]},
+          {title: "Backlight", url: "#backlight", children: [
+          ]},
+          {title: "System commands", url: "#system-commands", children: [
+          ]},
+          {title: "Configuration Settings", url: "#configuration-settings", children: [
+              {title: "Wifi", url: "#wifi" },
+              {title: "MQTT", url: "#mqtt" },
+              {title: "Config/xxx", url: "#configxxx" },
+          ]},
+          {title: "Multiple Commands", url: "#multiple-commands", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../faq/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../faq/" class="btn btn-xs btn-link">
+        FAQ
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../wifi-setup/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../wifi-setup/" class="btn btn-xs btn-link">
+        Wi-Fi Setup
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>Commands are not related to an object, but can get or set global properties or invoke system commands on the device.</p>
+<p>Commands can be issued via the Serial Commandline, Telnet Commandline or MQTT.
+For MQTT, use the <code>hasp/&lt;platename&gt;/command</code> topic with payload <code>&lt;keyword&gt; &lt;parameter(s)&gt;</code></p>
+<p>Here is a list of all the recaognized command keywords:</p>
+<h2 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">#</a></h2>
+<p><code>page</code> [0-11]</p>
+<p>Switches the display to show the objects from a diferent page.</p>
+<p><code>clearpage</code> [0-11,254]</p>
+<p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
+<p>To delete individual objects, you can issue the <code>p[x].b[y].delete</code> command.</p>
+<h2 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">#</a></h2>
+<p><code>dim</code> [0-100] (alias: <code>brightness</code>)</p>
+<p>Sets the level of the backlight from 0 to 100%, where 0% is off and 100% is full brightness.</p>
+<p>Example: <code>dim 50</code> sets the display to half the brightness.</p>
+<p>Tip: this can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity.</p>
+<p><code>light</code></p>
+<p>Switches the backlight on or off, independent of the set dim level.
+Turning the backlight on will restore the brightness to the previous dim level.</p>
+<p>Example: <code>light on</code> acepted values: on/off, true/false, 0/1, yes/no</p>
+<p>Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.</p>
+<p>?&gt; The <code>dim</code>and <code>light</code> command depends on a GPIO pin to be connected to control the the TFT_LED backlight via a transistor.</p>
+<p><code>wakeup</code></p>
+<p>Clears the idle state of the device and publishes an <code>state/idle = OFF</code> status message. It resets the idle counter as if a touch event occured on the devide. This is helpfull e.g. when you want to wake up the display when an external event has occured, like a PIR motion sensor.</p>
+<h2 id="system-commands">System commands<a class="headerlink" href="#system-commands" title="Permanent link">#</a></h2>
+<p><code>calibrate</code></p>
+<p>Start on-screen touch calibration.</p>
+<p>?&gt; You need to issue a soft reboot command to save the new calibration settings. If you do a hard reset of the device, the calibration settings will be lost.</p>
+<p><code>screenshot</code></p>
+<p>Saves a picture of the current screen to the flash filesystem. You can retrieve it via http://&gt;ip-address&lt;/screenshot.bmp
+This can be handy for bug reporting or documentation.</p>
+<p>The previous screenshot is overwritten.</p>
+<p><code>statusupdate</code></p>
+<p>Reports the status of the MCU. The response will be posted to the state topic:</p>
+<pre><code class="json">    &quot;statusupdate&quot;: {
+        &quot;status&quot;: &quot;available&quot;,
+        &quot;espVersion&quot;: &quot;0.0.6&quot;,
+        &quot;espUptime&quot;: 124,
+        &quot;signalStrength&quot;: -72,
+        &quot;haspIP&quot;: &quot;10.1.0.148&quot;,
+        &quot;heapFree&quot;: 5912,
+        &quot;heapFragmentation&quot;: 7,
+        &quot;espCore&quot;: &quot;2_6_3&quot;
+    }
+</code></pre>
+
+<p><code>reboot</code> (alias: <code>restart</code>)</p>
+<p>Saves any changes in the configuration file and reboots the device.</p>
+<p><code>factoryreset</code></p>
+<p>Clear the filesystem and eeprom and reboot the device in its initial state.</p>
+<p>Warning: There is no confirmation prompt nor undo function!</p>
+<h2 id="configuration-settings">Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permanent link">#</a></h2>
+<h3 id="wifi">Wifi<a class="headerlink" href="#wifi" title="Permanent link">#</a></h3>
+<p><code>ssid</code></p>
+<p>Sets network name of the access point to connect to.</p>
+<p><code>pass</code></p>
+<p>Sets the optional password for the access point to connect to.</p>
+<h3 id="mqtt">MQTT<a class="headerlink" href="#mqtt" title="Permanent link">#</a></h3>
+<p><code>hostname</code></p>
+<p>Sets the hostname of the device and mqtt topic for the node to <code>hasp/&lt;hostname&gt;/</code></p>
+<p><code>mqtthost</code></p>
+<p>Sets the hostname of the mqtt broker.</p>
+<p><code>mqttport</code></p>
+<p>Sets the port of the mqtt broker.</p>
+<p><code>mqttuser</code></p>
+<p>Sets the optional username for the mqtt broker.</p>
+<p><code>mqttpass</code></p>
+<p>Sets the optional password for the mqtt broker.</p>
+<h3 id="configxxx">Config/xxx<a class="headerlink" href="#configxxx" title="Permanent link">#</a></h3>
+<p>You can get or set the configuration of a hasp-lvgl submodule in json format.
+To get the configuration, the command <code>config/&amp;gt;submodule&amp;lt;</code>. 
+The result will be published to <code>hasp/plate35/state/config</code>. Passwords will be omited from the result.</p>
+<pre><code>config/wifi
+config/mqtt
+config/http
+config/mdns
+config/hasp
+config/gui
+config/debug
+</code></pre>
+
+<p>To update the configuration simple issue the same command <code>config/&amp;gt;submodule&amp;lt;</code> with updated json payload.</p>
+<h2 id="multiple-commands">Multiple Commands<a class="headerlink" href="#multiple-commands" title="Permanent link">#</a></h2>
+<p><code>json</code></p>
+<p>When you want to execute multiple commands in one payload, you can use the json command to create an array of commands.</p>
+<p>Each command is an element in this array of strings:</p>
+<pre><code class="json">[&quot;page 5&quot;,&quot;dim 50&quot;,&quot;light on&quot;,&quot;statusupdate&quot;]
+</code></pre>
+
+<p>The commands are interpreted and processed sequentially.</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../faq/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../faq/" class="btn btn-xs btn-link">
+        FAQ
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../wifi-setup/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../wifi-setup/" class="btn btn-xs btn-link">
+        Wi-Fi Setup
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-lvgl/edit/master/docs/commands.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

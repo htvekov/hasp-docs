@@ -1,13 +1,16 @@
+# Wifi Settings
 
 When using a wireless network adapter, you need to configure the SSID to connect.
 
-### Wifi Settings
+## Web UI
 
-#### SSID
+![WiFi Settings](../assets/images/settings/wifi_settings.png "WiFi Settings")
+
+### SSID
 
 The name of the access point to connect to.
 
-#### Password
+### Password
 
 Optional password for the access point, if required.
 

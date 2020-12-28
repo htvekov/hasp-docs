@@ -1,3 +1,4 @@
+# MQTT Settings
 
 All communication between **HASP Open Display** and your Home Automation service is done over MQTT. You will need an already working MQTT Broker.
 
@@ -6,26 +7,26 @@ All communication between **HASP Open Display** and your Home Automation service
 ![MQTT Settings](../assets/images/settings/mqtt_settings.png "MQTT Settings")
 
 
-### MQTT Settings
+## Web UI
 
-##### HASP Node Name
+### HASP Node Name
 The *Node Name* is the unique identifier of your device on your MQTT Broker.
 
 For example, setting the *Node Name* to **plate35** will make the device listen and communicate on the main topic **hasp/plate35/**
 
-##### Group Name
+### Group Name
 The *Group Name* is the unique identifier for a **Group** of devices.
 
 For example, the default *Group Name* is **plates**. This will make all devices in this group listen on the main topic **hasp/plates/**
 This way you can send a command to all devices in the group at the same moment. Each devices will only respond on their own main *Node Name* topic.
 
-##### MQTT Broker
+### MQTT Broker
 Set the IP or hostname of your MQTT Broker
 
-##### MQTT Port
+### MQTT Port
 Set the port for your MQTT Broker
 
-##### MQTT User and Password
+### MQTT User and Password
 Enter credentials if your *MQTT Broker* requires a Username and Password.
 
 ---

@@ -1,11 +1,8 @@
+# Debug Settings
 
-You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.
+## Web UI
 
-![HASP Settings](../assets/images/settings/hasp_settings.png "HASP Settings")
-
-### HASP Settings
-
-##### Upload
+![Debug Settings](../assets/images/settings/debug_settings.png "Debug Settings")
 
 With the upload function you can upload 2 types of files
  * .jsonl
@@ -14,20 +11,20 @@ With the upload function you can upload 2 types of files
  * .zi
     These are font files used in the Nextion/TJC HMI disp.
 
-##### UI Theme and Hue
+### Serial Speed
 
 Select one of the built-in themes to select the general style for the HASP interface.
 With the Hue slider you can select the base color for the built-in theme.
 
-##### Startup layout
+### Syslog Server
 
 Enter the filename of the .jsonl you have uploaded to enables the layout on startup.
 
-##### Startup Page
+### Syslog Port
 
 Select to what page the display should switch on startup.
 
-##### Startup brightness
+### Syslog Protocol
 
 Select the brightness level of the display on startup.
 *Please note that the display must support dim feature and GPIO for dim is set in display setup.*
@@ -35,4 +32,3 @@ Select the brightness level of the display on startup.
 ---
 
 Click 'Save Settings' to save you settings to the device. A restart is required to make the settings active. Navigate back to the Main Menu and click Restart to activate the settings.
-

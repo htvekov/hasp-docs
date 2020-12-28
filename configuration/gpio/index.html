@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Gpio - HASP - Open Hardware edition</title>
+    <title>GPIO Settings - HASP - Open Hardware edition</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "HASP Settings", url: "#_top", children: [
+          {title: "GPIO Settings", url: "#_top", children: [
+              {title: "Web UI", url: "#web-ui" },
           ]},
         ];
 
@@ -64,7 +65,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../debug/" class="btn btn-xs btn-link">
-        Debug
+        Debug Settings
       </a>
     </div>
     
@@ -80,26 +81,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <p>You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.</p>
-<p><img alt="HASP Settings" src="../../assets/images/settings/hasp_settings.png" title="HASP Settings" /></p>
-<h3 id="hasp-settings">HASP Settings<a class="headerlink" href="#hasp-settings" title="Permanent link">~</a></h3>
-<h5>Upload</h5>
-<p>With the upload function you can upload 2 types of files
- * .jsonl
-    This file contains the layout for the pages
-    See 'pages' section for more information on this file
- * .zi
-    These are font files used in the Nextion/TJC HMI disp.</p>
-<h5>UI Theme and Hue</h5>
-<p>Select one of the built-in themes to select the general style for the HASP interface.
-With the Hue slider you can select the base color for the built-in theme.</p>
-<h5>Startup layout</h5>
-<p>Enter the filename of the .jsonl you have uploaded to enables the layout on startup.</p>
-<h5>Startup Page</h5>
-<p>Select to what page the display should switch on startup.</p>
-<h5>Startup brightness</h5>
-<p>Select the brightness level of the display on startup.
-<em>Please note that the display must support dim feature and GPIO for dim is set in display setup.</em></p>
+    <h1 id="gpio-settings">GPIO Settings<a class="headerlink" href="#gpio-settings" title="Permanent link">~</a></h1>
+<h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link">~</a></h2>
+<p>You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.</p>
+<p><img alt="GPIO Settings" src="../../assets/images/settings/gpio_addpin.png" title="GPIO Add New Pin" /></p>
 <hr />
 <p>Click 'Save Settings' to save you settings to the device. A restart is required to make the settings active. Navigate back to the Main Menu and click Restart to activate the settings.</p>
 
@@ -119,7 +104,7 @@ With the Hue slider you can select the base color for the built-in theme.</p>
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../debug/" class="btn btn-xs btn-link">
-        Debug
+        Debug Settings
       </a>
     </div>
     

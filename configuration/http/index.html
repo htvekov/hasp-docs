@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Http - HASP - Open Hardware edition</title>
+    <title>MQTT Settings - HASP - Open Hardware edition</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -32,7 +32,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Setup HTTP User Athentication", url: "#_top", children: [
+          {title: "MQTT Settings", url: "#_top", children: [
+              {title: "Web UI", url: "#web-ui" },
           ]},
         ];
 
@@ -64,7 +65,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../wifi/" class="btn btn-xs btn-link">
-        Wifi
+        Wifi Settings
       </a>
     </div>
     
@@ -80,13 +81,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h3 id="setup-http-user-athentication">Setup HTTP User Athentication<a class="headerlink" href="#setup-http-user-athentication" title="Permanent link">~</a></h3>
+    <h1 id="mqtt-settings">MQTT Settings<a class="headerlink" href="#mqtt-settings" title="Permanent link">~</a></h1>
 <p>To restrict access to the web user interface you can set a Username and Password.</p>
-<p><img alt="HTTP configuration" src="../../assets/images/settings/configuration.png" /></p>
-<p>Click 'Save Settings' to activate.</p>
-<ul>
-<li>Please note that all http communication is unencrypted and that this is only a simple security measure</li>
-</ul>
+<h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link">~</a></h2>
+<p><img alt="HTTP configuration" src="../../assets/images/settings/http_settings.png" /></p>
+<p>Click 'Save Settings' to activate immediately. If the username and/or password have been changed you need to enter the new values.</p>
+<p>!!! note "Note" Please note that all http communication is unencrypted and that this is only a simple security measure</p>
 
   <br>
     
@@ -104,7 +104,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
       <a href="../wifi/" class="btn btn-xs btn-link">
-        Wifi
+        Wifi Settings
       </a>
     </div>
     

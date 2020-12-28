@@ -1,3 +1,4 @@
+![Header](assets/images/hasp/header.png)
 <h1>HASP - Open Hardware edition</h1>
 
 This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
@@ -28,35 +29,8 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 | PNG images              | :x: no | :grey_question: tbd | :grey_question: tbd 
 | Network                 | :white_check_mark: Wi-Fi | :white_check_mark: Wi-Fi | :white_check_mark: Ethernet
 
-## Cloning
+## Support
 
-Make sure to add the `--recursive` parameter when cloning the project. Otherwise git will not download the required submodules in the `/lib` subdirectory.
-
-```bash
-git clone --recursive https://github.com/fvanroie/hasp-lvgl
-```
-
-If you already cloned hasp-lvgl without the submodules, you can fetch the submodules seperately using:
-
-```bash
-git submodule update --init --recursive
-```
-
-To build a defierent branch use:
-
-```bash
-git clone --recursive https://github.com/fvanroie/hasp-lvgl
-cd hasp-lvgl
-git checkout 0.1.0-dev
-git submodule update --init --recursive
-```
-
-## Getting Started
-
-Check out the [wiki](https://github.com/fvanroie/hasp-lvgl/wiki) for how-to's, information and frequently asked questions.
-
-Support
----------------------------
 For support using hasp-lvgl, please join the [#hasp-lvgl channel][6] on Discord.
 
 

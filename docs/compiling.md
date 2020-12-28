@@ -30,3 +30,9 @@ Open the project folder in Visual Studio Code. This will automatically install a
 ## Create a configuration
 
 ## Compile Environment
+
+## Development
+
+### Block Diagram
+
+![Block Diagram](assets/images/block-diagram.svg)

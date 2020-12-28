@@ -18,7 +18,7 @@ p[0].b[1].value_font=8
 
 These icons are included in the built-in font sizes:
 
-|Symbol|UTF-8|Desciption|Symbol|UTF-8|Description
+|Icon|UTF-8|Desciption|Icon|UTF-8|Description
 |:--:|:------:|----|:--:|:-----:|-----------
 | <i class="fa fa-music"></i> | F001| music	| <i class="fa fa-random"></i> | F074| random
 | <i class="fa fa-film"></i> | F008| film	| <i class="fa fa-chevron-up"></i> | F077| chevron-up
@@ -30,10 +30,10 @@ These icons are included in the built-in font sizes:
 | <i class="fa fa-home"></i> | F015| home	| <i class="fa fa-cut"></i> | F0C4| cut
 | <i class="fa fa-download"></i> | F019| download	| <i class="fa fa-copy"></i> | F0C5| copy
 | <i class="fa fa-inbox"></i> | F01C| inbox	| <i class="fa fa-save"></i> | F0C7| save
-| <i class="fa fa-sync"></i> | F021| sync	| <i class="fa fa-bolt"></i> | F0E7| bolt
+| <i class="fa fa-refresh"></i> | F021| sync	| <i class="fa fa-bolt"></i> | F0E7| bolt
 | <i class="fa fa-volume-off"></i> | F026| volume-off	| <i class="fa fa-paste"></i> | F0EA| paste
 | <i class="fa fa-volume-down"></i> | F027| volume-down	| <i class="fa fa-bell"></i> | F0F3| bell
-| <i class="fa fa-volume-up"></i> | F028| volume-up	| <i class="fa fa-keyboard"></i> | F11C| keyboard
+| <i class="fa fa-volume-up"></i> | F028| volume-up	| <i class="fa fa-keyboard-o"></i> | F11C| keyboard
 | <i class="fa fa-image"></i> | F03E| image	| <i class="fa fa-location-arrow"></i> | F124| location-arrow
 | <i class="fa fa-step-backward"></i> | F048| step-backward	| <i class="fa fa-file"></i> | F15B| file
 | <i class="fa fa-play"></i> | F04B| play	| <i class="fa fa-wifi"></i> | F1EB| wifi
@@ -44,8 +44,8 @@ These icons are included in the built-in font sizes:
 | <i class="fa fa-chevron-left"></i> | F053| chevron-left	| <i class="fa fa-battery-empty"></i> | F244| battery-empty
 | <i class="fa fa-chevron-right"></i> | F054| chevron-right	| <i class="fa fa-usb"></i> | F287| usb
 | <i class="fa fa-plus"></i> | F067| plus	| <i class="fa fa-bluetooth"></i> | F293| bluetooth
-| <i class="fa fa-minus"></i> | F068| minus	| <i class="fa fa-pen"></i> | F304| pen
-| <i class="fa fa-eye"></i> | F06E| eye	| <i class="fa fa-trash-alt"></i> | F2ED| trash-alt
+| <i class="fa fa-minus"></i> | F068| minus	| <i class="fa fa-pencil"></i> | F304| pen
+| <i class="fa fa-eye"></i> | F06E| eye	| <i class="fa fa-trash"></i> | F2ED| trash-alt
 | <i class="fa fa-eye-slash"></i> | F070| eye-slash	| <i class="fa fa-backspace"></i> | F55A| backspace
 | <i class="fa fa-exclamation-triangle"></i> | F071| exclamation-triangle	| <i class="fa fa-sd-card"></i> | F7C2| sd-card
 
@@ -67,5 +67,5 @@ To ensure proper decoding the payload should be used with a `json` or `jsonl` co
 You can add a custom font by uploading it to the internal flash.
 Apply it as the default font on the Configuration > HASP Settings page.
 
-## FontAwesame Icons
+## FontAwesome Icons
 

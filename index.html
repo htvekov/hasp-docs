@@ -38,10 +38,6 @@
           ]},
           {title: "Features", url: "#features", children: [
           ]},
-          {title: "Cloning", url: "#cloning", children: [
-          ]},
-          {title: "Getting Started", url: "#getting-started", children: [
-          ]},
           {title: "Support", url: "#support", children: [
           ]},
         ];
@@ -222,7 +218,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1>HASP - Open Hardware edition</h1>
+    <p><img alt="Header" src="assets/images/hasp/header.png" /></p>
+<h1>HASP - Open Hardware edition</h1>
 
 <p>This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
 The <a href="https://github.com/aderusha/HASwitchPlate">original HASwitchPlate</a> project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
@@ -311,21 +308,6 @@ This rewrite removes the Nextion/TJC requirement by using the <a href="https://g
 </tr>
 </tbody>
 </table>
-<h2 id="cloning">Cloning<a class="headerlink" href="#cloning" title="Permanent link">~</a></h2>
-<p>Make sure to add the <code>--recursive</code> parameter when cloning the project. Otherwise git will not download the required submodules in the <code>/lib</code> subdirectory.</p>
-<pre><code class="language-bash">git clone --recursive https://github.com/fvanroie/hasp-lvgl
-</code></pre>
-<p>If you already cloned hasp-lvgl without the submodules, you can fetch the submodules seperately using:</p>
-<pre><code class="language-bash">git submodule update --init --recursive
-</code></pre>
-<p>To build a defierent branch use:</p>
-<pre><code class="language-bash">git clone --recursive https://github.com/fvanroie/hasp-lvgl
-cd hasp-lvgl
-git checkout 0.1.0-dev
-git submodule update --init --recursive
-</code></pre>
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">~</a></h2>
-<p>Check out the <a href="https://github.com/fvanroie/hasp-lvgl/wiki">wiki</a> for how-to's, information and frequently asked questions.</p>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">~</a></h2>
 <p>For support using hasp-lvgl, please join the <a href="https://discord.gg/VCWyuhF">#hasp-lvgl channel</a> on Discord.</p>
 
@@ -366,5 +348,5 @@ Edit on GitHub</a>
 </html>
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-12-28 02:29:14.120150+00:00
+Build Date UTC : 2020-12-28 02:29:58.875526+00:00
 -->

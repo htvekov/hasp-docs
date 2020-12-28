@@ -1,6 +1,6 @@
-You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.
-
 # Display Settings
+
+Define the overal settings of the display driver.
 
 ## Web UI
 

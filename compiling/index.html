@@ -105,9 +105,24 @@ git checkout 0.2.0
 git submodule update --init --recursive
 </code></pre>
 <h2 id="open-in-platformio">Open in PlatformIO<a class="headerlink" href="#open-in-platformio" title="Permanent link">~</a></h2>
-<p>Open the project folder in Visual Studio Code. This will automatically install all PlatformIO dependencies and the compiler frameworks needed.</p>
+<p><img alt="Install PIO" src="../assets/images/compiling/install_pio.png" /></p>
+<p>Open the project folder in <a href="https://code.visualstudio.com">Visual Studio Code</a>, make sure you have the PlatformIO IDE extension installed.
+This will automatically install all PlatformIO dependencies and the compiler frameworks needed.</p>
+<p><img alt="PIO Installed" src="../assets/images/compiling/pio_installed.png" /></p>
+<p>Restart Visual Studio Code when the PIO installation completes.</p>
 <h2 id="create-a-configuration">Create a configuration<a class="headerlink" href="#create-a-configuration" title="Permanent link">~</a></h2>
+<p>Copy <code>platformio_override-template.ini</code> to <code>platformio_override.ini</code> and uncomment the platforms for <code>esp32</code>and <code>esp8266</code>:</p>
+<pre><code>[platformio]
+extra_configs =
+    ; Uncomment or edit the lines to show more User Setups in the PIO sidebar
+    user_setups/esp32/*.ini
+    user_setups/esp8266/*.ini
+    ; user_setups/stm32f4xx/*.ini
+</code></pre>
+<p>Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the configured environments.</p>
 <h2 id="compile-environment">Compile Environment<a class="headerlink" href="#compile-environment" title="Permanent link">~</a></h2>
+<p><img alt="Build All" src="../assets/images/compiling/build_all.png" /></p>
+<p>You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.</p>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">~</a></h2>
 <h3 id="block-diagram">Block Diagram<a class="headerlink" href="#block-diagram" title="Permanent link">~</a></h3>
 <p><img alt="Block Diagram" src="../assets/images/block-diagram.svg" /></p>

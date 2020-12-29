@@ -25,12 +25,12 @@ git submodule update --init --recursive
 
 ## Open in PlatformIO
 
-![Install PIO](assets/images/screenshots/compiling/install_pio.png)
+![Install PIO](../assets/images/screenshots/compiling/install_pio.png)
 
 Open the project folder in [Visual Studio Code](https://code.visualstudio.com), make sure you have the PlatformIO IDE extension installed.
 This will automatically install all PlatformIO dependencies and the compiler frameworks needed.
 
-![PIO Installed](assets/images/screenshots/compiling/pio_installed.png)
+![PIO Installed](../assets/images/screenshots/compiling/pio_installed.png)
 
 Restart Visual Studio Code when the PIO installation completes.
 
@@ -51,7 +51,7 @@ Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the con
 
 ## Compile Environment
 
-![Build All](assets/images/screenshots/compiling/build_all.png)
+![Build All](../assets/images/screenshots/compiling/build_all.png)
 
 You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.
 

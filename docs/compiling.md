@@ -25,11 +25,35 @@ git submodule update --init --recursive
 
 ## Open in PlatformIO
 
-Open the project folder in Visual Studio Code. This will automatically install all PlatformIO dependencies and the compiler frameworks needed.
+![Install PIO](assets/images/screenshots/compiling/install_pio.png)
+
+Open the project folder in [Visual Studio Code](https://code.visualstudio.com), make sure you have the PlatformIO IDE extension installed.
+This will automatically install all PlatformIO dependencies and the compiler frameworks needed.
+
+![PIO Installed](assets/images/screenshots/compiling/pio_installed.png)
+
+Restart Visual Studio Code when the PIO installation completes.
 
 ## Create a configuration
 
+Copy `platformio_override-template.ini` to `platformio_override.ini` and uncomment the platforms for `esp32`and `esp8266`:
+
+```
+[platformio]
+extra_configs =
+	; Uncomment or edit the lines to show more User Setups in the PIO sidebar
+    user_setups/esp32/*.ini
+    user_setups/esp8266/*.ini
+    ; user_setups/stm32f4xx/*.ini
+```
+
+Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the configured environments.
+
 ## Compile Environment
+
+![Build All](assets/images/screenshots/compiling/build_all.png)
+
+You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.
 
 ## Development
 

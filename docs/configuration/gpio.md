@@ -5,7 +5,8 @@
 
 You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.
 
-![GPIO Settings](../assets/images/settings/gpio_addpin.png "GPIO Add New Pin")
+![GPIO Settings](../assets/images/settings/gpio_addpin.png "GPIO Add New Pin") &nbsp;
+![GPIO Pin Configuration](../assets/images/settings/gpio_pinconfig.png "GPIO Pin Configuration")
 
 
 ---

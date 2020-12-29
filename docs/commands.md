@@ -187,4 +187,4 @@ This command is used to create new objects on a page.
 
 Each line in the `jsonl` payload defines one object and has to be in the json format.
 
-*For details see Pages and Objects*
+*For details see [Pages](pages.md) and [Objects](objects.md)*

@@ -124,8 +124,14 @@ Possible wrapping modes are: expand, break, dots, scroll and loop
 | max       | int16      | no       | 100     |
 | val       | int16      | no       | 0       |
 | rotation  | int16      | no       | 0       |
-| type      | int16      | no       | normal  | normal, reverse, symmetrical
+| type      | int16      | no       | 0       | 0=normal, 1=symmetrical, 2=reverse
+| adjustable| bool       | no       | false   | Add indicator that the user can operate to change the value
+|start_angle| 0-360      | no       |         | start angle of the background or indicator (see note)
+| end_angle | 0-360      | no       |         | end angle of the background or indicator (see note)
 
+`start_angle` and `end_angle` set the angles of the arc background.
+`start_angle1` and `end_angle1` set the angles of the arc indicator.
+Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
 
 ### Spinner
 **objid:21**

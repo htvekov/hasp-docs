@@ -37,6 +37,9 @@ The color and gradient used for drawing the background of an object.
 | bg_grad_stop   | byte   | no       | expand  | Specifies where the gradient should stop. 0: at left/top most position, 255: at right/bottom most position. Default value: 255.
 | bg_main_stop   | byte   | no       | expand  | Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position. Default value: 0.
 
+To adjust the background style of a page use `p[x].b[0]` where `x` is the page number.
+
+
 ### Border
 
 The border is drawn on top of the background. It has radius rounding.

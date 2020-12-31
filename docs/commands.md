@@ -183,7 +183,8 @@ The commands are interpreted and processed sequentially.
 
 `jsonl` (json lines)
 
-This command is used to create new objects on a page.
+This command can be used to create new objects *or* update the properties of an existing object.
+When updating an existing object `objid` is not required and will be ignored.
 
 Each line in the `jsonl` payload defines one object and has to be in the json format.
 

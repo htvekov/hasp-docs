@@ -7,25 +7,8 @@ There are two ways to create an object on the screen:
 
 ## Common Properties
 
-These are the common properties shared among all objects:
-
-<style>
-table th:first-of-type {
-    width: 12%;
-}
-table th:nth-of-type(2) {
-    width: 12%;
-}
-table th:nth-of-type(3) {
-    width: 12%;
-}
-table th:nth-of-type(4) {
-    width: 12%;
-}
-table th:last-of-type {
-    width: 48%;
-}
-</style>
+These are the common properties shared among all objects,
+but only the `id` and `objid` properties are required to create an object:
 
 | Property | Value      | Required | Default | Description |
 |:---------|:----------:|:--------:|:-------:|:------------|

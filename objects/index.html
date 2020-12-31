@@ -50,6 +50,7 @@
               {title: "LED Indicator", url: "#led-indicator" },
               {title: "Dropdown List", url: "#dropdown-list" },
               {title: "Roller", url: "#roller" },
+              {title: "Base Object", url: "#base-object" },
           ]},
         ];
 
@@ -267,7 +268,7 @@ Besides the common properties listed above, each object type can have specific p
 </tr>
 <tr>
 <td align="center">91</td>
-<td align="left">Base Object</td>
+<td align="left"><a href="#base-object">Base Object</a></td>
 </tr>
 </tbody>
 </table>
@@ -417,32 +418,32 @@ Besides the common properties listed above, each object type can have specific p
 <td>int16</td>
 <td>no</td>
 <td>0</td>
-<td></td>
+<td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
 <td>no</td>
 <td>100</td>
-<td></td>
+<td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
-<td></td>
+<td>current value of the indicator</td>
 </tr>
 <tr>
 <td>rotation</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
-<td></td>
+<td>offset to the 0 degree position</td>
 </tr>
 <tr>
 <td>type</td>
-<td>int16</td>
+<td>0-2</td>
 <td>no</td>
 <td>0</td>
 <td>0=normal, 1=symmetrical, 2=reverse</td>
@@ -557,6 +558,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <th>Value</th>
 <th>Required</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -565,18 +567,21 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
 <td>no</td>
 <td>100</td>
+<td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>current value of the indicator</td>
 </tr>
 </tbody>
 </table>
@@ -589,6 +594,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <th>Value</th>
 <th>Required</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -597,18 +603,21 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
 <td>no</td>
 <td>100</td>
+<td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>current value of the indicator</td>
 </tr>
 </tbody>
 </table>
@@ -622,6 +631,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <th>Value</th>
 <th>Required</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -630,18 +640,21 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
 <td>no</td>
 <td>100</td>
+<td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>current value of the indicator</td>
 </tr>
 </tbody>
 </table>
@@ -655,6 +668,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <th>Value</th>
 <th>Required</th>
 <th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -663,18 +677,21 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
 <td>no</td>
 <td>100</td>
+<td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
 <td>no</td>
 <td>0</td>
+<td>current value of the indicator</td>
 </tr>
 </tbody>
 </table>
@@ -815,6 +832,9 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 <p>To change the currently selected item, use the <code>val</code> attribute.  <br />
 To change the items in the list, use the <code>options</code> attribute.</p>
 <p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
+<h3 id="base-object">Base Object<a class="headerlink" href="#base-object" title="Permanent link">~</a></h3>
+<p><strong>objid:91</strong></p>
+<p>The Base Object can be directly used as a simple widget. It is nothing more then a (rounded) rectangle.</p>
 
   <br>
     

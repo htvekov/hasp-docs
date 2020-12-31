@@ -22,6 +22,7 @@ but only the `id` and `objid` properties are required to create an object:
 | enabled  | true/false | no       | true    | object is clickable |
 | hidden   | true/false | no       | false   | object is hidden |
 | opacity  | 0-255      | no       | 255     | how much the the object is opaque |
+| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object, 0 = no round corners |
 
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
@@ -53,6 +54,7 @@ Besides the common properties listed above, each object type can have specific p
 | 41    | [LED](#led-indicator)
 | 50    | [Dropdown List](#dropdown-list)
 | 51    | [Roller](#roller)
+| 91    | Base Object
 
 ### Button
 **objid:10**

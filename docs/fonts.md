@@ -4,7 +4,7 @@
 
 The ESP8266 firmware only has 1 built-in font: Unscii with font size 8pt.
 
-The ESP32 additionally contains the Monserrat font in these font size: 12, 16, 22 and 28pt.
+The ESP32 additionally contains the Montserrat font in these font sizes: 12, 16, 22 and 28pt.
 
 The built-in fonts can be set by using the pointsize as parameter:
 

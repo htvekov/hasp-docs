@@ -444,11 +444,35 @@ Besides the common properties listed above, each object type can have specific p
 <td>type</td>
 <td>int16</td>
 <td>no</td>
-<td>normal</td>
-<td>normal, reverse, symmetrical</td>
+<td>0</td>
+<td>0=normal, 1=symmetrical, 2=reverse</td>
+</tr>
+<tr>
+<td>adjustable</td>
+<td>bool</td>
+<td>no</td>
+<td>false</td>
+<td>Add indicator that the user can operate to change the value</td>
+</tr>
+<tr>
+<td>start_angle</td>
+<td>0-360</td>
+<td>no</td>
+<td></td>
+<td>start angle of the background or indicator (see note)</td>
+</tr>
+<tr>
+<td>end_angle</td>
+<td>0-360</td>
+<td>no</td>
+<td></td>
+<td>end angle of the background or indicator (see note)</td>
 </tr>
 </tbody>
 </table>
+<p><code>start_angle</code> and <code>end_angle</code> set the angles of the arc background.
+<code>start_angle1</code> and <code>end_angle1</code> set the angles of the arc indicator.
+Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.</p>
 <h3 id="spinner">Spinner<a class="headerlink" href="#spinner" title="Permanent link">~</a></h3>
 <p><strong>objid:21</strong></p>
 <p><img align="center" alt="lv_spinner" src="../assets/images/objects/lv_ex_spinner_1.png" /></p>

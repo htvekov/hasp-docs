@@ -210,7 +210,8 @@ config/debug
 </code></pre>
 <p>The commands are interpreted and processed sequentially.</p>
 <p><code>jsonl</code> (json lines)</p>
-<p>This command is used to create new objects on a page.</p>
+<p>This command can be used to create new objects <em>or</em> update the properties of an existing object.
+When updating an existing object <code>objid</code> is not required and will be ignored.</p>
 <p>Each line in the <code>jsonl</code> payload defines one object and has to be in the json format.</p>
 <p><em>For details see <a href="../pages/">Pages</a> and <a href="../objects/">Objects</a></em></p>
 

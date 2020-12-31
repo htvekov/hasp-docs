@@ -54,7 +54,7 @@ Besides the common properties listed above, each object type can have specific p
 | 41    | [LED](#led-indicator)
 | 50    | [Dropdown List](#dropdown-list)
 | 51    | [Roller](#roller)
-| 91    | Base Object
+| 91    | [Base Object](#base-object)
 
 ### Button
 **objid:10**
@@ -120,11 +120,11 @@ Possible wrapping modes are: expand, break, dots, scroll and loop
 
 | Property  | Value      | Required | Default | Description
 |-----------|------------|----------|---------|--------------
-| min       | int16      | no       | 0       |
-| max       | int16      | no       | 100     |
-| val       | int16      | no       | 0       |
-| rotation  | int16      | no       | 0       |
-| type      | int16      | no       | 0       | 0=normal, 1=symmetrical, 2=reverse
+| min       | int16      | no       | 0       | minimum value of the indicator
+| max       | int16      | no       | 100     | maximum value of the indicator
+| val       | int16      | no       | 0       | current value of the indicator
+| rotation  | int16      | no       | 0       | offset to the 0 degree position
+| type      | 0-2        | no       | 0       | 0=normal, 1=symmetrical, 2=reverse
 | adjustable| bool       | no       | false   | Add indicator that the user can operate to change the value
 |start_angle| 0-360      | no       |         | start angle of the background or indicator (see note)
 | end_angle | 0-360      | no       |         | end angle of the background or indicator (see note)
@@ -161,20 +161,20 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 ![lv_slider](assets/images/objects/lv_ex_slider_1.png){: align=center }
 
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
+| Property | Value      | Required | Default | Description
+|----------|------------|----------|---------|---------------
+| min      | int16      | no       | 0       | minimum value of the indicator
+| max      | int16      | no       | 100     | maximum value of the indicator
+| val      | int16      | no       | 0       | current value of the indicator
 
 ### Double Slider
 **objid:30**
 
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
+| Property | Value      | Required | Default | Description
+|----------|------------|----------|---------|---------------
+| min      | int16      | no       | 0       | minimum value of the indicator
+| max      | int16      | no       | 100     | maximum value of the indicator
+| val      | int16      | no       | 0       | current value of the indicator
 
 
 ### Gauge
@@ -182,11 +182,11 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 ![lv_gauge](assets/images/objects/lv_ex_gauge_1.png){: align=center }
 
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
+| Property | Value      | Required | Default | Description
+|----------|------------|----------|---------|---------------
+| min      | int16      | no       | 0       | minimum value of the indicator
+| max      | int16      | no       | 100     | maximum value of the indicator
+| val      | int16      | no       | 0       | current value of the indicator
 
 
 ### Progress Bar
@@ -194,11 +194,11 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 ![lv_bar](assets/images/objects/lv_ex_bar_1.png){: align=center }
 
-| Property | Value      | Required | Default |
-|----------|------------|----------|---------|
-| min      | int16      | no       | 0       |
-| max      | int16      | no       | 100     |
-| val      | int16      | no       | 0       |
+| Property | Value      | Required | Default | Description
+|----------|------------|----------|---------|---------------
+| min      | int16      | no       | 0       | minimum value of the indicator
+| max      | int16      | no       | 100     | maximum value of the indicator
+| val      | int16      | no       | 0       | current value of the indicator
 
 
 ### Switch
@@ -255,3 +255,9 @@ To change the currently selected item, use the `val` attribute.
 To change the items in the list, use the `options` attribute.
 
 When the item is changed both `val` and `txt` of the newly selected item are send out.
+
+
+### Base Object
+**objid:91**
+
+The Base Object can be directly used as a simple widget. It is nothing more then a (rounded) rectangle.

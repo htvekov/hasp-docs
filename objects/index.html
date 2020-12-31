@@ -188,6 +188,13 @@ but only the <code>id</code> and <code>objid</code> properties are required to c
 <td align="center">255</td>
 <td align="left">how much the the object is opaque</td>
 </tr>
+<tr>
+<td align="left">radius</td>
+<td align="center">uint16</td>
+<td align="center">no</td>
+<td align="center">dep. on theme</td>
+<td align="left">the radius of the rounded corners of the object, 0 = no round corners</td>
+</tr>
 </tbody>
 </table>
 <p>If the <code>page</code> parameter is not present, the object is placed on the same page as the <em>previous object</em>. If <code>page</code> is not specified for the first object either, the <em>current page</em> being displayed is used.</p>
@@ -257,6 +264,10 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td align="center">51</td>
 <td align="left"><a href="#roller">Roller</a></td>
+</tr>
+<tr>
+<td align="center">91</td>
+<td align="left">Base Object</td>
 </tr>
 </tbody>
 </table>

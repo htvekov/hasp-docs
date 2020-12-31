@@ -12,7 +12,7 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 ![Screenshot](assets/images/screenshots/home-sliders.png) &nbsp; 
 ![Screenshot](assets/images/screenshots/home-buttons.png) &nbsp; 
 ![Screenshot](assets/images/screenshots/home-mediaplayer.png) &nbsp; <iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;"
-src="http://10.1.0.150:8000/lv_ex_roller_1/index.html?w=240&h=320"></iframe>
+src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe>
 
 ## Features
 

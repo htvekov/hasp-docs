@@ -196,12 +196,16 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 
 ![lv_gauge](assets/images/objects/lv_ex_gauge_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|---------------
-| min      | int16      | no       | 0       | minimum value of the indicator
-| max      | int16      | no       | 100     | maximum value of the indicator
-| val      | int16      | no       | 0       | current value of the indicator
-
+| Property       | Value      | Required | Default | Description
+|----------------|------------|----------|---------|---------------
+| min            | int16      | no       | 0       | minimum value of the indicator
+| max            | int16      | no       | 100     | maximum value of the indicator
+| val            | int16      | no       | 0       | current value of the indicator
+| critical_value | int16      | no       | 80      | scale color will be changed to scale_end_color after this value
+| angle          | 0-360      | no       | 0       | offset for the gauge's angles to rotate it
+| label_count    | uint8      | no       |         | number of labels (and minor tick count) of the scale
+| line_count     | uint16     | no       | 31      | minor tick count of the scale
+| format         |            |          |         | format majot tick values (tbd!)
 
 ### Progress Bar
 **objid:32**

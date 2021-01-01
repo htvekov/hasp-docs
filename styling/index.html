@@ -96,80 +96,70 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 Some objects allow for more complex syling, effectively changing its appearance or its sub-components.</p>
 <h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
 <p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
-<p>Objects use them to set spacing. See the documentation of the objects for the details.</p>
+<p>Objects use them to set spacing. See the documentation of the <a href="../objects/">objects</a> for the details.</p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>pad_top</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the padding on the top</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the top</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>pad_bottom</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the padding on the bottom</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the bottom</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>pad_left</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the padding on the left</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the left</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>pad_right</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the padding on the right</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the right</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>pad_inner</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the padding inside the object between children</td>
+<td align="center">int</td>
+<td align="left">Set the padding inside the object between children</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>margin_top</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the margin on the top</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the top</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>margin_bottom</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the margin on the bottom</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the bottom</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>margin_left</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the margin on the left</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the left</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>margin_right</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Set the margin on the right</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the right</td>
+<td align="center">0</td>
 </tr>
 </tbody>
 </table>
@@ -179,54 +169,54 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <thead>
 <tr>
 <th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
+<th align="center">Type</th>
+<th align="center">Req.</th>
 <th>Description</th>
+<th align="center">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>bg_opa</td>
-<td>byte</td>
-<td>no</td>
-<td>""</td>
+<td align="center">byte</td>
+<td align="center">no</td>
 <td>The background opacity level</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td>bg_color</td>
-<td>color</td>
-<td>no</td>
-<td>true</td>
+<td align="center">color</td>
+<td align="center">no</td>
 <td>The background color</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td>bg_grad_color</td>
-<td>color</td>
-<td>no</td>
-<td>0</td>
+<td align="center">color</td>
+<td align="center">no</td>
 <td>The background gradient color</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td>bg_grad_dir</td>
-<td>[0..2]</td>
-<td>no</td>
-<td>expand</td>
-<td><code>0</code> = None<br><code>1</code> = Horizontal<br><code>2</code> = Vertical</td>
+<td align="center">[0..2]</td>
+<td align="center">no</td>
+<td>0 = none<br>1 = horizontal<br>2 = vertical</td>
+<td align="center">0</td>
 </tr>
 <tr>
 <td>bg_grad_stop</td>
-<td>byte</td>
-<td>no</td>
-<td>expand</td>
-<td>Specifies where the gradient should stop.<br><code>0</code> = at left/top most position<br><code>255</code>= at right/bottom most position.<br>Default value: <code>255</code></td>
+<td align="center">byte</td>
+<td align="center">no</td>
+<td>Specifies where the gradient should stop.<br>0 = at left/top most position<br>255= at right/bottom most position</td>
+<td align="center">255</td>
 </tr>
 <tr>
 <td>bg_main_stop</td>
-<td>byte</td>
-<td>no</td>
-<td>expand</td>
-<td>Specifies where should the gradient start<br><code>0</code> = at left/top most position<br><code>255</code>= at right/bottom most position.<br>Default value: <code>0</code></td>
+<td align="center">byte</td>
+<td align="center">no</td>
+<td>Specifies where should the gradient start<br>0 = at left/top most position<br>255= at right/bottom most position</td>
+<td align="center">0</td>
 </tr>
 </tbody>
 </table>
@@ -237,46 +227,34 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <thead>
 <tr>
 <th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
+<th align="center">Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>border_color</td>
-<td>color</td>
-<td></td>
-<td></td>
+<td align="center">color</td>
 <td>Specifies the color of the border</td>
 </tr>
 <tr>
 <td>border_opa</td>
-<td>byte</td>
-<td></td>
-<td></td>
+<td align="center">byte</td>
 <td>Specifies opacity of the border</td>
 </tr>
 <tr>
 <td>border_width</td>
-<td>byte</td>
-<td></td>
-<td></td>
+<td align="center">byte</td>
 <td>Set the width of the border</td>
 </tr>
 <tr>
 <td>border_side</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>Specifies which sides of the border to draw.<br><code>0</code>= none<br><code>1</code>= left<br><code>2</code> = right<br><code>4</code> = top<br><code>8</code> = bottom<br><code>15</code> = full<br>A sum of these values is also possible to select specific sides.</td>
+<td align="center">byte</td>
+<td>Specifies which sides of the border to draw.<br>0 = none<br>1 = left<br>2 = right<br>4 = top<br>8 = bottom<br>15 = full<br>A sum of these values is also possible to select specific sides.</td>
 </tr>
 <tr>
 <td>border_post</td>
-<td>bool</td>
-<td></td>
-<td></td>
+<td align="center">bool</td>
 <td>If <code>true</code> the border will be drawn after all children have been drawn.</td>
 </tr>
 </tbody>
@@ -287,53 +265,39 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <thead>
 <tr>
 <th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
+<th align="center">Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>shadow_color</td>
-<td>color</td>
-<td></td>
-<td></td>
+<td align="center">color</td>
 <td>Specifies the color of the shadow</td>
 </tr>
 <tr>
 <td>shadow_opa</td>
-<td>byte</td>
-<td></td>
-<td></td>
+<td align="center">byte</td>
 <td>Specifies opacity of the shadow</td>
 </tr>
 <tr>
 <td>shadow_width</td>
-<td>int16</td>
-<td></td>
-<td></td>
+<td align="center">int16</td>
 <td>Set the width (blur size) of the outline</td>
 </tr>
 <tr>
 <td>shadow_ofs_x</td>
-<td>int16</td>
-<td></td>
-<td></td>
+<td align="center">int16</td>
 <td>Set the an X offset for the shadow</td>
 </tr>
 <tr>
 <td>shadow_ofs_y</td>
-<td>int16</td>
-<td></td>
-<td></td>
+<td align="center">int16</td>
 <td>Set the an Y offset for the shadow</td>
 </tr>
 <tr>
 <td>shadow_spread</td>
-<td>byte</td>
-<td></td>
-<td></td>
+<td align="center">byte</td>
 <td>make the shadow larger than the background in every direction by this value</td>
 </tr>
 </tbody>
@@ -343,140 +307,122 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>value_str</td>
-<td>string</td>
-<td></td>
-<td></td>
-<td>Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+<td align="left">value_str</td>
+<td align="center">string</td>
+<td align="left">Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_color</td>
-<td>color</td>
-<td></td>
-<td></td>
-<td>Color of the text</td>
+<td align="left">value_color</td>
+<td align="center">color</td>
+<td align="left">Color of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_opa</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>Opacity level of the text [0-255]</td>
+<td align="left">value_opa</td>
+<td align="center">byte</td>
+<td align="left">Opacity level of the text [0-255]</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_font</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>The <a href="../fonts/">Font ID</a></td>
+<td align="left">value_font</td>
+<td align="center">byte</td>
+<td align="left">The <a href="../fonts/">Font ID</a></td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_letter_space</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Letter space of the text</td>
+<td align="left">value_letter_space</td>
+<td align="center">int</td>
+<td align="left">Letter space of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_line_space</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Line space of the text</td>
+<td align="left">value_line_space</td>
+<td align="center">int</td>
+<td align="left">Line space of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_align</td>
-<td>align</td>
-<td></td>
-<td></td>
-<td>Alignment of the text. Can be LV_ALIGN_.... Default value: LV_ALIGN_CENTER.</td>
+<td align="left">value_align</td>
+<td align="center">align</td>
+<td align="left">Alignment of the text. Can be none/left/right/top/bottom/full</td>
+<td align="center">center</td>
 </tr>
 <tr>
-<td>value_ofs_x</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>X offset from the original position of the alignment</td>
+<td align="left">value_ofs_x</td>
+<td align="center">int</td>
+<td align="left">X offset from the original position of the alignment</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>value_ofs_y</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Y offset from the original position of the alignment</td>
+<td align="left">value_ofs_y</td>
+<td align="center">int</td>
+<td align="left">Y offset from the original position of the alignment</td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
 <h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">~</a></h3>
-<p>Properties for textual object.</p>
+<p>Properties for textual objects only.</p>
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>text_color</td>
-<td>color</td>
-<td></td>
-<td></td>
-<td>Color of the text</td>
+<td align="left">text_color</td>
+<td align="center">color</td>
+<td align="left">Color of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>text_opa</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>Opacity level of the text [0-255]</td>
+<td align="left">text_opa</td>
+<td align="center">byte</td>
+<td align="left">Opacity level of the text [0-255]</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>text_font</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>The <a href="../fonts/">Font ID</a></td>
+<td align="left">text_font</td>
+<td align="center">byte</td>
+<td align="left">The <a href="../fonts/">Font ID</a></td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>text_letter_space</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Letter space of the text</td>
+<td align="left">text_letter_space</td>
+<td align="center">int</td>
+<td align="left">Letter space of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>text_line_space</td>
-<td>int</td>
-<td></td>
-<td></td>
-<td>Line space of the text</td>
+<td align="left">text_line_space</td>
+<td align="center">int</td>
+<td align="left">Line space of the text</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>text_decor</td>
-<td>byte</td>
-<td></td>
-<td></td>
-<td>Add text decoration. 0=None, 1=Underline, 2=Strikethrough, 3=Underline&amp;Strikethrough</td>
+<td align="left">text_decor</td>
+<td align="center">byte</td>
+<td align="left">Add text decoration.<br>0 = none<br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough</td>
+<td align="center">0</td>
 </tr>
 <tr>
-<td>text_sel_color</td>
-<td>color</td>
-<td></td>
-<td></td>
-<td>Set background color of text selection</td>
+<td align="left">text_sel_color</td>
+<td align="center">color</td>
+<td align="left">Set background color of text selection</td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>

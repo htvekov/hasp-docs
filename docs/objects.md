@@ -240,7 +240,8 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 ### Roller
 **objid:51**
 
-![lv_roller](assets/images/objects/lv_ex_roller_1.png){: align=center }
+<iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe><p></p>
+
 
 | Property | Value      | Required | Default | Description
 |----------|------------|----------|---------|--------------------------

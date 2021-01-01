@@ -50,6 +50,7 @@ Besides the common properties listed above, each object type can have specific p
 | 30    | [Slider](#slider)
 | 31    | [Gauge](#gauge)
 | 32    | [Progress Bar](#progress-bar)
+| 33    | [Line Meter](#line-meter)
 | 40    | [Switch](#switch)
 | 41    | [LED](#led-indicator)
 | 50    | [Dropdown List](#dropdown-list)
@@ -169,6 +170,18 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 ### Double Slider
 **objid:30**
+
+| Property | Value      | Required | Default | Description
+|----------|------------|----------|---------|---------------
+| min      | int16      | no       | 0       | minimum value of the indicator
+| max      | int16      | no       | 100     | maximum value of the indicator
+| val      | int16      | no       | 0       | current value of the indicator
+
+
+### Line Meter
+**objid:33**
+
+![lv_lmeter](assets/images/objects/lv_ex_linemeter_1.png){: align=center }
 
 | Property | Value      | Required | Default | Description
 |----------|------------|----------|---------|---------------

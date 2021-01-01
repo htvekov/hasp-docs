@@ -320,22 +320,22 @@ Besides the common properties listed above, each object type can have specific p
 <td>string</td>
 <td>no</td>
 <td>expand</td>
-<td>The wrapping mode of long text labels (expand, break, dots, scroll and loop)</td>
+<td>The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop</td>
 </tr>
 </tbody>
 </table>
 <p>Normal Switches send touch events out as they occur. The possible events are:</p>
 <ul>
-<li>DOWN: Occurs when a button goes from depressed to pressed</li>
-<li>SHORT: The button was released within a short time i.e. a short click has occurred</li>
-<li>LONG: Event is send when the button is <em>still</em> being pressed after the threshold time</li>
+<li><code>DOWN</code>: Occurs when a button goes from depressed to pressed</li>
+<li><code>SHORT</code>: The button was released within a short time i.e. a short click has occurred</li>
+<li><code>LONG</code>: Event is send when the button is <em>still</em> being pressed after the threshold time</li>
 </ul>
 <!-- - HOLD: The HOLD event is repeated every 400ms while the button is still pressed -->
 <ul>
-<li>UP: The button is released after being pressing for a LONG threshold time.</li>
-<li>LOST: This event occurs when the object looses the focus while the screen is still being touched</li>
+<li><code>UP</code>: The button is released after being pressing for a LONG threshold time.</li>
+<li><code>LOST</code>: This event occurs when the object looses the focus while the screen is still being touched</li>
 </ul>
-<p>Toggle Switches only send out their new value (0 or 1) when toggled.</p>
+<p>Toggle Switches only send out their new value (<code>0</code> or <code>1</code>) when toggled.</p>
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
 <p><strong>objid:11</strong></p>
 <p><img align="center" alt="lv_checkbox" src="../assets/images/objects/lv_ex_checkbox_1.png" /></p>
@@ -355,7 +355,7 @@ Besides the common properties listed above, each object type can have specific p
 <td>int16</td>
 <td>no</td>
 <td>0</td>
-<td>The value: 1 for checked, 0 for unchecked</td>
+<td>1 for checked, 0 for unchecked</td>
 </tr>
 <tr>
 <td>txt</td>
@@ -392,11 +392,10 @@ Besides the common properties listed above, each object type can have specific p
 <td>string</td>
 <td>no</td>
 <td>expand</td>
-<td>The wrapping mode of long text labels</td>
+<td>The wrapping mode of long text labels.<br>Possible modes are: expand, break, dots, scroll, loop</td>
 </tr>
 </tbody>
 </table>
-<p>Possible wrapping modes are: expand, break, dots, scroll and loop</p>
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
 </code></pre>
 <h3 id="arc">Arc<a class="headerlink" href="#arc" title="Permanent link">~</a></h3>
@@ -446,7 +445,7 @@ Besides the common properties listed above, each object type can have specific p
 <td>0-2</td>
 <td>no</td>
 <td>0</td>
-<td>0=normal, 1=symmetrical, 2=reverse</td>
+<td>0 = normal, 1 = symmetrical, 2 = reverse</td>
 </tr>
 <tr>
 <td>adjustable</td>
@@ -460,20 +459,35 @@ Besides the common properties listed above, each object type can have specific p
 <td>0-360</td>
 <td>no</td>
 <td></td>
-<td>start angle of the background or indicator (see note)</td>
+<td>start angle of the arc background (see note)</td>
 </tr>
 <tr>
 <td>end_angle</td>
 <td>0-360</td>
 <td>no</td>
 <td></td>
-<td>end angle of the background or indicator (see note)</td>
+<td>end angle of the arc background (see note)</td>
+</tr>
+<tr>
+<td>start_angle1</td>
+<td>0-360</td>
+<td>no</td>
+<td></td>
+<td>start angle of the arc indicator (see note)</td>
+</tr>
+<tr>
+<td>end_angle1</td>
+<td>0-360</td>
+<td>no</td>
+<td></td>
+<td>end angle of the arc indicator (see note)</td>
 </tr>
 </tbody>
 </table>
-<p><code>start_angle</code> and <code>end_angle</code> set the angles of the arc background.
-<code>start_angle1</code> and <code>end_angle1</code> set the angles of the arc indicator.
-Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.</p>
+</div>
 <h3 id="spinner">Spinner<a class="headerlink" href="#spinner" title="Permanent link">~</a></h3>
 <p><strong>objid:21</strong></p>
 <p><img align="center" alt="lv_spinner" src="../assets/images/objects/lv_ex_spinner_1.png" /></p>
@@ -544,7 +558,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>boolean</td>
 <td>no</td>
 <td>false</td>
-<td>True if the color picker has a rectangular shape like a slider. False for a circular shape.</td>
+<td>true = color picker has a rectangular shape like a slider. false = circular shape.</td>
 </tr>
 </tbody>
 </table>
@@ -714,7 +728,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>int16</td>
 <td>no</td>
 <td>0</td>
-<td>The value: 1 for on, 0 for off</td>
+<td>1 for on, 0 for off</td>
 </tr>
 </tbody>
 </table>
@@ -737,7 +751,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>byte</td>
 <td>no</td>
 <td>0</td>
-<td>The brightness of the indicator 0-255</td>
+<td>The brightness of the indicator [0..255]</td>
 </tr>
 </tbody>
 </table>
@@ -760,7 +774,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 <td>string</td>
 <td>no</td>
 <td>""</td>
-<td>The items separated by \n</td>
+<td>List of items separated by <code>\n</code></td>
 </tr>
 <tr>
 <td>val</td>
@@ -800,7 +814,7 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 <td>string</td>
 <td>no</td>
 <td>""</td>
-<td>The items separated by \n</td>
+<td>List of items separated by <code>\n</code></td>
 </tr>
 <tr>
 <td>val</td>

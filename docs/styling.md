@@ -33,12 +33,11 @@ The color and gradient used for drawing the background of an object.
 | bg_opa         | byte   | no       | ""      | The background opacity level
 | bg_color       | color  | no       | true    | The background color
 | bg_grad_color  | color  | no       | 0       | The background gradient color
-| bg_grad_dir    | [0..2] | no       | expand  | 0 = None, 1 = Horizontal, 2 = Vertical
-| bg_grad_stop   | byte   | no       | expand  | Specifies where the gradient should stop. 0: at left/top most position, 255: at right/bottom most position. Default value: 255.
-| bg_main_stop   | byte   | no       | expand  | Specifies where should the gradient start. 0: at left/top most position, 255: at right/bottom most position. Default value: 0.
+| bg_grad_dir    | [0..2] | no       | expand  | `0` = None<br>`1` = Horizontal<br>`2` = Vertical
+| bg_grad_stop   | byte   | no       | expand  | Specifies where the gradient should stop.<br>`0` = at left/top most position<br>`255`= at right/bottom most position.<br>Default value: `255`
+| bg_main_stop   | byte   | no       | expand  | Specifies where should the gradient start<br>`0` = at left/top most position<br>`255`= at right/bottom most position.<br>Default value: `0`
 
 To adjust the background style of a page use `p[x].b[0]` where `x` is the page number.
-
 
 ### Border
 
@@ -49,7 +48,7 @@ The border is drawn on top of the background. It has radius rounding.
 | border_color | color | | | Specifies the color of the border
 | border_opa   | byte  | | | Specifies opacity of the border
 | border_width | byte  | | | Set the width of the border
-| border_side  | byte  | | | Specifies which sides of the border to draw. Can be 0=LV_BORDER_SIDE_NONE/1=LEFT/2=RIGHT/4=TOP/8=BOTTOM/15=FULL. A sum of these values is also possible to select specific sides.
+| border_side  | byte  | | | Specifies which sides of the border to draw.<br>`0`= none<br>`1`= left<br>`2` = right<br>`4` = top<br>`8` = bottom<br>`1`5 = dull.<br>A sum of these values is also possible to select specific sides.
 | border_post  | bool  | | | If `true` the border will be drawn after all children have been drawn.
 
 ### Shadow

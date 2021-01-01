@@ -40,21 +40,21 @@ Besides the common properties listed above, each object type can have specific p
 ### Cheatsheet
 
 | objid | Type
-|:-----:|:-----------
-| 10    | [Button](#button)
-| 11    | [Checkbox](#checkbox)
-| 12    | [Label](#text-label)
-| 20    | [Colorpicker](#colorpicker)
-| 21    | [Spinner](#spinner)
-| 22    | [Arc](#arc)
-| 30    | [Slider](#slider)
-| 31    | [Gauge](#gauge)
-| 32    | [Progress Bar](#progress-bar)
-| 40    | [Switch](#switch)
-| 41    | [LED](#led-indicator)
-| 50    | [Dropdown List](#dropdown-list)
-| 51    | [Roller](#roller)
-| 91    | [Base Object](#base-object)
+|:---:|:-----------
+| 10 | [Button](#button)
+| 11 | [Checkbox](#checkbox)
+| 12 | [Label](#text-label)
+| 20 | [Colorpicker](#colorpicker)
+| 21 | [Spinner](#spinner)
+| 22 | [Arc](#arc)
+| 30 | [Slider](#slider)
+| 31 | [Gauge](#gauge)
+| 32 | [Progress Bar](#progress-bar)
+| 40 | [Switch](#switch)
+| 41 | [LED](#led-indicator)
+| 50 | [Dropdown List](#dropdown-list)
+| 51 | [Roller](#roller)
+| 91 | [Base Object](#base-object)
 
 ### Button
 **objid:10**

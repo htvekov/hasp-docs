@@ -48,7 +48,7 @@ The border is drawn on top of the background. It has radius rounding.
 | border_color | color | | | Specifies the color of the border
 | border_opa   | byte  | | | Specifies opacity of the border
 | border_width | byte  | | | Set the width of the border
-| border_side  | byte  | | | Specifies which sides of the border to draw.<br>`0`= none<br>`1`= left<br>`2` = right<br>`4` = top<br>`8` = bottom<br>`1`5 = dull.<br>A sum of these values is also possible to select specific sides.
+| border_side  | byte  | | | Specifies which sides of the border to draw.<br>`0`= none<br>`1`= left<br>`2` = right<br>`4` = top<br>`8` = bottom<br>`15` = full<br>A sum of these values is also possible to select specific sides.
 | border_post  | bool  | | | If `true` the border will be drawn after all children have been drawn.
 
 ### Shadow

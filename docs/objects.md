@@ -2,8 +2,8 @@
 
 There are two ways to create an object on the screen:
 
-- Uploading a pages.jsonl file onto the internal flash
-- Use the `jsonl` command *(via MQTT, serial or telnet console)*
+- Uploading a [`pages.jsonl`](pages.md/#pagesjsonl) file onto the internal flash
+- Use the [`jsonl`](commands.md/#multiple-commands) command *(via MQTT, serial or telnet console)*
 
 ## Common Properties
 

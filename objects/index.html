@@ -744,17 +744,19 @@ Besides the common properties listed above, each object type can have specific p
 <td>format</td>
 <td>uint16</td>
 <td>no</td>
-<td>1</td>
+<td>0</td>
 <td>divider for major tick values</td>
 </tr>
 </tbody>
 </table>
-<p>To strip trailing zero's of major tick labels the <code>format</code> divider can be used to scale the values before printing:
-- 1 : print the major tick value as is
-- 10 : divide tick value by 10 before printing the major tick label
-- 100 : divide tick value by 100 before printing the major tick label
-- 1000 : divide tick value by 1000 before printing the major tick label
-- 10000 : divide tick value by 10000 before printing the major tick label</p>
+<p>To strip trailing zero's of major tick labels the <code>format</code> divider can be used to scale the values before printing:</p>
+<ul>
+<li>0 : print the major tick value as is</li>
+<li>1 : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label</li>
+<li>2 : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label</li>
+<li>3 : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label</li>
+<li>4 : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label</li>
+</ul>
 <p>Only these values are allowed, arbirary numbers are not supported.</p>
 <h3 id="progress-bar">Progress Bar<a class="headerlink" href="#progress-bar" title="Permanent link">~</a></h3>
 <p><strong>objid:32</strong></p>

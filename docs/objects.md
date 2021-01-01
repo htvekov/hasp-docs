@@ -205,7 +205,16 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 | angle          | 0-360      | no       | 0       | offset for the gauge's angles to rotate it
 | label_count    | uint8      | no       |         | number of labels (and minor tick count) of the scale
 | line_count     | uint16     | no       | 31      | minor tick count of the scale
-| format         |            |          |         | format majot tick values (tbd!)
+| format         | uint16     | no       | 1       | divider for major tick values
+
+To strip trailing zero's of major tick labels the `format` divider can be used to scale the values before printing:
+- 1 : print the major tick value as is
+- 10 : divide tick value by 10 before printing the major tick label
+- 100 : divide tick value by 100 before printing the major tick label
+- 1000 : divide tick value by 1000 before printing the major tick label
+- 10000 : divide tick value by 10000 before printing the major tick label
+
+Only these values are allowed, arbirary numbers are not supported.
 
 ### Progress Bar
 **objid:32**

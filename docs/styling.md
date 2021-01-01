@@ -76,7 +76,7 @@ Value is an arbitrary text drawn on top of an object. It can be a lightweight re
 | value_font         | byte   | The [Font ID](fonts.md)
 | value_letter_space | int    | Letter space of the text
 | value_line_space   | int    | Line space of the text
-| value_align        | align  | Alignment of the text. Can be none/left/right/top/bottom/full | center
+| value_align        | align  | Alignment of the text. Can be: none, left, right, top, bottom, full | center
 | value_ofs_x        | int    | X offset from the original position of the alignment
 | value_ofs_y        | int    | Y offset from the original position of the alignment
 

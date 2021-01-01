@@ -74,18 +74,18 @@ Besides the common properties listed above, each object type can have specific p
 | toggle   | boolean    | no       | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | no       | 0       | The value: 1 for toggled, 0 for untoggled
 | txt      | string     | no       | ""      | The text of the label
-| mode     | string     | no       | expand  | The wrapping mode of long text labels (expand, break, dots, scroll and loop)
+| mode     | string     | no       | expand  | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop
 
 Normal Switches send touch events out as they occur. The possible events are:
 
-- DOWN: Occurs when a button goes from depressed to pressed
-- SHORT: The button was released within a short time i.e. a short click has occurred
-- LONG: Event is send when the button is *still* being pressed after the threshold time
+- `DOWN`: Occurs when a button goes from depressed to pressed
+- `SHORT`: The button was released within a short time i.e. a short click has occurred
+- `LONG`: Event is send when the button is *still* being pressed after the threshold time
 <!-- - HOLD: The HOLD event is repeated every 400ms while the button is still pressed -->
-- UP: The button is released after being pressing for a LONG threshold time.
-- LOST: This event occurs when the object looses the focus while the screen is still being touched
+- `UP`: The button is released after being pressing for a LONG threshold time.
+- `LOST`: This event occurs when the object looses the focus while the screen is still being touched
 
-Toggle Switches only send out their new value (0 or 1) when toggled.
+Toggle Switches only send out their new value (`0` or `1`) when toggled.
 
 ### Checkbox
 **objid:11**
@@ -94,7 +94,7 @@ Toggle Switches only send out their new value (0 or 1) when toggled.
 
 | Property | Value      | Required | Default    | Description
 |----------|------------|----------|------------|--------------
-| val      | int16      | no       | 0          | The value: 1 for checked, 0 for unchecked
+| val      | int16      | no       | 0          | 1 for checked, 0 for unchecked
 | txt      | string     | no       | "Checkbox" | The label of the checkbox
 
 ### Text Label
@@ -105,9 +105,9 @@ Toggle Switches only send out their new value (0 or 1) when toggled.
 | Property | Value      | Required | Default    | Description
 |----------|------------|----------|------------|--------------
 | txt      | string     | no       | "Text"     | The text of the label
-| mode     | string     | no       | expand     | The wrapping mode of long text labels
+| mode     | string     | no       | expand     | The wrapping mode of long text labels.<br>Possible modes are: expand, break, dots, scroll, loop
 
-Possible wrapping modes are: expand, break, dots, scroll and loop
+
 
 ```json
 {"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
@@ -124,14 +124,15 @@ Possible wrapping modes are: expand, break, dots, scroll and loop
 | max       | int16      | no       | 100     | maximum value of the indicator
 | val       | int16      | no       | 0       | current value of the indicator
 | rotation  | int16      | no       | 0       | offset to the 0 degree position
-| type      | 0-2        | no       | 0       | 0=normal, 1=symmetrical, 2=reverse
+| type      | 0-2        | no       | 0       | 0 = normal, 1 = symmetrical, 2 = reverse
 | adjustable| bool       | no       | false   | Add indicator that the user can operate to change the value
-|start_angle| 0-360      | no       |         | start angle of the background or indicator (see note)
-| end_angle | 0-360      | no       |         | end angle of the background or indicator (see note)
+|start_angle| 0-360      | no       |         | start angle of the arc background (see note)
+| end_angle | 0-360      | no       |         | end angle of the arc background (see note)
+|start_angle1| 0-360      | no       |         | start angle of the arc indicator (see note)
+| end_angle1 | 0-360      | no       |         | end angle of the arc indicator (see note)
 
-`start_angle` and `end_angle` set the angles of the arc background.
-`start_angle1` and `end_angle1` set the angles of the arc indicator.
-Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
+!!! note
+    Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
 
 ### Spinner
 **objid:21**
@@ -153,7 +154,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 |----------|------------|----------|---------|--------------
 | val      | uint16     | no       | 0       | The selected color in RBG565 format
 | color    | hex string | no       | 0       | The selected color in html format #rrggbb
-| rect     | boolean    | no       | false   | True if the color picker has a rectangular shape like a slider. False for a circular shape.
+| rect     | boolean    | no       | false   | true = color picker has a rectangular shape like a slider. false = circular shape.
 
 
 ### Slider
@@ -208,7 +209,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 | Property   | Value      | Required | Default | Description
 |------------|------------|----------|---------|---------------
-| val      | int16        | no       | 0       | The value: 1 for on, 0 for off
+| val      | int16        | no       | 0       | 1 for on, 0 for off
 
 ### LED Indicator
 **objid:41**
@@ -217,7 +218,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 | Property   | Value      | Required | Default | Description
 |------------|------------|----------|---------|---------------
-| val        | byte       | no       | 0       | The brightness of the indicator 0-255
+| val        | byte       | no       | 0       | The brightness of the indicator [0..255]
 
 ### Dropdown List
 **objid:50**
@@ -226,7 +227,7 @@ Zero degree is at the middle right (3 o'clock) of the object and the degrees are
 
 | Property | Value      | Required | Default | Description
 |----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | The items separated by \n
+| options  | string     | no       | ""      | List of items separated by `\n`
 | val      | int16      | no       | 0       | The number of the selected item
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
 
@@ -243,7 +244,7 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 
 | Property | Value      | Required | Default | Description
 |----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | The items separated by \n
+| options  | string     | no       | ""      | List of items separated by `\n`
 | val      | int16      | no       | 0       | The number of the selected item
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
 | rows     | int8       | no       | 3       | The number ow rows that are visible

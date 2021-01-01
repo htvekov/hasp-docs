@@ -44,6 +44,7 @@
               {title: "Colorpicker", url: "#colorpicker" },
               {title: "Slider", url: "#slider" },
               {title: "Double Slider", url: "#double-slider" },
+              {title: "Line Meter", url: "#line-meter" },
               {title: "Gauge", url: "#gauge" },
               {title: "Progress Bar", url: "#progress-bar" },
               {title: "Switch", url: "#switch" },
@@ -249,6 +250,10 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td align="center">32</td>
 <td align="left"><a href="#progress-bar">Progress Bar</a></td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="left"><a href="#line-meter">Line Meter</a></td>
 </tr>
 <tr>
 <td align="center">40</td>
@@ -601,6 +606,43 @@ Besides the common properties listed above, each object type can have specific p
 </table>
 <h3 id="double-slider">Double Slider<a class="headerlink" href="#double-slider" title="Permanent link">~</a></h3>
 <p><strong>objid:30</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>minimum value of the indicator</td>
+</tr>
+<tr>
+<td>max</td>
+<td>int16</td>
+<td>no</td>
+<td>100</td>
+<td>maximum value of the indicator</td>
+</tr>
+<tr>
+<td>val</td>
+<td>int16</td>
+<td>no</td>
+<td>0</td>
+<td>current value of the indicator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="line-meter">Line Meter<a class="headerlink" href="#line-meter" title="Permanent link">~</a></h3>
+<p><strong>objid:33</strong></p>
+<p><img align="center" alt="lv_lmeter" src="../assets/images/objects/lv_ex_linemeter_1.png" /></p>
 <table>
 <thead>
 <tr>

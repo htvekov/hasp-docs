@@ -675,6 +675,34 @@ Besides the common properties listed above, each object type can have specific p
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
+<tr>
+<td>angle</td>
+<td>0-360</td>
+<td>no</td>
+<td>240</td>
+<td>angle between start and end of the scale</td>
+</tr>
+<tr>
+<td>line_count</td>
+<td>uint16</td>
+<td>no</td>
+<td>31</td>
+<td>tick count of the scale</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>0-360</td>
+<td>no</td>
+<td>0</td>
+<td>offset for the scale angles to rotate it</td>
+</tr>
+<tr>
+<td>type</td>
+<td>0-1</td>
+<td>no</td>
+<td>0</td>
+<td>0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise</td>
+</tr>
 </tbody>
 </table>
 <h3 id="gauge">Gauge<a class="headerlink" href="#gauge" title="Permanent link">~</a></h3>
@@ -723,8 +751,8 @@ Besides the common properties listed above, each object type can have specific p
 <td>angle</td>
 <td>0-360</td>
 <td>no</td>
-<td>0</td>
-<td>offset for the gauge's angles to rotate it</td>
+<td>240</td>
+<td>angle between start and end of the scale</td>
 </tr>
 <tr>
 <td>label_count</td>
@@ -739,6 +767,13 @@ Besides the common properties listed above, each object type can have specific p
 <td>no</td>
 <td>31</td>
 <td>minor tick count of the scale</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>0-360</td>
+<td>no</td>
+<td>0</td>
+<td>offset for the gauge's angles to rotate it</td>
 </tr>
 <tr>
 <td>format</td>

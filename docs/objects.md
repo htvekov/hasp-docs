@@ -75,7 +75,7 @@ Besides the common properties listed above, each object type can have specific p
 | toggle   | boolean    | no       | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | no       | 0       | The value: 1 for toggled, 0 for untoggled
 | txt      | string     | no       | ""      | The text of the label
-| mode     | string     | no       | expand  | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop
+| mode     | string     | no       | expand  | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
 
 Normal Switches send touch events out as they occur. The possible events are:
 
@@ -106,7 +106,7 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 | Property | Value      | Required | Default    | Description
 |----------|------------|----------|------------|--------------
 | txt      | string     | no       | "Text"     | The text of the label
-| mode     | string     | no       | expand     | The wrapping mode of long text labels.<br>Possible modes are: expand, break, dots, scroll, loop
+| mode     | string     | no       | crop       | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
 
 
 

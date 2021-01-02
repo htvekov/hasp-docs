@@ -2,8 +2,8 @@
 
 There are two ways to create an object on the screen:
 
-- Uploading a pages.jsonl file onto the internal flash
-- Use the `jsonl` command *(via MQTT, serial or telnet console)*
+- Uploading a [`pages.jsonl`](./pages.md/#pagesjsonl) file onto the internal flash
+- Use the [`jsonl`](./commands.md/#multiple-commands) command *(via MQTT, serial or telnet console)*
 
 ## Common Properties
 
@@ -184,11 +184,15 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 
 ![lv_lmeter](assets/images/objects/lv_ex_linemeter_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|---------------
-| min      | int16      | no       | 0       | minimum value of the indicator
-| max      | int16      | no       | 100     | maximum value of the indicator
-| val      | int16      | no       | 0       | current value of the indicator
+| Property       | Value      | Required | Default | Description
+|----------------|------------|----------|---------|---------------
+| min            | int16      | no       | 0       | minimum value of the indicator
+| max            | int16      | no       | 100     | maximum value of the indicator
+| val            | int16      | no       | 0       | current value of the indicator
+| angle          | 0-360      | no       | 240     | angle between start and end of the scale
+| line_count     | uint16     | no       | 31      | tick count of the scale
+| rotation       | 0-360      | no       | 0       | offset for the scale angles to rotate it
+| type           | 0-1        | no       | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
 
 
 ### Gauge
@@ -202,17 +206,19 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 | max            | int16      | no       | 100     | maximum value of the indicator
 | val            | int16      | no       | 0       | current value of the indicator
 | critical_value | int16      | no       | 80      | scale color will be changed to scale_end_color after this value
-| angle          | 0-360      | no       | 0       | offset for the gauge's angles to rotate it
+| angle          | 0-360      | no       | 240     | angle between start and end of the scale
 | label_count    | uint8      | no       |         | number of labels (and minor tick count) of the scale
 | line_count     | uint16     | no       | 31      | minor tick count of the scale
-| format         | uint16     | no       | 1       | divider for major tick values
+| rotation       | 0-360      | no       | 0       | offset for the gauge's angles to rotate it
+| format         | uint16     | no       | 0       | divider for major tick values
 
 To strip trailing zero's of major tick labels the `format` divider can be used to scale the values before printing:
-- 1 : print the major tick value as is
-- 10 : divide tick value by 10 before printing the major tick label
-- 100 : divide tick value by 100 before printing the major tick label
-- 1000 : divide tick value by 1000 before printing the major tick label
-- 10000 : divide tick value by 10000 before printing the major tick label
+
+- 0 : print the major tick value as is
+- 1 : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label
+- 2 : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label
+- 3 : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label
+- 4 : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label
 
 Only these values are allowed, arbirary numbers are not supported.
 

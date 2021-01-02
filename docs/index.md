@@ -3,7 +3,7 @@
 
 This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
 The [original HASwitchPlate][1] project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
-This rewrite removes the Nextion/TJC requirement by using the [Littlev Graphics Library][2] on the MCU to drive a cheap commodity display.
+This rewrite removes the Nextion/TJC requirement by using the [Lvgl Graphics Library][2] on the MCU to drive a cheap commodity display.
 
 This version also adds ESP32 and STM32F4 support to take advantage of the additional hardware capabilities.
 
@@ -11,7 +11,6 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 
 ![Screenshot](assets/images/screenshots/home-sliders.png) &nbsp; ![Screenshot](assets/images/screenshots/home-buttons.png) &nbsp; ![Screenshot](assets/images/screenshots/home-mediaplayer.png) &nbsp; ![Screenshot](assets/images/screenshots/lanbon.png) &nbsp;
 
-<iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe>
 
 ## Features
 
@@ -23,7 +22,7 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 | Maximum Page Count      | 4       | 12 | 12
 | Object Types / Widgets  | 14      | 15 | 15
 | Dynamic Objects         | :white_check_mark: yes | :white_check_mark: yes | :white_check_mark: yes
-| [Lvgl Theme Support][3] | basic only | all themes | tbd
+| Theme Support           | yes     | yes     | yes
 | [Custom .zi V5 font][4] | :white_check_mark: yes (latin1) | :white_check_mark: yes (latin1) | no
 | [FontAwesome Icons][5]  | :white_check_mark: 1300+ | :white_check_mark: 1300+ | no
 | PNG images              | :x: no | :grey_question: tbd | :grey_question: tbd 
@@ -31,13 +30,14 @@ This version also adds ESP32 and STM32F4 support to take advantage of the additi
 
 ## Support
 
-For support using hasp-lvgl, please join the [#hasp-lvgl channel][6] on Discord.
+For support using hasp-lvgl, please join the [#hasp-lvgl channel][6] on Discord
+or use [Discussions][3] on Github.
 
 
 
 [1]: https://github.com/aderusha/HASwitchPlate
-[2]: https://github.com/littlevgl/lvgl
-[3]: https://littlevgl.com/themes
+[2]: https://github.com/lvgl/lvgl
+[3]: https://github.com/fvanroie/hasp-lvgl/discussions
 [4]: https://github.com/fvanroie/HMI-Font-Pack/releases
 [5]: https://fontawesome.com/cheatsheet/
 [6]: https://discord.gg/VCWyuhF

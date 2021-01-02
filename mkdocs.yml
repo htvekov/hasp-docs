@@ -30,7 +30,9 @@ nav:
     - objects.md
     - fonts.md
     - styling.md
-  - example-pages.md
+  - Example Pages:
+    - example-0.md
+    - example-1.md
   - commands.md
   - FAQ: faq.md
   - firmware-update.md

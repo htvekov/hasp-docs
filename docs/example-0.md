@@ -1,5 +1,5 @@
 
-<h1>Example Pages</h1>
+<h1>Example 0</h1>
 
 ## Code
 
@@ -38,12 +38,3 @@ This is a real-world example of a `pages.jsonl` file:
 
 ## Result
 
-### Page 0
-
-### Page 1
-
-### Page 2
-
-### Page 3
-
-### Page 254

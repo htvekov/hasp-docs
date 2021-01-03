@@ -33,6 +33,7 @@ nav:
   - Example Pages:
     - example-0.md
     - example-1.md
+    - example-2.md
   - commands.md
   - FAQ: faq.md
   - firmware-update.md

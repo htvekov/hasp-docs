@@ -108,6 +108,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 {&quot;objid&quot;:10,&quot;id&quot;:3,&quot;x&quot;:164,&quot;y&quot;:290,&quot;w&quot;:76,&quot;h&quot;:30,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF054&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
 </code></pre>
 <h2 id="result">Result<a class="headerlink" href="#result" title="Permanent link">~</a></h2>
+<p>Values for Temperature, Humidity and CO2 Sensor are sent from another device by publishing to the appropriate command topic:</p>
+<ul>
+<li>hasp/lanbon/command/p[0].b[2].val %value% - update Temperature arc value</li>
+<li>hasp/lanbon/command/p[0].b[2].value_str %value%°C - update Temperature text value</li>
+<li>hasp/lanbon/command/p[0].b[3].val %value% - update Humidity arc value </li>
+<li>hasp/lanbon/command/p[0].b[3].value_str %value% %  - update Humidity text value</li>
+<li>hasp/lanbon/command/p[0].b[4].txt CO2 levels: %value% - update CO2 level value</li>
+</ul>
 <p><img align="left" alt="Screenshot" src="../assets/images/screenshots/lanbon.png" /></p>
 <div style="clear:both;"></div>
 

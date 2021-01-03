@@ -28,8 +28,9 @@ Pin	  |Function            |ESP32 Pin  |Config Name|Display Pin |
 25    |Module Ground	   |GND        |           |GND
 26    |Touch Chip Select   |GPIO22     |TOUCH_CS   |TP_CS
 
-!> (*)Only the WaveShare 4.0" RPi LCD Revision C has a solder jumper on the back to enable PWM backlight dimming.
-Other revisions of this board do not have this feature.
+!!! warning
+   Only the WaveShare 4.0" RPi LCD Revision C has a solder jumper on the back to enable PWM backlight dimming.    
+   Other revisions of this board do not have this feature.
 
 SPI MISO, MOSI and SCLK are shared between the touch controller and the LCD controller.
 

@@ -25,8 +25,8 @@
 {"page":254,"comment":"Navigation items at bottom"}
 {"objid":10,"id":1,"x":0,"y":290,"w":76,"h":30,"opacity":50,"txt":"\uF053","radius":0,"bg_color":"#34495E","text_color":"#000000"}
 {"objid":10,"id":2,"x":75,"y":290,"w":90,"h":30,"opacity":100,"txt":"\uF015","radius":0,"bg_color":"#34495E","text_color":"#000000"}
-{"objid":10,"id":3,"x":164,"y":290,"w":76,"h":30,"opacity":100,"txt":"\uF054","radius":0,"bg_color":"#34495E","text_color":"#000000"}```
-
+{"objid":10,"id":3,"x":164,"y":290,"w":76,"h":30,"opacity":100,"txt":"\uF054","radius":0,"bg_color":"#34495E","text_color":"#000000"}
+```
 ## Result
 
 ![Screenshot](assets/images/screenshots/lanbon.png){: align=left }

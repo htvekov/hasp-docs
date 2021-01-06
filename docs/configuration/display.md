@@ -6,23 +6,33 @@ Define the overal settings of the display driver.
 
 ![Display Settings](../assets/images/settings/display_settings.png "Display Settings")
 
-### UI Theme and Hue
+### Short Idle 
 
-Select one of the built-in themes to select the general style for the HASP interface.
-With the Hue slider you can select the base color for the built-in theme.
+When the display has not been touched for the Short Idle amount of seconds, an `idle = SHORT` event will be sent out.
 
-### Startup layout
+### Long Idle 
 
-Enter the filename of the .jsonl you have uploaded to enables the layout on startup.
+When the display has not been touched for Long + Short Idle amount of seconds, an `idle = LONG` event will be sent out.
 
-### Startup Page
+The Long Idle period begins to count *after* the Short Idle period.
 
-Select to what page the display should switch on startup.
+### Orientation
 
-### Startup brightness
+Rotate the display by the set number of degrees and optionally mirror the display as well.
 
-Select the brightness level of the display on startup.
-*Please note that the display must support dim feature and GPIO for dim is set in display setup.*
+### Show Pointer
+
+Enable this option to show a mouse pointer. This helps with checking if the touches are correctly detected.
+
+### Backlight Control
+
+Sets the GPIO pin which is used for PWM dimming of the backlight.
+
+### Calibrate
+
+*Only available with XPT2046 resistive touchscreen controllers.*
+
+Starts an onscreen calibration sequence.
 
 ---
 

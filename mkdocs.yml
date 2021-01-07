@@ -38,6 +38,7 @@ nav:
   - FAQ: faq.md
   - firmware-update.md
   - Displays:
+    - displays/ILI9341_SPI.md
     - displays/MHS4001.md
     - displays/MRB3511.md
     - displays/Waveshare_40RPi_LCD(C).md

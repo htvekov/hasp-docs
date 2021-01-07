@@ -65,7 +65,7 @@ Therefor the Lolin TFT 2.4 Touch Shield is used as the development display of ch
 
 ##### Backlight Control
 
-To use PWM dimming on the Lolin TFT 2.4" you must solder the TFT-LED pin to either D1, D2 or D4.
+To use PWM dimming on the Lolin TFT 2.4" you must connect the TFT-LED pin to either D1, D2 or D4.
 **D1 is recommended** for backlight control and configured by default.
 
 ![TFT-LED PWM dimming](assets/images/tft-led-pwm.png)

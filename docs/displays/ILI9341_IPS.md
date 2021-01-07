@@ -1,4 +1,10 @@
-<h1>ILI9341 SPI Panel</h1>
+<h1>ILI9341 IPS Panel</h1>
+
+![Display image](assets/images/displays/ILI9341_SPI.jpg)
+
+A 240x320 IPS TFT display with an ILI9341 controller and XPT2046 touch controller.
+
+Improvement over TN versions of the display with amazing view angles.
 
 ## Pin Configuration
 

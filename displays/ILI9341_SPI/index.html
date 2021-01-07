@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Francis Van Roie">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>ILI9341 SPI - HASP - Open Hardware edition</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Pin Configuration", url: "#_top", children: [
+          ]},
+          {title: "Custom build", url: "#custom-build", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../MHS4001/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../MHS4001/" class="btn btn-xs btn-link">
+        MHS4001
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../firmware-update/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../firmware-update/" class="btn btn-xs btn-link">
+        Firmware update
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1>ILI9341 SPI Panel</h1>
+
+<h2 id="pin-configuration">Pin Configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">~</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Function</th>
+<th align="center">ESP Pin</th>
+<th>Config Name</th>
+<th>Display Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Module Ground</td>
+<td align="center">GND</td>
+<td></td>
+<td>GND</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Module Power 3.3v</td>
+<td align="center">3V3</td>
+<td></td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SPI Clock</td>
+<td align="center">GPIO19</td>
+<td>TFT_SCLK</td>
+<td>CLK</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Data Input</td>
+<td align="center">GPIO23</td>
+<td>TFT_MOSI</td>
+<td>MOSI</td>
+</tr>
+<tr>
+<td>5</td>
+<td>LCD Reset line</td>
+<td align="center">GPIO15</td>
+<td>TFT_RST</td>
+<td>RES</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Data Command control</td>
+<td align="center">GPIO5</td>
+<td>TFT_DC</td>
+<td>DC</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Backlight</td>
+<td align="center">GPIO21</td>
+<td>TFT_BCKL</td>
+<td>BLK</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Data Output</td>
+<td align="center">GPIO19</td>
+<td>TFT_MISO</td>
+<td>MISO</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Chip Select</td>
+<td align="center">GPIO26</td>
+<td>TFT_CS</td>
+<td>CS1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Touch Select</td>
+<td align="center">GPIO22</td>
+<td>TOUCH_CS</td>
+<td>CS2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Touch Interrupt</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>SPI MISO, MOSI and SCLK are shared between the touch controller and the LCD controller.</p>
+<h2 id="custom-build">Custom build<a class="headerlink" href="#custom-build" title="Permanent link">~</a></h2>
+<p>Define a custom environment in <code>platformio_override.ini</code> and add a new <code>esp32_ili9341_spi</code> entry under <code>extra_default_envs =</code> </p>
+<p>If you've wired pins differently, change the values below.</p>
+<pre><code>;-- ILI9341 SPI version ------------------------
+[env:esp32_ili9341_spi]
+platform = espressif32
+platform_packages = framework-arduinoespressif32
+framework = arduino
+board = esp32dev
+monitor_port = COM4
+upload_port = ${env:esp32_ili9341_spi.monitor_port}
+monitor_filters = esp32_exception_decoder
+board_build.partitions = user_setups/esp32_partition_app1300k_spiffs1216k.csv
+
+build_flags =
+    ${env.build_flags}
+    ${esp32.build_flags}
+    -D ILI9341_DRIVER=1
+    -D TFT_WIDTH=240
+    -D TFT_HEIGHT=320
+    -D TFT_ROTATION=0 ; see TFT_ROTATION values
+    -D TFT_INVERSION_ON  ; to fix colors
+    -D SPI_FREQUENCY=80000000
+    -D SPI_TOUCH_FREQUENCY=2500000
+    -D SPI_READ_FREQUENCY=20000000
+    -D USER_SETUP_LOADED=1
+    -D TOUCH_DRIVER=2046     ; XPT2046 Resistive SPI touch panel driver
+    -D SUPPORT_TRANSACTIONS
+    ${esp32.vspi}        ; Use VSPI hardware SPI bus: 
+                         ; TFT_MISO=19 | TFT_MOSI=23 | TFT_SCLK=18
+                         ; MISO    = 8 | MOSI    = 4 | CLK     = 3
+; wiring recommendations, change pins according to your wiring
+    -D TFT_DC=5          ; DC,  lcd pin 3
+    -D TFT_RST=15        ; RES, lcd pin 5
+    -D TFT_BCKL=-1       ; BLK, lcd pin 7 (configurable via web UI (e.g. 21))
+    -D TFT_CS=26         ; CS1, lcd pin 9
+    -D TOUCH_CS=22       ; CS2, lcd pin 10  
+
+lib_deps =
+    ${env.lib_deps}
+    ${esp32.lib_deps}
+
+lib_ignore =
+    ${env.lib_ignore}
+    ${esp32.lib_ignore}
+
+extra_scripts =
+    ${env.extra_scripts}
+    ${esp32.extra_scripts}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../MHS4001/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../MHS4001/" class="btn btn-xs btn-link">
+        MHS4001
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../firmware-update/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../firmware-update/" class="btn btn-xs btn-link">
+        Firmware update
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/displays/ILI9341_SPI.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

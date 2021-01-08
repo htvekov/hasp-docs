@@ -298,4 +298,8 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 ### Base Object
 **objid:91**
 
+![lv_base_object](assets/images/objects/lv_ex_base_object_1.png)
+
 The Base Object can be directly used as a simple widget. It is nothing more then a (rounded) rectangle.
+
+You can use it as a background shape for other objects by putting its jsonl line before the object. 

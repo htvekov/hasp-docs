@@ -106,10 +106,10 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 
 | Property | Value      | Required | Default    | Description
 |----------|------------|----------|------------|--------------
-| txt      | string     | no       | "Text"     | The text of the label
+| txt      | string     | no       | "Text"     | The text of the label, `\n` for line break.
 | mode     | string     | no       | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 
-
+ 
 
 ```json
 {"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}

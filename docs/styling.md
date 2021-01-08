@@ -9,7 +9,7 @@ Color values can be:
 
 - Short names (from table)
 - RGB hex code (`#rrggbb`)
-- Decimal format (`0..65353`)
+- Number format (`0..65353`)
 
 
 |	Short Name	|	Hex Code	|

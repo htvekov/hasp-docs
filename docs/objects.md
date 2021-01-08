@@ -284,16 +284,12 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 | options  | string     | no       | ""      | List of items separated by `\n`
 | val      | int16      | no       | 0       | The number of the selected item
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
-| rows     | int8       | no       | 3       | The number ow rows that are visible
-
-!!! note "Note"
-    A roller does not use the `h` attribute to set its height but uses the `rows` attribute instead.
+| rows     | int8       | no       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.
 
-When the item is changed both `val` and `txt` of the newly selected item are send out.
-
+When the item is changed both `val` and `txt` of the newly selected item is sent out.
 
 ### Base Object
 **objid:91**

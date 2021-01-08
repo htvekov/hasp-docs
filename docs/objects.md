@@ -22,7 +22,7 @@ but only the `id` and `objid` properties are required to create an object:
 | enabled  | true/false | no       | true    | object is clickable |
 | hidden   | true/false | no       | false   | object is hidden |
 | opacity  | 0-255      | no       | 255     | how much the the object is opaque |
-| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object, 0 = no round corners |
+| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height) |
 
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
@@ -30,7 +30,6 @@ The maximum number of pages and objects is limited by the memory available in th
 
 `"page":254` indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.
-
 
 ## Object Types
 

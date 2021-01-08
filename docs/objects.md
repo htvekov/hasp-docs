@@ -194,6 +194,7 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 | rotation       | 0-360      | no       | 0       | offset for the scale angles to rotate it
 | type           | 0-1        | no       | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
 
+Use [line properties](styling.md#line) to customise.
 
 ### Gauge
 **objid:31**
@@ -242,6 +243,8 @@ Only these values are allowed, arbirary numbers are not supported.
 | Property   | Value      | Required | Default | Description
 |------------|------------|----------|---------|---------------
 | val      | int16        | no       | 0       | 1 for on, 0 for off
+
+`bg_color1` changes indicator color and `bg_color2`changes knob color
 
 ### LED Indicator
 **objid:41**

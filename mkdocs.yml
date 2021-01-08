@@ -1,5 +1,5 @@
-site_name: 'HASP - Open Hardware edition'
-site_description: 'Lvgl Graphics Library on the MCU to drive a cheap commodity display'
+site_name: 'HASP - Open SwitchPlate'
+site_description: 'Open firmware for MCUs to drive a cheap commodity touch display'
 site_author: 'Francis Van Roie'
 
 repo_url: https://github.com/fvanroie/hasp-lvgl

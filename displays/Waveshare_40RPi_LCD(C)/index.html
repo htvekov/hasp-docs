@@ -242,12 +242,11 @@ Including the VCC and GND pins, a total of 13 connections need to be made to the
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-</div>
-<p>Only the WaveShare 4.0" RPi LCD Revision C has a solder jumper on the back to enable PWM backlight dimming.  <br />
-   Other revisions of this board do not have this feature.</p>
 <p>SPI MISO, MOSI and SCLK are shared between the touch controller and the LCD controller.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention (*)</p>
+<p>Only the WaveShare 4.0" RPi LCD Revision C has a solder jumper on the back to enable PWM backlight dimming. Other revisions of this board do not have this feature.</p>
+</div>
 <h2 id="lcd-configuration">LCD Configuration<a class="headerlink" href="#lcd-configuration" title="Permanent link">~</a></h2>
 <p>The <code>lcd_config.ini</code> file specifies the different properties of the display, except for the actual pin configuration:</p>
 <pre><code class="language-ini">raspberrypi =

@@ -34,19 +34,19 @@
         var pageToc = [
           {title: "Colors", url: "#_top", children: [
           ]},
-          {title: "Padding and Margin", url: "#padding-and-margin", children: [
-          ]},
           {title: "Background", url: "#background", children: [
           ]},
           {title: "Border", url: "#border", children: [
           ]},
-          {title: "Shadow", url: "#shadow", children: [
+          {title: "Line", url: "#line", children: [
           ]},
-          {title: "Value", url: "#value", children: [
+          {title: "Padding and Margin", url: "#padding-and-margin", children: [
+          ]},
+          {title: "Shadow", url: "#shadow", children: [
           ]},
           {title: "Text", url: "#text", children: [
           ]},
-          {title: "Line", url: "#line", children: [
+          {title: "Value", url: "#value", children: [
           ]},
         ];
 
@@ -73,12 +73,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../example-0/" class="btn btn-xs btn-default pull-right">
+      <a href="../example-1/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../example-0/" class="btn btn-xs btn-link">
-        Demo Widgets
+      <a href="../example-1/" class="btn btn-xs btn-link">
+        Jaffa Sunrise
       </a>
     </div>
     
@@ -101,303 +101,111 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <h3 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">~</a></h3>
 <p>Color values can be:</p>
 <ul>
-<li>Short names (from table)</li>
+<li>Short names (from table below)</li>
 <li>RGB hex code (<code>#rrggbb</code>)</li>
-<li>Number format (<code>0..65353</code>)</li>
+<li>RGB565 number format (<code>0..65353</code>)</li>
 </ul>
 <table>
-<thead>
-<tr>
-<th align="left">Short Name</th>
-<th align="left">Hex Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">aqua</td>
-<td align="left">#00FFFF</td>
-</tr>
-<tr>
-<td align="left">azure</td>
-<td align="left">#F0FFFF</td>
-</tr>
-<tr>
-<td align="left">beige</td>
-<td align="left">#F5F5DC</td>
-</tr>
-<tr>
-<td align="left">bisque</td>
-<td align="left">#FFE4C4</td>
-</tr>
-<tr>
-<td align="left">black</td>
-<td align="left">#000000</td>
-</tr>
-<tr>
-<td align="left">blue</td>
-<td align="left">#0000FF</td>
-</tr>
-<tr>
-<td align="left">blush</td>
-<td align="left">#B00000</td>
-</tr>
-<tr>
-<td align="left">brown</td>
-<td align="left">#A52A2A</td>
-</tr>
-<tr>
-<td align="left">coral</td>
-<td align="left">#FF7F50</td>
-</tr>
-<tr>
-<td align="left">cyan</td>
-<td align="left">#00FFFF</td>
-</tr>
-<tr>
-<td align="left">fuchsia</td>
-<td align="left">#FF00FF</td>
-</tr>
-<tr>
-<td align="left">gold</td>
-<td align="left">#FFD700</td>
-</tr>
-<tr>
-<td align="left">gray</td>
-<td align="left">#808080</td>
-</tr>
-<tr>
-<td align="left">green</td>
-<td align="left">#008000</td>
-</tr>
-<tr>
-<td align="left">indigo</td>
-<td align="left">#4B0082</td>
-</tr>
-<tr>
-<td align="left">ivory</td>
-<td align="left">#FFFFF0</td>
-</tr>
-<tr>
-<td align="left">khaki</td>
-<td align="left">#F0E68C</td>
-</tr>
-<tr>
-<td align="left">lime</td>
-<td align="left">#00FF00</td>
-</tr>
-<tr>
-<td align="left">linen</td>
-<td align="left">#FAF0E6</td>
-</tr>
-<tr>
-<td align="left">maroon</td>
-<td align="left">#800000</td>
-</tr>
-<tr>
-<td align="left">navy</td>
-<td align="left">#000080</td>
-</tr>
-<tr>
-<td align="left">olive</td>
-<td align="left">#808000</td>
-</tr>
-<tr>
-<td align="left">orange</td>
-<td align="left">#FFA500</td>
-</tr>
-<tr>
-<td align="left">orchid</td>
-<td align="left">#DA70D6</td>
-</tr>
-<tr>
-<td align="left">peru</td>
-<td align="left">#CD853F</td>
-</tr>
-<tr>
-<td align="left">pink</td>
-<td align="left">#FFC0CB</td>
-</tr>
-<tr>
-<td align="left">plum</td>
-<td align="left">#DDA0DD</td>
-</tr>
-<tr>
-<td align="left">purple</td>
-<td align="left">#800080</td>
-</tr>
-<tr>
-<td align="left">red</td>
-<td align="left">#FF0000</td>
-</tr>
-<tr>
-<td align="left">salmon</td>
-<td align="left">#FA8072</td>
-</tr>
-<tr>
-<td align="left">sienna</td>
-<td align="left">#A0522D</td>
-</tr>
-<tr>
-<td align="left">silver</td>
-<td align="left">#C0C0C0</td>
-</tr>
-<tr>
-<td align="left">snow</td>
-<td align="left">#FFFAFA</td>
-</tr>
-<tr>
-<td align="left">tan</td>
-<td align="left">#D2B48C</td>
-</tr>
-<tr>
-<td align="left">teal</td>
-<td align="left">#008080</td>
-</tr>
-<tr>
-<td align="left">tomato</td>
-<td align="left">#FF6347</td>
-</tr>
-<tr>
-<td align="left">violet</td>
-<td align="left">#EE82EE</td>
-</tr>
-<tr>
-<td align="left">wheat</td>
-<td align="left">#F5DEB3</td>
-</tr>
-<tr>
-<td align="left">white</td>
-<td align="left">#FFFFFF</td>
-</tr>
-<tr>
-<td align="left">yellow</td>
-<td align="left">#FFFF00</td>
-</tr>
-</tbody>
+<tr><th style="text-align:center">Hex Code</th><th>Short Name</th><!--th>RGB565 Number</th></tr-->
+<tr><td style="background-color:#FFC0CB;text-align:center">#FFC0CB</td><td>Pink</td></tr>
+<tr><td style="background-color:#DDA0DD;text-align:center">#DDA0DD</td><td>Plum</td></tr>
+<tr><td style="background-color:#DA70D6;text-align:center">#DA70D6</td><td>Orchid</td></tr>
+<tr><td style="background-color:#EE82EE;text-align:center">#EE82EE</td><td>Violet</td></tr>
+<tr><td style="background-color:#FF00FF;text-align:center;color:white">#FF00FF</td><td>Magenta or Fuchsia</td></tr>
+<tr><td style="background-color:#800080;text-align:center;color:white">#800080</td><td>Purple</td></tr>
+<tr><td style="background-color:#4B0082;text-align:center;color:white">#4B0082</td><td>Indigo</td></tr>
+<tr><td style="background-color:#B00000;text-align:center;color:white">#B00000</td><td>Blush</td></tr>
+<tr><td style="background-color:#FF0000;text-align:center;color:white">#FF0000</td><td>Red</td></tr>
+<tr><td style="background-color:#FF6347;text-align:center;color:white">#FF6347</td><td>Tomato</td></tr>
+<tr><td style="background-color:#FA8072;text-align:center">#FA8072</td><td>Salmon</td></tr>
+<tr><td style="background-color:#FF7F50;text-align:center">#FF7F50</td><td>Coral</td></tr>
+<tr><td style="background-color:#FFA500;text-align:center">#FFA500</td><td>Orange</td></tr>
+<tr><td style="background-color:#FFD700;text-align:center">#FFD700</td><td>Gold</td></tr>
+<tr><td style="background-color:#FFFF00;text-align:center">#FFFF00</td><td>Yellow</td></tr>
+<tr><td style="background-color:#F0E68C;text-align:center">#F0E68C</td><td>Khaki</td></tr>
+<tr><td style="background-color:#FFE4C4;text-align:center">#FFE4C4</td><td>Bisque</td></tr>
+<tr><td style="background-color:#F5DEB3;text-align:center">#F5DEB3</td><td>Wheat</td></tr>
+<tr><td style="background-color:#D2B48C;text-align:center">#D2B48C</td><td>Tan</td></tr>
+<tr><td style="background-color:#00FFFF;text-align:center">#00FFFF</td><td>Cyan or Aqua</td></tr>
+<tr><td style="background-color:#00FF00;text-align:center">#00FF00</td><td>Lime</td></tr>
+<tr><td style="background-color:#008000;text-align:center;color:white">#008000</td><td>Green</td></tr>
+<tr><td style="background-color:#008080;text-align:center;color:white">#008080</td><td>Teal</td></tr>
+<tr><td style="background-color:#0000FF;text-align:center;color:white">#0000FF</td><td>Blue</td></tr>
+<tr><td style="background-color:#000080;text-align:center;color:white">#000080</td><td>Navy</td></tr>
+<tr><td style="background-color:#808000;text-align:center;color:white">#808000</td><td>Olive</td></tr>
+<tr><td style="background-color:#CD853F;text-align:center;color:white">#CD853F</td><td>Peru</td></tr>
+<tr><td style="background-color:#A0522D;text-align:center;color:white">#A0522D</td><td>Sienna</td></tr>
+<tr><td style="background-color:#A52A2A;text-align:center;color:white">#A52A2A</td><td>Brown</td></tr>
+<tr><td style="background-color:#800000;text-align:center;color:white">#800000</td><td>Maroon</td></tr>
+<tr><td style="background-color:#FFFFFF;text-align:center">#FFFFFF</td><td>White</td></tr>
+<tr><td style="background-color:#FFFAFA;text-align:center">#FFFAFA</td><td>Snow</td></tr>
+<tr><td style="background-color:#FFFFF0;text-align:center">#FFFFF0</td><td>Ivory</td></tr>
+<tr><td style="background-color:#FAF0E6;text-align:center">#FAF0E6</td><td>Linen</td></tr>
+<tr><td style="background-color:#F5F5DC;text-align:center">#F5F5DC</td><td>Beige</td></tr>
+<tr><td style="background-color:#F0FFFF;text-align:center">#F0FFFF</td><td>Azure</td></tr>
+<tr><td style="background-color:#C0C0C0;text-align:center">#C0C0C0</td><td>Silver</td></tr>
+<tr><td style="background-color:#808080;text-align:center;color:white">#808080</td><td>Gray or Grey</td></tr>
+<tr><td style="background-color:#000000;text-align:center;color:white">#000000</td><td>Black</td></tr>
 </table>
-<h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
-<p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
-<p>Objects use them to set spacing. See the documentation of the <a href="../objects/">objects</a> for the details.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th align="center">Type</th>
-<th align="left">Description</th>
-<th align="center">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pad_top</td>
-<td align="center">int</td>
-<td align="left">Set the padding on the top</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>pad_bottom</td>
-<td align="center">int</td>
-<td align="left">Set the padding on the bottom</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>pad_left</td>
-<td align="center">int</td>
-<td align="left">Set the padding on the left</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>pad_right</td>
-<td align="center">int</td>
-<td align="left">Set the padding on the right</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>pad_inner</td>
-<td align="center">int</td>
-<td align="left">Set the padding inside the object between children</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>margin_top</td>
-<td align="center">int</td>
-<td align="left">Set the margin on the top</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>margin_bottom</td>
-<td align="center">int</td>
-<td align="left">Set the margin on the bottom</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>margin_left</td>
-<td align="center">int</td>
-<td align="left">Set the margin on the left</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td>margin_right</td>
-<td align="center">int</td>
-<td align="left">Set the margin on the right</td>
-<td align="center">0</td>
-</tr>
-</tbody>
-</table>
+
+<h4>Setting Color</h4>
+<p>Examples:</p>
+<pre><code class="language-json">p[0].b[2].value_color=13891
+p[1].b[5].text_color=silver
+p[2].b[3].bg_color=#C0C0C0
+</code></pre>
+<h4>Return values</h4>
+<p>When retrieving the color of an object, both the HTML representation as the RGB values are returned seperately.</p>
+<p>The format will be a json object with components:</p>
+<ul>
+<li>color : 6 digit hexadecimal code preceeded by a hash <code>#</code> sign.</li>
+<li>r : byte value for red (<code>0..255</code>)</li>
+<li>g : byte value for green (<code>0..255</code>)</li>
+<li>b : byte value for blue (<code>0..255</code>)</li>
+</ul>
+<p>For example, the color returned by a color picker change event is:</p>
+<pre><code class="language-json">hasp/plate_123/state/p1b4 =&gt; {&quot;color&quot;:&quot;#00fff6&quot;,&quot;r&quot;:&quot;0&quot;,&quot;g&quot;:&quot;255&quot;,&quot;b&quot;:&quot;246&quot;}
+</code></pre>
 <h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">~</a></h3>
 <p>The color and gradient used for drawing the background of an object.</p>
 <table>
 <thead>
 <tr>
-<th>Property</th>
+<th align="left">Property</th>
 <th align="center">Type</th>
-<th align="center">Req.</th>
-<th>Description</th>
-<th align="center">Default</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>bg_opa</td>
+<td align="left">bg_opa</td>
 <td align="center">byte</td>
-<td align="center">no</td>
-<td>The background opacity level</td>
-<td align="center"></td>
+<td align="left">The background opacity level</td>
 </tr>
 <tr>
-<td>bg_color</td>
-<td align="center">color</td>
-<td align="center">no</td>
-<td>The background color</td>
-<td align="center"></td>
+<td align="left">bg_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">The background color</td>
 </tr>
 <tr>
-<td>bg_grad_color</td>
-<td align="center">color</td>
-<td align="center">no</td>
-<td>The background gradient color</td>
-<td align="center"></td>
+<td align="left">bg_grad_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">The background gradient color</td>
 </tr>
 <tr>
-<td>bg_grad_dir</td>
+<td align="left">bg_grad_dir</td>
 <td align="center">[0..2]</td>
-<td align="center">no</td>
-<td>0 = none<br>1 = horizontal<br>2 = vertical</td>
-<td align="center">0</td>
+<td align="left">0 = none <em>(=default)</em><br>1 = horizontal<br>2 = vertical</td>
 </tr>
 <tr>
-<td>bg_grad_stop</td>
+<td align="left">bg_grad_stop</td>
 <td align="center">byte</td>
-<td align="center">no</td>
-<td>Specifies where the gradient should stop.<br>0 = at left/top most position<br>255= at right/bottom most position</td>
-<td align="center">255</td>
+<td align="left">Specifies where the gradient should stop.<br>0 = at left/top most position<br>255= at right/bottom most position <em>(=default)</em></td>
 </tr>
 <tr>
-<td>bg_main_stop</td>
+<td align="left">bg_main_stop</td>
 <td align="center">byte</td>
-<td align="center">no</td>
-<td>Specifies where should the gradient start<br>0 = at left/top most position<br>255= at right/bottom most position</td>
-<td align="center">0</td>
+<td align="left">Specifies where should the gradient start<br>0 = at left/top most position <em>(=default)</em><br>255= at right/bottom most position</td>
 </tr>
 </tbody>
 </table>
@@ -407,203 +215,36 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <table>
 <thead>
 <tr>
-<th>Property</th>
+<th align="left">Property</th>
 <th align="center">Type</th>
-<th>Description</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>border_color</td>
-<td align="center">color</td>
-<td>Specifies the color of the border</td>
+<td align="left">border_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">Specifies the color of the border</td>
 </tr>
 <tr>
-<td>border_opa</td>
+<td align="left">border_opa</td>
 <td align="center">byte</td>
-<td>Specifies opacity of the border</td>
+<td align="left">Specifies opacity of the border</td>
 </tr>
 <tr>
-<td>border_width</td>
+<td align="left">border_width</td>
 <td align="center">byte</td>
-<td>Set the width of the border</td>
+<td align="left">Set the width of the border</td>
 </tr>
 <tr>
-<td>border_side</td>
+<td align="left">border_side</td>
 <td align="center">byte</td>
-<td>Specifies which sides of the border to draw.<br>0 = none<br>1 = left<br>2 = right<br>4 = top<br>8 = bottom<br>15 = full<br>A sum of these values is also possible to select specific sides.</td>
+<td align="left">Specifies which sides of the border to draw.<br>0 = none<br>1 = left<br>2 = right<br>4 = top<br>8 = bottom<br>15 = full<br>A sum of these values is also possible to select specific sides.</td>
 </tr>
 <tr>
-<td>border_post</td>
+<td align="left">border_post</td>
 <td align="center">bool</td>
-<td>If <code>true</code> the border will be drawn after all children have been drawn.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="shadow">Shadow<a class="headerlink" href="#shadow" title="Permanent link">~</a></h3>
-<p>The shadow is a blurred area under the object.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th align="center">Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>shadow_color</td>
-<td align="center">color</td>
-<td>Specifies the color of the shadow</td>
-</tr>
-<tr>
-<td>shadow_opa</td>
-<td align="center">byte</td>
-<td>Specifies opacity of the shadow</td>
-</tr>
-<tr>
-<td>shadow_width</td>
-<td align="center">int16</td>
-<td>Set the width (blur size) of the outline</td>
-</tr>
-<tr>
-<td>shadow_ofs_x</td>
-<td align="center">int16</td>
-<td>Set the an X offset for the shadow</td>
-</tr>
-<tr>
-<td>shadow_ofs_y</td>
-<td align="center">int16</td>
-<td>Set the an Y offset for the shadow</td>
-</tr>
-<tr>
-<td>shadow_spread</td>
-<td align="center">byte</td>
-<td>make the shadow larger than the background in every direction by this value</td>
-</tr>
-</tbody>
-</table>
-<h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">~</a></h3>
-<p>Value is an arbitrary text drawn on top of an object. It can be a lightweight replacement for creating label objects.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Property</th>
-<th align="center">Type</th>
-<th align="left">Description</th>
-<th align="center">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">value_str</td>
-<td align="center">string</td>
-<td align="left">Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_color</td>
-<td align="center">color</td>
-<td align="left">Color of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_opa</td>
-<td align="center">byte</td>
-<td align="left">Opacity level of the text [0-255]</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_font</td>
-<td align="center">byte</td>
-<td align="left">The <a href="../fonts/">Font ID</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_letter_space</td>
-<td align="center">int</td>
-<td align="left">Letter space of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_line_space</td>
-<td align="center">int</td>
-<td align="left">Line space of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_align</td>
-<td align="center">align</td>
-<td align="left">Alignment of the text. Can be: none, left, right, top, bottom, full</td>
-<td align="center">center</td>
-</tr>
-<tr>
-<td align="left">value_ofs_x</td>
-<td align="center">int</td>
-<td align="left">X offset from the original position of the alignment</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">value_ofs_y</td>
-<td align="center">int</td>
-<td align="left">Y offset from the original position of the alignment</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">~</a></h3>
-<p>Properties for textual objects only.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Property</th>
-<th align="center">Type</th>
-<th align="left">Description</th>
-<th align="center">Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">text_color</td>
-<td align="center">color</td>
-<td align="left">Color of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">text_opa</td>
-<td align="center">byte</td>
-<td align="left">Opacity level of the text [0-255]</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">text_font</td>
-<td align="center">byte</td>
-<td align="left">The <a href="../fonts/">Font ID</a></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">text_letter_space</td>
-<td align="center">int</td>
-<td align="left">Letter space of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">text_line_space</td>
-<td align="center">int</td>
-<td align="left">Line space of the text</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">text_decor</td>
-<td align="center">byte</td>
-<td align="left">Add text decoration.<br>0 = none<br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="left">text_sel_color</td>
-<td align="center">color</td>
-<td align="left">Set background color of text selection</td>
-<td align="center"></td>
+<td align="left">If <code>true</code> the border will be drawn after all children have been drawn.</td>
 </tr>
 </tbody>
 </table>
@@ -621,7 +262,7 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <tbody>
 <tr>
 <td align="left">line_color</td>
-<td align="center">color</td>
+<td align="center"><a href="#colors">color</a></td>
 <td align="left">Color of the line</td>
 <td align="center"></td>
 </tr>
@@ -654,6 +295,224 @@ Some objects allow for more complex syling, effectively changing its appearance 
 <td align="center">bool</td>
 <td align="left"><code>true</code> = draw rounded line endings</td>
 <td align="center"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
+<p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
+<p>Objects use them to set spacing. See the documentation of the <a href="../objects/">objects</a> for the details.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pad_top</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the top</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">pad_bottom</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the bottom</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">pad_left</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the left</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">pad_right</td>
+<td align="center">int</td>
+<td align="left">Set the padding on the right</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">pad_inner</td>
+<td align="center">int</td>
+<td align="left">Set the padding inside the object between children</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">margin_top</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the top</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">margin_bottom</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the bottom</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">margin_left</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the left</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">margin_right</td>
+<td align="center">int</td>
+<td align="left">Set the margin on the right</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shadow">Shadow<a class="headerlink" href="#shadow" title="Permanent link">~</a></h3>
+<p>The shadow is a blurred area under the object.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">shadow_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">Color of the shadow</td>
+</tr>
+<tr>
+<td align="left">shadow_opa</td>
+<td align="center">byte</td>
+<td align="left">Specifies opacity of the shadow</td>
+</tr>
+<tr>
+<td align="left">shadow_width</td>
+<td align="center">int16</td>
+<td align="left">Set the width (blur size) of the outline</td>
+</tr>
+<tr>
+<td align="left">shadow_ofs_x</td>
+<td align="center">int16</td>
+<td align="left">Set the an X offset for the shadow</td>
+</tr>
+<tr>
+<td align="left">shadow_ofs_y</td>
+<td align="center">int16</td>
+<td align="left">Set the an Y offset for the shadow</td>
+</tr>
+<tr>
+<td align="left">shadow_spread</td>
+<td align="center">byte</td>
+<td align="left">Make the shadow larger than the background in every direction by this value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">~</a></h3>
+<p>Properties for textual objects only.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">text_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">Color of the text</td>
+</tr>
+<tr>
+<td align="left">text_opa</td>
+<td align="center">byte</td>
+<td align="left">Opacity level of the text [0-255]</td>
+</tr>
+<tr>
+<td align="left">text_font</td>
+<td align="center">byte</td>
+<td align="left">The <a href="../fonts/">Font ID</a></td>
+</tr>
+<tr>
+<td align="left">text_letter_space</td>
+<td align="center">int</td>
+<td align="left">Letter space of the text</td>
+</tr>
+<tr>
+<td align="left">text_line_space</td>
+<td align="center">int</td>
+<td align="left">Line space of the text</td>
+</tr>
+<tr>
+<td align="left">text_decor</td>
+<td align="center">byte</td>
+<td align="left">Add text decoration.<br>0 = none <em>(=default)</em><br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough</td>
+</tr>
+<tr>
+<td align="left">text_sel_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">Set background color of text selection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="value">Value<a class="headerlink" href="#value" title="Permanent link">~</a></h3>
+<p>Value is an arbitrary text drawn on top of an object. It can be a lightweight replacement for creating label objects.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">value_str</td>
+<td align="center">string</td>
+<td align="left">Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+</tr>
+<tr>
+<td align="left">value_color</td>
+<td align="center"><a href="#colors">color</a></td>
+<td align="left">Color of the text</td>
+</tr>
+<tr>
+<td align="left">value_opa</td>
+<td align="center">byte</td>
+<td align="left">Opacity level of the text [0-255]</td>
+</tr>
+<tr>
+<td align="left">value_font</td>
+<td align="center">byte</td>
+<td align="left">The <a href="../fonts/">Font ID</a></td>
+</tr>
+<tr>
+<td align="left">value_letter_space</td>
+<td align="center">int</td>
+<td align="left">Letter space of the text</td>
+</tr>
+<tr>
+<td align="left">value_line_space</td>
+<td align="center">int</td>
+<td align="left">Line space of the text</td>
+</tr>
+<tr>
+<td align="left">value_align</td>
+<td align="center">align</td>
+<td align="left">Alignment of the text. Can be: none, left, right, top, bottom, full or center <em>(=default)</em></td>
+</tr>
+<tr>
+<td align="left">value_ofs_x</td>
+<td align="center">int</td>
+<td align="left">X offset from the original position of the alignment</td>
+</tr>
+<tr>
+<td align="left">value_ofs_y</td>
+<td align="center">int</td>
+<td align="left">Y offset from the original position of the alignment</td>
 </tr>
 </tbody>
 </table>
@@ -690,12 +549,12 @@ n/a
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../example-0/" class="btn btn-xs btn-default pull-right">
+      <a href="../example-1/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../example-0/" class="btn btn-xs btn-link">
-        Demo Widgets
+      <a href="../example-1/" class="btn btn-xs btn-link">
+        Jaffa Sunrise
       </a>
     </div>
     

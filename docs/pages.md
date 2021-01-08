@@ -4,7 +4,7 @@ The initial layout of the pages is defined by creating a special file on the SPI
 
 This layout is displayed each time HASP starts up.
 
-Upload this file *(and other resource assets like fonts and images)* in the web interface **Configuration -> HASP Settings** menu.
+Upload this file *(and other resource assets like fonts and images)* in the web interface **HASP Design** menu.
 
 ## pages.jsonl
 

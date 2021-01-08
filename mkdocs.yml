@@ -31,13 +31,14 @@ nav:
     - fonts.md
     - styling.md
   - Example Pages:
-    - example-0.md
-    - example-1.md
-    - example-2.md
+    - Demo Widgets: example-0.md
+    - Jaffa Sunrise: example-1.md
+    - Dash UI: example-2.md
   - commands.md
   - FAQ: faq.md
   - firmware-update.md
   - Displays:
+    - displays/ILI9341_IPS.md
     - displays/MHS4001.md
     - displays/MRB3511.md
     - displays/Waveshare_40RPi_LCD(C).md

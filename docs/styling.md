@@ -4,6 +4,56 @@
 You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
 Some objects allow for more complex syling, effectively changing its appearance or its sub-components.
 
+### Colors
+Color values can be:
+
+- Short names (from table)
+- RGB hex code (`#rrggbb`)
+- Number format (`0..65353`)
+
+
+|	Short Name	|	Hex Code	|
+|	:---	|	:---	|
+|	aqua 	|	 #00FFFF	|
+|	azure 	|	 #F0FFFF	|
+|	beige 	|	 #F5F5DC	|
+|	bisque 	|	 #FFE4C4	|
+|	black 	|	 #000000	|
+|	blue 	|	 #0000FF	|
+|	blush 	|	 #B00000	|
+|	brown 	|	 #A52A2A	|
+|	coral 	|	 #FF7F50	|
+|	cyan 	|	 #00FFFF	|
+|	fuchsia |	 #FF00FF	|
+|	gold 	|	 #FFD700	|
+|	gray 	|	 #808080	|
+|	green 	|	 #008000	|
+|	indigo 	|	 #4B0082	|
+|	ivory 	|	 #FFFFF0	|
+|	khaki 	|	 #F0E68C	|
+|	lime 	|	 #00FF00	|
+|	linen 	|	 #FAF0E6	|
+|	maroon 	|	 #800000	|
+|	navy 	|	 #000080	|
+|	olive 	|	 #808000	|
+|	orange 	|	 #FFA500	|
+|	orchid 	|	 #DA70D6	|
+|	peru 	|	 #CD853F	|
+|	pink 	|	 #FFC0CB	|
+|	plum 	|	 #DDA0DD	|
+|	purple 	|	 #800080	|
+|	red 	|	 #FF0000	|
+|	salmon 	|	 #FA8072	|
+|	sienna 	|	 #A0522D	|
+|	silver 	|	 #C0C0C0	|
+|	snow 	|	 #FFFAFA	|
+|	tan 	|	 #D2B48C	|
+|	teal 	|	 #008080	|
+|	tomato 	|	 #FF6347	|
+|	violet 	|	 #EE82EE	|
+|	wheat 	|	 #F5DEB3	|
+|	white 	|	 #FFFFFF	|
+|	yellow 	|	 #FFFF00	|
 
 
 ### Padding and Margin
@@ -94,8 +144,20 @@ Properties for textual objects only.
 | text_decor        | byte | Add text decoration.<br>0 = none<br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough | 0
 | text_sel_color    | color| Set background color of text selection
 
-<!--
 ### Line
+
+Properties for line objects only.
+
+| Property          | Type | Description | Default |
+| :---              | :---:  | :---          | :---:   |
+| line_color        | color| Color of the line
+| line_opa          | byte | Opacity level of the line [0-255]
+| line_width        | int  | Width of the line. | 0
+| line_dash_width   | int  | Width of dash. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash | 0
+| line_dash_gap     | int  | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash| 0
+| line_rounded      | bool | `true` = draw rounded line endings | `false`
+
+<!--
 
 n/a
 

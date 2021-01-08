@@ -1,5 +1,5 @@
 
-<h1>Example 2</h1>
+<h1>Dash UI</h1>
 
 ## Code
 
@@ -15,17 +15,17 @@
 {"objid":12,"id":5,"x":2,"y":35,"w":140,"txt":"Temperature"}
 {"objid":12,"id":6,"x":140,"y":35,"w":140,"txt":"Humidity"}
 {"objid":10,"id":7,"x":0,"y":160,"w":240,"h":20,"txt":"LIGHTS","bg_color":"#F1C40F","text_color":"#FFFFFF","radius":0,"border_side":0}
-{"objid":12,"id":8,"x":20,"y":190,"w":40,"h":20,"txt":"Ceiling Light"}
+{"objid":12,"id":8,"x":20,"y":190,"w":140,"h":20,"txt":"Ceiling Light"}
 {"objid":40,"id":9,"x":160,"y":190,"w":40,"h":20,"toggle":"TRUE"}
-{"objid":12,"id":10,"x":20,"y":215,"w":40,"h":20,"txt":"Wall Light"}
+{"objid":12,"id":10,"x":20,"y":215,"w":140,"h":20,"txt":"Wall Light"}
 {"objid":40,"id":11,"x":160,"y":215,"w":40,"h":20,"toggle":"TRUE"}
-{"objid":12,"id":12,"x":20,"y":240,"w":40,"h":20,"txt":"Ambient Light"}
+{"objid":12,"id":12,"x":20,"y":240,"w":200,"h":20,"txt":"Ambient Light"}
 {"objid":30,"id":13,"x":30,"y":265,"w":200,"h":10}
 
-{"page":254,"comment":"Navigation items at bottom"}
-{"objid":10,"id":1,"x":0,"y":290,"w":76,"h":30,"opacity":50,"txt":"\uF053","radius":0,"bg_color":"#34495E","text_color":"#000000"}
-{"objid":10,"id":2,"x":75,"y":290,"w":90,"h":30,"opacity":100,"txt":"\uF015","radius":0,"bg_color":"#34495E","text_color":"#000000"}
-{"objid":10,"id":3,"x":164,"y":290,"w":76,"h":30,"opacity":100,"txt":"\uF054","radius":0,"bg_color":"#34495E","text_color":"#000000"}
+{"page":254,"comment":"---------- Page 254 ----------"}
+{"page":254,"objid":10,"id":1,"x":0,"y":290,"w":76,"h":30,"opacity":50,"txt":"\uF053","radius":0,"bg_color":"#34495E","text_color":"#000000"}
+{"page":254,"objid":10,"id":2,"x":75,"y":290,"w":90,"h":30,"opacity":100,"txt":"\uF015","radius":0,"bg_color":"#34495E","text_color":"#000000"}
+{"page":254,"objid":10,"id":3,"x":164,"y":290,"w":76,"h":30,"opacity":100,"txt":"\uF054","radius":0,"bg_color":"#34495E","text_color":"#000000"}
 ```
 ## Result
 

@@ -22,7 +22,7 @@ but only the `id` and `objid` properties are required to create an object:
 | enabled  | true/false | no       | true    | object is clickable |
 | hidden   | true/false | no       | false   | object is hidden |
 | opacity  | 0-255      | no       | 255     | how much the the object is opaque |
-| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object, 0 = no round corners |
+| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height) |
 
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
@@ -30,7 +30,6 @@ The maximum number of pages and objects is limited by the memory available in th
 
 `"page":254` indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.
-
 
 ## Object Types
 
@@ -194,6 +193,7 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 | rotation       | 0-360      | no       | 0       | offset for the scale angles to rotate it
 | type           | 0-1        | no       | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
 
+Use [line properties](styling.md#line) to customise.
 
 ### Gauge
 **objid:31**
@@ -214,13 +214,13 @@ Toggle Switches only send out their new value (`0` or `1`) when toggled.
 
 To strip trailing zero's of major tick labels the `format` divider can be used to scale the values before printing:
 
-- 0 : print the major tick value as is
-- 1 : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label
-- 2 : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label
-- 3 : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label
-- 4 : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label
+- `0` : print the major tick value as is
+- `1` : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label
+- `2` : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label
+- `3` : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label
+- `4` : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label
 
-Only these values are allowed, arbirary numbers are not supported.
+Only these values are allowed, arbitrary numbers are not supported.
 
 ### Progress Bar
 **objid:32**
@@ -242,6 +242,8 @@ Only these values are allowed, arbirary numbers are not supported.
 | Property   | Value      | Required | Default | Description
 |------------|------------|----------|---------|---------------
 | val      | int16        | no       | 0       | 1 for on, 0 for off
+
+`bg_color1` changes indicator color and `bg_color2`changes knob color
 
 ### LED Indicator
 **objid:41**

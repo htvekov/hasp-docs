@@ -338,8 +338,8 @@ Besides the common properties listed above, each object type can have specific p
 <td>mode</td>
 <td>string</td>
 <td>no</td>
-<td>expand</td>
-<td>The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop</td>
+<td><code>expand</code></td>
+<td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
 </tr>
 </tbody>
 </table>
@@ -353,7 +353,8 @@ Besides the common properties listed above, each object type can have specific p
 <!-- - `HOLD`: The HOLD event is repeated every 400ms while the button is still pressed -->
 <!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
 
-<p>Toggle Switches (<code>toggle=true</code>) only send out their new value when toggled: <code>val=0</code> or <code>val=1</code>.</p>
+<p>Toggle Switches (<code>toggle=true</code>) send out their new value only when toggled: <code>{"val":"0"}</code> or <code>{"val":"1"}</code>.</p>
+<p><code>bg_color</code> changes <code>val 0</code> background color and <code>bg_color1</code> changes <code>val 1</code> background color.</p>
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
 <p><strong>objid:11</strong></p>
 <p><img align="center" alt="lv_checkbox" src="../assets/images/objects/lv_ex_checkbox_1.png" /></p>
@@ -409,8 +410,8 @@ Besides the common properties listed above, each object type can have specific p
 <td>mode</td>
 <td>string</td>
 <td>no</td>
-<td>crop</td>
-<td>The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop</td>
+<td><code>crop</code></td>
+<td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
 </tr>
 </tbody>
 </table>

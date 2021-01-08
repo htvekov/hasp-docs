@@ -76,16 +76,16 @@ Besides the common properties listed above, each object type can have specific p
 | txt      | string     | no       | ""      | The text of the label
 | mode     | string     | no       | expand  | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
 
-Normal Switches send touch events out as they occur. The possible events are:
+Normal buttons (`toggle=false`) send touch events while they occur. The possible events are:
 
 - `DOWN`: Occurs when a button goes from depressed to pressed
 - `SHORT`: The button was released within a short time i.e. a short click has occurred
 - `LONG`: Event is send when the button is *still* being pressed after the threshold time
-<!-- - HOLD: The HOLD event is repeated every 400ms while the button is still pressed -->
 - `UP`: The button is released after being pressing for a LONG threshold time.
-- `LOST`: This event occurs when the object looses the focus while the screen is still being touched
+<!-- - `HOLD`: The HOLD event is repeated every 400ms while the button is still pressed -->
+<!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
 
-Toggle Switches only send out their new value (`0` or `1`) when toggled.
+Toggle Switches (`toggle=true`) only send out their new value when toggled: `val=0` or `val=1`.
 
 ### Checkbox
 **objid:11**

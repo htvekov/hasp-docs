@@ -44,6 +44,8 @@
           ]},
           {title: "Text", url: "#text", children: [
           ]},
+          {title: "Line", url: "#line", children: [
+          ]},
         ];
 
     </script>
@@ -426,8 +428,57 @@ Some objects allow for more complex syling, effectively changing its appearance 
 </tr>
 </tbody>
 </table>
+<h3 id="line">Line<a class="headerlink" href="#line" title="Permanent link">~</a></h3>
+<p>Properties for line objects only.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="left">Description</th>
+<th align="center">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">line_color</td>
+<td align="center">color</td>
+<td align="left">Color of the line</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">line_opa</td>
+<td align="center">byte</td>
+<td align="left">Opacity level of the line [0-255]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">line_width</td>
+<td align="center">int</td>
+<td align="left">Width of the line. Default = 0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">line_dash_width</td>
+<td align="center">int</td>
+<td align="left">Width of dash. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default = 0.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">line_dash_gap</td>
+<td align="center">int</td>
+<td align="left">Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default value: 0.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">line_rounded</td>
+<td align="center">bool</td>
+<td align="left"><code>true</code>: draw rounded line endings. Default value: <code>false</code></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 <!--
-### Line
 
 n/a
 

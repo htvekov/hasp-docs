@@ -5,6 +5,8 @@ It needs a compatible micro-controller with drivers supporting the attached disp
 
 Below is a list of recommended development boards and a TFT touchscreen to get you up-and-running in no time.
 
+![Plug-and-play](assets/images/lolin-esp.png "ESP with Lolin 2.4&quot;")
+
 ## Recommended Boards
 
 <style>

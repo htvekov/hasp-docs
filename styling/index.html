@@ -32,7 +32,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Padding and Margin", url: "#_top", children: [
+          {title: "Colors", url: "#_top", children: [
+          ]},
+          {title: "Padding and Margin", url: "#padding-and-margin", children: [
           ]},
           {title: "Background", url: "#background", children: [
           ]},
@@ -96,6 +98,183 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <p>You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
 Some objects allow for more complex syling, effectively changing its appearance or its sub-components.</p>
+<h3 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">~</a></h3>
+<p>Color values can be:</p>
+<ul>
+<li>Short names (from table)</li>
+<li>RGB hex code (<code>#rrggbb</code>)</li>
+<li>Decimal format (<code>0..65353</code>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Short Name</th>
+<th align="left">Hex Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">aqua</td>
+<td align="left">#00FFFF</td>
+</tr>
+<tr>
+<td align="left">azure</td>
+<td align="left">#F0FFFF</td>
+</tr>
+<tr>
+<td align="left">beige</td>
+<td align="left">#F5F5DC</td>
+</tr>
+<tr>
+<td align="left">bisque</td>
+<td align="left">#FFE4C4</td>
+</tr>
+<tr>
+<td align="left">black</td>
+<td align="left">#000000</td>
+</tr>
+<tr>
+<td align="left">blue</td>
+<td align="left">#0000FF</td>
+</tr>
+<tr>
+<td align="left">blush</td>
+<td align="left">#B00000</td>
+</tr>
+<tr>
+<td align="left">brown</td>
+<td align="left">#A52A2A</td>
+</tr>
+<tr>
+<td align="left">coral</td>
+<td align="left">#FF7F50</td>
+</tr>
+<tr>
+<td align="left">cyan</td>
+<td align="left">#00FFFF</td>
+</tr>
+<tr>
+<td align="left">fuchsia</td>
+<td align="left">#FF00FF</td>
+</tr>
+<tr>
+<td align="left">gold</td>
+<td align="left">#FFD700</td>
+</tr>
+<tr>
+<td align="left">gray</td>
+<td align="left">#808080</td>
+</tr>
+<tr>
+<td align="left">green</td>
+<td align="left">#008000</td>
+</tr>
+<tr>
+<td align="left">indigo</td>
+<td align="left">#4B0082</td>
+</tr>
+<tr>
+<td align="left">ivory</td>
+<td align="left">#FFFFF0</td>
+</tr>
+<tr>
+<td align="left">khaki</td>
+<td align="left">#F0E68C</td>
+</tr>
+<tr>
+<td align="left">lime</td>
+<td align="left">#00FF00</td>
+</tr>
+<tr>
+<td align="left">linen</td>
+<td align="left">#FAF0E6</td>
+</tr>
+<tr>
+<td align="left">maroon</td>
+<td align="left">#800000</td>
+</tr>
+<tr>
+<td align="left">navy</td>
+<td align="left">#000080</td>
+</tr>
+<tr>
+<td align="left">olive</td>
+<td align="left">#808000</td>
+</tr>
+<tr>
+<td align="left">orange</td>
+<td align="left">#FFA500</td>
+</tr>
+<tr>
+<td align="left">orchid</td>
+<td align="left">#DA70D6</td>
+</tr>
+<tr>
+<td align="left">peru</td>
+<td align="left">#CD853F</td>
+</tr>
+<tr>
+<td align="left">pink</td>
+<td align="left">#FFC0CB</td>
+</tr>
+<tr>
+<td align="left">plum</td>
+<td align="left">#DDA0DD</td>
+</tr>
+<tr>
+<td align="left">purple</td>
+<td align="left">#800080</td>
+</tr>
+<tr>
+<td align="left">red</td>
+<td align="left">#FF0000</td>
+</tr>
+<tr>
+<td align="left">salmon</td>
+<td align="left">#FA8072</td>
+</tr>
+<tr>
+<td align="left">sienna</td>
+<td align="left">#A0522D</td>
+</tr>
+<tr>
+<td align="left">silver</td>
+<td align="left">#C0C0C0</td>
+</tr>
+<tr>
+<td align="left">snow</td>
+<td align="left">#FFFAFA</td>
+</tr>
+<tr>
+<td align="left">tan</td>
+<td align="left">#D2B48C</td>
+</tr>
+<tr>
+<td align="left">teal</td>
+<td align="left">#008080</td>
+</tr>
+<tr>
+<td align="left">tomato</td>
+<td align="left">#FF6347</td>
+</tr>
+<tr>
+<td align="left">violet</td>
+<td align="left">#EE82EE</td>
+</tr>
+<tr>
+<td align="left">wheat</td>
+<td align="left">#F5DEB3</td>
+</tr>
+<tr>
+<td align="left">white</td>
+<td align="left">#FFFFFF</td>
+</tr>
+<tr>
+<td align="left">yellow</td>
+<td align="left">#FFFF00</td>
+</tr>
+</tbody>
+</table>
 <h3 id="padding-and-margin">Padding and Margin<a class="headerlink" href="#padding-and-margin" title="Permanent link">~</a></h3>
 <p>Padding sets the space on the inner sides of the edges. It means "I don't want my children too close to my sides, so keep this space". Padding inner sets the "gap" between the children. Margin sets the space on the outer side of the edges. It means "I want this space around me".</p>
 <p>Objects use them to set spacing. See the documentation of the <a href="../objects/">objects</a> for the details.</p>

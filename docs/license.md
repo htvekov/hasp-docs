@@ -1,6 +1,6 @@
 <h1>License</h1>
 
-### The MIT License (MIT)
+### MIT License
 
 Hasp-lvgl is Copyright© 2019-2021 fvanroie, netwize.be and contributors
 

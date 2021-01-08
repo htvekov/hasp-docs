@@ -47,7 +47,7 @@ Switches the backlight on or off, independent of the set dim level. Turning the 
 
 Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.
 
-!!! important 
+!!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
     `dim`and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
 
 `wakeup`

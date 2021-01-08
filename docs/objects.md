@@ -215,13 +215,13 @@ Use [line properties](styling.md#line) to customise.
 
 To strip trailing zero's of major tick labels the `format` divider can be used to scale the values before printing:
 
-- 0 : print the major tick value as is
-- 1 : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label
-- 2 : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label
-- 3 : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label
-- 4 : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label
+- `0` : print the major tick value as is
+- `1` : strip 1 zero, i.e. divide tick value by 10 before printing the major tick label
+- `2` : strip 2 zeros, i.e. divide tick value by 100 before printing the major tick label
+- `3` : strip 3 zeros, i.e. divide tick value by 1000 before printing the major tick label
+- `4` : strip 4 zeros, i.e. divide tick value by 10000 before printing the major tick label
 
-Only these values are allowed, arbirary numbers are not supported.
+Only these values are allowed, arbitrary numbers are not supported.
 
 ### Progress Bar
 **objid:32**

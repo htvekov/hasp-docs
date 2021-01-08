@@ -102,10 +102,10 @@ Properties for line objects only.
 | :---              | :---:  | :---          | :---:   |
 | line_color        | color| Color of the line
 | line_opa          | byte | Opacity level of the line [0-255]
-| line_width        | int  | Width of the line. Default = 0
-| line_dash_width   | int  | Width of dash. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default = 0.
-| line_dash_gap     | int  | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default value: 0.
-| line_rounded      | bool | `true`: draw rounded line endings. Default value: `false`
+| line_width        | int  | Width of the line. | 0
+| line_dash_width   | int  | Width of dash. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash | 0
+| line_dash_gap     | int  | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash| 0
+| line_rounded      | bool | `true` = draw rounded line endings | `false`
 
 <!--
 

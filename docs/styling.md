@@ -94,8 +94,20 @@ Properties for textual objects only.
 | text_decor        | byte | Add text decoration.<br>0 = none<br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough | 0
 | text_sel_color    | color| Set background color of text selection
 
-<!--
 ### Line
+
+Properties for line objects only.
+
+| Property          | Type | Description | Default |
+| :---              | :---:  | :---          | :---:   |
+| line_color        | color| Color of the line
+| line_opa          | byte | Opacity level of the line [0-255]
+| line_width        | int  | Width of the line. Default = 0
+| line_dash_width   | int  | Width of dash. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default = 0.
+| line_dash_gap     | int  | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. 0: disable dash. Default value: 0.
+| line_rounded      | bool | `true`: draw rounded line endings. Default value: `false`
+
+<!--
 
 n/a
 

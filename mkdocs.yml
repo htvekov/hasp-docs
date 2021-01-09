@@ -42,7 +42,7 @@ nav:
     - displays/ILI9341_IPS.md
     - displays/MHS4001.md
     - displays/MRB3511.md
-    - displays/Waveshare_40RPi_LCD(C).md
+    - displays/Waveshare_RPi_LCD_Rev_C.md
   - compiling.md
   - license.md
 

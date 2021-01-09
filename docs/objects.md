@@ -74,7 +74,7 @@ Besides the common properties listed above, each object type can have specific p
 | toggle   | boolean    | no       | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | no       | 0       | The value: 1 for toggled, 0 for untoggled
 | txt      | string     | no       | ""      | The text of the label
-| mode     | string     | no       | expand  | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
+| mode     | string     | no       | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 
 Normal buttons (`toggle=false`) send touch events while they occur. The possible events are:
 
@@ -85,7 +85,9 @@ Normal buttons (`toggle=false`) send touch events while they occur. The possible
 <!-- - `HOLD`: The HOLD event is repeated every 400ms while the button is still pressed -->
 <!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
 
-Toggle Switches (`toggle=true`) only send out their new value when toggled: `val=0` or `val=1`.
+Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"val":"0"}` or `{"val":"1"}`.
+
+`bg_color` changes `val 0` background color and `bg_color1` changes `val 1` background color.
 
 ### Checkbox
 **objid:11**
@@ -104,10 +106,10 @@ Toggle Switches (`toggle=true`) only send out their new value when toggled: `val
 
 | Property | Value      | Required | Default    | Description
 |----------|------------|----------|------------|--------------
-| txt      | string     | no       | "Text"     | The text of the label
-| mode     | string     | no       | crop       | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
+| txt      | string     | no       | "Text"     | The text of the label, `\n` for line break.
+| mode     | string     | no       | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 
-
+ 
 
 ```json
 {"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
@@ -282,18 +284,18 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 | options  | string     | no       | ""      | List of items separated by `\n`
 | val      | int16      | no       | 0       | The number of the selected item
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
-| rows     | int8       | no       | 3       | The number ow rows that are visible
-
-!!! note "Note"
-    A roller does not use the `h` attribute to set its height but uses the `rows` attribute instead.
+| rows     | int8       | no       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.
 
-When the item is changed both `val` and `txt` of the newly selected item are send out.
-
+When the item is changed both `val` and `txt` of the newly selected item is sent out.
 
 ### Base Object
 **objid:91**
 
+![lv_base_object](assets/images/objects/lv_ex_base_object_1.png)
+
 The Base Object can be directly used as a simple widget. It is nothing more then a (rounded) rectangle.
+
+You can use it as a background shape for other objects by putting its jsonl line before the object. 

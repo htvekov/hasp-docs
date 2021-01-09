@@ -159,8 +159,8 @@ Properties for textual objects only.
 | text_color        |[color][1]| Color of the text
 | text_opa          | byte     | Opacity level of the text [0-255]
 | text_font         | byte     | The [Font ID](fonts.md)
-| text_letter_space | int      | Letter space of the text
-| text_line_space   | int      | Line space of the text
+| text_letter_space | int      | Distance between letters of the text, can be a negative number
+| text_line_space   | int      | Distance between lines of the text, can be a negative number 
 | text_decor        | byte     | Add text decoration.<br>0 = none *(=default)*<br>1 = underline<br>2 = strikethrough<br>3 = underline and strikethrough
 | text_sel_color    |[color][1]| Set background color of text selection
 
@@ -174,8 +174,8 @@ Value is an arbitrary text drawn on top of an object. It can be a lightweight re
 | value_color        |[color][1]| Color of the text
 | value_opa          | byte     | Opacity level of the text [0-255]
 | value_font         | byte     | The [Font ID](fonts.md)
-| value_letter_space | int      | Letter space of the text
-| value_line_space   | int      | Line space of the text
+| value_letter_space | int      | Distance between letters of the text, can be a negative number
+| value_line_space   | int      | Distance between lines of the text, can be a negative number
 | value_align        | align    | Alignment of the text. Can be: none, left, right, top, bottom, full or center *(=default)*
 | value_ofs_x        | int      | X offset from the original position of the alignment
 | value_ofs_y        | int      | Y offset from the original position of the alignment

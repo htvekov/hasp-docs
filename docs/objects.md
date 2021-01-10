@@ -83,12 +83,12 @@ Besides the common properties listed above, each object type can have specific p
 </details>
 
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------
-| toggle   | boolean    | no       | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
-| val      | int16      | no       | 0       | The value: 1 for toggled, 0 for untoggled
-| txt      | string     | no       | ""      | The text of the label
-| mode     | string     | no       | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
+| Property | Value      | Default | Description
+|----------|------------|---------|--------------
+| toggle   | boolean    | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
+| val      | int16      | 0       | The value: 1 for toggled, 0 for untoggled
+| txt      | string     | ""      | The text of the label
+| mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 
 Normal buttons (`toggle=false`) send touch events while they occur. The possible events are:
 
@@ -108,21 +108,21 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 
 ![lv_checkbox](assets/images/objects/lv_ex_checkbox_1.png){: align=center }
 
-| Property | Value      | Required | Default    | Description
-|----------|------------|----------|------------|--------------
-| val      | int16      | no       | 0          | 1 for checked, 0 for unchecked
-| txt      | string     | no       | "Checkbox" | The label of the checkbox
+| Property | Value      | Default    | Description
+|----------|------------|------------|--------------
+| val      | int16      | 0          | 1 for checked, 0 for unchecked
+| txt      | string     | "Checkbox" | The label of the checkbox
 
 ### Text Label
 **objid:12**
 
 ![lv_label](assets/images/objects/lv_ex_label_1.png){: align=center }
 
-| Property | Value      | Required | Default    | Description
-|----------|------------|----------|------------|--------------
-| txt      | string     | no       | "Text"     | The text of the label, `\n` for line break.
-| mode     | string     | no       | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
-| align    | 0..2       | no       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
+| Property | Value      | Default    | Description
+|----------|------------|------------|--------------
+| txt      | string     | "Text"     | The text of the label, `\n` for line break.
+| mode     | string     | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
+| align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
  
 
@@ -133,12 +133,12 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 ### Button Matrix
 **objid:13**
 
-![lv_label](assets/images/objects/lv_ex_label_1.png){: align=center }
+![lv_btnmatrix](assets/images/objects/lv_ex_btnmatrix_1.png){: align=center }
 
-| Property | Value      | Required | Default    | Description
-|----------|------------|----------|------------|--------------
-| options  | json array | no       | "Text"     | Json array of strings where each element is the label of a button. Use `"\n"` for a new line of buttons.
-| align    | 0..2       | no       | 0          | Text alignment: `0` = left, `1` = center, `2` = right
+| Property | Value      | Default    | Description
+|----------|------------|------------|--------------
+| options  | json array | "Text"     | Json array of strings where each element is the label of a button. Use `"\n"` for a new line of buttons.
+| align    | 0..2       | 0          | Text alignment: `0` = left, `1` = center, `2` = right
 
 
 ```json
@@ -157,18 +157,18 @@ p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yell
 
 ![lv_arc](assets/images/objects/lv_ex_arc_1.png){: align=center }
 
-| Property  | Value      | Required | Default | Description
-|-----------|------------|----------|---------|--------------
-| min       | int16      | no       | 0       | minimum value of the indicator
-| max       | int16      | no       | 100     | maximum value of the indicator
-| val       | int16      | no       | 0       | current value of the indicator
-| rotation  | int16      | no       | 0       | offset to the 0 degree position
-| type      | 0-2        | no       | 0       | 0 = normal, 1 = symmetrical, 2 = reverse
-| adjustable| bool       | no       | false   | Add indicator that the user can operate to change the value
-|start_angle| 0-360      | no       |         | start angle of the arc background (see note)
-| end_angle | 0-360      | no       |         | end angle of the arc background (see note)
-|start_angle1| 0-360     | no       |         | start angle of the arc indicator (see note)
-| end_angle1 | 0-360     | no       |         | 0 = normal, 1 = symmetrical, 2 = reverse
+| Property  | Value      | Default | Description
+|-----------|------------|---------|--------------
+| min       | int16      | 0       | minimum value of the indicator
+| max       | int16      | 100     | maximum value of the indicator
+| val       | int16      | 0       | current value of the indicator
+| rotation  | int16      | 0       | offset to the 0 degree position
+| type      | 0-2        | 0       | 0 = normal, 1 = symmetrical, 2 = reverse
+| adjustable| bool       | false   | Add indicator that the user can operate to change the value
+|start_angle| 0-360      |         | start angle of the arc background (see note)
+| end_angle | 0-360      |         | end angle of the arc background (see note)
+|start_angle1| 0-360     |         | start angle of the arc indicator (see note)
+| end_angle1 | 0-360     |         | 0 = normal, 1 = symmetrical, 2 = reverse
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
@@ -178,22 +178,22 @@ p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yell
 
 ![lv_spinner](assets/images/objects/lv_ex_spinner_1.png){: align=center }
 
-| Property  | Value      | Required | Default | Description
-|-----------|------------|----------|---------|--------------
-| speed     | int16      | no       | 1000    | The time for 1 turn in ms
-| direction | int16      | no       | 100     | 0 for clockwise, 1 for counter-clockwise
-| thickness | int16      | no       | dep. on theme | The width of the arc line
+| Property  | Value      | Default | Description
+|-----------|------------|---------|--------------
+| speed     | int16      | 1000    | The time for 1 turn in ms
+| direction | int16      | 100     | 0 for clockwise, 1 for counter-clockwise
+| thickness | int16      | dep. on theme | The width of the arc line
 
 ### Colorpicker
 **objid:20**
 
 ![lv_cpicker](assets/images/objects/lv_ex_cpicker_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------
-| val      | uint16     | no       | 0       | The selected color in RBG565 format
-| color    | hex string | no       | 0       | The selected color in html format #rrggbb
-| rect     | boolean    | no       | false   | true = color picker has a rectangular shape like a slider. false = circular shape.
+| Property | Value      | Default | Description
+|----------|------------|---------|--------------
+| val      | uint16     | 0       | The selected color in RBG565 format
+| color    | hex string | 0       | The selected color in html format #rrggbb
+| rect     | boolean    | false   | true = color picker has a rectangular shape like a slider. false = circular shape.
 
 
 ### Slider
@@ -201,20 +201,20 @@ p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yell
 
 ![lv_slider](assets/images/objects/lv_ex_slider_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|---------------
-| min      | int16      | no       | 0       | minimum value of the indicator
-| max      | int16      | no       | 100     | maximum value of the indicator
-| val      | int16      | no       | 0       | current value of the indicator
+| Property | Value      | Default | Description
+|----------|------------|---------|---------------
+| min      | int16      | 0       | minimum value of the indicator
+| max      | int16      | 100     | maximum value of the indicator
+| val      | int16      | 0       | current value of the indicator
 
 ### Double Slider
 **objid:30**
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|---------------
-| min      | int16      | no       | 0       | minimum value of the indicator
-| max      | int16      | no       | 100     | maximum value of the indicator
-| val      | int16      | no       | 0       | current value of the indicator
+| Property | Value      | Default | Description
+|----------|------------|---------|---------------
+| min      | int16      | 0       | minimum value of the indicator
+| max      | int16      | 100     | maximum value of the indicator
+| val      | int16      | 0       | current value of the indicator
 
 
 ### Line Meter
@@ -222,15 +222,15 @@ p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yell
 
 ![lv_lmeter](assets/images/objects/lv_ex_linemeter_1.png){: align=center }
 
-| Property       | Value      | Required | Default | Description
-|----------------|------------|----------|---------|---------------
-| min            | int16      | no       | 0       | minimum value of the indicator
-| max            | int16      | no       | 100     | maximum value of the indicator
-| val            | int16      | no       | 0       | current value of the indicator
-| angle          | 0-360      | no       | 240     | angle between start and end of the scale
-| line_count     | uint16     | no       | 31      | tick count of the scale
-| rotation       | 0-360      | no       | 0       | offset for the scale angles to rotate it
-| type           | 0-1        | no       | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
+| Property       | Value      | Default | Description
+|----------------|------------|---------|---------------
+| min            | int16      | 0       | minimum value of the indicator
+| max            | int16      | 100     | maximum value of the indicator
+| val            | int16      | 0       | current value of the indicator
+| angle          | 0-360      | 240     | angle between start and end of the scale
+| line_count     | uint16     | 31      | tick count of the scale
+| rotation       | 0-360      | 0       | offset for the scale angles to rotate it
+| type           | 0-1        | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
 
 Use [line properties](styling.md#line) to customise.
 
@@ -239,17 +239,17 @@ Use [line properties](styling.md#line) to customise.
 
 ![lv_gauge](assets/images/objects/lv_ex_gauge_1.png){: align=center }
 
-| Property       | Value      | Required | Default | Description
-|----------------|------------|----------|---------|---------------
-| min            | int16      | no       | 0       | minimum value of the indicator
-| max            | int16      | no       | 100     | maximum value of the indicator
-| val            | int16      | no       | 0       | current value of the indicator
-| critical_value | int16      | no       | 80      | scale color will be changed to scale_end_color after this value
-| angle          | 0-360      | no       | 240     | angle between start and end of the scale
-| label_count    | uint8      | no       |         | number of labels (and minor tick count) of the scale
-| line_count     | uint16     | no       | 31      | minor tick count of the scale
-| rotation       | 0-360      | no       | 0       | offset for the gauge's angles to rotate it
-| format         | uint16     | no       | 0       | divider for major tick values
+| Property       | Value      | Default | Description
+|----------------|------------|---------|---------------
+| min            | int16      | 0       | minimum value of the indicator
+| max            | int16      | 100     | maximum value of the indicator
+| val            | int16      | 0       | current value of the indicator
+| critical_value | int16      | 80      | scale color will be changed to scale_end_color after this value
+| angle          | 0-360      | 240     | angle between start and end of the scale
+| label_count    | uint8      |         | number of labels (and minor tick count) of the scale
+| line_count     | uint16     | 31      | minor tick count of the scale
+| rotation       | 0-360      | 0       | offset for the gauge's angles to rotate it
+| format         | uint16     | 0       | divider for major tick values
 
 To strip trailing zero's of major tick labels the `format` divider can be used to scale the values before printing:
 
@@ -266,11 +266,11 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 ![lv_bar](assets/images/objects/lv_ex_bar_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|---------------
-| min      | int16      | no       | 0       | minimum value of the indicator
-| max      | int16      | no       | 100     | maximum value of the indicator
-| val      | int16      | no       | 0       | current value of the indicator
+| Property | Value      | Default | Description
+|----------|------------|---------|---------------
+| min      | int16      | 0       | minimum value of the indicator
+| max      | int16      | 100     | maximum value of the indicator
+| val      | int16      | 0       | current value of the indicator
 
 
 ### Switch
@@ -278,9 +278,9 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 ![lv_switch](assets/images/objects/lv_ex_switch_1.png){: align=center }
 
-| Property   | Value      | Required | Default | Description
-|------------|------------|----------|---------|---------------
-| val      | int16        | no       | 0       | 1 for on, 0 for off
+| Property   | Value      | Default | Description
+|------------|------------|---------|---------------
+| val      | int16        | 0       | 1 for on, 0 for off
 
 `bg_color1` changes indicator color and `bg_color2`changes knob color
 
@@ -289,20 +289,20 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 ![lv_led](assets/images/objects/lv_ex_led_1.png){: align=center }
 
-| Property   | Value      | Required | Default | Description
-|------------|------------|----------|---------|---------------
-| val        | byte       | no       | 0       | The brightness of the indicator [0..255]
+| Property   | Value      | Default | Description
+|------------|------------|---------|---------------
+| val        | byte       | 0       | The brightness of the indicator [0..255]
 
 ### Dropdown List
 **objid:50**
 
 ![lv_dropdown](assets/images/objects/lv_ex_dropdown_1.png){: align=center }
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | List of items separated by `\n`
-| val      | int16      | no       | 0       | The number of the selected item
-| txt      | string     | no       | ""      | *Read-only* The text of the selected item
+| Property | Value      | Default | Description
+|----------|------------|---------|--------------------------
+| options  | string     | ""      | List of items separated by `\n`
+| val      | int16      | 0       | The number of the selected item
+| txt      | string     | ""      | *Read-only* The text of the selected item
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.
@@ -316,13 +316,13 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 <iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe><p></p>
 
 
-| Property | Value      | Required | Default | Description
-|----------|------------|----------|---------|--------------------------
-| options  | string     | no       | ""      | List of items separated by `\n`
-| val      | int16      | no       | 0       | The number of the selected item
-| txt      | string     | no       | ""      | *Read-only* The text of the selected item
-| rows     | int8       | no       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
-| align    | 0..2       | no       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
+| Property | Value      | Default | Description
+|----------|------------|---------|--------------------------
+| options  | string     | ""      | List of items separated by `\n`
+| val      | int16      | 0       | The number of the selected item
+| txt      | string     | ""      | *Read-only* The text of the selected item
+| rows     | int8       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
+| align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.

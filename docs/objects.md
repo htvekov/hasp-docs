@@ -71,7 +71,7 @@ Besides the common properties listed above, each object type can have specific p
 | 91 | [Base Object](#base-object)
 
 ### Button
-**objid:10**
+**obj:`btn`**
 
 ![lv_btn](assets/images/objects/lv_ex_btn_1.png)
 
@@ -102,7 +102,7 @@ Example:
 
 
 ### Checkbox
-**objid:11**
+**obj:`cb`**
 
 ![lv_checkbox](assets/images/objects/lv_ex_checkbox_1.png){: align=center }
 
@@ -112,7 +112,7 @@ Example:
 | txt      | string     | "Checkbox" | The label of the checkbox
 
 ### Text Label
-**objid:12**
+**obj:`label`**
 
 ![lv_label](assets/images/objects/lv_ex_label_1.png){: align=center }
 
@@ -128,7 +128,7 @@ Example:
 ```
 
 ### Button Matrix
-**objid:13**
+**obj:`btnmatrix`**
 
 ![lv_btnmatrix](assets/images/objects/lv_ex_btnmatrix_1.png){: align=center }
 
@@ -148,7 +148,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 
 
 ### Arc
-**objid:22**
+**obj:`arc`**
 
 ![lv_arc](assets/images/objects/lv_ex_arc_1.png){: align=center }
 
@@ -169,7 +169,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
 
 ### Spinner
-**objid:21**
+**obj:`spinner`**
 
 ![lv_spinner](assets/images/objects/lv_ex_spinner_1.png){: align=center }
 
@@ -180,7 +180,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | thickness | int16      | dep. on theme | The width of the arc line
 
 ### Colorpicker
-**objid:20**
+**obj:`cpicker`**
 
 ![lv_cpicker](assets/images/objects/lv_ex_cpicker_1.png){: align=center }
 
@@ -192,7 +192,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 
 
 ### Slider
-**objid:30**
+**obj:`slider`**
 
 ![lv_slider](assets/images/objects/lv_ex_slider_1.png){: align=center }
 
@@ -213,7 +213,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 
 
 ### Line Meter
-**objid:33**
+**obj:`lmeter`**
 
 ![lv_lmeter](assets/images/objects/lv_ex_linemeter_1.png){: align=center }
 
@@ -230,7 +230,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 Use [line properties](styling.md#line) to customise.
 
 ### Gauge
-**objid:31**
+**obj:`gauge`**
 
 ![lv_gauge](assets/images/objects/lv_ex_gauge_1.png){: align=center }
 
@@ -257,7 +257,7 @@ To strip trailing zero's of major tick labels the `format` divider can be used t
 Only these values are allowed, arbitrary numbers are not supported.
 
 ### Progress Bar
-**objid:32**
+**obj:`bar`**
 
 ![lv_bar](assets/images/objects/lv_ex_bar_1.png){: align=center }
 
@@ -269,7 +269,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 
 ### Switch
-**objid:40**
+**obj:`switch`**
 
 ![lv_switch](assets/images/objects/lv_ex_switch_1.png){: align=center }
 
@@ -280,7 +280,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 `bg_color1` changes indicator color and `bg_color2`changes knob color
 
 ### LED Indicator
-**objid:41**
+**obj:`led`**
 
 ![lv_led](assets/images/objects/lv_ex_led_1.png){: align=center }
 
@@ -289,7 +289,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 | val        | byte       | 0       | The brightness of the indicator [0..255]
 
 ### Dropdown List
-**objid:50**
+**obj:`dropdown`**
 
 ![lv_dropdown](assets/images/objects/lv_ex_dropdown_1.png){: align=center }
 
@@ -306,7 +306,7 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 
 
 ### Roller
-**objid:51**
+**obj:`roller`**
 
 <iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe><p></p>
 
@@ -325,7 +325,7 @@ To change the items in the list, use the `options` attribute.
 When the item is changed both `val` and `txt` of the newly selected item is sent out.
 
 ### Base Object
-**objid:91**
+**obj:`obj`**
 
 ![lv_base_object](assets/images/objects/lv_ex_base_object_1.png)
 

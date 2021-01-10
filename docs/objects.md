@@ -31,6 +31,19 @@ The maximum number of pages and objects is limited by the memory available in th
 `"page":254` indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.
 
+## Common Methods
+
+These are the common methods shared among all objects,
+
+| Method   | Parameters | Description |
+|:---------|:----------:|:------------|
+| delete   |            | Delete the object from the page
+
+
+```json
+p[0].b[5].delete
+```
+
 ## Object Types
 
 Each object type is an ID that indicates which object type that line represents.
@@ -43,6 +56,7 @@ Besides the common properties listed above, each object type can have specific p
 | 10 | [Button](#button)
 | 11 | [Checkbox](#checkbox)
 | 12 | [Label](#text-label)
+| 13 | [Button Matrix](#button-matrix)
 | 20 | [Colorpicker](#colorpicker)
 | 21 | [Spinner](#spinner)
 | 22 | [Arc](#arc)
@@ -115,6 +129,28 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 ```json
 {"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
 ```
+
+### Button Matrix
+**objid:13**
+
+![lv_label](assets/images/objects/lv_ex_label_1.png){: align=center }
+
+| Property | Value      | Required | Default    | Description
+|----------|------------|----------|------------|--------------
+| options  | json array | no       | "Text"     | Json array of strings where each element is the label of a button. Use `"\n"` for a new line of buttons.
+| align    | 0..2       | no       | 0          | Text alignment: `0` = left, `1` = center, `2` = right
+
+
+```json
+{"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
+```
+
+The Text properties of this object apply to *all* buttons in the matrix.
+To change the color of a single label prefix the text with a `#RRGGBB` hexadecimal color code and close with a single hash `#` tag:
+```json
+p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yellow Label#"]
+```
+
 
 ### Arc
 **objid:22**

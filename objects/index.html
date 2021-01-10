@@ -321,14 +321,6 @@ Besides the common properties listed above, each object type can have specific p
 <h3 id="button">Button<a class="headerlink" href="#button" title="Permanent link">~</a></h3>
 <p><strong>objid:10</strong></p>
 <p><img alt="lv_btn" src="../assets/images/objects/lv_ex_btn_1.png" /></p>
-<details open=""><summary>Show Jsonl Code (Click to expand)</summary>
-
-<pre><code class="language-json">{&quot;page&quot;:0,&quot;comment&quot;:&quot;---------- Page 0 ----------&quot;}
-{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;TRUE&quot;,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
-</code></pre>
-
-</details>
-
 <table>
 <thead>
 <tr>
@@ -377,6 +369,9 @@ Besides the common properties listed above, each object type can have specific p
 
 <p>Toggle Switches (<code>toggle=true</code>) send out their new value only when toggled: <code>{"val":"0"}</code> or <code>{"val":"1"}</code>.</p>
 <p><code>bg_color</code> changes <code>val 0</code> background color and <code>bg_color1</code> changes <code>val 1</code> background color.</p>
+<p>Example:</p>
+<pre><code class="language-json">{&quot;objid&quot;:10,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;true&quot;,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
+</code></pre>
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
 <p><strong>objid:11</strong></p>
 <p><img align="center" alt="lv_checkbox" src="../assets/images/objects/lv_ex_checkbox_1.png" /></p>
@@ -437,6 +432,7 @@ Besides the common properties listed above, each object type can have specific p
 </tr>
 </tbody>
 </table>
+<p>Example:</p>
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
 </code></pre>
 <h3 id="button-matrix">Button Matrix<a class="headerlink" href="#button-matrix" title="Permanent link">~</a></h3>
@@ -466,11 +462,10 @@ Besides the common properties listed above, each object type can have specific p
 </tr>
 </tbody>
 </table>
-<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
-</code></pre>
-<p>The Text properties of this object apply to <em>all</em> buttons in the matrix.
-To change the color of a single label prefix the text with a <code>#RRGGBB</code> hexadecimal color code and close with a single hash <code>#</code> tag:</p>
-<pre><code class="language-json">p[2].b[1].options [&quot;#FF0000 Red Label#&quot;,&quot;#0000FF Cyan Label#&quot;,&quot;\n&quot;,&quot;#FFFF00 Yellow Label#&quot;]
+<p>The <a href="../styling/">styling properties</a> apply to <em>all</em> buttons in the matrix.
+To change the color of a single label prefix the text with a <code>#RRGGBB</code> hexadecimal color code and close with a single hash <code>#</code> tag.</p>
+<p>Example:</p>
+<pre><code class="language-json">p[2].b[1].options [&quot;#FF0000 Red Text#&quot;,&quot;#0000FF Cyan Text#&quot;,&quot;\n&quot;,&quot;#FFFF00 Yellow Text#&quot;]
 </code></pre>
 <h3 id="arc">Arc<a class="headerlink" href="#arc" title="Permanent link">~</a></h3>
 <p><strong>objid:22</strong></p>
@@ -866,7 +861,7 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tbody>
 <tr>
 <td>val</td>
-<td>int16</td>
+<td>bool</td>
 <td>0</td>
 <td>1 for on, 0 for off</td>
 </tr>

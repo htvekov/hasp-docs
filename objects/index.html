@@ -413,6 +413,13 @@ Besides the common properties listed above, each object type can have specific p
 <td><code>crop</code></td>
 <td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
 </tr>
+<tr>
+<td>align</td>
+<td>string</td>
+<td>no</td>
+<td>crop</td>
+<td>The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop</td>
+</tr>
 </tbody>
 </table>
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
@@ -499,7 +506,7 @@ Besides the common properties listed above, each object type can have specific p
 <td>0-360</td>
 <td>no</td>
 <td></td>
-<td>end angle of the arc indicator (see note)</td>
+<td>0 = normal, 1 = symmetrical, 2 = reverse</td>
 </tr>
 </tbody>
 </table>

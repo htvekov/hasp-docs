@@ -113,7 +113,7 @@ values: `1` or `0`, `on` or `off`, `true` or `false`
 
 Sets **all** GPIO's assigned to the group number &lt;x> in **Configuration -> GPIO Configuration** to "0" or "1".
 
-GUI objects that are assigned to that group will also change state accordingly.
+GUI objects that are assigned to the same group using `groupid` during object creation will change state accordingly.
 
 ## Configuration Settings
 

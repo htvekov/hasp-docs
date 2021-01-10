@@ -1,5 +1,5 @@
-site_name: 'HASP - Open Hardware edition'
-site_description: 'Lvgl Graphics Library on the MCU to drive a cheap commodity display'
+site_name: 'HASP - Open SwitchPlate'
+site_description: 'Open firmware for MCUs to drive a cheap commodity touch display'
 site_author: 'Francis Van Roie'
 
 repo_url: https://github.com/fvanroie/hasp-lvgl
@@ -42,7 +42,7 @@ nav:
     - displays/ILI9341_IPS.md
     - displays/MHS4001.md
     - displays/MRB3511.md
-    - displays/Waveshare_40RPi_LCD(C).md
+    - displays/Waveshare_RPi_LCD_Rev_C.md
   - compiling.md
   - license.md
 

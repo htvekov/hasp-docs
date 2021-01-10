@@ -334,7 +334,6 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -343,28 +342,24 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td>toggle</td>
 <td>boolean</td>
-<td>no</td>
 <td>false</td>
 <td>When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>The value: 1 for toggled, 0 for untoggled</td>
 </tr>
 <tr>
 <td>txt</td>
 <td>string</td>
-<td>no</td>
 <td>""</td>
 <td>The text of the label</td>
 </tr>
 <tr>
 <td>mode</td>
 <td>string</td>
-<td>no</td>
 <td><code>expand</code></td>
 <td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
 </tr>
@@ -390,7 +385,6 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -399,14 +393,12 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>1 for checked, 0 for unchecked</td>
 </tr>
 <tr>
 <td>txt</td>
 <td>string</td>
-<td>no</td>
 <td>"Checkbox"</td>
 <td>The label of the checkbox</td>
 </tr>
@@ -420,7 +412,6 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -429,21 +420,18 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td>txt</td>
 <td>string</td>
-<td>no</td>
 <td>"Text"</td>
 <td>The text of the label, <code>\n</code> for line break.</td>
 </tr>
 <tr>
 <td>mode</td>
 <td>string</td>
-<td>no</td>
 <td><code>crop</code></td>
 <td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
 </tr>
 <tr>
 <td>align</td>
 <td>0..2</td>
-<td>no</td>
 <td>0</td>
 <td>Text alignment: <code>0</code> = left, <code>1</code> = center, <code>2</code> = right</td>
 </tr>
@@ -453,13 +441,12 @@ Besides the common properties listed above, each object type can have specific p
 </code></pre>
 <h3 id="button-matrix">Button Matrix<a class="headerlink" href="#button-matrix" title="Permanent link">~</a></h3>
 <p><strong>objid:13</strong></p>
-<p><img align="center" alt="lv_label" src="../assets/images/objects/lv_ex_label_1.png" /></p>
+<p><img align="center" alt="lv_btnmatrix" src="../assets/images/objects/lv_ex_btnmatrix_1.png" /></p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -468,14 +455,12 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td>options</td>
 <td>json array</td>
-<td>no</td>
 <td>"Text"</td>
 <td>Json array of strings where each element is the label of a button. Use <code>"\n"</code> for a new line of buttons.</td>
 </tr>
 <tr>
 <td>align</td>
 <td>0..2</td>
-<td>no</td>
 <td>0</td>
 <td>Text alignment: <code>0</code> = left, <code>1</code> = center, <code>2</code> = right</td>
 </tr>
@@ -495,7 +480,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -504,70 +488,60 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
 <tr>
 <td>rotation</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>offset to the 0 degree position</td>
 </tr>
 <tr>
 <td>type</td>
 <td>0-2</td>
-<td>no</td>
 <td>0</td>
 <td>0 = normal, 1 = symmetrical, 2 = reverse</td>
 </tr>
 <tr>
 <td>adjustable</td>
 <td>bool</td>
-<td>no</td>
 <td>false</td>
 <td>Add indicator that the user can operate to change the value</td>
 </tr>
 <tr>
 <td>start_angle</td>
 <td>0-360</td>
-<td>no</td>
 <td></td>
 <td>start angle of the arc background (see note)</td>
 </tr>
 <tr>
 <td>end_angle</td>
 <td>0-360</td>
-<td>no</td>
 <td></td>
 <td>end angle of the arc background (see note)</td>
 </tr>
 <tr>
 <td>start_angle1</td>
 <td>0-360</td>
-<td>no</td>
 <td></td>
 <td>start angle of the arc indicator (see note)</td>
 </tr>
 <tr>
 <td>end_angle1</td>
 <td>0-360</td>
-<td>no</td>
 <td></td>
 <td>0 = normal, 1 = symmetrical, 2 = reverse</td>
 </tr>
@@ -585,7 +559,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -594,21 +567,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>speed</td>
 <td>int16</td>
-<td>no</td>
 <td>1000</td>
 <td>The time for 1 turn in ms</td>
 </tr>
 <tr>
 <td>direction</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>0 for clockwise, 1 for counter-clockwise</td>
 </tr>
 <tr>
 <td>thickness</td>
 <td>int16</td>
-<td>no</td>
 <td>dep. on theme</td>
 <td>The width of the arc line</td>
 </tr>
@@ -622,7 +592,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -631,21 +600,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>val</td>
 <td>uint16</td>
-<td>no</td>
 <td>0</td>
 <td>The selected color in RBG565 format</td>
 </tr>
 <tr>
 <td>color</td>
 <td>hex string</td>
-<td>no</td>
 <td>0</td>
 <td>The selected color in html format #rrggbb</td>
 </tr>
 <tr>
 <td>rect</td>
 <td>boolean</td>
-<td>no</td>
 <td>false</td>
 <td>true = color picker has a rectangular shape like a slider. false = circular shape.</td>
 </tr>
@@ -659,7 +625,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -668,21 +633,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
@@ -695,7 +657,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -704,21 +665,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
@@ -732,7 +690,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -741,49 +698,42 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
 <tr>
 <td>angle</td>
 <td>0-360</td>
-<td>no</td>
 <td>240</td>
 <td>angle between start and end of the scale</td>
 </tr>
 <tr>
 <td>line_count</td>
 <td>uint16</td>
-<td>no</td>
 <td>31</td>
 <td>tick count of the scale</td>
 </tr>
 <tr>
 <td>rotation</td>
 <td>0-360</td>
-<td>no</td>
 <td>0</td>
 <td>offset for the scale angles to rotate it</td>
 </tr>
 <tr>
 <td>type</td>
 <td>0-1</td>
-<td>no</td>
 <td>0</td>
 <td>0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise</td>
 </tr>
@@ -798,7 +748,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -807,63 +756,54 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
 <tr>
 <td>critical_value</td>
 <td>int16</td>
-<td>no</td>
 <td>80</td>
 <td>scale color will be changed to scale_end_color after this value</td>
 </tr>
 <tr>
 <td>angle</td>
 <td>0-360</td>
-<td>no</td>
 <td>240</td>
 <td>angle between start and end of the scale</td>
 </tr>
 <tr>
 <td>label_count</td>
 <td>uint8</td>
-<td>no</td>
 <td></td>
 <td>number of labels (and minor tick count) of the scale</td>
 </tr>
 <tr>
 <td>line_count</td>
 <td>uint16</td>
-<td>no</td>
 <td>31</td>
 <td>minor tick count of the scale</td>
 </tr>
 <tr>
 <td>rotation</td>
 <td>0-360</td>
-<td>no</td>
 <td>0</td>
 <td>offset for the gauge's angles to rotate it</td>
 </tr>
 <tr>
 <td>format</td>
 <td>uint16</td>
-<td>no</td>
 <td>0</td>
 <td>divider for major tick values</td>
 </tr>
@@ -886,7 +826,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -895,21 +834,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>min</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>minimum value of the indicator</td>
 </tr>
 <tr>
 <td>max</td>
 <td>int16</td>
-<td>no</td>
 <td>100</td>
 <td>maximum value of the indicator</td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>current value of the indicator</td>
 </tr>
@@ -923,7 +859,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -932,7 +867,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>1 for on, 0 for off</td>
 </tr>
@@ -947,7 +881,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -956,7 +889,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>val</td>
 <td>byte</td>
-<td>no</td>
 <td>0</td>
 <td>The brightness of the indicator [0..255]</td>
 </tr>
@@ -970,7 +902,6 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -979,21 +910,18 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <tr>
 <td>options</td>
 <td>string</td>
-<td>no</td>
 <td>""</td>
 <td>List of items separated by <code>\n</code></td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>The number of the selected item</td>
 </tr>
 <tr>
 <td>txt</td>
 <td>string</td>
-<td>no</td>
 <td>""</td>
 <td><em>Read-only</em> The text of the selected item</td>
 </tr>
@@ -1012,7 +940,6 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 <tr>
 <th>Property</th>
 <th>Value</th>
-<th>Required</th>
 <th>Default</th>
 <th>Description</th>
 </tr>
@@ -1021,35 +948,30 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 <tr>
 <td>options</td>
 <td>string</td>
-<td>no</td>
 <td>""</td>
 <td>List of items separated by <code>\n</code></td>
 </tr>
 <tr>
 <td>val</td>
 <td>int16</td>
-<td>no</td>
 <td>0</td>
 <td>The number of the selected item</td>
 </tr>
 <tr>
 <td>txt</td>
 <td>string</td>
-<td>no</td>
 <td>""</td>
 <td><em>Read-only</em> The text of the selected item</td>
 </tr>
 <tr>
 <td>rows</td>
 <td>int8</td>
-<td>no</td>
 <td>3</td>
 <td>The number of rows that are visible<BR>Use this property instead of <code>h</code> to set object height</td>
 </tr>
 <tr>
 <td>align</td>
 <td>0..2</td>
-<td>no</td>
 <td>0</td>
 <td>Text alignment: <code>0</code> = left, <code>1</code> = center, <code>2</code> = right</td>
 </tr>

@@ -41,11 +41,14 @@
         var pageToc = [
           {title: "Common Properties", url: "#_top", children: [
           ]},
+          {title: "Common Methods", url: "#common-methods", children: [
+          ]},
           {title: "Object Types", url: "#object-types", children: [
               {title: "Cheatsheet", url: "#cheatsheet" },
               {title: "Button", url: "#button" },
               {title: "Checkbox", url: "#checkbox" },
               {title: "Text Label", url: "#text-label" },
+              {title: "Button Matrix", url: "#button-matrix" },
               {title: "Arc", url: "#arc" },
               {title: "Spinner", url: "#spinner" },
               {title: "Colorpicker", url: "#colorpicker" },
@@ -217,6 +220,26 @@ but only the <code>id</code> and <code>objid</code> properties are required to c
 <p>The maximum number of pages and objects is limited by the memory available in the MCU.</p>
 <p><code>"page":254</code> indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.</p>
+<h2 id="common-methods">Common Methods<a class="headerlink" href="#common-methods" title="Permanent link">~</a></h2>
+<p>These are the common methods shared among all objects,</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="center">Parameters</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">delete</td>
+<td align="center"></td>
+<td align="left">Delete the object from the page</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-json">p[0].b[5].delete
+</code></pre>
 <h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">~</a></h2>
 <p>Each object type is an ID that indicates which object type that line represents.
 Besides the common properties listed above, each object type can have specific properties.</p>
@@ -240,6 +263,10 @@ Besides the common properties listed above, each object type can have specific p
 <tr>
 <td align="center">12</td>
 <td align="left"><a href="#text-label">Label</a></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left"><a href="#button-matrix">Button Matrix</a></td>
 </tr>
 <tr>
 <td align="center">20</td>
@@ -423,6 +450,42 @@ Besides the common properties listed above, each object type can have specific p
 </tbody>
 </table>
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
+</code></pre>
+<h3 id="button-matrix">Button Matrix<a class="headerlink" href="#button-matrix" title="Permanent link">~</a></h3>
+<p><strong>objid:13</strong></p>
+<p><img align="center" alt="lv_label" src="../assets/images/objects/lv_ex_label_1.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>json array</td>
+<td>no</td>
+<td>"Text"</td>
+<td>Json array of strings where each element is the label of a button. Use <code>"\n"</code> for a new line of buttons.</td>
+</tr>
+<tr>
+<td>align</td>
+<td>0..2</td>
+<td>no</td>
+<td>0</td>
+<td>Text alignment: <code>0</code> = left, <code>1</code> = center, <code>2</code> = right</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;objid&quot;:12,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
+</code></pre>
+<p>The Text properties of this object apply to <em>all</em> buttons in the matrix.
+To change the color of a single label prefix the text with a <code>#RRGGBB</code> hexadecimal color code and close with a single hash <code>#</code> tag:</p>
+<pre><code class="language-json">p[2].b[1].options [&quot;#FF0000 Red Label#&quot;,&quot;#0000FF Cyan Label#&quot;,&quot;\n&quot;,&quot;#FFFF00 Yellow Label#&quot;]
 </code></pre>
 <h3 id="arc">Arc<a class="headerlink" href="#arc" title="Permanent link">~</a></h3>
 <p><strong>objid:22</strong></p>

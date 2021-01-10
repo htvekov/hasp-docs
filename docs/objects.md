@@ -308,7 +308,7 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 ### Roller
 **obj:`roller`**
 
-<iframe width=240 height=320 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=240&h=320"></iframe><p></p>
+<iframe width=320 height=240 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=320&h=240"></iframe><p></p>
 
 
 | Property | Value      | Default | Description

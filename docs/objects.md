@@ -75,14 +75,6 @@ Besides the common properties listed above, each object type can have specific p
 
 ![lv_btn](assets/images/objects/lv_ex_btn_1.png)
 
-<details open=""><summary>Show Jsonl Code (Click to expand)</summary>
-```json
-{"page":0,"comment":"---------- Page 0 ----------"}
-{"objid":10,"id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"TRUE","txt":"Push Me \uf0a6"}
-```
-</details>
-
-
 | Property | Value      | Default | Description
 |----------|------------|---------|--------------
 | toggle   | boolean    | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
@@ -102,6 +94,12 @@ Normal buttons (`toggle=false`) send touch events while they occur. The possible
 Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"val":"0"}` or `{"val":"1"}`.
 
 `bg_color` changes `val 0` background color and `bg_color1` changes `val 1` background color.
+
+Example:
+```json
+{"objid":10,"id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"true","txt":"Push Me \uf0a6"}
+```
+
 
 ### Checkbox
 **objid:11**
@@ -124,8 +122,7 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 | mode     | string     | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 | align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
- 
-
+Example:
 ```json
 {"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
 ```
@@ -141,14 +138,12 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 | align    | 0..2       | 0          | Text alignment: `0` = left, `1` = center, `2` = right
 
 
-```json
-{"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
-```
+The [styling properties](styling.md) apply to *all* buttons in the matrix.
+To change the color of a single label prefix the text with a `#RRGGBB` hexadecimal color code and close with a single hash `#` tag.
 
-The Text properties of this object apply to *all* buttons in the matrix.
-To change the color of a single label prefix the text with a `#RRGGBB` hexadecimal color code and close with a single hash `#` tag:
+Example:
 ```json
-p[2].b[1].options ["#FF0000 Red Label#","#0000FF Cyan Label#","\n","#FFFF00 Yellow Label#"]
+p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text#"]
 ```
 
 
@@ -280,7 +275,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 | Property   | Value      | Default | Description
 |------------|------------|---------|---------------
-| val      | int16        | 0       | 1 for on, 0 for off
+| val        | bool       | 0       | 1 for on, 0 for off
 
 `bg_color1` changes indicator color and `bg_color2`changes knob color
 

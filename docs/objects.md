@@ -106,6 +106,7 @@ Toggle Switches (`toggle=true`) only send out their new value when toggled: `val
 |----------|------------|----------|------------|--------------
 | txt      | string     | no       | "Text"     | The text of the label
 | mode     | string     | no       | crop       | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
+| align    | string     | no       | crop       | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
 
 
 
@@ -128,8 +129,8 @@ Toggle Switches (`toggle=true`) only send out their new value when toggled: `val
 | adjustable| bool       | no       | false   | Add indicator that the user can operate to change the value
 |start_angle| 0-360      | no       |         | start angle of the arc background (see note)
 | end_angle | 0-360      | no       |         | end angle of the arc background (see note)
-|start_angle1| 0-360      | no       |         | start angle of the arc indicator (see note)
-| end_angle1 | 0-360      | no       |         | end angle of the arc indicator (see note)
+|start_angle1| 0-360     | no       |         | start angle of the arc indicator (see note)
+| end_angle1 | 0-360     | no       |         | 0 = normal, 1 = symmetrical, 2 = reverse
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.

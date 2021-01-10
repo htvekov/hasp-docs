@@ -137,6 +137,19 @@ Objects use them to set spacing. See the documentation of the [objects](objects.
 | margin_left   | int | Set the margin on the left | 0   
 | margin_right  | int | Set the margin on the right | 0   
 
+### Scale
+
+The properties for styling the scale of a linemeter or gauge.
+
+| Property               |  Type    | Description
+| :---                   |  :---:   | :---
+| scale_grad_color       |[color][1]| Make gradient to this color on the scale lines
+| scale_end_color        |[color][1]| Color of the scale lines in the end region
+| scale_width            | int16    | Width of the scale
+| scale_border_width     | int16    | Width of a border drawn on the outer side of the scale in the normal region
+| scale_end_border_width | int16    | Width of a border drawn on the outer side of the scale in the end region
+| scale_end_line_width   | int16    | Width of a scale lines in the end region
+
 ### Shadow
 
 The shadow is a blurred area under the object.

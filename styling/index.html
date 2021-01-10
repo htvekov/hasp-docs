@@ -255,7 +255,7 @@ p[2].b[3].bg_color=#C0C0C0
 <tr>
 <td align="left">border_side</td>
 <td align="center">byte</td>
-<td align="left">Specifies which sides of the border to draw.<br>0 = none<br>1 = left<br>2 = right<br>4 = top<br>8 = bottom<br>15 = full<br>A sum of these values is also possible to select specific sides.</td>
+<td align="left">Specifies which sides of the border to draw.<br>0 = none<br>1 = bottom<br>2 = top<br>4 = left<br>8 = right<br>15 = full<br>A sum of these values is also possible to select specific sides.</td>
 </tr>
 <tr>
 <td align="left">border_post</td>
@@ -290,19 +290,19 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 <tr>
 <td align="left">line_width</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Width of the line.</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">line_dash_width</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Width of dash. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">line_dash_gap</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash</td>
 <td align="center">0</td>
 </tr>
@@ -329,55 +329,55 @@ p[2].b[3].bg_color=#C0C0C0
 <tbody>
 <tr>
 <td align="left">pad_top</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the padding on the top</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">pad_bottom</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the padding on the bottom</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">pad_left</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the padding on the left</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">pad_right</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the padding on the right</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">pad_inner</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the padding inside the object between children</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">margin_top</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the margin on the top</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">margin_bottom</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the margin on the bottom</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">margin_left</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the margin on the left</td>
 <td align="center">0</td>
 </tr>
 <tr>
 <td align="left">margin_right</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Set the margin on the right</td>
 <td align="center">0</td>
 </tr>
@@ -497,12 +497,12 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 <tr>
 <td align="left">text_letter_space</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Distance between letters of the text, can be a negative number</td>
 </tr>
 <tr>
 <td align="left">text_line_space</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Distance between lines of the text, can be a negative number</td>
 </tr>
 <tr>
@@ -550,12 +550,12 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 <tr>
 <td align="left">value_letter_space</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Distance between letters of the text, can be a negative number</td>
 </tr>
 <tr>
 <td align="left">value_line_space</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Distance between lines of the text, can be a negative number</td>
 </tr>
 <tr>
@@ -565,12 +565,12 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 <tr>
 <td align="left">value_ofs_x</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">X offset from the original position of the alignment</td>
 </tr>
 <tr>
 <td align="left">value_ofs_y</td>
-<td align="center">int</td>
+<td align="center">int16</td>
 <td align="left">Y offset from the original position of the alignment</td>
 </tr>
 </tbody>

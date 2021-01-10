@@ -108,7 +108,7 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 |----------|------------|----------|------------|--------------
 | txt      | string     | no       | "Text"     | The text of the label, `\n` for line break.
 | mode     | string     | no       | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
-| align    | string     | no       | crop       | The wrapping mode of long text labels. Modes expand, break, dots, scroll, loop, crop
+| align    | string     | no       | crop       | Text alignment: 0 = left, 1 = center, 2 = right
 
  
 
@@ -286,6 +286,7 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 | val      | int16      | no       | 0       | The number of the selected item
 | txt      | string     | no       | ""      | *Read-only* The text of the selected item
 | rows     | int8       | no       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
+| align    | string     | no       | crop    | Text alignment: 0 = left, 1 = center, 2 = right
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.

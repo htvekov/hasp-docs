@@ -1,5 +1,5 @@
 
-<h1>Example 0</h1>
+<h1>Widgets Demo</h1>
 
 ## Code
 

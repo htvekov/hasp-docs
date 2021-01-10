@@ -97,7 +97,7 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 
 Example:
 ```json
-{"objid":10,"id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"true","txt":"Push Me \uf0a6"}
+{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"true","txt":"Push Me \uf0a6"}
 ```
 
 
@@ -124,7 +124,7 @@ Example:
 
 Example:
 ```json
-{"page":2,"id":1,"objid":12,"h":24,"w":120,"txt":"\ufe05 Icon Demo"}
+{"page":2,"id":1,"obj":"label","h":24,"w":120,"txt":"\ufe05 Icon Demo"}
 ```
 
 ### Button Matrix

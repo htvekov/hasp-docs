@@ -28,8 +28,8 @@ The order of objects dictates the layer on the page from bottom to top.
 
 Example Objects
 ```json
-{"page":2,"id":1,"objid":12,"x":5,"y":20,"h":50,"w":50,"enabled":"true","hidden":"false"}
-{"page":2,"id":2,"objid":50,"x":5,"y":120,"h":90,"w":50,"enabled":"false","hidden":"false"}
+{"page":2,"id":1,"obj":"label","x":5,"y":20,"h":50,"w":50,"enabled":"true","hidden":"false"}
+{"page":2,"id":2,"obj":"dropdown","x":5,"y":120,"h":90,"w":50,"enabled":"false","hidden":"false"}
 ```
 
 Once the object is created, you can reference it with `p[x].b[y]` where `x` is the page number and `y` is the id of the object.

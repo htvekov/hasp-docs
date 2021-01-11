@@ -108,7 +108,7 @@ Example:
 
 | Property | Value      | Default    | Description
 |----------|------------|------------|--------------
-| val      | int16      | 0          | 1 for checked, 0 for unchecked
+| val      | int16      | 0          | `1` = checked<br>`0` = unchecked
 | txt      | string     | "Checkbox" | The label of the checkbox
 
 ### Text Label
@@ -158,7 +158,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | max       | int16      | 100     | maximum value of the indicator
 | val       | int16      | 0       | current value of the indicator
 | rotation  | int16      | 0       | offset to the 0 degree position
-| type      | 0-2        | 0       | 0 = normal, 1 = symmetrical, 2 = reverse
+| type      | 0-2        | 0       | `0` = normal, `1` = symmetrical, `2` = reverse
 | adjustable| bool       | false   | Add indicator that the user can operate to change the value
 |start_angle| 0-360      |         | start angle of the arc background (see note)
 | end_angle | 0-360      |         | end angle of the arc background (see note)
@@ -176,7 +176,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | Property  | Value      | Default | Description
 |-----------|------------|---------|--------------
 | speed     | int16      | 1000    | The time for 1 turn in ms
-| direction | int16      | 100     | 0 for clockwise, 1 for counter-clockwise
+| direction | int16      | 100     | `0` = clockwise, `1` = counter-clockwise
 | thickness | int16      | dep. on theme | The width of the arc line
 
 ### Colorpicker
@@ -188,7 +188,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 |----------|------------|---------|--------------
 | val      | uint16     | 0       | The selected color in RBG565 format
 | color    | hex string | 0       | The selected color in html format #rrggbb
-| rect     | boolean    | false   | true = color picker has a rectangular shape like a slider. false = circular shape.
+| rect     | boolean    | false   | `true` = color picker has a rectangular shape like a slider. `false` = circular shape.
 
 
 ### Slider
@@ -225,7 +225,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | angle          | 0-360      | 240     | angle between start and end of the scale
 | line_count     | uint16     | 31      | tick count of the scale
 | rotation       | 0-360      | 0       | offset for the scale angles to rotate it
-| type           | 0-1        | 0       | 0 = indicator lines are activated clock-wise<br>1 = indicator lines are activated counter-clock-wise
+| type           | 0-1        | 0       | `0` = indicator lines are activated clock-wise<br>`1` = indicator lines are activated counter-clock-wise
 
 Use [line properties](styling.md#line) to customise.
 
@@ -275,7 +275,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 | Property   | Value      | Default | Description
 |------------|------------|---------|---------------
-| val        | bool       | 0       | 1 for on, 0 for off
+| val        | bool       | 0       | `1` = on, `0` = off
 
 `bg_color1` changes indicator color and `bg_color2`changes knob color
 
@@ -286,7 +286,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 | Property   | Value      | Default | Description
 |------------|------------|---------|---------------
-| val        | byte       | 0       | The brightness of the indicator [0..255]
+| val        | byte       | 0       | The brightness of the indicator [`0..255`]
 
 ### Dropdown List
 **obj:`dropdown`**

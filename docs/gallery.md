@@ -28,7 +28,7 @@
             <a href="https://raw.githubusercontent.com/fvanroie/hasp-docs/master/docs/assets/images/builds/wallbox-us-0.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4" data-title="US Switchplate with motion sensor" data-footer="Lolin 2.4&quot; display with D1 mini">
                 <img src="../assets/images/builds/wallbox-us-2.png" class="img-fluid">
             </a>
-            <a href="https://raw.githubusercontent.com/fvanroie/hasp-docs/master/docs/assets/images/builds/telemetry-plate.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4" data-title="Telemetry panel" data-footer="MHS4001 display with ESP32 dev board">
+            <a href="https://raw.githubusercontent.com/fvanroie/hasp-docs/master/docs/assets/images/builds/telemetry-plate.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4" data-title="Telemetry panel" data-footer="Waveshare RPi LCD (Rev C) display with ESP32 dev board">
                 <img src="../assets/images/builds/telemetry-plate.png" class="img-fluid">
             </a>
         </div>

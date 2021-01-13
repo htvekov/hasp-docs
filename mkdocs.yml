@@ -38,6 +38,7 @@ nav:
   - commands.md
   - FAQ: faq.md
   - firmware-update.md
+  - gallery.md
   - Displays:
     - displays/ILI9341_IPS.md
     - displays/MHS4001.md

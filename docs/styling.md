@@ -11,48 +11,7 @@ Color values can be:
 - RGB hex code (`#rrggbb`)
 - RGB565 number format (`0..65353`)
 
-<table>
-<tr><th style="text-align:center">Hex Code</th><th>Short Name</th><!--th>RGB565 Number</th></tr-->
-<tr><td style="background-color:#FFC0CB;text-align:center">#FFC0CB</td><td>Pink</td></tr>
-<tr><td style="background-color:#DDA0DD;text-align:center">#DDA0DD</td><td>Plum</td></tr>
-<tr><td style="background-color:#DA70D6;text-align:center">#DA70D6</td><td>Orchid</td></tr>
-<tr><td style="background-color:#EE82EE;text-align:center">#EE82EE</td><td>Violet</td></tr>
-<tr><td style="background-color:#FF00FF;text-align:center;color:white">#FF00FF</td><td>Magenta or Fuchsia</td></tr>
-<tr><td style="background-color:#800080;text-align:center;color:white">#800080</td><td>Purple</td></tr>
-<tr><td style="background-color:#4B0082;text-align:center;color:white">#4B0082</td><td>Indigo</td></tr>
-<tr><td style="background-color:#B00000;text-align:center;color:white">#B00000</td><td>Blush</td></tr>
-<tr><td style="background-color:#FF0000;text-align:center;color:white">#FF0000</td><td>Red</td></tr>
-<tr><td style="background-color:#FF6347;text-align:center;color:white">#FF6347</td><td>Tomato</td></tr>
-<tr><td style="background-color:#FA8072;text-align:center">#FA8072</td><td>Salmon</td></tr>
-<tr><td style="background-color:#FF7F50;text-align:center">#FF7F50</td><td>Coral</td></tr>
-<tr><td style="background-color:#FFA500;text-align:center">#FFA500</td><td>Orange</td></tr>
-<tr><td style="background-color:#FFD700;text-align:center">#FFD700</td><td>Gold</td></tr>
-<tr><td style="background-color:#FFFF00;text-align:center">#FFFF00</td><td>Yellow</td></tr>
-<tr><td style="background-color:#F0E68C;text-align:center">#F0E68C</td><td>Khaki</td></tr>
-<tr><td style="background-color:#FFE4C4;text-align:center">#FFE4C4</td><td>Bisque</td></tr>
-<tr><td style="background-color:#F5DEB3;text-align:center">#F5DEB3</td><td>Wheat</td></tr>
-<tr><td style="background-color:#D2B48C;text-align:center">#D2B48C</td><td>Tan</td></tr>
-<tr><td style="background-color:#00FFFF;text-align:center">#00FFFF</td><td>Cyan or Aqua</td></tr>
-<tr><td style="background-color:#00FF00;text-align:center">#00FF00</td><td>Lime</td></tr>
-<tr><td style="background-color:#008000;text-align:center;color:white">#008000</td><td>Green</td></tr>
-<tr><td style="background-color:#008080;text-align:center;color:white">#008080</td><td>Teal</td></tr>
-<tr><td style="background-color:#0000FF;text-align:center;color:white">#0000FF</td><td>Blue</td></tr>
-<tr><td style="background-color:#000080;text-align:center;color:white">#000080</td><td>Navy</td></tr>
-<tr><td style="background-color:#808000;text-align:center;color:white">#808000</td><td>Olive</td></tr>
-<tr><td style="background-color:#CD853F;text-align:center;color:white">#CD853F</td><td>Peru</td></tr>
-<tr><td style="background-color:#A0522D;text-align:center;color:white">#A0522D</td><td>Sienna</td></tr>
-<tr><td style="background-color:#A52A2A;text-align:center;color:white">#A52A2A</td><td>Brown</td></tr>
-<tr><td style="background-color:#800000;text-align:center;color:white">#800000</td><td>Maroon</td></tr>
-<tr><td style="background-color:#FFFFFF;text-align:center">#FFFFFF</td><td>White</td></tr>
-<tr><td style="background-color:#FFFAFA;text-align:center">#FFFAFA</td><td>Snow</td></tr>
-<tr><td style="background-color:#FFFFF0;text-align:center">#FFFFF0</td><td>Ivory</td></tr>
-<tr><td style="background-color:#FAF0E6;text-align:center">#FAF0E6</td><td>Linen</td></tr>
-<tr><td style="background-color:#F5F5DC;text-align:center">#F5F5DC</td><td>Beige</td></tr>
-<tr><td style="background-color:#F0FFFF;text-align:center">#F0FFFF</td><td>Azure</td></tr>
-<tr><td style="background-color:#C0C0C0;text-align:center">#C0C0C0</td><td>Silver</td></tr>
-<tr><td style="background-color:#808080;text-align:center;color:white">#808080</td><td>Gray or Grey</td></tr>
-<tr><td style="background-color:#000000;text-align:center;color:white">#000000</td><td>Black</td></tr>
-</table>
+{{ read_csv("docs/assets/csv/colors.csv") }}
 
 #### Setting Color
 

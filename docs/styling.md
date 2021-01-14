@@ -4,6 +4,13 @@
 You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
 Some objects allow for more complex syling, effectively changing its appearance or its sub-components.
 
+### Boolean
+Properties with a boolean data type accept these values and are case insensitive:
+
+- ON / OFF
+- 1 / 0
+- true / false
+
 ### Colors
 Color values can be:
 
@@ -63,20 +70,20 @@ The border is drawn on top of the background. It has radius rounding.
 | border_opa   | byte     | Specifies opacity of the border
 | border_width | byte     | Set the width of the border
 | border_side  | byte     | Specifies which sides of the border to draw.<br>0 = none<br>1 = bottom<br>2 = top<br>4 = left<br>8 = right<br>15 = full<br>A sum of these values is also possible to select specific sides.
-| border_post  | bool     | If `true` the border will be drawn after all children have been drawn.
+| border_post  | bool[2]  | If `true` the border will be drawn after all children have been drawn.
 
 ### Line
 
 Properties for line objects only.
 
-| Property          |  Type    | Description | Default |
-| :---              |  :---:   | :---        | :---:   |
+| Property          |  Type    | Description
+| :---              |  :---:   | :---
 | line_color        |[color][1]| Color of the line
 | line_opa          | byte     | Opacity level of the line [0-255]
-| line_width        | int16    | Width of the line. | 0
-| line_dash_width   | int16    | Width of dash. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash | 0
-| line_dash_gap     | int16    | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash| 0
-| line_rounded      | bool     | `true` = draw rounded line endings | `false`
+| line_width        | int16    | Width of the line
+| line_dash_width   | int16    | Width of dash. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash (= default)
+| line_dash_gap     | int16    | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash (= default)
+| line_rounded      | bool[2]  | `true` = draw rounded line endings. Default = `false`
 
 ### Padding and Margin
 
@@ -142,7 +149,7 @@ Value is an arbitrary text drawn on top of an object. It can be a lightweight re
 
 | Property           |  Type    | Description
 | :---               |  :---:   | :---
-| value_str          | string   | Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)
+| value_str          | string   | Text to display
 | value_color        |[color][1]| Color of the text
 | value_opa          | byte     | Opacity level of the text [0-255]
 | value_font         | byte     | The [Font ID](fonts.md)
@@ -175,3 +182,4 @@ n/a
 -->
 
 [1]: #colors
+[2]: #boolean

@@ -84,17 +84,17 @@ Padding sets the space on the inner sides of the edges. It means "I don't want m
 
 Objects use them to set spacing. See the documentation of the [objects](objects.md) for the details.
 
-| Property      | Type  | Description | Default |
-| :---          | :---: | :--- | :---: |
-| pad_top       | int16 | Set the padding on the top | 0   
-| pad_bottom    | int16 | Set the padding on the bottom | 0   
-| pad_left      | int16 | Set the padding on the left | 0   
-| pad_right     | int16 | Set the padding on the right | 0   
-| pad_inner     | int16 | Set the padding inside the object between children | 0   
-| margin_top    | int16 | Set the margin on the top | 0   
-| margin_bottom | int16 | Set the margin on the bottom | 0   
-| margin_left   | int16 | Set the margin on the left | 0   
-| margin_right  | int16 | Set the margin on the right | 0   
+| Property      | Type  | Description
+| :---          | :---: | :---
+| pad_top       | int16 | Set the padding on the top
+| pad_bottom    | int16 | Set the padding on the bottom
+| pad_left      | int16 | Set the padding on the left
+| pad_right     | int16 | Set the padding on the right
+| pad_inner     | int16 | Set the padding inside the object between children
+| margin_top    | int16 | Set the margin on the top
+| margin_bottom | int16 | Set the margin on the bottom
+| margin_left   | int16 | Set the margin on the left
+| margin_right  | int16 | Set the margin on the right
 
 ### Scale
 

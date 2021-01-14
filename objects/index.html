@@ -248,72 +248,89 @@ Besides the common properties listed above, each object type can have specific p
 <thead>
 <tr>
 <th align="center">objid</th>
+<th align="left">obj</th>
 <th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">10</td>
+<td align="left">btn</td>
 <td align="left"><a href="#button">Button</a></td>
 </tr>
 <tr>
 <td align="center">11</td>
+<td align="left">cb</td>
 <td align="left"><a href="#checkbox">Checkbox</a></td>
 </tr>
 <tr>
 <td align="center">12</td>
+<td align="left">label</td>
 <td align="left"><a href="#text-label">Label</a></td>
 </tr>
 <tr>
 <td align="center">13</td>
+<td align="left">btnmatrix</td>
 <td align="left"><a href="#button-matrix">Button Matrix</a></td>
 </tr>
 <tr>
 <td align="center">20</td>
+<td align="left">cpicker</td>
 <td align="left"><a href="#colorpicker">Colorpicker</a></td>
 </tr>
 <tr>
 <td align="center">21</td>
+<td align="left">spinner</td>
 <td align="left"><a href="#spinner">Spinner</a></td>
 </tr>
 <tr>
 <td align="center">22</td>
+<td align="left">arc</td>
 <td align="left"><a href="#arc">Arc</a></td>
 </tr>
 <tr>
 <td align="center">30</td>
+<td align="left">slider</td>
 <td align="left"><a href="#slider">Slider</a></td>
 </tr>
 <tr>
 <td align="center">31</td>
+<td align="left">gauge</td>
 <td align="left"><a href="#gauge">Gauge</a></td>
 </tr>
 <tr>
 <td align="center">32</td>
+<td align="left">bar</td>
 <td align="left"><a href="#progress-bar">Progress Bar</a></td>
 </tr>
 <tr>
 <td align="center">33</td>
+<td align="left">lmeter</td>
 <td align="left"><a href="#line-meter">Line Meter</a></td>
 </tr>
 <tr>
 <td align="center">40</td>
+<td align="left">sw</td>
 <td align="left"><a href="#switch">Switch</a></td>
 </tr>
 <tr>
 <td align="center">41</td>
+<td align="left">led</td>
 <td align="left"><a href="#led-indicator">LED</a></td>
 </tr>
 <tr>
 <td align="center">50</td>
+<td align="left">ddlist</td>
 <td align="left"><a href="#dropdown-list">Dropdown List</a></td>
 </tr>
 <tr>
 <td align="center">51</td>
+<td align="left">roller</td>
 <td align="left"><a href="#roller">Roller</a></td>
 </tr>
 <tr>
 <td align="center">91</td>
+<td align="left">obj</td>
 <td align="left"><a href="#base-object">Base Object</a></td>
 </tr>
 </tbody>
@@ -368,7 +385,6 @@ Besides the common properties listed above, each object type can have specific p
 <!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
 
 <p>Toggle Switches (<code>toggle=true</code>) send out their new value only when toggled: <code>{"val":"0"}</code> or <code>{"val":"1"}</code>.</p>
-<p><code>bg_color</code> changes <code>val 0</code> background color and <code>bg_color1</code> changes <code>val 1</code> background color.</p>
 <p>Example:</p>
 <pre><code class="language-json">{&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;true&quot;,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
 </code></pre>
@@ -514,7 +530,7 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <td>adjustable</td>
 <td>bool</td>
 <td>false</td>
-<td>Add indicator that the user can operate to change the value</td>
+<td>Add knob that the user can operate to change the value</td>
 </tr>
 <tr>
 <td>start_angle</td>
@@ -538,7 +554,7 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <td>end_angle1</td>
 <td>0-360</td>
 <td></td>
-<td>0 = normal, 1 = symmetrical, 2 = reverse</td>
+<td>end angle of the arc indicator (see note)</td>
 </tr>
 </tbody>
 </table>

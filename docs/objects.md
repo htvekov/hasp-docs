@@ -51,24 +51,24 @@ Besides the common properties listed above, each object type can have specific p
 
 ### Cheatsheet
 
-| objid | Type
-|:---:|:-----------
-| 10 | [Button](#button)
-| 11 | [Checkbox](#checkbox)
-| 12 | [Label](#text-label)
-| 13 | [Button Matrix](#button-matrix)
-| 20 | [Colorpicker](#colorpicker)
-| 21 | [Spinner](#spinner)
-| 22 | [Arc](#arc)
-| 30 | [Slider](#slider)
-| 31 | [Gauge](#gauge)
-| 32 | [Progress Bar](#progress-bar)
-| 33 | [Line Meter](#line-meter)
-| 40 | [Switch](#switch)
-| 41 | [LED](#led-indicator)
-| 50 | [Dropdown List](#dropdown-list)
-| 51 | [Roller](#roller)
-| 91 | [Base Object](#base-object)
+| objid | obj | Type
+|:---:|:---------|:-----------
+| 10 | btn       | [Button](#button)
+| 11 | cb        | [Checkbox](#checkbox)
+| 12 | label     | [Label](#text-label)
+| 13 | btnmatrix | [Button Matrix](#button-matrix)
+| 20 | cpicker   | [Colorpicker](#colorpicker)
+| 21 | spinner   | [Spinner](#spinner)
+| 22 | arc       | [Arc](#arc)
+| 30 | slider    | [Slider](#slider)
+| 31 | gauge     | [Gauge](#gauge)
+| 32 | bar       | [Progress Bar](#progress-bar)
+| 33 | lmeter    | [Line Meter](#line-meter)
+| 40 | sw        | [Switch](#switch)
+| 41 | led       | [LED](#led-indicator)
+| 50 | ddlist    | [Dropdown List](#dropdown-list)
+| 51 | roller    | [Roller](#roller)
+| 91 | obj       | [Base Object](#base-object)
 
 ### Button
 **obj:`btn`**
@@ -92,8 +92,6 @@ Normal buttons (`toggle=false`) send touch events while they occur. The possible
 <!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
 
 Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"val":"0"}` or `{"val":"1"}`.
-
-`bg_color` changes `val 0` background color and `bg_color1` changes `val 1` background color.
 
 Example:
 ```json
@@ -159,11 +157,11 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | val       | int16      | 0       | current value of the indicator
 | rotation  | int16      | 0       | offset to the 0 degree position
 | type      | 0-2        | 0       | `0` = normal, `1` = symmetrical, `2` = reverse
-| adjustable| bool       | false   | Add indicator that the user can operate to change the value
+| adjustable| bool       | false   | Add knob that the user can operate to change the value
 |start_angle| 0-360      |         | start angle of the arc background (see note)
 | end_angle | 0-360      |         | end angle of the arc background (see note)
 |start_angle1| 0-360     |         | start angle of the arc indicator (see note)
-| end_angle1 | 0-360     |         | 0 = normal, 1 = symmetrical, 2 = reverse
+| end_angle1 | 0-360     |         | end angle of the arc indicator (see note)
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.

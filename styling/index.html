@@ -39,7 +39,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Colors", url: "#_top", children: [
+          {title: "Boolean", url: "#_top", children: [
+          ]},
+          {title: "Colors", url: "#colors", children: [
           ]},
           {title: "Background", url: "#background", children: [
           ]},
@@ -114,6 +116,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <p>You can adjust the appearance of objects by changing the foreground, background and/or border color of each object.
 Some objects allow for more complex syling, effectively changing its appearance or its sub-components.</p>
+<h3 id="boolean">Boolean<a class="headerlink" href="#boolean" title="Permanent link">~</a></h3>
+<p>Properties with a boolean data type accept these values and are case insensitive:</p>
+<ul>
+<li>ON / OFF</li>
+<li>1 / 0</li>
+<li>true / false</li>
+</ul>
 <h3 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">~</a></h3>
 <p>Color values can be:</p>
 <ul>
@@ -348,7 +357,7 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 <tr>
 <td align="left">border_post</td>
-<td align="center">bool</td>
+<td align="center">bool<a href="#boolean">2</a></td>
 <td align="left">If <code>true</code> the border will be drawn after all children have been drawn.</td>
 </tr>
 </tbody>
@@ -361,7 +370,6 @@ p[2].b[3].bg_color=#C0C0C0
 <th align="left">Property</th>
 <th align="center">Type</th>
 <th align="left">Description</th>
-<th align="center">Default</th>
 </tr>
 </thead>
 <tbody>
@@ -369,37 +377,31 @@ p[2].b[3].bg_color=#C0C0C0
 <td align="left">line_color</td>
 <td align="center"><a href="#colors">color</a></td>
 <td align="left">Color of the line</td>
-<td align="center"></td>
 </tr>
 <tr>
 <td align="left">line_opa</td>
 <td align="center">byte</td>
 <td align="left">Opacity level of the line [0-255]</td>
-<td align="center"></td>
 </tr>
 <tr>
 <td align="left">line_width</td>
 <td align="center">int16</td>
-<td align="left">Width of the line.</td>
-<td align="center">0</td>
+<td align="left">Width of the line</td>
 </tr>
 <tr>
 <td align="left">line_dash_width</td>
 <td align="center">int16</td>
-<td align="left">Width of dash. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash</td>
-<td align="center">0</td>
+<td align="left">Width of dash. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash (= default)</td>
 </tr>
 <tr>
 <td align="left">line_dash_gap</td>
 <td align="center">int16</td>
-<td align="left">Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash</td>
-<td align="center">0</td>
+<td align="left">Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. <code>0</code> = disable dash (= default)</td>
 </tr>
 <tr>
 <td align="left">line_rounded</td>
-<td align="center">bool</td>
-<td align="left"><code>true</code> = draw rounded line endings</td>
-<td align="center"><code>false</code></td>
+<td align="center">bool<a href="#boolean">2</a></td>
+<td align="left"><code>true</code> = draw rounded line endings. Default = <code>false</code></td>
 </tr>
 </tbody>
 </table>
@@ -610,7 +612,7 @@ p[2].b[3].bg_color=#C0C0C0
 <tr>
 <td align="left">value_str</td>
 <td align="center">string</td>
-<td align="left">Text to display. Only the pointer is saved! (Don't use local variable with lv_style_set_value_str, instead use static, global or dynamically allocated data)</td>
+<td align="left">Text to display</td>
 </tr>
 <tr>
 <td align="left">value_color</td>

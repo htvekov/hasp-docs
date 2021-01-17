@@ -8,21 +8,22 @@ There are two ways to create an object on the screen:
 ## Common Properties
 
 These are the common properties shared among all objects,
-but only the `id` and `objid` properties are required to create an object:
+but only the `id` and `obj` properties are required to create an object:
 
-| Property | Value      | Required | Default | Description |
-|:---------|:----------:|:--------:|:-------:|:------------|
-| id       | 0-255      | yes      | n/a     | ID of the object on this page |
-| objid    | 0-255      | yes      | n/a     | ID of the object type *(see below)* |
-| page     | 0-255      | no       | n/a     | ID of the page the object appears on |
-| x        | int16      | no       | 0       | horizontal position on the page |
-| y        | int16      | no       | 0       | vertical position on the page |
-| w        | int16      | no       | 0       | width of the object |
-| h        | int16      | no       | 0       | height of the object |
-| enabled  | true/false | no       | true    | object is clickable |
-| hidden   | true/false | no       | false   | object is hidden |
-| opacity  | 0-255      | no       | 255     | how much the the object is opaque |
-| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height) |
+| Property | Value      | Required | Default | Description
+|:---------|:----------:|:--------:|:-------:|:----
+| id       | 0-255      | yes      | n/a     | ID of the object on this page
+| ~~objid~~| 0-255      | yes      | n/a     | ~~ID of the object type *(see below)*~~
+| obj      | string     | yes      | n/a     | Name of the object type *(see below)*
+| page     | 0-255      | no       | n/a     | ID of the page the object appears on
+| x        | int16      | no       | 0       | horizontal position on the page
+| y        | int16      | no       | 0       | vertical position on the page
+| w        | int16      | no       | 0       | width of the object
+| h        | int16      | no       | 0       | height of the object
+| enabled  | true/false | no       | true    | object is clickable
+| hidden   | true/false | no       | false   | object is hidden
+| opacity  | 0-255      | no       | 255     | how much the the object is opaque
+| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height)
 
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 

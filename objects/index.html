@@ -125,7 +125,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </ul>
 <h2 id="common-properties">Common Properties<a class="headerlink" href="#common-properties" title="Permanent link">~</a></h2>
 <p>These are the common properties shared among all objects,
-but only the <code>id</code> and <code>objid</code> properties are required to create an object:</p>
+but only the <code>id</code> and <code>obj</code> properties are required to create an object:</p>
 <table>
 <thead>
 <tr>
@@ -145,11 +145,18 @@ but only the <code>id</code> and <code>objid</code> properties are required to c
 <td align="left">ID of the object on this page</td>
 </tr>
 <tr>
-<td align="left">objid</td>
+<td align="left">~~objid~~</td>
 <td align="center">0-255</td>
 <td align="center">yes</td>
 <td align="center">n/a</td>
-<td align="left">ID of the object type <em>(see below)</em></td>
+<td align="left">~~ID of the object type <em>(see below)</em>~~</td>
+</tr>
+<tr>
+<td align="left">obj</td>
+<td align="center">string</td>
+<td align="center">yes</td>
+<td align="center">n/a</td>
+<td align="left">Name of the object type <em>(see below)</em></td>
 </tr>
 <tr>
 <td align="left">page</td>

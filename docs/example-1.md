@@ -41,7 +41,7 @@ This is an example of a `pages.jsonl` file:
 
 ## OpenHab
 
-The config files to have this demo load automatically can be found [here]("https://github.com/arovak/haspLVGL_demo"). 
+The config files to have this demo load automatically can be found [here][1]. 
 
 ## Result
 
@@ -51,3 +51,5 @@ The config files to have this demo load automatically can be found [here]("https
 ![Screenshot](assets/images/screenshots/esample1-page254.png){: align=left }
 
 <div style="clear:both;"></div>
+
+[1]: https://github.com/arovak/haspLVGL_demo

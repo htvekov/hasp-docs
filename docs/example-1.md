@@ -41,7 +41,7 @@ This is an example of a `pages.jsonl` file:
 
 ## OpenHab
 
-The config files to have this demo load automatically can be found <a url="https://github.com/arovak/haspLVGL_demo">here</a>. 
+The config files to have this demo load automatically can be found [here]("https://github.com/arovak/haspLVGL_demo"). 
 
 ## Result
 

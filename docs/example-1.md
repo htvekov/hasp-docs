@@ -39,6 +39,10 @@ This is an example of a `pages.jsonl` file:
 {"obj":"btn","id":3,"page":254,"x":161,"y":257,"w":73,"h":58,"bg_color":"#000000","border_color":"#C7BAA7","border_width":0,"radius":10,"radius1":10,"radius2":10,"txt":"\uf061","text_color":"#978B7D","text_font":1}
 ```
 
+## OpenHab
+
+The config files to have this demo load automatically can be found [here][1]. 
+
 ## Result
 
 ![Screenshot](assets/images/screenshots/esample1-page0.png){: align=left }
@@ -47,3 +51,5 @@ This is an example of a `pages.jsonl` file:
 ![Screenshot](assets/images/screenshots/esample1-page254.png){: align=left }
 
 <div style="clear:both;"></div>
+
+[1]: https://github.com/arovak/haspLVGL_demo

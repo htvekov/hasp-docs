@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>GPIO Settings - HASP - Open SwitchPlate</title>
+    <title>Gpio - HASP - Open SwitchPlate</title>
     
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
@@ -39,8 +39,22 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "GPIO Settings", url: "#_top", children: [
-              {title: "Web UI", url: "#web-ui" },
+          {title: "Web UI", url: "#_top", children: [
+          ]},
+          {title: "Pin", url: "#pin", children: [
+          ]},
+          {title: "Groupid", url: "#groupid", children: [
+          ]},
+          {title: "Default state", url: "#default-state", children: [
+          ]},
+          {title: "Types", url: "#types", children: [
+              {title: "Button", url: "#button" },
+              {title: "Switch", url: "#switch" },
+              {title: "Relay", url: "#relay" },
+              {title: "Led", url: "#led" },
+              {title: "PWM", url: "#pwm" },
+          ]},
+          {title: "Idle State", url: "#idle-state", children: [
           ]},
         ];
 
@@ -95,11 +109,83 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="gpio-settings">GPIO Settings<a class="headerlink" href="#gpio-settings" title="Permanent link">~</a></h1>
+    <h1>GPIO Settings</h1>
+
+<p>You can attach external devices like buttons, switches, relays or LEDs using the GPIO pins of the ESP.</p>
 <h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link">~</a></h2>
-<p>You can configure the general look and feel for the interface by uploading you favorite fonts and selecting your favorite theme and color.</p>
 <p><img alt="GPIO Settings" src="../../assets/images/settings/gpio_addpin.png" title="GPIO Add New Pin" /> &nbsp;
 <img alt="GPIO Pin Configuration" src="../../assets/images/settings/gpio_pinconfig.png" title="GPIO Pin Configuration" /></p>
+<h2 id="pin">Pin<a class="headerlink" href="#pin" title="Permanent link">~</a></h2>
+<p>Select the pin of the gpio to use.</p>
+<p>Pins known to be in use will be hidden from this list.
+Check the documentation of your board to see which pins are free to be used as gpio.</p>
+<h2 id="groupid">Groupid<a class="headerlink" href="#groupid" title="Permanent link">~</a></h2>
+<p>GPIOs and objects can be grouped together by specifying a groupid. The state of objects is then altered by any object in the same group. This allows for simple action-reaction scenarios without relying on a home automation system:</p>
+<ul>
+<li>Link a switch and relay together</li>
+<li>Link a push button and doorbell together</li>
+</ul>
+<p>The applied value is <em>normalized</em> and <em>proportionate</em> to the value of the input object, much like a percentage:</p>
+<ul>
+<li>Binary objects, like a switch, checkbox or toggle button only pass along 0% and 100% values.</li>
+<li>Range objects, like a slider, arc slider, roller or drop-down list pass along a value between 0-65535, depending on their current <code>min</code>, <code>max</code> and <code>val</code> attributes.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The grouping of multiple gpios and objects together is intended for simple actions only.
+More complex actions should be performed by a home automation system, without linking groupids together.</p>
+</div>
+<h2 id="default-state">Default state<a class="headerlink" href="#default-state" title="Permanent link">~</a></h2>
+<p>The polarity of the gpio when it is <em>not</em> being engaged i.e. the gpio is not connected, zero or idle:</p>
+<ul>
+<li><code>HIGH</code>: The default state is high using the internal PULL_UP resistor. </li>
+<li><code>LOW</code>: The default state is low using the internal PULL_DOWN resistor. </li>
+</ul>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">~</a></h2>
+<h3 id="button">Button<a class="headerlink" href="#button" title="Permanent link">~</a></h3>
+<p>A button gpio sends events to topic <code>input#</code> where <code>#</code> is the groupnumber.</p>
+<p>GPIO buttons send out <strong>events</strong> while they occur. The possible events are:</p>
+<ul>
+<li><code>DOWN</code>: Occurs when a button goes from depressed to pressed</li>
+<li><code>SHORT</code>: The button was released within a short time i.e. a short click has occurred</li>
+<li><code>LONG</code>: Event is send when the button is <em>still</em> being pressed after the threshold time</li>
+<li><code>UP</code>: The button is released after being pressing for a LONG threshold time.</li>
+</ul>
+<!-- - `HOLD`: The HOLD event is repeated every 400ms while the button is still pressed -->
+<!-- - `LOST`: This event occurs when the object looses the focus while the screen is still being touched -->
+
+<p>The values of objects or gpios with the same groupid will be set to maximum when the button is being pressed and to minimum when the button is released.</p>
+<h3 id="switch">Switch<a class="headerlink" href="#switch" title="Permanent link">~</a></h3>
+<p>A switch gpio sends events to <code>input#</code> where <code>#</code> is the groupnumber.</p>
+<p>GPIO Switches send out their <strong>value</strong> when toggled: {"val":"0"} or {"val":"1"}.</p>
+<p>The values of objects or gpios in the same group will be set to maximum when the switch is turned on
+and to minimum when the switch is turned off.</p>
+<h3 id="relay">Relay<a class="headerlink" href="#relay" title="Permanent link">~</a></h3>
+<p>Set the relay ON or OFF when an event is received on <code>output#</code> where <code>#</code> is the groupnumber or from another group <code>intput</code>.</p>
+<p>When a relay is grouped with a button or switch in the same group, it will be turned ON or OFF according to the state of the button or switch.</p>
+<p>When a relay is controlled by a range object (slider, arc slider, roller, drop-down list) within the same group, the state will be be ON if the <code>.val</code> value is halfway the range or above.</p>
+<div class="admonition danger">
+<p class="admonition-title">Warning</p>
+<p>Attaching devices to mains power can be dangerous!
+Configuring gpios is done on your <strong>own responsibility</strong>.
+Be sure to test any system thoroughly using low voltages first.</p>
+</div>
+<h3 id="led">Led<a class="headerlink" href="#led" title="Permanent link">~</a></h3>
+<p>Set the brightness of the LED between <code>0</code> and <code>255</code> when a value is received on <code>output#</code> where <code>#</code> is the groupnumber.</p>
+<p>When a led is controlled by a button or switch in the same group, it will be turned ON or off according to the state of the button or switch.</p>
+<p>When a led is controlled by a range object (slider, arc slider, roller, drop-down list) in the same group, the brightness will be proportional to the <code>.val</code> value of the object within its range (<code>min-max</code>).</p>
+<p>For example:</p>
+<p>Consider a roller or drop-down list with 4 options: <code>OFF</code>, <code>Low</code>, <code>Medium</code> and <code>High</code>.
+The <code>.val</code> values can range from 0 to 3.
+These will set the brightness of the led to 0 (0%), 84 (33%), 170 (66%) and 255 (100%) respectively.</p>
+<p>For a roller or drop-down list with 5 options, <code>.val</code> ranges between 0 and 4. The brightness of the led increases 25% with each step.</p>
+<h3 id="pwm">PWM<a class="headerlink" href="#pwm" title="Permanent link">~</a></h3>
+<p>Set the duty cycle of the pin between <code>0</code> and <code>4095</code> when a value is received on <code>output#</code> where <code>#</code> is the groupnumber or from another group <code>intput</code>.</p>
+<p>When the PWM gpio is grouped with a button or switch, its duty cycle is either set to full-duty or off according to the state of the button or switch.</p>
+<p>When the PWM gpio is grouped with range object (slider, arc slider, roller, drop-down list), the duty cycle is proportional to the <code>.val</code> value of the object within its range (<code>min-max</code>).</p>
+<h2 id="idle-state">Idle State<a class="headerlink" href="#idle-state" title="Permanent link">~</a></h2>
+<p>The GPIO pins do <em>not</em> affect the idle state of the device. Only interacting with the touchscreen automatically resets the idle state.</p>
+<p>If you want a GPIO pin to wakeup the device, you should monitor its mqtt topic and use the <code>wakeup</code>, <code>dim</code> and <code>light</code> <a href="../../commands/#backlight">commands</a> appropriately.</p>
 <hr />
 <p>Click 'Save Settings' to save you settings to the device. A restart is required to make the settings active. Navigate back to the Main Menu and click Restart to activate the settings.</p>
 

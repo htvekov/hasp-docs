@@ -145,11 +145,11 @@ but only the <code>id</code> and <code>obj</code> properties are required to cre
 <td align="left">ID of the object on this page</td>
 </tr>
 <tr>
-<td align="left">~~objid~~</td>
+<td align="left">objid</td>
 <td align="center">0-255</td>
 <td align="center">yes</td>
 <td align="center">n/a</td>
-<td align="left">~~ID of the object type <em>(see below)</em>~~</td>
+<td align="left">ID of the object type <em>(obsolete: use obj)</em></td>
 </tr>
 <tr>
 <td align="left">obj</td>
@@ -257,88 +257,105 @@ Besides the common properties listed above, each object type can have specific p
 <th align="center">objid</th>
 <th align="left">obj</th>
 <th align="left">Type</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">10</td>
 <td align="left">btn</td>
+<td align="left">Binary</td>
 <td align="left"><a href="#button">Button</a></td>
 </tr>
 <tr>
 <td align="center">11</td>
 <td align="left">cb</td>
+<td align="left">Binary</td>
 <td align="left"><a href="#checkbox">Checkbox</a></td>
-</tr>
-<tr>
-<td align="center">12</td>
-<td align="left">label</td>
-<td align="left"><a href="#text-label">Label</a></td>
-</tr>
-<tr>
-<td align="center">13</td>
-<td align="left">btnmatrix</td>
-<td align="left"><a href="#button-matrix">Button Matrix</a></td>
-</tr>
-<tr>
-<td align="center">20</td>
-<td align="left">cpicker</td>
-<td align="left"><a href="#colorpicker">Colorpicker</a></td>
-</tr>
-<tr>
-<td align="center">21</td>
-<td align="left">spinner</td>
-<td align="left"><a href="#spinner">Spinner</a></td>
-</tr>
-<tr>
-<td align="center">22</td>
-<td align="left">arc</td>
-<td align="left"><a href="#arc">Arc</a></td>
-</tr>
-<tr>
-<td align="center">30</td>
-<td align="left">slider</td>
-<td align="left"><a href="#slider">Slider</a></td>
-</tr>
-<tr>
-<td align="center">31</td>
-<td align="left">gauge</td>
-<td align="left"><a href="#gauge">Gauge</a></td>
-</tr>
-<tr>
-<td align="center">32</td>
-<td align="left">bar</td>
-<td align="left"><a href="#progress-bar">Progress Bar</a></td>
-</tr>
-<tr>
-<td align="center">33</td>
-<td align="left">lmeter</td>
-<td align="left"><a href="#line-meter">Line Meter</a></td>
 </tr>
 <tr>
 <td align="center">40</td>
 <td align="left">sw</td>
+<td align="left">Binary</td>
 <td align="left"><a href="#switch">Switch</a></td>
 </tr>
 <tr>
-<td align="center">41</td>
-<td align="left">led</td>
-<td align="left"><a href="#led-indicator">LED</a></td>
+<td align="center">32</td>
+<td align="left">bar</td>
+<td align="left">Range</td>
+<td align="left"><a href="#progress-bar">Progress Bar</a></td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="left">slider</td>
+<td align="left">Range</td>
+<td align="left"><a href="#slider">Slider</a></td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="left">arc</td>
+<td align="left">Range</td>
+<td align="left"><a href="#arc">Arc</a></td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="left">lmeter</td>
+<td align="left">Range</td>
+<td align="left"><a href="#line-meter">Line Meter</a></td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="left">gauge</td>
+<td align="left">Range</td>
+<td align="left"><a href="#gauge">Gauge</a></td>
 </tr>
 <tr>
 <td align="center">50</td>
 <td align="left">ddlist</td>
+<td align="left">Selector</td>
 <td align="left"><a href="#dropdown-list">Dropdown List</a></td>
 </tr>
 <tr>
 <td align="center">51</td>
 <td align="left">roller</td>
+<td align="left">Selector</td>
 <td align="left"><a href="#roller">Roller</a></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="left">btnmatrix</td>
+<td align="left">Selector</td>
+<td align="left"><a href="#button-matrix">Button Matrix</a></td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="left">cpicker</td>
+<td align="left">Selector</td>
+<td align="left"><a href="#colorpicker">Colorpicker</a></td>
 </tr>
 <tr>
 <td align="center">91</td>
 <td align="left">obj</td>
+<td align="left">Visual</td>
 <td align="left"><a href="#base-object">Base Object</a></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left">label</td>
+<td align="left">Visual</td>
+<td align="left"><a href="#text-label">Label</a></td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td align="left">led</td>
+<td align="left">Visual</td>
+<td align="left"><a href="#led-indicator">LED</a></td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="left">spinner</td>
+<td align="left">Visual</td>
+<td align="left"><a href="#spinner">Spinner</a></td>
 </tr>
 </tbody>
 </table>

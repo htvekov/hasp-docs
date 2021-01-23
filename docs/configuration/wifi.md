@@ -16,7 +16,7 @@ Optional password for the access point, if required.
 
 ---
 
-Click 'Save Settings' to save you settings to the device. A restart is required to make the settings active. Navigate back to the Main Menu and click Restart to activate the settings.
+Click 'Save Settings' to save your settings to the device. A restart is required to make the settings active. Navigate back to the Main Menu and click Restart to activate the settings.
 
 
 ## Commandline

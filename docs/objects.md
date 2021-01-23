@@ -13,7 +13,7 @@ but only the `id` and `obj` properties are required to create an object:
 | Property | Value      | Required | Default | Description
 |:---------|:----------:|:--------:|:-------:|:----
 | id       | 0-255      | yes      | n/a     | ID of the object on this page
-| ~~objid~~| 0-255      | yes      | n/a     | ~~ID of the object type *(see below)*~~
+| objid    | 0-255      | yes      | n/a     | ID of the object type *(obsolete: use obj)*
 | obj      | string     | yes      | n/a     | Name of the object type *(see below)*
 | page     | 0-255      | no       | n/a     | ID of the page the object appears on
 | x        | int16      | no       | 0       | horizontal position on the page
@@ -52,24 +52,24 @@ Besides the common properties listed above, each object type can have specific p
 
 ### Cheatsheet
 
-| objid | obj | Type
-|:---:|:---------|:-----------
-| 10 | btn       | [Button](#button)
-| 11 | cb        | [Checkbox](#checkbox)
-| 12 | label     | [Label](#text-label)
-| 13 | btnmatrix | [Button Matrix](#button-matrix)
-| 20 | cpicker   | [Colorpicker](#colorpicker)
-| 21 | spinner   | [Spinner](#spinner)
-| 22 | arc       | [Arc](#arc)
-| 30 | slider    | [Slider](#slider)
-| 31 | gauge     | [Gauge](#gauge)
-| 32 | bar       | [Progress Bar](#progress-bar)
-| 33 | lmeter    | [Line Meter](#line-meter)
-| 40 | sw        | [Switch](#switch)
-| 41 | led       | [LED](#led-indicator)
-| 50 | ddlist    | [Dropdown List](#dropdown-list)
-| 51 | roller    | [Roller](#roller)
-| 91 | obj       | [Base Object](#base-object)
+| objid | obj | Type | Description
+|:---:|:---------|:-----------|:-----------
+| 10 | btn       | Binary | [Button](#button)
+| 11 | cb        | Binary | [Checkbox](#checkbox)
+| 40 | sw        | Binary | [Switch](#switch)
+| 32 | bar       | Range | [Progress Bar](#progress-bar)
+| 30 | slider    | Range | [Slider](#slider)
+| 22 | arc       | Range | [Arc](#arc)
+| 33 | lmeter    | Range | [Line Meter](#line-meter)
+| 31 | gauge     | Range | [Gauge](#gauge)
+| 50 | ddlist    | Selector | [Dropdown List](#dropdown-list)
+| 51 | roller    | Selector | [Roller](#roller)
+| 13 | btnmatrix | Selector | [Button Matrix](#button-matrix)
+| 20 | cpicker   | Selector | [Colorpicker](#colorpicker)
+| 91 | obj       | Visual | [Base Object](#base-object)
+| 12 | label     | Visual | [Label](#text-label)
+| 41 | led       | Visual | [LED](#led-indicator)
+| 21 | spinner   | Visual | [Spinner](#spinner)
 
 ### Button
 **obj:`btn`**

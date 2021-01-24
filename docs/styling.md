@@ -70,7 +70,7 @@ The border is drawn on top of the background. It has radius rounding.
 | border_opa   | byte     | Specifies opacity of the border
 | border_width | byte     | Set the width of the border
 | border_side  | byte     | Specifies which sides of the border to draw.<br>0 = none<br>1 = bottom<br>2 = top<br>4 = left<br>8 = right<br>15 = full<br>A sum of these values is also possible to select specific sides.
-| border_post  | bool[2]  | If `true` the border will be drawn after all children have been drawn.
+| border_post  | [bool][2]| If `true` the border will be drawn after all children have been drawn.
 
 ### Line
 
@@ -83,7 +83,7 @@ Properties for line objects only.
 | line_width        | int16    | Width of the line
 | line_dash_width   | int16    | Width of dash. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash (= default)
 | line_dash_gap     | int16    | Gap between two dash line. Dashing is drawn only for horizontal or vertical lines. `0` = disable dash (= default)
-| line_rounded      | bool[2]  | `true` = draw rounded line endings. Default = `false`
+| line_rounded      | [bool][2]| `true` = draw rounded line endings. Default = `false`
 
 ### Padding and Margin
 

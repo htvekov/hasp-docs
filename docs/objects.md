@@ -78,7 +78,7 @@ Besides the common properties listed above, each object type can have specific p
 
 | Property | Value      | Default | Description
 |----------|------------|---------|--------------
-| toggle   | boolean    | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
+| toggle   | [bool][2]    | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | 0       | The value: 1 for toggled, 0 for untoggled
 | txt      | string     | ""      | The text of the label
 | mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
@@ -158,7 +158,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | val       | int16      | 0       | current value of the indicator
 | rotation  | int16      | 0       | offset to the 0 degree position
 | type      | 0-2        | 0       | `0` = normal, `1` = symmetrical, `2` = reverse
-| adjustable| bool       | false   | Add knob that the user can operate to change the value
+| adjustable| [bool][2]  | false   | Add knob that the user can operate to change the value
 |start_angle| 0-360      |         | start angle of the arc background (see note)
 | end_angle | 0-360      |         | end angle of the arc background (see note)
 |start_angle1| 0-360     |         | start angle of the arc indicator (see note)
@@ -186,7 +186,7 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 | Property | Value      | Default | Description
 |----------|------------|---------|--------------
 | color    | [color][1] | 0       | The selected color in html format #rrggbb
-| rect     | boolean    | false   | `true` = color picker has a rectangular shape like a slider. `false` = circular shape.
+| rect     | [bool][2]    | false   | `true` = color picker has a rectangular shape like a slider. `false` = circular shape.
 
 #### Setting Color
 
@@ -281,7 +281,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 | Property   | Value      | Default | Description
 |------------|------------|---------|---------------
-| val        | bool       | 0       | `1` = on, `0` = off
+| val        | [bool][2]  | 0       | `1` = on, `0` = off
 
 `bg_color1` changes indicator color and `bg_color2`changes knob color
 
@@ -340,3 +340,4 @@ The Base Object can be directly used as a simple widget. It is nothing more then
 You can use it as a background shape for other objects by putting its jsonl line before the object. 
 
 [1]: styling.md#colors
+[2]: styling.md#boolean

@@ -633,14 +633,8 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 </thead>
 <tbody>
 <tr>
-<td>val</td>
-<td>uint16</td>
-<td>0</td>
-<td>The selected color in RBG565 format</td>
-</tr>
-<tr>
 <td>color</td>
-<td>hex string</td>
+<td><a href="../styling/#colors">color</a></td>
 <td>0</td>
 <td>The selected color in html format #rrggbb</td>
 </tr>
@@ -652,6 +646,12 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 </tr>
 </tbody>
 </table>
+<h4>Setting Color</h4>
+<p>Examples:</p>
+<pre><code class="language-json">p[0].b[2].color=13891
+p[1].b[5].color=silver
+p[2].b[3].color=#C0C0C0
+</code></pre>
 <h3 id="slider">Slider<a class="headerlink" href="#slider" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>slider</code></strong></p>
 <p><img align="center" alt="lv_slider" src="../assets/images/objects/lv_ex_slider_1.png" /></p>

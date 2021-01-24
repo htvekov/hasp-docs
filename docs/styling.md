@@ -42,7 +42,7 @@ The format will be a json object with components:
 
 For example, the color returned by a color picker change event is:
 ```json
-hasp/plate_123/state/p1b4 => {"color":"#00fff6","r":"0","g":"255","b":"246"}
+hasp/plate_123/state/p1b4 => {"color":"#00fff6","r":0,"g":255,"b":246}
 ```
 
 ### Background

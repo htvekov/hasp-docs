@@ -185,10 +185,17 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 
 | Property | Value      | Default | Description
 |----------|------------|---------|--------------
-| val      | uint16     | 0       | The selected color in RBG565 format
-| color    | hex string | 0       | The selected color in html format #rrggbb
+| color    | [color][1] | 0       | The selected color in html format #rrggbb
 | rect     | boolean    | false   | `true` = color picker has a rectangular shape like a slider. `false` = circular shape.
 
+#### Setting Color
+
+Examples:
+```json
+p[0].b[2].color=13891
+p[1].b[5].color=silver
+p[2].b[3].color=#C0C0C0
+```
 
 ### Slider
 **obj:`slider`**
@@ -331,3 +338,5 @@ When the item is changed both `val` and `txt` of the newly selected item is sent
 The Base Object can be directly used as a simple widget. It is nothing more then a (rounded) rectangle.
 
 You can use it as a background shape for other objects by putting its jsonl line before the object. 
+
+[1]: styling.md#colors

@@ -1,6 +1,6 @@
 <h1>Pages</h1>
 
-The initial layout of the pages is defined by creating a special file on the SPIFFS file system.
+The initial layout of the pages is defined by creating a special file on the flash file system.
 
 This layout is displayed each time HASP starts up.
 

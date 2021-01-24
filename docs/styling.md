@@ -16,7 +16,7 @@ Color values can be:
 
 - Short names (from table below)
 - RGB hex code (`#rrggbb`)
-- RGB565 number format (`0..65353`)
+- RGB565 number format (`0..65535`)
 
 {{ read_csv("docs/assets/csv/colors.csv") }}
 

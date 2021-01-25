@@ -39,6 +39,8 @@ These are the common methods shared among all objects,
 | Method   | Parameters | Description |
 |:---------|:----------:|:------------|
 | delete   |            | Delete the object from the page
+| to_front |            | Bring the object to the front on the page
+| to_back  |            | Send the object to the back on the page
 
 
 ```json

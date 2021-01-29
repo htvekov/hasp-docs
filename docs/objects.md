@@ -29,8 +29,8 @@ If the `page` parameter is not present, the object is placed on the same page as
 
 The maximum number of pages and objects is limited by the memory available in the MCU.
 
-`"page":254` indicates that the object is visible on every page. It can be used for example to specify a static menu bar.
-You can still hide the object on select pages if needed. Objects on this page appear on top of any objects on the underlying page.
+`"page":0` indicates that the object is visible on **all** pages. It can be used for example to specify a static menu bar.
+You can still hide the object on select pages if needed. Objects on page 0 appear on **top** of any objects on the underlying page.
 
 ## Common Methods
 

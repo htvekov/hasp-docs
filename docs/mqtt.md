@@ -1,4 +1,28 @@
-<h1>Commands</h1>
+<h1>MQTT Topics</h1>
+
+## Events
+
+Button objects send out touch events on the subtopic:
+
+  <code>hasp/<i>&lt;platename&gt;</i>/event/p<i style="color:red">x</i>/b<i style="color:red">y</i></code> where x is the page number and y is the object id.
+
+Events only occur for push buttons and objects that have no value selection.
+
+## States
+
+The state topics receives updates on state changes like:
+
+- periodic statusupdate messages
+- dim change 0..100
+- light change ON/OFF
+- page change 0..11
+- idle change SHORT/LONG/OFF
+
+Updates on the state of the objects are sent to a subtopic:
+
+  <code>hasp/<i>&lt;platename&gt;</i>/state/p<i style="color:red">x</i>/b<i style="color:red">y</i></code> where x is the page number and y is the object id.
+
+## Commands
 
 Commands are not related to an object on the screen but can get or set global properties or invoke system commands on the device.
 
@@ -8,23 +32,23 @@ For MQTT, use the `hasp/<hostname>/command` topic with payload `<keyword> <param
 
 Here is a list of all the recognized command keywords:
 
-## Pages
+### Pages
 
 `page`     
-value: `[0-12]`
+value: `[0-11]`
 
 Switches the display to show the objects from a different page and return the page number in `state/page`.
 
 Calling the `page` command without a parameter will return the value of the current page in `state/page`.
 
 `clearpage`     
-value: `[0-12]`
+value: `[0-11,254]`
 
 Deletes all objects on a given page. If no page number is specified, it clears the current page.
 
 To delete individual objects, you can issue the `p[x].b[y].delete` command.
 
-## Backlight
+### Backlight
 
 `dim`   
 values: `[0-100]`
@@ -56,7 +80,7 @@ Clears the idle state of the device and publishes a `state/idle = OFF` status me
 
 It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.
 
-## System Commands
+### System Commands
 
 `calibrate`
 
@@ -105,7 +129,7 @@ Clear the filesystem and EEPROM and reboot the device in its initial state.
 !!! danger "Warning"
     There is no confirmation prompt nor an undo function!
 
-## Output Commands (GPIO)
+### Output Commands (GPIO)
 
 `output<x>` where `<x>` is number of the group
 
@@ -115,9 +139,9 @@ Sets **all** GPIO's assigned to the group number &lt;x> in **Configuration -> GP
 
 GUI objects that are assigned to the same group using `groupid` during object creation will change state accordingly.
 
-## Configuration Settings
+### Configuration Settings
 
-### Wi-FI
+#### Wi-FI
 
 `ssid`
 
@@ -127,7 +151,7 @@ Set network name of the access point to connect to.
 
 Set the optional password for the access point to connect to.
 
-### MQTT
+#### MQTT
 
 `hostname`
 
@@ -149,7 +173,7 @@ Set the optional username for the mqtt broker.
 
 Set the optional password for the mqtt broker.
 
-### Config/submodule
+#### Config/submodule
 
 You can get or set the configuration of a hasp-lvgl submodule in json format.
 To get the configuration, use the command `config/<submodule>`. 
@@ -167,7 +191,7 @@ config/debug
 
 To update the configuration simply issue the same command `config/<submodule>` with updated json payload.
 
-## Multiple Commands
+### Multiple Commands
 
 `json`
 

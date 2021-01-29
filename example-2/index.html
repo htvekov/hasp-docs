@@ -100,7 +100,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">~</a></h2>
 <p><code>pages.jsonl</code> file:</p>
-<pre><code class="language-json">{&quot;page&quot;:0,&quot;comment&quot;:&quot;---------- Page 0 ----------&quot;}
+<pre><code class="language-json">{&quot;page&quot;:1,&quot;comment&quot;:&quot;---------- Page 1 ----------&quot;}
 {&quot;id&quot;:0,&quot;bg_color&quot;:&quot;#FFFFFF&quot;,&quot;text_color&quot;:&quot;#000000&quot;,&quot;radius&quot;:0,&quot;border_side&quot;:0}
 {&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:240,&quot;h&quot;:30,&quot;txt&quot;:&quot;LIVING ROOM&quot;,&quot;value_font&quot;:22,&quot;bg_color&quot;:&quot;#2C3E50&quot;,&quot;text_color&quot;:&quot;#FFFFFF&quot;,&quot;radius&quot;:0,&quot;border_side&quot;:0}
 {&quot;obj&quot;:&quot;arc&quot;,&quot;id&quot;:2,&quot;x&quot;:5,&quot;y&quot;:45,&quot;w&quot;:140,&quot;h&quot;:100,&quot;max&quot;:40,&quot;border_side&quot;:0,&quot;type&quot;:0,&quot;rotation&quot;:0,&quot;start_angle&quot;:180,&quot;end_angle&quot;:0,&quot;start_angle1&quot;:180,&quot;value_font&quot;:12,&quot;value_ofs_x&quot;:-19,&quot;value_ofs_y&quot;:-4,&quot;bg_opa&quot;:0}
@@ -116,19 +116,19 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 {&quot;obj&quot;:&quot;label&quot;,&quot;id&quot;:12,&quot;x&quot;:20,&quot;y&quot;:240,&quot;w&quot;:200,&quot;h&quot;:20,&quot;txt&quot;:&quot;Ambient Light&quot;}
 {&quot;obj&quot;:&quot;slider&quot;,&quot;id&quot;:13,&quot;x&quot;:30,&quot;y&quot;:265,&quot;w&quot;:200,&quot;h&quot;:10}
 
-{&quot;page&quot;:254,&quot;comment&quot;:&quot;---------- Page 254 ----------&quot;}
-{&quot;page&quot;:254,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:0,&quot;y&quot;:290,&quot;w&quot;:76,&quot;h&quot;:30,&quot;opacity&quot;:50,&quot;txt&quot;:&quot;\uF053&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
-{&quot;page&quot;:254,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:2,&quot;x&quot;:75,&quot;y&quot;:290,&quot;w&quot;:90,&quot;h&quot;:30,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF015&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
-{&quot;page&quot;:254,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:3,&quot;x&quot;:164,&quot;y&quot;:290,&quot;w&quot;:76,&quot;h&quot;:30,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF054&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
+{&quot;page&quot;:0,&quot;comment&quot;:&quot;---------- All pages ----------&quot;}
+{&quot;page&quot;:0,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:0,&quot;y&quot;:290,&quot;w&quot;:76,&quot;h&quot;:30,&quot;opacity&quot;:50,&quot;txt&quot;:&quot;\uF053&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
+{&quot;page&quot;:0,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:2,&quot;x&quot;:75,&quot;y&quot;:290,&quot;w&quot;:90,&quot;h&quot;:30,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF015&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
+{&quot;page&quot;:0,&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:3,&quot;x&quot;:164,&quot;y&quot;:290,&quot;w&quot;:76,&quot;h&quot;:30,&quot;opacity&quot;:100,&quot;txt&quot;:&quot;\uF054&quot;,&quot;radius&quot;:0,&quot;bg_color&quot;:&quot;#34495E&quot;,&quot;text_color&quot;:&quot;#000000&quot;}
 </code></pre>
 <h2 id="result">Result<a class="headerlink" href="#result" title="Permanent link">~</a></h2>
 <p>Values for Temperature, Humidity and CO2 Sensor are sent from another device by publishing to the appropriate command topic:</p>
 <ul>
-<li>hasp/lanbon/command/p[0].b[2].val %value% - update Temperature arc value</li>
-<li>hasp/lanbon/command/p[0].b[2].value_str %value%°C - update Temperature text value</li>
-<li>hasp/lanbon/command/p[0].b[3].val %value% - update Humidity arc value </li>
-<li>hasp/lanbon/command/p[0].b[3].value_str %value% %  - update Humidity text value</li>
-<li>hasp/lanbon/command/p[0].b[4].txt CO2 levels: %value% - update CO2 level value</li>
+<li>hasp/lanbon/command/p[1].b[2].val %value% - update Temperature arc value</li>
+<li>hasp/lanbon/command/p[1].b[2].value_str %value%°C - update Temperature text value</li>
+<li>hasp/lanbon/command/p[1].b[3].val %value% - update Humidity arc value </li>
+<li>hasp/lanbon/command/p[1].b[3].value_str %value% %  - update Humidity text value</li>
+<li>hasp/lanbon/command/p[1].b[4].txt CO2 levels: %value% - update CO2 level value</li>
 </ul>
 <p><img align="left" alt="Screenshot" src="../assets/images/screenshots/lanbon.png" /></p>
 <div style="clear:both;"></div>

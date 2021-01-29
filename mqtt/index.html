@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Commands - HASP - Open SwitchPlate</title>
+    <title>Mqtt - HASP - Open SwitchPlate</title>
     
     <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
@@ -39,20 +39,17 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Pages", url: "#_top", children: [
+          {title: "Events", url: "#_top", children: [
           ]},
-          {title: "Backlight", url: "#backlight", children: [
+          {title: "States", url: "#states", children: [
           ]},
-          {title: "System Commands", url: "#system-commands", children: [
-          ]},
-          {title: "Output Commands (GPIO)", url: "#output-commands-gpio", children: [
-          ]},
-          {title: "Configuration Settings", url: "#configuration-settings", children: [
-              {title: "Wi-FI", url: "#wi-fi" },
-              {title: "MQTT", url: "#mqtt" },
-              {title: "Config/submodule", url: "#configsubmodule" },
-          ]},
-          {title: "Multiple Commands", url: "#multiple-commands", children: [
+          {title: "Commands", url: "#commands", children: [
+              {title: "Pages", url: "#pages" },
+              {title: "Backlight", url: "#backlight" },
+              {title: "System Commands", url: "#system-commands" },
+              {title: "Output Commands (GPIO)", url: "#output-commands-gpio" },
+              {title: "Configuration Settings", url: "#configuration-settings" },
+              {title: "Multiple Commands", url: "#multiple-commands" },
           ]},
         ];
 
@@ -79,50 +76,39 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     
-    
-      
-    
 
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../faq/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../faq/" class="btn btn-xs btn-link">
-        FAQ
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../example-0/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../example-0/" class="btn btn-xs btn-link">
-        Widgets Demo
-      </a>
-    </div>
-    
-  </div>
+    <h1>MQTT Topics</h1>
 
-    
-
-    <h1>Commands</h1>
-
+<h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">~</a></h2>
+<p>Button objects send out touch events on the subtopic:</p>
+<p><code>hasp/<i>&lt;platename&gt;</i>/event/p<i style="color:red">x</i>/b<i style="color:red">y</i></code> where x is the page number and y is the object id.</p>
+<p>Events only occur for push buttons and objects that have no value selection.</p>
+<h2 id="states">States<a class="headerlink" href="#states" title="Permanent link">~</a></h2>
+<p>The state topics receives updates on state changes like:</p>
+<ul>
+<li>periodic statusupdate messages</li>
+<li>dim change 0..100</li>
+<li>light change ON/OFF</li>
+<li>page change 0..11</li>
+<li>idle change SHORT/LONG/OFF</li>
+</ul>
+<p>Updates on the state of the objects are sent to a subtopic:</p>
+<p><code>hasp/<i>&lt;platename&gt;</i>/state/p<i style="color:red">x</i>/b<i style="color:red">y</i></code> where x is the page number and y is the object id.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">~</a></h2>
 <p>Commands are not related to an object on the screen but can get or set global properties or invoke system commands on the device.</p>
 <p>Commands can be issued via the Serial Commandline, Telnet Commandline or MQTT.</p>
 <p>For MQTT, use the <code>hasp/&lt;hostname&gt;/command</code> topic with payload <code>&lt;keyword&gt; &lt;parameter(s)&gt;</code></p>
 <p>Here is a list of all the recognized command keywords:</p>
-<h2 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">~</a></h2>
+<h3 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">~</a></h3>
 <p><code>page</code>   <br />
-value: <code>[0-12]</code></p>
+value: <code>[0-11]</code></p>
 <p>Switches the display to show the objects from a different page and return the page number in <code>state/page</code>.</p>
 <p>Calling the <code>page</code> command without a parameter will return the value of the current page in <code>state/page</code>.</p>
 <p><code>clearpage</code>   <br />
-value: <code>[0-12]</code></p>
+value: <code>[0-11,254]</code></p>
 <p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
 <p>To delete individual objects, you can issue the <code>p[x].b[y].delete</code> command.</p>
-<h2 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h2>
+<h3 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h3>
 <p><code>dim</code> <br />
 values: <code>[0-100]</code></p>
 <p>Sets the level of the backlight from 0 to 100%, where 0% is off and 100% is full brightness.</p>
@@ -149,7 +135,7 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 <p><code>wakeup</code></p>
 <p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message.</p>
 <p>It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
-<h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h2>
+<h3 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h3>
 <p><code>calibrate</code></p>
 <p>Start on-screen touch calibration.</p>
 <p>You need to issue a soft reboot command to save the new calibration settings. If you do a hard reset of the device, the calibration settings will be lost.</p>
@@ -181,18 +167,18 @@ This can be handy for bug reporting or documentation.</p>
 <p class="admonition-title">Warning</p>
 <p>There is no confirmation prompt nor an undo function!</p>
 </div>
-<h2 id="output-commands-gpio">Output Commands (GPIO)<a class="headerlink" href="#output-commands-gpio" title="Permanent link">~</a></h2>
+<h3 id="output-commands-gpio">Output Commands (GPIO)<a class="headerlink" href="#output-commands-gpio" title="Permanent link">~</a></h3>
 <p><code>output&lt;x&gt;</code> where <code>&lt;x&gt;</code> is number of the group</p>
 <p>values: <code>1</code> or <code>0</code>, <code>on</code> or <code>off</code>, <code>true</code> or <code>false</code></p>
 <p>Sets <strong>all</strong> GPIO's assigned to the group number &lt;x&gt; in <strong>Configuration -&gt; GPIO Configuration</strong> to "0" or "1".</p>
 <p>GUI objects that are assigned to the same group using <code>groupid</code> during object creation will change state accordingly.</p>
-<h2 id="configuration-settings">Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permanent link">~</a></h2>
-<h3 id="wi-fi">Wi-FI<a class="headerlink" href="#wi-fi" title="Permanent link">~</a></h3>
+<h3 id="configuration-settings">Configuration Settings<a class="headerlink" href="#configuration-settings" title="Permanent link">~</a></h3>
+<h4>Wi-FI</h4>
 <p><code>ssid</code></p>
 <p>Set network name of the access point to connect to.</p>
 <p><code>pass</code></p>
 <p>Set the optional password for the access point to connect to.</p>
-<h3 id="mqtt">MQTT<a class="headerlink" href="#mqtt" title="Permanent link">~</a></h3>
+<h4>MQTT</h4>
 <p><code>hostname</code></p>
 <p>Set the hostname of the device and mqtt topic for the node to <code>hasp/&lt;hostname&gt;/</code></p>
 <p><code>mqtthost</code></p>
@@ -203,7 +189,7 @@ This can be handy for bug reporting or documentation.</p>
 <p>Set the optional username for the mqtt broker.</p>
 <p><code>mqttpass</code></p>
 <p>Set the optional password for the mqtt broker.</p>
-<h3 id="configsubmodule">Config/submodule<a class="headerlink" href="#configsubmodule" title="Permanent link">~</a></h3>
+<h4>Config/submodule</h4>
 <p>You can get or set the configuration of a hasp-lvgl submodule in json format.
 To get the configuration, use the command <code>config/&lt;submodule&gt;</code>. 
 The result will be published to <code>hasp/&lt;hostname&gt;/state/config</code>. Passwords will be omitted from the result.</p>
@@ -216,7 +202,7 @@ config/gui
 config/debug
 </code></pre>
 <p>To update the configuration simply issue the same command <code>config/&lt;submodule&gt;</code> with updated json payload.</p>
-<h2 id="multiple-commands">Multiple Commands<a class="headerlink" href="#multiple-commands" title="Permanent link">~</a></h2>
+<h3 id="multiple-commands">Multiple Commands<a class="headerlink" href="#multiple-commands" title="Permanent link">~</a></h3>
 <p><code>json</code></p>
 <p>When you want to execute multiple commands in one payload, you can use the <code>json</code> command to create an array of commands in a json payload</p>
 <p>Each command is an element in this array of strings:</p>
@@ -232,39 +218,12 @@ When updating an existing object <code>objid</code> is not required and will be 
   <br>
     
 
-    
-    
-      
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="../faq/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="../faq/" class="btn btn-xs btn-link">
-        FAQ
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="../example-0/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../example-0/" class="btn btn-xs btn-link">
-        Widgets Demo
-      </a>
-    </div>
-    
-  </div>
-
     <br>
 </div>
 
 <footer class="container-fluid wm-page-content">
       <p>
-        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/commands.md"><i class="fa fa-github"></i>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/mqtt.md"><i class="fa fa-github"></i>
 Edit on GitHub</a>
       </p>
   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>

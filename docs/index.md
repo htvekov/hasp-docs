@@ -1,11 +1,14 @@
 ![Header](assets/images/hasp/header.png)
 <h1>HASP - Open Hardware edition</h1>
 
-This project is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
-The [original HASwitchPlate][1] project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
-This rewrite removes the Nextion/TJC requirement by using the [Lvgl Graphics Library][2] on the MCU to drive a cheap commodity display.
+Control your home-automation devices from a customizable touchscreen UI connected via MQTT.
 
-This version also adds ESP32 and STM32F4 support to take advantage of the additional hardware capabilities.
+hasp-lvgl is a re-implementation of the popular HASwitchPlate sketch created by aderusha.
+The [original HASwitchPlate][1] project uses a Wemos D1 mini and requires a Nextion/TJC HMI display.
+This rewrite removes the Nextion/TJC requirement by using the [Light and Versatile Graphics Library][2]
+on the MCU to drive a cheap commodity display.
+
+This project also adds ESP32 and STM32F4 support to take advantage of the additional hardware capabilities.
 
 ## Demo Screens
 

@@ -11,7 +11,7 @@ Here is a list of all the recognized command keywords:
 ## Pages
 
 `page`     
-value: `[0-12]`
+value: `[0-12]`, `prev` or `next`
 
 Switches the display to show the objects from a different page and return the page number in `state/page`.
 

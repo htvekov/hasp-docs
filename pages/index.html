@@ -104,26 +104,27 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <p>The initial layout of the pages is defined by creating a special file on the flash file system.</p>
 <p>This layout is displayed each time HASP starts up.</p>
-<p>Upload this file <em>(and other resource assets like fonts and images)</em> in the web interface <strong>HASP Design</strong> menu.</p>
+<p>Upload this file <em>(and other resource assets like fonts and images)</em> using the web interface <a href="../configuration/hasp/">HASP Design</a> menu.</p>
 <h2 id="pagesjsonl">pages.jsonl<a class="headerlink" href="#pagesjsonl" title="Permanent link">~</a></h2>
 <p>The location of this file is <code>/pages.jsonl</code> in the root of the filesystem. 
 It uses the <a href="http://www.jsonlines.org">JSON Lines format</a> with one json object per line. 
 Each line should contain exactly <strong>one</strong> valid json object and end with a line-break <code>\n</code> <em>(not a comma)</em>.</p>
-<p>The file is interpreted <strong>line-by-line</strong>.    </p>
+<p>The jsonl lines are interpreted line-by-line.</p>
 <p>When a malformed line is encountered, the processing of the rest of the file stops.  <br />
 If you are missing objects, check the logs to see which line was processed last.  <br />
 You probably have a typo in the following line which blocks parsing the rest of the file.    </p>
-<div class="admonition danger">
-<p class="admonition-title">The complete file in its entirety is <em>not</em> a valid json file.</p>
-<p>Each individual line however must be a valid json object.
+<div class="admonition note">
+<p class="admonition-title"><i class='fa fa-info-circle'></i>&nbsp; Note</p>
+<p>The complete file in its entirety is <em>not</em> a valid json file.
+Each individual line however must be a valid json object.
 The file extension is <code>.jsonl</code> and not <code>.json</code>.</p>
 </div>
 <h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">~</a></h2>
 <p>Each line in <code>pages.jsonl</code> creates <strong>one object</strong> on a page and has to be in the json format.
-The order of objects dictates the layer on the page from bottom to top.</p>
+The order of the objects also dictates the <em>layer</em> on the page from bottom to top.</p>
 <p>Example Objects</p>
-<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;x&quot;:5,&quot;y&quot;:20,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:&quot;true&quot;,&quot;hidden&quot;:&quot;false&quot;}
-{&quot;page&quot;:2,&quot;id&quot;:2,&quot;obj&quot;:&quot;dropdown&quot;,&quot;x&quot;:5,&quot;y&quot;:120,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:&quot;false&quot;,&quot;hidden&quot;:&quot;false&quot;}
+<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;x&quot;:5,&quot;y&quot;:5,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:&quot;true&quot;,&quot;hidden&quot;:&quot;false&quot;}
+{&quot;page&quot;:2,&quot;id&quot;:2,&quot;obj&quot;:&quot;btn&quot;,&quot;x&quot;:5,&quot;y&quot;:90,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:&quot;false&quot;,&quot;hidden&quot;:&quot;false&quot;}
 </code></pre>
 <p>Once the object is created, you can reference it with <code>p[x].b[y]</code> where <code>x</code> is the page number and <code>y</code> is the id of the object.</p>
 <p>for example:</p>

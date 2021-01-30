@@ -264,9 +264,9 @@ Some objects allow for more complex syling, effectively changing its appearance 
 </table>
 <h4>Setting Color</h4>
 <p>Examples:</p>
-<pre><code class="language-json">p[0].b[2].value_color=13891
-p[1].b[5].text_color=silver
-p[2].b[3].bg_color=#C0C0C0
+<pre><code class="language-json">p0b2.value_color=13891
+p1b5.text_color=silver
+p2b3.bg_color=#C0C0C0
 </code></pre>
 <h4>Return values</h4>
 <p>When retrieving the color of an object, both the HTML representation as the RGB values are returned seperately.</p>
@@ -323,7 +323,7 @@ p[2].b[3].bg_color=#C0C0C0
 </tr>
 </tbody>
 </table>
-<p>To adjust the background style of a page use <code>p[x].b[0]</code> where <code>x</code> is the page number.</p>
+<p>To adjust the background style of a page use <code>pxb0</code> where <code>x</code> is the page number.</p>
 <h3 id="border">Border<a class="headerlink" href="#border" title="Permanent link">~</a></h3>
 <p>The border is drawn on top of the background. It has radius rounding.</p>
 <table>

@@ -255,7 +255,8 @@ You can still hide the object on select pages if needed. Objects on page 0 appea
 </tr>
 </tbody>
 </table>
-<pre><code class="language-json">p[0].b[5].delete
+<pre><code class="language-json">p1b5.delete
+p1b3.to_front
 </code></pre>
 <h2 id="object-types">Object Types<a class="headerlink" href="#object-types" title="Permanent link">~</a></h2>
 <p>Each object type is an ID that indicates which object type that line represents.
@@ -515,7 +516,7 @@ Besides the common properties listed above, each object type can have specific p
 <p>The <a href="../styling/">styling properties</a> apply to <em>all</em> buttons in the matrix.
 To change the color of a single label prefix the text with a <code>#RRGGBB</code> hexadecimal color code and close with a single hash <code>#</code> tag.</p>
 <p>Example:</p>
-<pre><code class="language-json">p[2].b[1].options [&quot;#FF0000 Red Text#&quot;,&quot;#0000FF Cyan Text#&quot;,&quot;\n&quot;,&quot;#FFFF00 Yellow Text#&quot;]
+<pre><code class="language-json">p2b1.options [&quot;#FF0000 Red Text#&quot;,&quot;#0000FF Cyan Text#&quot;,&quot;\n&quot;,&quot;#FFFF00 Yellow Text#&quot;]
 </code></pre>
 <h3 id="arc">Arc<a class="headerlink" href="#arc" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>arc</code></strong></p>
@@ -658,9 +659,9 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 </table>
 <h4>Setting Color</h4>
 <p>Examples:</p>
-<pre><code class="language-json">p[0].b[2].color=13891
-p[1].b[5].color=silver
-p[2].b[3].color=#C0C0C0
+<pre><code class="language-json">p0b2.color=13891
+p1b5.color=silver
+p2b3.color=#C0C0C0
 </code></pre>
 <h3 id="slider">Slider<a class="headerlink" href="#slider" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>slider</code></strong></p>

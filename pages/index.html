@@ -126,10 +126,10 @@ The order of the objects also dictates the <em>layer</em> on the page from botto
 <pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;x&quot;:5,&quot;y&quot;:5,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:&quot;true&quot;,&quot;hidden&quot;:&quot;false&quot;}
 {&quot;page&quot;:2,&quot;id&quot;:2,&quot;obj&quot;:&quot;btn&quot;,&quot;x&quot;:5,&quot;y&quot;:90,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:&quot;false&quot;,&quot;hidden&quot;:&quot;false&quot;}
 </code></pre>
-<p>Once the object is created, you can reference it with <code>p[x].b[y]</code> where <code>x</code> is the page number and <code>y</code> is the id of the object.</p>
+<p>Once the object is created, you can reference it with <code>pxby</code> where <code>x</code> is the page number and <code>y</code> is the id of the object.</p>
 <p>for example:</p>
-<pre><code>p[2].b[1].w=100
-p[2].b[2].hidden=true
+<pre><code>p2b1.w=100
+p2b2.hidden=true
 </code></pre>
 <h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">~</a></h2>
 <p>If any of the required <code>id</code> or <code>objid</code> properties are missing -<em>and the line is still valid json</em>- then it is interpreted as a comment.</p>

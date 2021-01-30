@@ -10,8 +10,8 @@ The built-in fonts can be set by using the pointsize as parameter:
 
 for example:
 ```
-p[0].b[1].text_font=16
-p[0].b[1].value_font=8
+p4b1.text_font=16
+p4b2.value_font=8
 ```
 
 ## Built-in Icons
@@ -59,7 +59,7 @@ To ensure proper decoding the payload should be used with a `json` or `jsonl` co
 
 `json` example:
 ```
-["p[0].b[10].txt=\uf00c OK"]
+["p3b10.txt=\uf00c OK"]
 ```
 
 ## Custom Fonts

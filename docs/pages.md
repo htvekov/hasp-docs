@@ -33,12 +33,12 @@ Example Objects
 {"page":2,"id":2,"obj":"btn","x":5,"y":90,"h":90,"w":50,"enabled":"false","hidden":"false"}
 ```
 
-Once the object is created, you can reference it with `p[x].b[y]` where `x` is the page number and `y` is the id of the object.
+Once the object is created, you can reference it with `pxby` where `x` is the page number and `y` is the id of the object.
 
 for example:
 ```
-p[2].b[1].w=100
-p[2].b[2].hidden=true
+p2b1.w=100
+p2b2.hidden=true
 ```
 
 ## Comments

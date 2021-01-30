@@ -44,7 +44,8 @@ These are the common methods shared among all objects,
 
 
 ```json
-p[0].b[5].delete
+p1b5.delete
+p1b3.to_front
 ```
 
 ## Object Types
@@ -144,7 +145,7 @@ To change the color of a single label prefix the text with a `#RRGGBB` hexadecim
 
 Example:
 ```json
-p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text#"]
+p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text#"]
 ```
 
 
@@ -194,9 +195,9 @@ p[2].b[1].options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow
 
 Examples:
 ```json
-p[0].b[2].color=13891
-p[1].b[5].color=silver
-p[2].b[3].color=#C0C0C0
+p0b2.color=13891
+p1b5.color=silver
+p2b3.color=#C0C0C0
 ```
 
 ### Slider

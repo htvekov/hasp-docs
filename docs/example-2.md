@@ -31,11 +31,11 @@
 
 Values for Temperature, Humidity and CO2 Sensor are sent from another device by publishing to the appropriate command topic:
 
-- hasp/lanbon/command/p[1].b[2].val %value% - update Temperature arc value
-- hasp/lanbon/command/p[1].b[2].value_str %value%°C - update Temperature text value
-- hasp/lanbon/command/p[1].b[3].val %value% - update Humidity arc value 
-- hasp/lanbon/command/p[1].b[3].value_str %value% %  - update Humidity text value
-- hasp/lanbon/command/p[1].b[4].txt CO2 levels: %value% - update CO2 level value
+- hasp/lanbon/command/p1b2.val %value% - update Temperature arc value
+- hasp/lanbon/command/p1b2.value_str %value%°C - update Temperature text value
+- hasp/lanbon/command/p1b3.val %value% - update Humidity arc value 
+- hasp/lanbon/command/p1b3.value_str %value% %  - update Humidity text value
+- hasp/lanbon/command/p1b4.txt CO2 levels: %value% - update CO2 level value
 
 ![Screenshot](assets/images/screenshots/lanbon.png){: align=left }
 

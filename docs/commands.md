@@ -22,7 +22,7 @@ value: `[0-12]`
 
 Deletes all objects on a given page. If no page number is specified, it clears the current page.
 
-To delete individual objects, you can issue the `p[x].b[y].delete` command.
+To delete individual objects, you can issue the `pxby.delete` command.
 
 ## Backlight
 

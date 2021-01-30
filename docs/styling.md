@@ -24,9 +24,9 @@ Color values can be:
 
 Examples:
 ```json
-p[0].b[2].value_color=13891
-p[1].b[5].text_color=silver
-p[2].b[3].bg_color=#C0C0C0
+p0b2.value_color=13891
+p1b5.text_color=silver
+p2b3.bg_color=#C0C0C0
 ```
 
 #### Return values
@@ -58,7 +58,7 @@ The color and gradient used for drawing the background of an object.
 | bg_grad_stop   | byte     | Specifies where the gradient should stop.<br>0 = at left/top most position<br>255= at right/bottom most position *(=default)*
 | bg_main_stop   | byte     | Specifies where should the gradient start<br>0 = at left/top most position *(=default)*<br>255= at right/bottom most position
 
-To adjust the background style of a page use `p[x].b[0]` where `x` is the page number.
+To adjust the background style of a page use `pxb0` where `x` is the page number.
 
 ### Border
 

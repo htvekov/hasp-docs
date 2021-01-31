@@ -101,11 +101,17 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <h2 id="download-the-firmware">Download the firmware<a class="headerlink" href="#download-the-firmware" title="Permanent link">~</a></h2>
 <p>Go to the <a href="https://github.com/fvanroie/hasp-lvgl/releases">releases</a> page on GitHub to download the latest hasp-lvgl binaries.</p>
-<p>There are currently 2 download options, pick the one appropriate for your hardware:</p>
+<p>Get the files required for ESP32:</p>
 <ul>
-<li>hasp-lvgl-0.2.0-esp32_ili9341_spi.bin</li>
-<li>boot files</li>
+<li>d1-mini-esp32_ili9341_v0.3.2.bin</li>
+<li>bootloader_dio_40m.bin</li>
+<li>boot_app0.bin</li>
+<li>partitions.bin</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also download the <em>nightly</em> hasp-lvgl firmware.zip file from the <a href="https://github.com/fvanroie/hasp-lvgl/actions?query=workflow%3A%22PlatformIO+CI%22">Actions tab</a> on Github.</p>
+</div>
 <h2 id="install-the-firmware">Install the firmware<a class="headerlink" href="#install-the-firmware" title="Permanent link">~</a></h2>
 <h3 id="flash-esp32">Flash ESP32<a class="headerlink" href="#flash-esp32" title="Permanent link">~</a></h3>
 <p>When flashing the ESP32 for the first time, you need to install a bootloader, partition scheme and application loader:</p>

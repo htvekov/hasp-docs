@@ -26,20 +26,20 @@ table th:last-of-type {
     width: 22%;
 }
 </style>
-|&nbsp;      | Basic       | Standard     | Pro          
-|:-----------|:-----------:|:------------:|:------------:
-| MCU        | ESP8266     | ESP32-WROOM  | ESP32-WROVER 
-| CPU Freq.  | 80Mhz       | 240Mhz       | 240Mhz   
-| Ram        | 80Kb        | 520Kb        | 520Kb
-| PSRam      | no          | no           | yes
+|&nbsp;       | Minimal     | Basic        | Standard
+|:----        |:----:       |:----:        |:----:
+| MCU         | ESP8266     | ESP32-WROOM  | ESP32-WROVER 
+| CPU Freq.   | 80Mhz       | 240Mhz       | 240Mhz   
+| Ram         | 80Kb        | 520Kb        | 520Kb
+| PSRam       | no          | no           | yes
 | Minimal Flash | 4MB         | 4MB          | 4MB
-| Display    | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI
-| Touch      | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI
-| Network    | Wi-Fi        | Wi-Fi         | Wi-Fi
-| Dev. Board*|[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]
-| Firmware   | [Download][1] | [Download][1]  | [Download][1]
+| Display     | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI
+| Touch       | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI
+| Network     | Wi-Fi        | Wi-Fi         | Wi-Fi
+| Dev. Board* |[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]
+| Firmware    | [Download][1] | [Download][1]  | [Download][1]
 
-[1]: ./installation.md
+[1]: https://github.com/fvanroie/hasp-lvgl/releases
 [3]: https://www.aliexpress.com/item/32643142716.html
 [4]: https://www.aliexpress.com/item/32815530502.html
 [5]: https://www.aliexpress.com/item/32977375539.html

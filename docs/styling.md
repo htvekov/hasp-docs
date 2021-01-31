@@ -7,9 +7,8 @@ Some objects allow for more complex syling, effectively changing its appearance 
 ### Boolean
 Properties with a boolean data type accept these values and are case insensitive:
 
-- ON / OFF
-- 1 / 0
-- true / false
+- true / ON / 1 / yes
+- false / OFF / 0 / no
 
 ### Colors
 Color values can be:

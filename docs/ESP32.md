@@ -4,10 +4,16 @@
 
 Go to the [releases](https://github.com/fvanroie/hasp-lvgl/releases) page on GitHub to download the latest hasp-lvgl binaries.
 
-There are currently 2 download options, pick the one appropriate for your hardware:
+Get the files required for ESP32:
 
-- hasp-lvgl-0.2.0-esp32_ili9341_spi.bin
-- boot files
+- d1-mini-esp32_ili9341_v0.3.2.bin
+- bootloader_dio_40m.bin
+- boot_app0.bin
+- partitions.bin
+
+!!! note
+    You can also download the *nightly* hasp-lvgl firmware.zip file from the [Actions tab](https://github.com/fvanroie/hasp-lvgl/actions?query=workflow%3A%22PlatformIO+CI%22) on Github.
+
 
 ## Install the firmware
 

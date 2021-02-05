@@ -121,15 +121,23 @@ The previous screenshot is overwritten.
 Reports the status of the MCU. The response will be posted to the state topic:
 
 ```json
-    "statusupdate": {
-        "status": "available",
-        "espVersion": "0.0.6",
-        "espUptime": 124,
-        "signalStrength": -72,
-        "haspIP": "10.1.0.148",
-        "heapFree": 5912,
-        "heapFragmentation": 7,
-        "espCore": "2_6_3"
+    "hasp/<platename>/state/statusupdate" => {
+        "node":"plate35",
+        "status":"available",
+        "version":"0.3.3",
+        "uptime":1813,
+        "ssid":"network",
+        "rssi":-63,
+        "ip":"192.168.4.2",
+        "heapFree":125820,
+        "heapFrag":35,
+        "espCore":"v3.2.3-14-gd3e562907",
+        "espCanUpdate":"false",
+        "page":1,
+        "numPages":12,
+        "tftDriver":"ILI9341",
+        "tftWidth":240,
+        "tftHeight":320
     }
 ```
 

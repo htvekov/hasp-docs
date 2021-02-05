@@ -56,6 +56,36 @@ Clears the idle state of the device and publishes a `state/idle = OFF` status me
 
 It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.
 
+### Moodlight
+
+An RGB moodlight can be controlled by configuring 3 [GPIO pins][3] as type `Mood Red`, `Mood Green` and `Mood blue`.
+These leds can then be controlled together using the `moodlight`command:
+
+```json
+moodlight {"power":"off","color":"green"}
+moodlight {"power":true,"color":"#ff00e7"}
+moodlight {"color":12345}
+moodlight {"power":"on","r":255,"g":0,"b":255}
+```
+
+- The `power`key accepts [boolean values][2] to turn the moodlight on or off
+- The `color` key accepts [color values][1] to set the RGB channels at once
+- Individual `r`, `g` and `b` keys can also be used to set each channel seperately
+
+Calling the `moodlight`command without parameters returns the current state:
+
+```json
+    "hasp/<platename>/state/moodlight" => {
+        "power":"on",
+        "color":"#dea1de",
+        "r":222,
+        "g":161,
+        "b":222
+    }
+```
+
+The color is returned both as hex-value and individual channels.
+
 ## System Commands
 
 `calibrate`
@@ -76,15 +106,23 @@ The previous screenshot is overwritten.
 Reports the status of the MCU. The response will be posted to the state topic:
 
 ```json
-    "statusupdate": {
-        "status": "available",
-        "espVersion": "0.0.6",
-        "espUptime": 124,
-        "signalStrength": -72,
-        "haspIP": "10.1.0.148",
-        "heapFree": 5912,
-        "heapFragmentation": 7,
-        "espCore": "2_6_3"
+    "hasp/<platename>/state/statusupdate" => {
+        "node":"plate35",
+        "status":"available",
+        "version":"0.3.3",
+        "uptime":1813,
+        "ssid":"network",
+        "rssi":-63,
+        "ip":"192.168.4.2",
+        "heapFree":125820,
+        "heapFrag":35,
+        "espCore":"v3.2.3-14-gd3e562907",
+        "espCanUpdate":"false",
+        "page":1,
+        "numPages":12,
+        "tftDriver":"ILI9341",
+        "tftWidth":240,
+        "tftHeight":320
     }
 ```
 
@@ -189,3 +227,7 @@ When updating an existing object `objid` is not required and will be ignored.
 Each line in the `jsonl` payload defines one object and has to be in the json format.
 
 *For details see [Pages](pages.md) and [Objects](objects.md)*
+
+[1]: styling.md#colors
+[2]: styling.md#boolean
+[3]: configuration/gpio.md

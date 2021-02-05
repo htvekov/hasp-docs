@@ -42,6 +42,7 @@
           {title: "Pages", url: "#_top", children: [
           ]},
           {title: "Backlight", url: "#backlight", children: [
+              {title: "Moodlight", url: "#moodlight" },
           ]},
           {title: "System Commands", url: "#system-commands", children: [
           ]},
@@ -149,6 +150,29 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 <p><code>wakeup</code></p>
 <p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message.</p>
 <p>It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
+<h3 id="moodlight">Moodlight<a class="headerlink" href="#moodlight" title="Permanent link">~</a></h3>
+<p>An RGB moodlight can be controlled by configuring 3 <a href="../configuration/gpio/">GPIO pins</a> as type <code>Mood Red</code>, <code>Mood Green</code> and <code>Mood blue</code>.
+These leds can then be controlled together using the <code>moodlight</code>command:</p>
+<pre><code class="language-json">moodlight {&quot;power&quot;:&quot;off&quot;,&quot;color&quot;:&quot;green&quot;}
+moodlight {&quot;power&quot;:true,&quot;color&quot;:&quot;#ff00e7&quot;}
+moodlight {&quot;color&quot;:12345}
+moodlight {&quot;power&quot;:&quot;on&quot;,&quot;r&quot;:255,&quot;g&quot;:0,&quot;b&quot;:255}
+</code></pre>
+<ul>
+<li>The <code>power</code>key accepts <a href="../styling/#boolean">boolean values</a> to turn the moodlight on or off</li>
+<li>The <code>color</code> key accepts <a href="../styling/#colors">color values</a> to set the RGB channels at once</li>
+<li>Individual <code>r</code>, <code>g</code> and <code>b</code> keys can also be used to set each channel seperately</li>
+</ul>
+<p>Calling the <code>moodlight</code>command without parameters returns the current state:</p>
+<pre><code class="language-json">    &quot;hasp/&lt;platename&gt;/state/moodlight&quot; =&gt; {
+        &quot;power&quot;:&quot;on&quot;,
+        &quot;color&quot;:&quot;#dea1de&quot;,
+        &quot;r&quot;:222,
+        &quot;g&quot;:161,
+        &quot;b&quot;:222
+    }
+</code></pre>
+<p>The color is returned both as hex-value and individual channels.</p>
 <h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h2>
 <p><code>calibrate</code></p>
 <p>Start on-screen touch calibration.</p>
@@ -159,15 +183,23 @@ This can be handy for bug reporting or documentation.</p>
 <p>The previous screenshot is overwritten.</p>
 <p><code>statusupdate</code></p>
 <p>Reports the status of the MCU. The response will be posted to the state topic:</p>
-<pre><code class="language-json">    &quot;statusupdate&quot;: {
-        &quot;status&quot;: &quot;available&quot;,
-        &quot;espVersion&quot;: &quot;0.0.6&quot;,
-        &quot;espUptime&quot;: 124,
-        &quot;signalStrength&quot;: -72,
-        &quot;haspIP&quot;: &quot;10.1.0.148&quot;,
-        &quot;heapFree&quot;: 5912,
-        &quot;heapFragmentation&quot;: 7,
-        &quot;espCore&quot;: &quot;2_6_3&quot;
+<pre><code class="language-json">    &quot;hasp/&lt;platename&gt;/state/statusupdate&quot; =&gt; {
+        &quot;node&quot;:&quot;plate35&quot;,
+        &quot;status&quot;:&quot;available&quot;,
+        &quot;version&quot;:&quot;0.3.3&quot;,
+        &quot;uptime&quot;:1813,
+        &quot;ssid&quot;:&quot;network&quot;,
+        &quot;rssi&quot;:-63,
+        &quot;ip&quot;:&quot;192.168.4.2&quot;,
+        &quot;heapFree&quot;:125820,
+        &quot;heapFrag&quot;:35,
+        &quot;espCore&quot;:&quot;v3.2.3-14-gd3e562907&quot;,
+        &quot;espCanUpdate&quot;:&quot;false&quot;,
+        &quot;page&quot;:1,
+        &quot;numPages&quot;:12,
+        &quot;tftDriver&quot;:&quot;ILI9341&quot;,
+        &quot;tftWidth&quot;:240,
+        &quot;tftHeight&quot;:320
     }
 </code></pre>
 <p><code>reboot</code> or <code>restart</code></p>

@@ -158,15 +158,23 @@ This can be handy for bug reporting or documentation.</p>
 <p>The previous screenshot is overwritten.</p>
 <p><code>statusupdate</code></p>
 <p>Reports the status of the MCU. The response will be posted to the state topic:</p>
-<pre><code class="language-json">    &quot;statusupdate&quot;: {
-        &quot;status&quot;: &quot;available&quot;,
-        &quot;espVersion&quot;: &quot;0.0.6&quot;,
-        &quot;espUptime&quot;: 124,
-        &quot;signalStrength&quot;: -72,
-        &quot;haspIP&quot;: &quot;10.1.0.148&quot;,
-        &quot;heapFree&quot;: 5912,
-        &quot;heapFragmentation&quot;: 7,
-        &quot;espCore&quot;: &quot;2_6_3&quot;
+<pre><code class="language-json">    &quot;hasp/&lt;platename&gt;/state/statusupdate&quot; =&gt; {
+        &quot;node&quot;:&quot;plate35&quot;,
+        &quot;status&quot;:&quot;available&quot;,
+        &quot;version&quot;:&quot;0.3.3&quot;,
+        &quot;uptime&quot;:1813,
+        &quot;ssid&quot;:&quot;network&quot;,
+        &quot;rssi&quot;:-63,
+        &quot;ip&quot;:&quot;192.168.4.2&quot;,
+        &quot;heapFree&quot;:125820,
+        &quot;heapFrag&quot;:35,
+        &quot;espCore&quot;:&quot;v3.2.3-14-gd3e562907&quot;,
+        &quot;espCanUpdate&quot;:&quot;false&quot;,
+        &quot;page&quot;:1,
+        &quot;numPages&quot;:12,
+        &quot;tftDriver&quot;:&quot;ILI9341&quot;,
+        &quot;tftWidth&quot;:240,
+        &quot;tftHeight&quot;:320
     }
 </code></pre>
 <p><code>reboot</code> or <code>restart</code></p>

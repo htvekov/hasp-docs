@@ -149,7 +149,7 @@ Clear the filesystem and EEPROM and reboot the device in its initial state.
 
 values: `1` or `0`, `on` or `off`, `true` or `false`
 
-Sets **all** GPIO's assigned to the group number &lt;x> in **Configuration -> GPIO Configuration** to "0" or "1".
+Sets **all** GPIO's assigned to the group number &lt;x> in **Configuration -> [GPIO Configuration][3]** to "0" or "1".
 
 GUI objects that are assigned to the same group using `groupid` during object creation will change state accordingly.
 

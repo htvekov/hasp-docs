@@ -42,11 +42,11 @@ Switches the display to show the objects from a different page and return the pa
 Calling the `page` command without a parameter will return the value of the current page in `state/page`.
 
 `clearpage`     
-value: `[0-11,254]`
+value: `[0-12]`
 
 Deletes all objects on a given page. If no page number is specified, it clears the current page.
 
-To delete individual objects, you can issue the `p[x].b[y].delete` command.
+To delete individual objects, you can issue the `pxby.delete` command.
 
 ### Backlight
 
@@ -79,6 +79,27 @@ Tip: this can be used in conjunction with the idle event, e.g. to turn the backl
 Clears the idle state of the device and publishes a `state/idle = OFF` status message.
 
 It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.
+
+### Moodlight
+
+`moodlight`
+
+An RGB moodlight can be controlled by setting 3 GPIO pins for Mood Red, Mood Green and Moodblue.
+The leds can then be controlled by the `moodlight`command:
+
+```json
+moodlight {"power":"off","color":"green"}
+moodlight {"power":1,"color":"#ff00e7"}
+moodlight {"power":"on","r":255,"g":0,"b":255}
+```
+
+Calling the `moodlight`command without parameters will return the current state:
+
+```json
+hasp/<platename>/state/moodlight => {"power":"1","color":"#dea1de","r":222,"g":161,"b":222}
+```
+
+The color is returned both as hex-value and individual channels.
 
 ### System Commands
 

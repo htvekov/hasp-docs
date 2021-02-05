@@ -46,6 +46,7 @@
           {title: "Commands", url: "#commands", children: [
               {title: "Pages", url: "#pages" },
               {title: "Backlight", url: "#backlight" },
+              {title: "Moodlight", url: "#moodlight" },
               {title: "System Commands", url: "#system-commands" },
               {title: "Output Commands (GPIO)", url: "#output-commands-gpio" },
               {title: "Configuration Settings", url: "#configuration-settings" },
@@ -105,9 +106,9 @@ value: <code>[0-11]</code></p>
 <p>Switches the display to show the objects from a different page and return the page number in <code>state/page</code>.</p>
 <p>Calling the <code>page</code> command without a parameter will return the value of the current page in <code>state/page</code>.</p>
 <p><code>clearpage</code>   <br />
-value: <code>[0-11,254]</code></p>
+value: <code>[0-12]</code></p>
 <p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
-<p>To delete individual objects, you can issue the <code>p[x].b[y].delete</code> command.</p>
+<p>To delete individual objects, you can issue the <code>pxby.delete</code> command.</p>
 <h3 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h3>
 <p><code>dim</code> <br />
 values: <code>[0-100]</code></p>
@@ -135,6 +136,18 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 <p><code>wakeup</code></p>
 <p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message.</p>
 <p>It resets the idle counter as if a touch event occurred on the device. This is helpful e.g. when you want to wake up the display when an external event has occurred, like a PIR motion sensor.</p>
+<h3 id="moodlight">Moodlight<a class="headerlink" href="#moodlight" title="Permanent link">~</a></h3>
+<p><code>moodlight</code></p>
+<p>An RGB moodlight can be controlled by setting 3 GPIO pins for Mood Red, Mood Green and Moodblue.
+The leds can then be controlled by the <code>moodlight</code>command:</p>
+<pre><code class="language-json">moodlight {&quot;power&quot;:&quot;off&quot;,&quot;color&quot;:&quot;green&quot;}
+moodlight {&quot;power&quot;:1,&quot;color&quot;:&quot;#ff00e7&quot;}
+moodlight {&quot;power&quot;:&quot;on&quot;,&quot;r&quot;:255,&quot;g&quot;:0,&quot;b&quot;:255}
+</code></pre>
+<p>Calling the <code>moodlight</code>command without parameters will return the current state:</p>
+<pre><code class="language-json">hasp/&lt;platename&gt;/state/moodlight =&gt; {&quot;power&quot;:&quot;1&quot;,&quot;color&quot;:&quot;#dea1de&quot;,&quot;r&quot;:222,&quot;g&quot;:161,&quot;b&quot;:222}
+</code></pre>
+<p>The color is returned both as hex-value and individual channels.</p>
 <h3 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">~</a></h3>
 <p><code>calibrate</code></p>
 <p>Start on-screen touch calibration.</p>

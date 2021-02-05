@@ -123,8 +123,8 @@ The file extension is <code>.jsonl</code> and not <code>.json</code>.</p>
 <p>Each line in <code>pages.jsonl</code> creates <strong>one object</strong> on a page and has to be in the json format.
 The order of the objects also dictates the <em>layer</em> on the page from bottom to top.</p>
 <p>Example Objects</p>
-<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;x&quot;:5,&quot;y&quot;:5,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:&quot;true&quot;,&quot;hidden&quot;:&quot;false&quot;}
-{&quot;page&quot;:2,&quot;id&quot;:2,&quot;obj&quot;:&quot;btn&quot;,&quot;x&quot;:5,&quot;y&quot;:90,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:&quot;false&quot;,&quot;hidden&quot;:&quot;false&quot;}
+<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;x&quot;:5,&quot;y&quot;:5,&quot;h&quot;:50,&quot;w&quot;:50,&quot;enabled&quot;:true,&quot;hidden&quot;:false}
+{&quot;page&quot;:2,&quot;id&quot;:2,&quot;obj&quot;:&quot;btn&quot;,&quot;x&quot;:5,&quot;y&quot;:90,&quot;h&quot;:90,&quot;w&quot;:50,&quot;enabled&quot;:false,&quot;hidden&quot;:false}
 </code></pre>
 <p>Once the object is created, you can reference it with <code>pxby</code> where <code>x</code> is the page number and <code>y</code> is the id of the object.</p>
 <p>for example:</p>

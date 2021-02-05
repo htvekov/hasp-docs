@@ -139,17 +139,10 @@ but only the <code>id</code> and <code>obj</code> properties are required to cre
 <tbody>
 <tr>
 <td align="left">id</td>
-<td align="center">0-255</td>
+<td align="center">1..255</td>
 <td align="center">yes</td>
 <td align="center">n/a</td>
 <td align="left">ID of the object on this page</td>
-</tr>
-<tr>
-<td align="left">objid</td>
-<td align="center">0-255</td>
-<td align="center">yes</td>
-<td align="center">n/a</td>
-<td align="left">ID of the object type <em>(obsolete: use obj)</em></td>
 </tr>
 <tr>
 <td align="left">obj</td>
@@ -160,7 +153,7 @@ but only the <code>id</code> and <code>obj</code> properties are required to cre
 </tr>
 <tr>
 <td align="left">page</td>
-<td align="center">0-255</td>
+<td align="center">0..12</td>
 <td align="center">no</td>
 <td align="center">n/a</td>
 <td align="left">ID of the page the object appears on</td>
@@ -195,21 +188,21 @@ but only the <code>id</code> and <code>obj</code> properties are required to cre
 </tr>
 <tr>
 <td align="left">enabled</td>
-<td align="center">true/false</td>
+<td align="center"><a href="../styling/#boolean">bool</a></td>
 <td align="center">no</td>
 <td align="center">true</td>
 <td align="left">object is clickable</td>
 </tr>
 <tr>
 <td align="left">hidden</td>
-<td align="center">true/false</td>
+<td align="center"><a href="../styling/#boolean">bool</a></td>
 <td align="center">no</td>
 <td align="center">false</td>
 <td align="left">object is hidden</td>
 </tr>
 <tr>
 <td align="left">opacity</td>
-<td align="center">0-255</td>
+<td align="center">0..255</td>
 <td align="center">no</td>
 <td align="center">255</td>
 <td align="left">how much the the object is opaque</td>
@@ -421,7 +414,7 @@ Besides the common properties listed above, each object type can have specific p
 
 <p>Toggle Switches (<code>toggle=true</code>) send out their new value only when toggled: <code>{"val":"0"}</code> or <code>{"val":"1"}</code>.</p>
 <p>Example:</p>
-<pre><code class="language-json">{&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:&quot;true&quot;,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
+<pre><code class="language-json">{&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:true,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
 </code></pre>
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>cb</code></strong></p>

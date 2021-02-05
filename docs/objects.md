@@ -10,20 +10,19 @@ There are two ways to create an object on the screen:
 These are the common properties shared among all objects,
 but only the `id` and `obj` properties are required to create an object:
 
-| Property | Value      | Required | Default | Description
-|:---------|:----------:|:--------:|:-------:|:----
-| id       | 0-255      | yes      | n/a     | ID of the object on this page
-| objid    | 0-255      | yes      | n/a     | ID of the object type *(obsolete: use obj)*
-| obj      | string     | yes      | n/a     | Name of the object type *(see below)*
-| page     | 0-255      | no       | n/a     | ID of the page the object appears on
-| x        | int16      | no       | 0       | horizontal position on the page
-| y        | int16      | no       | 0       | vertical position on the page
-| w        | int16      | no       | 0       | width of the object
-| h        | int16      | no       | 0       | height of the object
-| enabled  | true/false | no       | true    | object is clickable
-| hidden   | true/false | no       | false   | object is hidden
-| opacity  | 0-255      | no       | 255     | how much the the object is opaque
-| radius   | uint16     | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height)
+| Property | Value     | Required | Default | Description
+|:---------|:---------:|:--------:|:-------:|:----
+| id       | 1..255    | yes      | n/a     | ID of the object on this page
+| obj      | string    | yes      | n/a     | Name of the object type *(see below)*
+| page     | 0..12     | no       | n/a     | ID of the page the object appears on
+| x        | int16     | no       | 0       | horizontal position on the page
+| y        | int16     | no       | 0       | vertical position on the page
+| w        | int16     | no       | 0       | width of the object
+| h        | int16     | no       | 0       | height of the object
+| enabled  | [bool][2] | no       | true    | object is clickable
+| hidden   | [bool][2] | no       | false   | object is hidden
+| opacity  | 0..255    | no       | 255     | how much the the object is opaque
+| radius   | uint16    | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height)
 
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
@@ -81,7 +80,7 @@ Besides the common properties listed above, each object type can have specific p
 
 | Property | Value      | Default | Description
 |----------|------------|---------|--------------
-| toggle   | [bool][2]    | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
+| toggle   | [bool][2]  | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | 0       | The value: 1 for toggled, 0 for untoggled
 | txt      | string     | ""      | The text of the label
 | mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
@@ -99,7 +98,7 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 
 Example:
 ```json
-{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"true","txt":"Push Me \uf0a6"}
+{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":true,"txt":"Push Me \uf0a6"}
 ```
 
 

@@ -29,8 +29,8 @@ The order of the objects also dictates the *layer* on the page from bottom to to
 
 Example Objects
 ```json
-{"page":2,"id":1,"obj":"label","x":5,"y":5,"h":50,"w":50,"enabled":"true","hidden":"false"}
-{"page":2,"id":2,"obj":"btn","x":5,"y":90,"h":90,"w":50,"enabled":"false","hidden":"false"}
+{"page":2,"id":1,"obj":"label","x":5,"y":5,"h":50,"w":50,"enabled":true,"hidden":false}
+{"page":2,"id":2,"obj":"btn","x":5,"y":90,"h":90,"w":50,"enabled":false,"hidden":false}
 ```
 
 Once the object is created, you can reference it with `pxby` where `x` is the page number and `y` is the id of the object.

@@ -7,7 +7,7 @@ This is a real-world example of a `pages.jsonl` file:
 
 ```json
 {"page":1,"comment":"---------- Page 1 ----------"}
-{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":"TRUE","txt":"Push Me \uf0a6"}
+{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":true,"txt":"Push Me \uf0a6"}
 {"obj":"cb","id":2,"x":10,"y":100,"w":220,"h":55,"txt":"A Checkbox"}
 {"obj":"label","id":3,"x":10,"y":10,"w":220,"h":30,"txt":"My Label","align":1,"padh":50}
 {"obj":"switch","id":4,"x":70,"y":205,"w":100,"h":55}
@@ -24,7 +24,7 @@ This is a real-world example of a `pages.jsonl` file:
 
 {"comment":"---------- Page 3 ----------"}
 {"obj":"cpicker","id":1,"page":3,"x":20,"y":0,"w":200,"h":200}
-{"obj":"cpicker","id":2,"page":3,"x":20,"y":210,"w":200,"h":50,"rect":"TRUE"}
+{"obj":"cpicker","id":2,"page":3,"x":20,"y":210,"w":200,"h":50,"rect":true}
 
 {"page":4,"comment":"---------- Page 4 ----------"}
 {"obj":"dropdown","id":1,"x":10,"y":10,"w":220,"options":"Spring\nSummer\nAutumn\nWinter"}

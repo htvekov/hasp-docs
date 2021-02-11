@@ -389,7 +389,7 @@ Besides the common properties listed above, each object type can have specific p
 <td>The value: 1 for toggled, 0 for untoggled</td>
 </tr>
 <tr>
-<td>txt</td>
+<td>text</td>
 <td>string</td>
 <td>""</td>
 <td>The text of the label</td>
@@ -414,7 +414,7 @@ Besides the common properties listed above, each object type can have specific p
 
 <p>Toggle Switches (<code>toggle=true</code>) send out their new value only when toggled: <code>{"val":"0"}</code> or <code>{"val":"1"}</code>.</p>
 <p>Example:</p>
-<pre><code class="language-json">{&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:true,&quot;txt&quot;:&quot;Push Me \uf0a6&quot;}
+<pre><code class="language-json">{&quot;obj&quot;:&quot;btn&quot;,&quot;id&quot;:1,&quot;x&quot;:10,&quot;y&quot;:45,&quot;w&quot;:220,&quot;h&quot;:55,&quot;toggle&quot;:true,&quot;text&quot;:&quot;Push Me \uf0a6&quot;}
 </code></pre>
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>cb</code></strong></p>
@@ -436,7 +436,7 @@ Besides the common properties listed above, each object type can have specific p
 <td><code>1</code> = checked<br><code>0</code> = unchecked</td>
 </tr>
 <tr>
-<td>txt</td>
+<td>text</td>
 <td>string</td>
 <td>"Checkbox"</td>
 <td>The label of the checkbox</td>
@@ -457,7 +457,7 @@ Besides the common properties listed above, each object type can have specific p
 </thead>
 <tbody>
 <tr>
-<td>txt</td>
+<td>text</td>
 <td>string</td>
 <td>"Text"</td>
 <td>The text of the label, <code>\n</code> for line break.</td>
@@ -477,7 +477,7 @@ Besides the common properties listed above, each object type can have specific p
 </tbody>
 </table>
 <p>Example:</p>
-<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;h&quot;:24,&quot;w&quot;:120,&quot;txt&quot;:&quot;\ufe05 Icon Demo&quot;}
+<pre><code class="language-json">{&quot;page&quot;:2,&quot;id&quot;:1,&quot;obj&quot;:&quot;label&quot;,&quot;h&quot;:24,&quot;w&quot;:120,&quot;text&quot;:&quot;\ufe05 Icon Demo&quot;}
 </code></pre>
 <h3 id="button-matrix">Button Matrix<a class="headerlink" href="#button-matrix" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>btnmatrix</code></strong></p>
@@ -959,7 +959,7 @@ p2b3.color=#C0C0C0
 <td>The number of the selected item</td>
 </tr>
 <tr>
-<td>txt</td>
+<td>text</td>
 <td>string</td>
 <td>""</td>
 <td><em>Read-only</em> The text of the selected item</td>
@@ -968,7 +968,7 @@ p2b3.color=#C0C0C0
 </table>
 <p>To change the currently selected item, use the <code>val</code> attribute.  <br />
 To change the items in the list, use the <code>options</code> attribute.</p>
-<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item are send out.</p>
+<p>When the item is changed both <code>val</code> and <code>text</code> of the newly selected item are send out.</p>
 <h3 id="roller">Roller<a class="headerlink" href="#roller" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>roller</code></strong></p>
 <iframe width=320 height=240 scrolling="no" style="display: block; border-style:none;" src="https://fvanroie.github.io/hasp-docs/lv_ex_roller_1/index.html?w=320&h=240"></iframe>
@@ -997,7 +997,7 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 <td>The number of the selected item</td>
 </tr>
 <tr>
-<td>txt</td>
+<td>text</td>
 <td>string</td>
 <td>""</td>
 <td><em>Read-only</em> The text of the selected item</td>
@@ -1018,7 +1018,7 @@ To change the items in the list, use the <code>options</code> attribute.</p>
 </table>
 <p>To change the currently selected item, use the <code>val</code> attribute.  <br />
 To change the items in the list, use the <code>options</code> attribute.</p>
-<p>When the item is changed both <code>val</code> and <code>txt</code> of the newly selected item is sent out.</p>
+<p>When the item is changed both <code>val</code> and <code>text</code> of the newly selected item is sent out.</p>
 <h3 id="base-object">Base Object<a class="headerlink" href="#base-object" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>obj</code></strong></p>
 <p><img alt="lv_base_object" src="../assets/images/objects/lv_ex_base_object_1.png" /></p>

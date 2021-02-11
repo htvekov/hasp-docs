@@ -15,6 +15,7 @@ Color values can be:
 
 - Short names (from table below)
 - RGB hex code (`#rrggbb`)
+- Short hex code (`#rgb`)
 - RGB565 number format (`0..65535`)
 
 {{ read_csv("docs/assets/csv/colors.csv") }}
@@ -25,7 +26,8 @@ Examples:
 ```json
 p0b2.value_color=13891
 p1b5.text_color=silver
-p2b3.bg_color=#C0C0C0
+p2b3.bg_color=#C042A3
+p2b4.border._color=#9f9
 ```
 
 #### Return values

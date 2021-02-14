@@ -76,6 +76,7 @@ To use PWM dimming on the Lolin TFT 2.4" you must connect the TFT-LED pin to eit
 
 !!! warning ""
     It is *not* recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.
+    The D1-mini has D4 connected to on-board LED and boot fails if pulled LOW
 
 ### Compatible ESP boards
 

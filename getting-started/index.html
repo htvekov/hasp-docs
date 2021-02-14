@@ -221,7 +221,8 @@ Therefor the Lolin TFT 2.4 Touch Shield is used as the development display of ch
 <p class="admonition-title"><i class="fa fa-exclamation-triangle"></i> Do <em>not</em> use D3 for backlight control because it is already in use for touch!</p>
 </div>
 <div class="admonition warning">
-<p>It is <em>not</em> recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.</p>
+<p>It is <em>not</em> recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.
+The D1-mini has D4 connected to on-board LED and boot fails if pulled LOW</p>
 </div>
 <h3 id="compatible-esp-boards">Compatible ESP boards<a class="headerlink" href="#compatible-esp-boards" title="Permanent link">~</a></h3>
 <p><img alt="TFT-LED PWM dimming" src="../assets/images/esp_boards.png" /></p>

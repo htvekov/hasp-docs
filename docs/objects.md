@@ -64,7 +64,7 @@ Besides the common properties listed above, each object type can have specific p
 | 22 | arc       | Range | [Arc](#arc)
 | 33 | lmeter    | Range | [Line Meter](#line-meter)
 | 31 | gauge     | Range | [Gauge](#gauge)
-| 50 | ddlist    | Selector | [Dropdown List](#dropdown-list)
+| 50 | dropdown  | Selector | [Dropdown List](#dropdown-list)
 | 51 | roller    | Selector | [Roller](#roller)
 | 13 | btnmatrix | Selector | [Button Matrix](#button-matrix)
 | 20 | cpicker   | Selector | [Colorpicker](#colorpicker)

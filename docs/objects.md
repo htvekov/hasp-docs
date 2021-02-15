@@ -58,7 +58,7 @@ Besides the common properties listed above, each object type can have specific p
 |:---:|:---------|:-----------|:-----------
 | 10 | btn       | Binary | [Button](#button)
 | 11 | cb        | Binary | [Checkbox](#checkbox)
-| 40 | sw        | Binary | [Switch](#switch)
+| 40 | switch    | Binary | [Switch](#switch)
 | 32 | bar       | Range | [Progress Bar](#progress-bar)
 | 30 | slider    | Range | [Slider](#slider)
 | 22 | arc       | Range | [Arc](#arc)

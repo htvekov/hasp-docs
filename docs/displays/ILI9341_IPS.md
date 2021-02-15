@@ -8,19 +8,19 @@ Improvement over TN versions of the display with amazing view angles.
 
 ## Pin Configuration
 
-Pin| Function            |ESP Pin |Config Name|Display Pin |
----|---------------------| :---:  |-----------|------------|
-1  | Module Ground       | GND    |           | GND
-2  | Module Power 3.3v   | 3V3    |           | VCC
-3  | SPI Clock           | GPIO18 | TFT_SCLK  | CLK
-4  | Data Input          | GPIO23 | TFT_MOSI  | MOSI
-5  | LCD Reset line      | GPIO15 | TFT_RST   | RES
-6  | Data Command control| GPIO5  | TFT_DC    | DC
-7  | Backlight           | GPIO21 | TFT_BCKL  | BLK
-8  | Data Output         | GPIO19 | TFT_MISO  | MISO
-9  | Chip Select         | GPIO26 | TFT_CS    | CS1
-10 | Touch Select        | GPIO22 | TOUCH_CS  | CS2
-11 | Touch Interrupt     |        |           | 
+Pin| Function            |ESP32 Pin|Config Name|Display Pin |
+---|---------------------| :---:   |-----------|------------|
+1  | Module Ground       | GND     |           | GND
+2  | Module Power 3.3v   | 3V3     |           | VCC
+3  | SPI Clock           | GPIO18  | TFT_SCLK  | CLK
+4  | Data Input          | GPIO23  | TFT_MOSI  | MOSI
+5  | LCD Reset line      | GPIO15  | TFT_RST   | RES
+6  | Data Command control| GPIO5   | TFT_DC    | DC
+7  | Backlight           | GPIO21  | TFT_BCKL  | BLK
+8  | Data Output         | GPIO19  | TFT_MISO  | MISO
+9  | Chip Select         | GPIO26  | TFT_CS    | CS1
+10 | Touch Select        | GPIO22  | TOUCH_CS  | CS2
+11 | Touch Interrupt     |         |           | 
 
 SPI MISO, MOSI and SCLK are shared between the touch controller and the LCD controller.
 

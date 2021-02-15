@@ -12,7 +12,7 @@ Pin| Function            |ESP Pin |Config Name|Display Pin |
 ---|---------------------| :---:  |-----------|------------|
 1  | Module Ground       | GND    |           | GND
 2  | Module Power 3.3v   | 3V3    |           | VCC
-3  | SPI Clock           | GPIO19 | TFT_SCLK  | CLK
+3  | SPI Clock           | GPIO18 | TFT_SCLK  | CLK
 4  | Data Input          | GPIO23 | TFT_MOSI  | MOSI
 5  | LCD Reset line      | GPIO15 | TFT_RST   | RES
 6  | Data Command control| GPIO5  | TFT_DC    | DC

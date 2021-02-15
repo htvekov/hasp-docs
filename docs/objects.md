@@ -57,7 +57,7 @@ Besides the common properties listed above, each object type can have specific p
 | objid | obj | Type | Description
 |:---:|:---------|:-----------|:-----------
 | 10 | btn       | Binary | [Button](#button)
-| 11 | cb        | Binary | [Checkbox](#checkbox)
+| 11 | checkbox  | Binary | [Checkbox](#checkbox)
 | 40 | switch    | Binary | [Switch](#switch)
 | 32 | bar       | Range | [Progress Bar](#progress-bar)
 | 30 | slider    | Range | [Slider](#slider)
@@ -111,6 +111,10 @@ Example:
 |----------|------------|------------|--------------
 | val      | int16      | 0          | `1` = checked<br>`0` = unchecked
 | text     | string     | "Checkbox" | The label of the checkbox
+
+!!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
+    The checkbox object ignores the `w` and `h` attribute. These are calculated
+    based on the font and text.
 
 ### Text Label
 **obj:`label`**

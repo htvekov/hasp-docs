@@ -31,6 +31,9 @@ The maximum number of pages and objects is limited by the memory available in th
 `"page":0` indicates that the object is visible on **all** pages. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on page 0 appear on **top** of any objects on the underlying page.
 
+All objects are clickable by default and respond to touch events.
+To disable touch events for an object set its `enabled` property to `false`.
+
 ## Common Methods
 
 These are the common methods shared among all objects,
@@ -103,7 +106,7 @@ Example:
 
 
 ### Checkbox
-**obj:`cb`**
+**obj:`checkbox`**
 
 ![lv_checkbox](assets/images/objects/lv_ex_checkbox_1.png){: align=center }
 

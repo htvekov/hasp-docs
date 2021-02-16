@@ -27,7 +27,7 @@ Examples:
 p0b2.value_color=13891
 p1b5.text_color=silver
 p2b3.bg_color=#C042A3
-p2b4.border._color=#9f9
+p2b4.border_color=#9f9
 ```
 
 #### Return values

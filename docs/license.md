@@ -86,7 +86,7 @@ Hasp-lvgl is based on the existing work of the following open source developers:
 
 - Built-in font Ubuntu Consensed
   Copyright© Canonical Ltd.
-  Font Awesome is distributed under the terms of the [Ubuntu font licence](https://ubuntu.com/legal/font-licence) 
+  Ubuntu Consensed is distributed under the terms of the [Ubuntu font licence](https://ubuntu.com/legal/font-licence) 
 
 - Custom zi fonts and built-in fonts incorporate [Font Awesome](http://fontawesome.io/),
   Copyright© 2017 Dave Gandy.

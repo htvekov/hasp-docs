@@ -35,7 +35,7 @@ Hasp-lvgl is based on the existing work of the following open source developers:
 
 - [LVGL](https://lvgl.io/) graphics library,
   Copyright© 2016 Gábor Kiss-Vámosi and
-  Copyright (c) 2020 LVGL LLC.
+  Copyright© 2020 LVGL LLC.
   LVGL is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 - [ArduinoJson](https://arduinojson.org/)
@@ -74,9 +74,17 @@ Hasp-lvgl is based on the existing work of the following open source developers:
 
 ### Windows Application
 
-- paho.mqtt.c client
+- mingw-w64 GCC for Windows 64 & 32 bits
+  Copyright© 2009 - 2013 by the mingw-w64 project
+  Mingw-w64 is free software and permissively-licensed. The details are located in the sources themselves. 
+
+- paho.mqtt.c client library
   Copyright© Eclipse Foundation
   Paho is distributed under the terms of the [Eclipse Public License v2.0](https://www.eclipse.org/legal/epl-2.0/)
+
+- Simple DirectMedia Layer library
+  Copyright© 1997-2021 Sam Lantinga <slouken@libsdl.org>
+  SDL 2.0 and newer are available under the [zlib license](https://www.zlib.net/zlib_license.html)
 
 ### Assets
 

@@ -15,6 +15,7 @@ but only the `id` and `obj` properties are required to create an object:
 | id       | 1..255    | yes      | n/a     | ID of the object on this page
 | obj      | string    | yes      | n/a     | Name of the object type *(see below)*
 | page     | 0..12     | no       | n/a     | ID of the page the object appears on
+| groupid  | 0..15     | no       | 0 (none)| ID of the [GPIO group][3] the object belongs to
 | x        | int16     | no       | 0       | horizontal position on the page
 | y        | int16     | no       | 0       | vertical position on the page
 | w        | int16     | no       | 0       | width of the object
@@ -350,3 +351,4 @@ You can use it as a background shape for other objects by putting its jsonl line
 
 [1]: styling.md#colors
 [2]: styling.md#boolean
+[3]: configuration/gpio.md#groupid

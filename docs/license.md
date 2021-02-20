@@ -23,7 +23,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -------------------------------------------
-### Components
+## Components
+
+### Core
 
 Hasp-lvgl is based on the existing work of the following open source developers:
 
@@ -36,6 +38,12 @@ Hasp-lvgl is based on the existing work of the following open source developers:
   Copyright (c) 2020 LVGL LLC.
   LVGL is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+- [ArduinoJson](https://arduinojson.org/)
+  Copyright© 2014-2020 Benoit BLANCHON
+  [MIT License](http://opensource.org/licenses/MIT).
+
+### MCU
+
 - [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) display library,
   Copyright© 2020 Bodmer (https://github.com/Bodmer) All rights reserved.
   TFT_eSPI is distributed under the terms of the [FreeBSD License](https://opensource.org/licenses/BSD-2-Clause)
@@ -45,10 +53,6 @@ Hasp-lvgl is based on the existing work of the following open source developers:
 
 - zi Font Engine
   Copyright© 2020 fvanroie, netwize.be
-  [MIT License](http://opensource.org/licenses/MIT).
-
-- [ArduinoJson](https://arduinojson.org/)
-  Copyright© 2014-2020 Benoit BLANCHON
   [MIT License](http://opensource.org/licenses/MIT).
 
 - [PubSubClient](https://github.com/knolleary/pubsubclient)
@@ -68,7 +72,23 @@ Hasp-lvgl is based on the existing work of the following open source developers:
   Copyright© 2018 Brian T. Park
   [MIT License](http://opensource.org/licenses/MIT).
 
-- Custom zi Fonts incorporate [Font Awesome](http://fontawesome.io/),
+### Windows Application
+
+- paho.mqtt.c client
+  Copyright© Eclipse Foundation
+  Paho is distributed under the terms of the [Eclipse Public License v2.0](https://www.eclipse.org/legal/epl-2.0/)
+
+### Assets
+
+- Built-in font unscii (8pt)
+  Copyright© viznut.
+  A public domain bitmapped Unicode font 
+
+- Built-in font Ubuntu Consensed
+  Copyright© Canonical Ltd.
+  Font Awesome is distributed under the terms of the [Ubuntu font licence](https://ubuntu.com/legal/font-licence) 
+
+- Custom zi fonts and built-in fonts incorporate [Font Awesome](http://fontawesome.io/),
   Copyright© 2017 Dave Gandy.
   Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
   and [MIT License](http://opensource.org/licenses/MIT).

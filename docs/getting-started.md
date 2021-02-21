@@ -36,7 +36,7 @@ table th:last-of-type {
 | Display     | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI
 | Touch       | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI
 | Network     | Wi-Fi        | Wi-Fi         | Wi-Fi
-| Dev. Board* |[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]
+| Dev. Board* |[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.5 Mini32][5]
 | Firmware    | [Download][1] | [Download][1]  | [Download][1]
 
 [1]: https://github.com/fvanroie/hasp-lvgl/releases
@@ -88,7 +88,7 @@ no need to use any jumper cables:
 **ESP32:**
 
 - Wemos D1 Mini ESP32 *(**only** solder the inner row of pin headers)*
-- TTGO T7 V1.4 MINI32 ESP32 *(**only** solder the inner row of pin headers)*
+- TTGO T7 V1.5 MINI32 ESP32 *(**only** solder the inner row of pin headers)*
 - LOLIN D32 Pro V2.0.0 *using an **additional** TFT cable*
 
 **ESP8266:**

@@ -47,6 +47,11 @@ table th:last-of-type {
 !!! note " "
     *Due to the large number of possible hardware options a selection of 3 popular ESP development boards has been made for the precompiled binaries.*
 
+For new projects we recommend ESP32-WROVER boards with PSram.
+
+The performance of the ESP8266 will be slow due to its low memory and CPU frequency.
+It is okay for getting started, for small project where speed is not needed or when you have one at hand.
+
 !!! warning ""
     Advanced users can [build and compile](../compiling) custom configurations using PlatformIO, however this is not currently supported.
 

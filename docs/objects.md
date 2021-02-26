@@ -15,6 +15,7 @@ but only the `id` and `obj` properties are required to create an object:
 | id       | 1..255    | yes      | n/a     | ID of the object on this page
 | obj      | string    | yes      | n/a     | Name of the object type *(see below)*
 | page     | 0..12     | no       | n/a     | ID of the page the object appears on
+| groupid  | 0..15     | no       | 0 (none)| ID of the [GPIO group][3] the object belongs to
 | x        | int16     | no       | 0       | horizontal position on the page
 | y        | int16     | no       | 0       | vertical position on the page
 | w        | int16     | no       | 0       | width of the object
@@ -30,6 +31,9 @@ The maximum number of pages and objects is limited by the memory available in th
 
 `"page":0` indicates that the object is visible on **all** pages. It can be used for example to specify a static menu bar.
 You can still hide the object on select pages if needed. Objects on page 0 appear on **top** of any objects on the underlying page.
+
+All objects are clickable by default and respond to touch events.
+To disable touch events for an object set its `enabled` property to `false`.
 
 ## Common Methods
 
@@ -57,14 +61,14 @@ Besides the common properties listed above, each object type can have specific p
 | objid | obj | Type | Description
 |:---:|:---------|:-----------|:-----------
 | 10 | btn       | Binary | [Button](#button)
-| 11 | cb        | Binary | [Checkbox](#checkbox)
-| 40 | sw        | Binary | [Switch](#switch)
+| 11 | checkbox  | Binary | [Checkbox](#checkbox)
+| 40 | switch    | Binary | [Switch](#switch)
 | 32 | bar       | Range | [Progress Bar](#progress-bar)
 | 30 | slider    | Range | [Slider](#slider)
 | 22 | arc       | Range | [Arc](#arc)
 | 33 | lmeter    | Range | [Line Meter](#line-meter)
 | 31 | gauge     | Range | [Gauge](#gauge)
-| 50 | ddlist    | Selector | [Dropdown List](#dropdown-list)
+| 50 | dropdown  | Selector | [Dropdown List](#dropdown-list)
 | 51 | roller    | Selector | [Roller](#roller)
 | 13 | btnmatrix | Selector | [Button Matrix](#button-matrix)
 | 20 | cpicker   | Selector | [Colorpicker](#colorpicker)
@@ -82,7 +86,7 @@ Besides the common properties listed above, each object type can have specific p
 |----------|------------|---------|--------------
 | toggle   | [bool][2]  | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | 0       | The value: 1 for toggled, 0 for untoggled
-| txt      | string     | ""      | The text of the label
+| text     | string     | ""      | The text of the label
 | mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 
 Normal buttons (`toggle=false`) send touch events while they occur. The possible events are:
@@ -98,19 +102,23 @@ Toggle Switches (`toggle=true`) send out their new value only when toggled: `{"v
 
 Example:
 ```json
-{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":true,"txt":"Push Me \uf0a6"}
+{"obj":"btn","id":1,"x":10,"y":45,"w":220,"h":55,"toggle":true,"text":"Push Me \uf0a6"}
 ```
 
 
 ### Checkbox
-**obj:`cb`**
+**obj:`checkbox`**
 
 ![lv_checkbox](assets/images/objects/lv_ex_checkbox_1.png){: align=center }
 
 | Property | Value      | Default    | Description
 |----------|------------|------------|--------------
 | val      | int16      | 0          | `1` = checked<br>`0` = unchecked
-| txt      | string     | "Checkbox" | The label of the checkbox
+| text     | string     | "Checkbox" | The label of the checkbox
+
+!!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
+    The checkbox object ignores the `w` and `h` attribute. These are calculated
+    based on the font and text.
 
 ### Text Label
 **obj:`label`**
@@ -119,13 +127,13 @@ Example:
 
 | Property | Value      | Default    | Description
 |----------|------------|------------|--------------
-| txt      | string     | "Text"     | The text of the label, `\n` for line break.
+| text     | string     | "Text"     | The text of the label, `\n` for line break.
 | mode     | string     | `crop`     | The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
 | align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
 Example:
 ```json
-{"page":2,"id":1,"obj":"label","h":24,"w":120,"txt":"\ufe05 Icon Demo"}
+{"page":2,"id":1,"obj":"label","h":24,"w":120,"text":"\ufe05 Icon Demo"}
 ```
 
 ### Button Matrix
@@ -305,12 +313,12 @@ Only these values are allowed, arbitrary numbers are not supported.
 |----------|------------|---------|--------------------------
 | options  | string     | ""      | List of items separated by `\n`
 | val      | int16      | 0       | The number of the selected item
-| txt      | string     | ""      | *Read-only* The text of the selected item
+| text     | string     | ""      | *Read-only* The text of the selected item
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.
 
-When the item is changed both `val` and `txt` of the newly selected item are send out.
+When the item is changed both `val` and `text` of the newly selected item are send out.
 
 
 ### Roller
@@ -323,14 +331,14 @@ When the item is changed both `val` and `txt` of the newly selected item are sen
 |----------|------------|---------|--------------------------
 | options  | string     | ""      | List of items separated by `\n`
 | val      | int16      | 0       | The number of the selected item
-| txt      | string     | ""      | *Read-only* The text of the selected item
+| text     | string     | ""      | *Read-only* The text of the selected item
 | rows     | int8       | 3       | The number of rows that are visible<BR>Use this property instead of `h` to set object height
 | align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
 To change the currently selected item, use the `val` attribute.    
 To change the items in the list, use the `options` attribute.
 
-When the item is changed both `val` and `txt` of the newly selected item is sent out.
+When the item is changed both `val` and `text` of the newly selected item is sent out.
 
 ### Base Object
 **obj:`obj`**
@@ -343,3 +351,4 @@ You can use it as a background shape for other objects by putting its jsonl line
 
 [1]: styling.md#colors
 [2]: styling.md#boolean
+[3]: configuration/gpio.md#groupid

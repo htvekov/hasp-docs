@@ -35,7 +35,7 @@ Sets the level of the backlight from 0 to 100%, where 0% is off and 100% is full
     `dim 50` sets the display to half the brightness.
 
 !!! note "Tip"
-    This can be used in conjunction with the idle event e.g. to dim the backlight after a short period of inactivity.
+    This can be used in conjunction with the [idle events][4], e.g. to turn the backlight off after a long period of inactivity.
 
 `light`     
 values: `on`/`off`, `true`/`false`, `0`/`1`, `yes`/`no`
@@ -44,8 +44,6 @@ Switches the backlight on or off, independent of the set dim level. Turning the 
 
 !!! example "Example"
     `light on` Turn the backlight on 
-
-Tip: this can be used in conjunction with the idle event, e.g. to turn the backlight off after a long period of inactivity.
 
 !!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
     `dim`and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
@@ -231,3 +229,4 @@ Each line in the `jsonl` payload defines one object and has to be in the json fo
 [1]: styling.md#colors
 [2]: styling.md#boolean
 [3]: configuration/gpio.md
+[4]: configuration/display.md#short-idle

@@ -25,12 +25,12 @@ To ensure proper decoding the payload should be used with a `json` or `jsonl` co
 
 `jsonl` example:
 ```
-{"obj":"label","id":10,"x":0,"y":0,"w":70,"h":50,"parentid":5,"txt":"\uf00c OK"}
+{"obj":"label","id":10,"x":0,"y":0,"w":70,"h":50,"parentid":5,"text":"\uf00c OK"}
 ```
 
 `json` example:
 ```
-["p2b10.txt=\uf00c OK"]
+["p2b10.text=\uf00c OK"]
 ```
 
 ## Custom Fonts

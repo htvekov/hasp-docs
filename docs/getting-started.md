@@ -36,7 +36,7 @@ table th:last-of-type {
 | Display     | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI
 | Touch       | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI
 | Network     | Wi-Fi        | Wi-Fi         | Wi-Fi
-| Dev. Board* |[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]
+| Dev. Board* |[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.5 Mini32][5]
 | Firmware    | [Download][1] | [Download][1]  | [Download][1]
 
 [1]: https://github.com/fvanroie/hasp-lvgl/releases
@@ -46,6 +46,11 @@ table th:last-of-type {
 
 !!! note " "
     *Due to the large number of possible hardware options a selection of 3 popular ESP development boards has been made for the precompiled binaries.*
+
+For new projects we recommend ESP32-WROVER boards with PSram.
+
+The performance of the ESP8266 will be slow due to its low memory and CPU frequency.
+It is okay for getting started, for small project where speed is not needed or when you have one at hand.
 
 !!! warning ""
     Advanced users can [build and compile](../compiling) custom configurations using PlatformIO, however this is not currently supported.
@@ -76,6 +81,7 @@ To use PWM dimming on the Lolin TFT 2.4" you must connect the TFT-LED pin to eit
 
 !!! warning ""
     It is *not* recommended to use D4 for backlight control because it is already in use for PSram on the ESP32-Wrover.
+    The D1-mini has D4 connected to on-board LED and boot fails if pulled LOW
 
 ### Compatible ESP boards
 
@@ -87,7 +93,7 @@ no need to use any jumper cables:
 **ESP32:**
 
 - Wemos D1 Mini ESP32 *(**only** solder the inner row of pin headers)*
-- TTGO T7 V1.4 MINI32 ESP32 *(**only** solder the inner row of pin headers)*
+- TTGO T7 V1.5 MINI32 ESP32 *(**only** solder the inner row of pin headers)*
 - LOLIN D32 Pro V2.0.0 *using an **additional** TFT cable*
 
 **ESP8266:**

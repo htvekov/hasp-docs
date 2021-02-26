@@ -30,7 +30,7 @@ table th:last-of-type {
 | Display    | ILI9341 SPI | ILI9341 SPI  | ILI9341 SPI  | ILI9341 FSMC 
 | Touch      | XPT2046 SPI | XPT2046 SPI  | XPT2046 SPI  | XPT2046 SPI  
 | Network    | Wi-Fi        | Wi-Fi         | Wi-Fi         | Ethernet / Wi-Fi
-| Dev. Board*|[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.4 Mini32][5]| STM32F407VET/ZGT Black
+| Dev. Board*|[D1 mini ESP8266][3]|[D1 mini ESP32][4]|[TTGO T7 v1.5 Mini32][5]| STM32F407VET/ZGT Black
 | Firmware   | [Download][1] | [Download][1]  | [Download][1]  |
 
 [1]: ./installation.md

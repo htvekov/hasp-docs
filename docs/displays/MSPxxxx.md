@@ -1,6 +1,6 @@
 <h1>ILI9341 TFT Panel</h1>
 
-![Display image](http://www.lcdwiki.com/images/6/64/MSP2807-008.jpg)
+![Display image](../assets/images/displays/msp2807.png)
 
 Models:
 

@@ -196,9 +196,9 @@ config/wifi
 config/mqtt
 config/http
 config/mdns
-config/hasp
+config/hasp {"startdim":100}
 config/gui
-config/debug
+config/debug {"tele":300}
 ```
 
 To update the configuration simply issue the same command `config/<submodule>` with updated json payload.

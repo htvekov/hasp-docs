@@ -50,6 +50,8 @@
           {title: "Development", url: "#development", children: [
               {title: "Block Diagram", url: "#block-diagram" },
           ]},
+          {title: "MQTT Tests", url: "#mqtt-tests", children: [
+          ]},
         ];
 
     </script>
@@ -140,6 +142,11 @@ extra_configs =
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">~</a></h2>
 <h3 id="block-diagram">Block Diagram<a class="headerlink" href="#block-diagram" title="Permanent link">~</a></h3>
 <p><img alt="Block Diagram" src="../assets/images/block-diagram.svg" /></p>
+<h2 id="mqtt-tests">MQTT Tests<a class="headerlink" href="#mqtt-tests" title="Permanent link">~</a></h2>
+<p>To run the tavern testing suite, install the tavern python package and configure <code>test\config.yaml</code> with your broker settings.</p>
+<pre><code class="language-bash">pip install tavern
+tavern-ci .\test\
+</code></pre>
 
   <br>
     

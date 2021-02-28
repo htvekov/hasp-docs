@@ -19,7 +19,7 @@ Pin| Function            |ESP32 Pin|Config Name|Display Pin |
 7  | Backlight           | GPIO21  | TFT_BCKL  | BLK
 8  | Data Output         | GPIO19  | TFT_MISO  | MISO
 9  | Chip Select         | GPIO26  | TFT_CS    | CS1
-10 | Touch Select        | GPIO22  | TOUCH_CS  | CS2
+10 | Touch Select        | GPIO17  | TOUCH_CS  | CS2
 11 | Touch Interrupt     |         |           | 
 
 SPI MISO, MOSI and SCLK are shared between the touch controller and the LCD controller.
@@ -63,7 +63,7 @@ build_flags =
     -D TFT_RST=15        ; RES, lcd pin 5
     -D TFT_BCKL=-1       ; BLK, lcd pin 7 (configurable via web UI (e.g. 21))
     -D TFT_CS=26         ; CS1, lcd pin 9
-    -D TOUCH_CS=22       ; CS2, lcd pin 10  
+    -D TOUCH_CS=17       ; CS2, lcd pin 10  
     
 lib_deps =
     ${env.lib_deps}

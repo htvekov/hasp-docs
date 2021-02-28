@@ -26,7 +26,7 @@ Pin| Function            |ESP32 Pin|Config Name|Display Pin |
 8  | Backlight           | GPIO21  | TFT_BCKL  | LED
 9  | Data Output (not used) | GPIO19 or N/C    | TFT_MISO  | SDO(MISO)
 10 | Touch SPI Clock     | GPIO18  | TFT_SCLK  | T_CLK
-11 | Touch Select        | GPIO22  | TOUCH_CS  | T_CS
+11 | Touch Select        | GPIO17  | TOUCH_CS  | T_CS
 12 | Touch Data Input    | GPIO23  | TFT_MOSI  | T_DIN
 13 | Touch Data Output   | GPIO19  | TFT_MISO  | T_DO
 14 | Touch Interrupt     | N/C     |           | T_IRQ

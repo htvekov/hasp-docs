@@ -179,7 +179,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <tr>
 <td>10</td>
 <td>Touch Select</td>
-<td align="center">GPIO22</td>
+<td align="center">GPIO17</td>
 <td>TOUCH_CS</td>
 <td>CS2</td>
 </tr>
@@ -229,7 +229,7 @@ build_flags =
     -D TFT_RST=15        ; RES, lcd pin 5
     -D TFT_BCKL=-1       ; BLK, lcd pin 7 (configurable via web UI (e.g. 21))
     -D TFT_CS=26         ; CS1, lcd pin 9
-    -D TOUCH_CS=22       ; CS2, lcd pin 10  
+    -D TOUCH_CS=17       ; CS2, lcd pin 10  
 
 lib_deps =
     ${env.lib_deps}

@@ -39,13 +39,18 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Clone from GitHub", url: "#_top", children: [
+          {title: "Install Visual Studio Code", url: "#_top", children: [
+          ]},
+          {title: "Clone hasp-lvgl", url: "#clone-hasp-lvgl", children: [
           ]},
           {title: "Open in PlatformIO", url: "#open-in-platformio", children: [
           ]},
           {title: "Create a configuration", url: "#create-a-configuration", children: [
           ]},
-          {title: "Compile Environment", url: "#compile-environment", children: [
+          {title: "Compile", url: "#compile", children: [
+              {title: "MCU Environments", url: "#mcu-environments" },
+              {title: "Native Windows build", url: "#native-windows-build" },
+              {title: "Native Linux build", url: "#native-linux-build" },
           ]},
           {title: "Development", url: "#development", children: [
               {title: "Block Diagram", url: "#block-diagram" },
@@ -107,7 +112,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h1>Compiling</h1>
 
-<h2 id="clone-from-github">Clone from GitHub<a class="headerlink" href="#clone-from-github" title="Permanent link">~</a></h2>
+<h2 id="install-visual-studio-code">Install Visual Studio Code<a class="headerlink" href="#install-visual-studio-code" title="Permanent link">~</a></h2>
+<ul>
+<li>on <a href="https://code.visualstudio.com/docs/setup/windows">Windows</a></li>
+<li>on <a href="https://code.visualstudio.com/docs/setup/linux">Linux</a></li>
+</ul>
+<p>Additional packages on Linux:</p>
+<pre><code>sudo apt update
+sudo apt install git python3-venv
+</code></pre>
+<h2 id="clone-hasp-lvgl">Clone hasp-lvgl<a class="headerlink" href="#clone-hasp-lvgl" title="Permanent link">~</a></h2>
 <p>Make sure to add the <code>--recursive</code> parameter when cloning the project from GitHub. Otherwise git will not download the required submodules in the <code>/lib</code> subdirectory.</p>
 <pre><code class="language-bash">git clone --recursive https://github.com/fvanroie/hasp-lvgl
 </code></pre>
@@ -122,8 +136,9 @@ git submodule update --init --recursive
 </code></pre>
 <h2 id="open-in-platformio">Open in PlatformIO<a class="headerlink" href="#open-in-platformio" title="Permanent link">~</a></h2>
 <p><img alt="Install PIO" src="../assets/images/compiling/install_pio.png" /></p>
-<p>Open the project folder in <a href="https://code.visualstudio.com">Visual Studio Code</a>, make sure you have the PlatformIO IDE extension installed.
-This will automatically install all PlatformIO dependencies and the compiler frameworks needed.</p>
+<p>Open the project folder in <a href="https://code.visualstudio.com">Visual Studio Code</a>.
+You will receive a popup to install PlatformIO IDE if it is not already installed.
+This will automatically install all PlatformIO dependencies and the MCU compiler frameworks needed.</p>
 <p><img alt="PIO Installed" src="../assets/images/compiling/pio_installed.png" /></p>
 <p>Restart Visual Studio Code when the PIO installation completes.</p>
 <h2 id="create-a-configuration">Create a configuration<a class="headerlink" href="#create-a-configuration" title="Permanent link">~</a></h2>
@@ -136,9 +151,22 @@ extra_configs =
     ; user_setups/stm32f4xx/*.ini
 </code></pre>
 <p>Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the configured environments.</p>
-<h2 id="compile-environment">Compile Environment<a class="headerlink" href="#compile-environment" title="Permanent link">~</a></h2>
+<h2 id="compile">Compile<a class="headerlink" href="#compile" title="Permanent link">~</a></h2>
+<h3 id="mcu-environments">MCU Environments<a class="headerlink" href="#mcu-environments" title="Permanent link">~</a></h3>
 <p><img alt="Build All" src="../assets/images/compiling/build_all.png" /></p>
 <p>You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.</p>
+<h3 id="native-windows-build">Native Windows build<a class="headerlink" href="#native-windows-build" title="Permanent link">~</a></h3>
+<p>For native windows_sdl builds, you also need MingW:</p>
+<p>Use <a href="https://www.msys2.org/">MSYS2</a></p>
+<pre><code class="language-sh">pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-SDL2
+</code></pre>
+<p>Add the path to your Mingw-w64 <code>bin</code> folder to the Windows PATH environment
+variable (usually <code>C:\msys64\mingw64\bin</code>). See <a href="https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites">instruction, 4</a>.</p>
+<h3 id="native-linux-build">Native Linux build<a class="headerlink" href="#native-linux-build" title="Permanent link">~</a></h3>
+<p>For native linux_sdl builds, you also need:</p>
+<pre><code>sudo apt update
+sudo apt install build-essential libsdl2-dev
+</code></pre>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">~</a></h2>
 <h3 id="block-diagram">Block Diagram<a class="headerlink" href="#block-diagram" title="Permanent link">~</a></h3>
 <p><img alt="Block Diagram" src="../assets/images/block-diagram.svg" /></p>

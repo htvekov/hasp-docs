@@ -2,8 +2,9 @@
 
 ## Install Visual Studio Code
 
-- on [Windows](https://code.visualstudio.com/docs/setup/windows)
 - on [Linux](https://code.visualstudio.com/docs/setup/linux)
+- on [MacOS](https://code.visualstudio.com/docs/setup/mac)
+- on [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 Additional packages on Linux:
 ```
@@ -69,6 +70,27 @@ Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the con
 
 You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.
 
+### Native Linux build
+
+For native linux_sdl builds, you also need:
+```
+sudo apt update
+sudo apt install build-essential libsdl2-dev
+```
+
+
+### Native MacOS build
+
+For native darwin_sdl builds, you also need [Homebrew](brew.sh):
+
+```sh
+brew install gcc sdl2
+```
+
+Add the path to your Mingw-w64 `bin` folder to the Windows PATH environment
+variable (usually `C:\msys64\mingw64\bin`). See [instruction, 4](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites).
+
+
 ### Native Windows build
 
 For native windows_sdl builds, you also need MingW:
@@ -82,13 +104,6 @@ pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-SDL2
 Add the path to your Mingw-w64 `bin` folder to the Windows PATH environment
 variable (usually `C:\msys64\mingw64\bin`). See [instruction, 4](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites).
 
-### Native Linux build
-
-For native linux_sdl builds, you also need:
-```
-sudo apt update
-sudo apt install build-essential libsdl2-dev
-```
 
 ## Development
 

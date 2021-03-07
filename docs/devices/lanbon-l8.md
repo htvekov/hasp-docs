@@ -5,7 +5,6 @@
 Model Number: L8-HS (switch)
 
 - EU version 240V
-- US version 240V
 - US version 110V
 
 Features:
@@ -17,6 +16,8 @@ Features:
 
 !!! note "Note"
     - Model Number: L8-HD (dimmer) has not been tested!
+    - Model Number: L8-HT (thermostat switch) has not been tested!
+    - Model Number: L8-HB (boiler switch) has not been tested!
 
 ## Flashing
 

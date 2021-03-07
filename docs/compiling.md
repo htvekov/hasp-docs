@@ -81,7 +81,7 @@ sudo apt install build-essential libsdl2-dev
 
 ### Native MacOS build
 
-For native darwin_sdl builds, you also need [Homebrew](brew.sh):
+For native darwin_sdl builds, you also need [Homebrew](https://brew.sh):
 
 ```sh
 brew install gcc sdl2

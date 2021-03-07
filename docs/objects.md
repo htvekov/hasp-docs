@@ -180,7 +180,7 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 
 Example:
 ```json
-{"obj":"arc","id":5,"x":20,"y":75,"w":200,"h":200,"min":15,"max":35,"border_side":0,"type":0,"rotation":0,"start_angle":135,"end_angle":45,"start_angle1":135,"end_angle1":45,"adjustable":"true"}
+{"obj":"arc","id":5,"x":20,"y":75,"w":200,"h":200,"min":15,"max":35,"border_side":0,"type":0,"rotation":0,"start_angle":135,"end_angle":45,"start_angle1":135,"end_angle1":45,"adjustable":true}
 ```
 
 ### Spinner
@@ -303,7 +303,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 
 Example:
 ```json
-{"obj":"switch","id":6,"x":89,"y":235,"w":66,"h":30,"toggle":"TRUE"}
+{"obj":"switch","id":6,"x":89,"y":235,"w":66,"h":30,"toggle":true}
 ```
 
 ### LED Indicator

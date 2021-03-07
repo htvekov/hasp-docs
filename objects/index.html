@@ -407,7 +407,13 @@ Besides the common properties listed above, each object type can have specific p
 <td>mode</td>
 <td>string</td>
 <td><code>expand</code></td>
-<td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
+<td>The wrapping mode of long text labels.<br><code>expand</code> = Expand the object size to the text size<br><code>break</code> = Keep the object width, break the too long lines and expand the object height<br><code>dots</code> = Keep the size and write dots at the end if the text is too long<br><code>scroll</code> = Keep the size and roll the text back and forth<br><code>loop</code> = Keep the size and roll the text circularly<br><code>crop</code> = Keep the size and crop the text out of it</td>
+</tr>
+<tr>
+<td>align</td>
+<td>0..2</td>
+<td>0</td>
+<td>Text alignment: <code>0</code> = left, <code>1</code> = center, <code>2</code> = right</td>
 </tr>
 </tbody>
 </table>
@@ -604,6 +610,9 @@ To change the color of a single label prefix the text with a <code>#RRGGBB</code
 <p class="admonition-title">Note</p>
 <p>Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.</p>
 </div>
+<p>Example:</p>
+<pre><code class="language-json">{&quot;obj&quot;:&quot;arc&quot;,&quot;id&quot;:5,&quot;x&quot;:20,&quot;y&quot;:75,&quot;w&quot;:200,&quot;h&quot;:200,&quot;min&quot;:15,&quot;max&quot;:35,&quot;border_side&quot;:0,&quot;type&quot;:0,&quot;rotation&quot;:0,&quot;start_angle&quot;:135,&quot;end_angle&quot;:45,&quot;start_angle1&quot;:135,&quot;end_angle1&quot;:45,&quot;adjustable&quot;:&quot;true&quot;}
+</code></pre>
 <h3 id="spinner">Spinner<a class="headerlink" href="#spinner" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>spinner</code></strong></p>
 <p><img align="center" alt="lv_spinner" src="../assets/images/objects/lv_ex_spinner_1.png" /></p>
@@ -923,9 +932,23 @@ p2b3.color=#C0C0C0
 <td>0</td>
 <td><code>1</code> = on, <code>0</code> = off</td>
 </tr>
+<tr>
+<td>bg_color1</td>
+<td><a href="../styling/#colors">color</a></td>
+<td>0</td>
+<td>changes indicator color</td>
+</tr>
+<tr>
+<td>bg_color2</td>
+<td><a href="../styling/#colors">color</a></td>
+<td>0</td>
+<td>changes knob color</td>
+</tr>
 </tbody>
 </table>
-<p><code>bg_color1</code> changes indicator color and <code>bg_color2</code>changes knob color</p>
+<p>Example:</p>
+<pre><code class="language-json">{&quot;obj&quot;:&quot;switch&quot;,&quot;id&quot;:6,&quot;x&quot;:89,&quot;y&quot;:235,&quot;w&quot;:66,&quot;h&quot;:30,&quot;toggle&quot;:&quot;TRUE&quot;}
+</code></pre>
 <h3 id="led-indicator">LED Indicator<a class="headerlink" href="#led-indicator" title="Permanent link">~</a></h3>
 <p><strong>obj:<code>led</code></strong></p>
 <p><img align="center" alt="lv_led" src="../assets/images/objects/lv_ex_led_1.png" /></p>

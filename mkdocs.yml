@@ -45,6 +45,8 @@ nav:
     - displays/MRB3511.md
     - displays/MSPxxxx.md
     - displays/Waveshare_RPi_LCD_Rev_C.md
+  - Devices:
+    - devices/lanbon-l8.md
   - compiling.md
   - license.md
 

@@ -39,14 +39,14 @@ nav:
   - FAQ: faq.md
   - firmware-update.md
   - gallery.md
+  - Devices:
+    - Lanbon L8: devices/lanbon-l8.md
   - Displays:
     - displays/ILI9341_IPS.md
     - displays/MHS4001.md
     - displays/MRB3511.md
     - displays/MSPxxxx.md
     - displays/Waveshare_RPi_LCD_Rev_C.md
-  - Devices:
-    - devices/lanbon-l8.md
   - compiling.md
   - license.md
 

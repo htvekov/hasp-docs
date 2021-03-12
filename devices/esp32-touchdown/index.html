@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Francis Van Roie">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Esp32 touchdown - HASP - Open SwitchPlate</title>
+    
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <link rel="stylesheet" href="../../css/ekko-lightbox.min.css">
+
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script src="../../js/ekko-lightbox.min.js"></script>
+
+    
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Video", url: "#_top", children: [
+          ]},
+          {title: "Backlight Control", url: "#backlight-control", children: [
+          ]},
+          {title: "3D Printed Cases", url: "#3d-printed-cases", children: [
+          ]},
+          {title: "Flashing", url: "#flashing", children: [
+          ]},
+          {title: "GPIO Settings", url: "#gpio-settings", children: [
+          ]},
+          {title: "PCB Blueprint", url: "#pcb-blueprint", children: [
+          ]},
+          {title: "LCD Configuration", url: "#lcd-configuration", children: [
+          ]},
+          {title: "HASP build_flags", url: "#hasp-build_flags", children: [
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+ 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <h1>ESP32-Touchdown</h1>
+
+<p><img alt="Display image" src="https://cdn.tindiemedia.com/images/resize/Q1ijRaGtVaTcsqY6KOYGnrOphyk=/p/fit-in/994x664/filters:fill(fff)/i/556911/products/2021-01-26T17%3A10%3A19.349Z-osh.JPG?1611652238" /></p>
+<p>Features:</p>
+<ul>
+<li>ESP32-WROOM-32D</li>
+<li>ILI9488 3.5" (480*320) TFT screen in 4-wire SPI mode</li>
+<li>FT62x6 Capacitive Touch Controller</li>
+<li>APK2112 3.3V regulator</li>
+<li>MCP73831 battery management IC</li>
+<li>CP2102 USB-to-UART IC</li>
+<li>USB-C connector</li>
+<li>Piezo Speaker</li>
+<li>microSD card holder</li>
+<li>Battery voltage divider connected to GPIO35</li>
+<li>Stemma / JST-PH I2C connector</li>
+<li>Compact size: 100x57x15mm</li>
+</ul>
+<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">~</a></h2>
+<p><img alt="YOUTUBE" src="sdVtHU2Gz7Y" /></p>
+<h2 id="backlight-control">Backlight Control<a class="headerlink" href="#backlight-control" title="Permanent link">~</a></h2>
+<p>To enable backlight control, you need to solder the jumper pad from position 3-2 to position 2-1:
+<img alt="Backlight Control" src="https://camo.githubusercontent.com/82f47f28203f74d19dec720529c5c40368ba7b5c6c29a70e18d1a83d58ec2db0/687474703a2f2f7777772e64757374696e77617474732e6e6c2f45535033322d546f756368446f776e2f6261636b6c696768745f73656c6563742e706e67" /></p>
+<h2 id="3d-printed-cases">3D Printed Cases<a class="headerlink" href="#3d-printed-cases" title="Permanent link">~</a></h2>
+<p>You can find several different <a href="https://github.com/DustinWatts/esp32-touchdown/tree/main/Case">3D printable cases</a> in the <a href="https://github.com/DustinWatts/esp32-touchdown/">ESP32-Touchdown repository</a>:</p>
+<h2 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">~</a></h2>
+<p>The ESP32-Touchdown can easily be flashed over USB like any ESP32 development board.</p>
+<h2 id="gpio-settings">GPIO Settings<a class="headerlink" href="#gpio-settings" title="Permanent link">~</a></h2>
+<p>These pins can be used freely as GPIOs:</p>
+<h2 id="pcb-blueprint">PCB Blueprint<a class="headerlink" href="#pcb-blueprint" title="Permanent link">~</a></h2>
+<p>The ESP32-Touchdown is fully <a href="https://github.com/DustinWatts/esp32-touchdown/tree/main/Hardware">Open Source Hardware</a>:</p>
+<ul>
+<li>Schematics</li>
+<li>Bill of materials</li>
+<li>PCB layout</li>
+<li>Datasheets</li>
+</ul>
+<p><img alt="Display image" src="https://raw.githubusercontent.com/DustinWatts/esp32-touchdown/main/Hardware/ESP32_TouchDown_dimensions.png" /></p>
+<h2 id="lcd-configuration">LCD Configuration<a class="headerlink" href="#lcd-configuration" title="Permanent link">~</a></h2>
+<p>The <code>lcd_config.ini</code> file specifies the different properties of the display, except for the actual pin configuration:</p>
+<pre><code class="language-ini">st7789v =
+    -D ST7789_DRIVER=1
+    ;-D CGRAM_OFFSET=1         ; Library will add offsets required
+    -D TFT_SDA_READ            ; Read from display, it only provides an SDA pin
+    -D TFT_WIDTH=240
+    -D TFT_HEIGHT=320
+    -D TFT_ROTATION=2          ; see TFT_ROTATION values
+    ; -D TFT_INVERSION_OFF     ; for normal colors
+    ; -D TFT_RGB_ORDER=TFT_RGB   ; Colour order Red-Green-Blue
+    -D TFT_RGB_ORDER=TFT_BGR ; Colour order Blue-Green-Red
+    -D SPI_FREQUENCY=80000000
+    -D SPI_READ_FREQUENCY=6000000 
+    -D USER_SETUP_LOADED=1
+    -D SUPPORT_TRANSACTIONS
+</code></pre>
+<h2 id="hasp-build_flags">HASP build_flags<a class="headerlink" href="#hasp-build_flags" title="Permanent link">~</a></h2>
+<p>Specify the LCD Configuration to use and define the GPIOs in the environment build flags:</p>
+<pre><code>build_flags =
+    ${env.build_flags}
+    ${esp32.build_flags}
+    ${esp32.vspi}        ; Use VSPI hardware SPI bus
+
+;region -- TFT_eSPI build options ------------------------
+    -D USER_SETUP_LOADED=1
+    -D ILI9488_DRIVER=1
+    -D TFT_ROTATION=0 ; 0=0, 1=90, 2=180 or 3=270 degree
+    -D TFT_WIDTH=320
+    -D TFT_HEIGHT=480
+    -D TFT_CS=15  ;// Chip select control pin
+    -D TFT_DC=2  ;// Data Command control pin
+    -D TFT_RST=4 ;// Reset pin (could connect to RST pin)
+    -D TFT_BCKL=5  ;None, configurable via web UI (e.g. 2 for D4)
+    -D SUPPORT_TRANSACTIONS
+    -D TOUCH_DRIVER=6336 ; XPT2606 Resistive touch panel driver 
+    -D TOUCH_SDA=21
+    -D TOUCH_SCL=22
+    -D TOUCH_IRQ=27   ; not connected
+    -D TOUCH_RST=-1   ; not used, connected to 3.3V
+    -D TOUCH_FREQUENCY=400000
+    -D SPI_FREQUENCY=27000000
+    -D SPI_READ_FREQUENCY=16000000
+;endregion
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+      <p>
+        <a href="https://github.com/fvanroie/hasp-docs/edit/master/docs/devices/esp32-touchdown.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

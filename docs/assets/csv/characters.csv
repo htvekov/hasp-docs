@@ -1,5 +1,5 @@
 UTF-8, Char, Description, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
-00A0, &#x00A0;, Non-breaking space, , , , , , , , , , , , , , 
+00A0, &#x00A0;, Non-breaking space, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00A1, &#x00A1;, Inverted exclamation mark, , , , , , , , , , , , , , 
 00A2, &#x00A2;, Cent sign, , , , , , , , , , , , , , 
 00A3, &#x00A3;, Pound sign, , , , , , , , , , , , , , 
@@ -15,21 +15,21 @@ UTF-8, Char, Description, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00AD, &#x00AD;, Soft hyphen, , , , , , , , , , , , , , 
 00AE, &#x00AE;, Registered sign, , , , , , , , , , , , , , 
 00AF, &#x00AF;, Macron, , , , , , , , , , , , , , 
-00B0, &#x00B0;, Degree symbol, , , , , , , , , , , , , , 
-00B1, &#x00B1;, Plus-minus sign, , , , , , , , , , , , , , 
+00B0, &#x00B0;, Degree symbol, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
+00B1, &#x00B1;, Plus-minus sign, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00B2, &#x00B2;, Superscript two, , , , , , , , , , , , , , 
 00B3, &#x00B3;, Superscript three, , , , , , , , , , , , , , 
 00B4, &#x00B4;, Acute accent, , , , , , , , , , , , , , 
-00B5, &#x00B5;, Micro sign, , , , , , , , , , , , , , 
+00B5, &#x00B5;, Micro sign, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00B6, &#x00B6;, Pilcrow sign, , , , , , , , , , , , , , 
-00B7, &#x00B7;, Middle dot, , , , , , , , , , , , , , 
+00B7, &#x00B7;, Middle dot, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00B8, &#x00B8;, Cedilla, , , , , , , , , , , , , , 
 00B9, &#x00B9;, Superscript one, , , , , , , , , , , , , , 
 00BA, &#x00BA;, Masculine ordinal indicator, , , , , , , , , , , , , , 
 00BB, &#x00BB;, Right-pointing double-angle quotation mark, , , , , , , , , , , , , , 
-00BC, &#x00BC;, Vulgar fraction one quarter, , , , , , , , , , , , , , 
-00BD, &#x00BD;, Vulgar fraction one half, , , , , , , , , , , , , , 
-00BE, &#x00BE;, Vulgar fraction three quarters, , , , , , , , , , , , , , 
+00BC, &#x00BC;, Vulgar fraction one quarter, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
+00BD, &#x00BD;, Vulgar fraction one half, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
+00BE, &#x00BE;, Vulgar fraction three quarters, FR, CZ, HU, RO, HR, SL, SV, DA, FI, NO, DE, IT, ES, PT
 00BF, &#x00BF;, Inverted question mark, , , , , , , , , , , , , , 
 00C0, &#x00C0;,  Capital A with grave, FR, , , , , , , , , , , , , 
 00C1, &#x00C1;,  Capital A with acute, FR, , HU, , , , , , , , , , , 

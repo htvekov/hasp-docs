@@ -72,11 +72,7 @@ Hasp-lvgl is based on the existing work of the following open source developers:
   Copyright© 2018 Brian T. Park
   [MIT License](http://opensource.org/licenses/MIT).
 
-### Windows Application
-
-- mingw-w64 GCC for Windows 64 & 32 bits
-  Copyright© 2009 - 2013 by the mingw-w64 project
-  Mingw-w64 is free software and permissively-licensed. The details are located in the sources themselves. 
+### Native Application
 
 - paho.mqtt.c client library
   Copyright© Eclipse Foundation
@@ -85,6 +81,13 @@ Hasp-lvgl is based on the existing work of the following open source developers:
 - Simple DirectMedia Layer library
   Copyright© 1997-2021 Sam Lantinga <slouken@libsdl.org>
   SDL 2.0 and newer are available under the [zlib license](https://www.zlib.net/zlib_license.html)
+
+### Native Windows Application
+
+- mingw-w64 GCC for Windows 64 & 32 bits
+  Copyright© 2009 - 2013 by the mingw-w64 project
+  Mingw-w64 is free software and permissively-licensed. The details are located in the sources themselves. 
+
 
 ### Assets
 

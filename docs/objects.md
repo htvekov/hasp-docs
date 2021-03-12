@@ -87,7 +87,8 @@ Besides the common properties listed above, each object type can have specific p
 | toggle   | [bool][2]  | false   | When enabled, creates a toggle-on/toggle-off button. If false, creates a normal button
 | val      | int16      | 0       | The value: 1 for toggled, 0 for untoggled
 | text     | string     | ""      | The text of the label
-| mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>scroll = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
+| mode     | string     | `expand`| The wrapping mode of long text labels.<br>`expand` = Expand the object size to the text size<br>`break` = Keep the object width, break the too long lines and expand the object height<br>`dots` = Keep the size and write dots at the end if the text is too long<br>`scroll` = Keep the size and roll the text back and forth<br>`loop` = Keep the size and roll the text circularly<br>`crop` = Keep the size and crop the text out of it
+| align    | 0..2       | 0       | Text alignment: `0` = left, `1` = center, `2` = right
 
 Normal buttons (`toggle=false`) send touch events while they occur. The possible events are:
 
@@ -176,6 +177,11 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
+
+Example:
+```json
+{"obj":"arc","id":5,"x":20,"y":75,"w":200,"h":200,"min":15,"max":35,"border_side":0,"type":0,"rotation":0,"start_angle":135,"end_angle":45,"start_angle1":135,"end_angle1":45,"adjustable":true}
+```
 
 ### Spinner
 **obj:`spinner`**
@@ -292,8 +298,13 @@ Only these values are allowed, arbitrary numbers are not supported.
 | Property   | Value      | Default | Description
 |------------|------------|---------|---------------
 | val        | [bool][2]  | 0       | `1` = on, `0` = off
+| bg_color1  | [color][1] | 0       | changes indicator color
+| bg_color2  | [color][1] | 0       | changes knob color
 
-`bg_color1` changes indicator color and `bg_color2`changes knob color
+Example:
+```json
+{"obj":"switch","id":6,"x":89,"y":235,"w":66,"h":30,"toggle":true}
+```
 
 ### LED Indicator
 **obj:`led`**

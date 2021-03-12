@@ -39,6 +39,8 @@ nav:
   - FAQ: faq.md
   - firmware-update.md
   - gallery.md
+  - Devices:
+    - Lanbon L8: devices/lanbon-l8.md
   - Displays:
     - displays/ILI9341_IPS.md
     - displays/MHS4001.md

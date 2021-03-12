@@ -1,6 +1,18 @@
 <h1>Compiling</h1>
 
-## Clone from GitHub
+## Install Visual Studio Code
+
+- on [Linux](https://code.visualstudio.com/docs/setup/linux)
+- on [MacOS](https://code.visualstudio.com/docs/setup/mac)
+- on [Windows](https://code.visualstudio.com/docs/setup/windows)
+
+Additional packages on Linux:
+```
+sudo apt update
+sudo apt install git python3-venv
+```
+
+## Clone hasp-lvgl
 
 Make sure to add the `--recursive` parameter when cloning the project from GitHub. Otherwise git will not download the required submodules in the `/lib` subdirectory.
 
@@ -27,8 +39,9 @@ git submodule update --init --recursive
 
 ![Install PIO](assets/images/compiling/install_pio.png)
 
-Open the project folder in [Visual Studio Code](https://code.visualstudio.com), make sure you have the PlatformIO IDE extension installed.
-This will automatically install all PlatformIO dependencies and the compiler frameworks needed.
+Open the project folder in [Visual Studio Code](https://code.visualstudio.com).
+You will receive a popup to install PlatformIO IDE if it is not already installed.
+This will automatically install all PlatformIO dependencies and the MCU compiler frameworks needed.
 
 ![PIO Installed](assets/images/compiling/pio_installed.png)
 
@@ -49,13 +62,49 @@ extra_configs =
 
 Then Click on the "Refresh Project tasks" icon in PlatformIO to list all the configured environments.
 
-## Compile Environment
+## Compile
+
+### MCU Environments
 
 ![Build All](assets/images/compiling/build_all.png)
 
 You can now run "Build" or "Build All" in PlatformIO to compile (all) the firmware.
 
+### Native Linux build
+
+For native linux_sdl builds, you also need:
+```
+sudo apt update
+sudo apt install build-essential libsdl2-dev
+```
+
+
+### Native MacOS build
+
+For native darwin_sdl builds, you also need [Homebrew](https://brew.sh):
+
+```sh
+brew install gcc sdl2
+```
+
+
+### Native Windows build
+
+For native windows_sdl builds, you also need MingW:
+
+Use [MSYS2](https://www.msys2.org/)
+
+```sh
+pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-SDL2
+```
+
+Add the path to your Mingw-w64 `bin` folder to the Windows PATH environment
+variable (usually `C:\msys64\mingw64\bin`). See [instruction, 4](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites).
+
+
 ## Development
+
+
 
 ### Block Diagram
 

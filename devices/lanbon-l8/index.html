@@ -39,11 +39,15 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Flashing", url: "#_top", children: [
+          {title: "Contents", url: "#_top", children: [
+          ]},
+          {title: "Flashing", url: "#flashing", children: [
           ]},
           {title: "GPIO Settings", url: "#gpio-settings", children: [
           ]},
-          {title: "Demo", url: "#demo", children: [
+          {title: "Wiring Diagrams", url: "#wiring-diagrams", children: [
+          ]},
+          {title: "Video", url: "#video", children: [
           ]},
           {title: "LCD Configuration", url: "#lcd-configuration", children: [
           ]},
@@ -104,14 +108,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h1>Lanbon L8</h1>
 
-<p><img alt="Display image" src="../../assets/images/devices/lanbon-l8.jpg" /></p>
+<p><img alt="Display image" src="../../assets/images/devices/lanbon-l8-models.png" /></p>
 <p>Model Number: L8-HS (switch)</p>
 <ul>
-<li>EU version 240V</li>
-<li>US version 110V</li>
+<li>AU version</li>
+<li>EU version</li>
+<li>US version</li>
 </ul>
 <p>Features:</p>
 <ul>
+<li>Input voltage 110-250V ~ 50-60Hz AC</li>
 <li>ESP32-WROVER-B</li>
 <li>Capacitive touch screen</li>
 <li>3 Relays - load up to 200W/gang</li>
@@ -125,6 +131,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>Model Number: L8-HB (boiler switch) has not been tested!</li>
 </ul>
 </div>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">~</a></h2>
+<p><img alt="Display image" src="../../assets/images/devices/lanbon-l8-contents.png" /></p>
 <h2 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">~</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Disclaimer</p>
@@ -191,7 +199,10 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>To configure all GPIOs at once use this command:</p>
 <pre><code class="language-json">config/gpio {&quot;config&quot;:[2360346,2491680,2623009,2097420,2097678,2097947,0,0]}
 </code></pre>
-<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">~</a></h2>
+<h2 id="wiring-diagrams">Wiring Diagrams<a class="headerlink" href="#wiring-diagrams" title="Permanent link">~</a></h2>
+<p>The switch supports several wiring configurations:</p>
+<p><img alt="Display image" src="../../assets/images/devices/lanbon-l8-wiring.png" /></p>
+<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">~</a></h2>
 <p><img alt="YOUTUBE" src="KWQSwoVaKf8" /></p>
 <h2 id="lcd-configuration">LCD Configuration<a class="headerlink" href="#lcd-configuration" title="Permanent link">~</a></h2>
 <p>The <code>lcd_config.ini</code> file specifies the different properties of the display, except for the actual pin configuration:</p>

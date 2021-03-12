@@ -1,14 +1,16 @@
 <h1>Lanbon L8</h1>
 
-![Display image](../assets/images/devices/lanbon-l8.jpg)
+![Display image](../assets/images/devices/lanbon-l8-models.png)
 
 Model Number: L8-HS (switch)
 
-- EU version 240V
-- US version 110V
+- AU version
+- EU version
+- US version
 
 Features:
 
+- Input voltage 110-250V ~ 50-60Hz AC
 - ESP32-WROVER-B
 - Capacitive touch screen
 - 3 Relays - load up to 200W/gang
@@ -18,6 +20,11 @@ Features:
     - Model Number: L8-HD (dimmer) has not been tested!
     - Model Number: L8-HT (thermostat switch) has not been tested!
     - Model Number: L8-HB (boiler switch) has not been tested!
+
+
+## Contents
+
+![Display image](../assets/images/devices/lanbon-l8-contents.png)
 
 ## Flashing
 
@@ -47,7 +54,13 @@ To configure all GPIOs at once use this command:
 config/gpio {"config":[2360346,2491680,2623009,2097420,2097678,2097947,0,0]}
 ```
 
-## Demo
+## Wiring Diagrams
+
+The switch supports several wiring configurations:
+
+![Display image](../assets/images/devices/lanbon-l8-wiring.png)
+
+## Video
 
 ![YOUTUBE](KWQSwoVaKf8)
 

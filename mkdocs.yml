@@ -40,6 +40,7 @@ nav:
   - firmware-update.md
   - gallery.md
   - Devices:
+    - ESP32-Touchdown: devices/esp32-touchdown.md
     - Lanbon L8: devices/lanbon-l8.md
   - Displays:
     - displays/ILI9341_IPS.md

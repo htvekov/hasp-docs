@@ -31,6 +31,8 @@ Features:
 !!! warning "Disclaimer"
     Never connect high-voltage when the panel is not properly secured in place.
 
+![Display image](../assets/images/devices/lanbon-l8-pcb.png)
+
 1. Disengage the high-voltage power
 2. Detach the panel from the PSU power supply
 3. Connect RX, TX, IO0, GND and power pins to the female pinheader:

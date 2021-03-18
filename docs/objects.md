@@ -167,6 +167,7 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 | min       | int16      | 0       | minimum value of the indicator
 | max       | int16      | 100     | maximum value of the indicator
 | val       | int16      | 0       | current value of the indicator
+| value_str | string     | ""      | textual display for the value
 | rotation  | int16      | 0       | offset to the 0 degree position
 | type      | 0-2        | 0       | `0` = normal, `1` = symmetrical, `2` = reverse
 | adjustable| [bool][2]  | false   | Add knob that the user can operate to change the value
@@ -288,6 +289,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 | min      | int16      | 0       | minimum value of the indicator
 | max      | int16      | 100     | maximum value of the indicator
 | val      | int16      | 0       | current value of the indicator
+| value_str | string     | ""      | textual display for the value
 
 
 ### Switch

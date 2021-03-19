@@ -25,6 +25,8 @@ but only the `id` and `obj` properties are required to create an object:
 | opacity  | 0..255    | no       | 255     | how much the the object is opaque
 | radius   | uint16    | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height)
 
+Further customizable properties can be found in [styling](https://fvanroie.github.io/hasp-docs/#styling).
+
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
 The maximum number of pages and objects is limited by the memory available in the MCU.
@@ -167,7 +169,6 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 | min       | int16      | 0       | minimum value of the indicator
 | max       | int16      | 100     | maximum value of the indicator
 | val       | int16      | 0       | current value of the indicator
-| value_str | string     | ""      | textual display for the value
 | rotation  | int16      | 0       | offset to the 0 degree position
 | type      | 0-2        | 0       | `0` = normal, `1` = symmetrical, `2` = reverse
 | adjustable| [bool][2]  | false   | Add knob that the user can operate to change the value
@@ -178,6 +179,9 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
+
+!!! note
+    Check out [value styling](https://fvanroie.github.io/hasp-docs/#styling/#value) to display a textual value in the middle of the arc.
 
 Example:
 ```json
@@ -289,7 +293,6 @@ Only these values are allowed, arbitrary numbers are not supported.
 | min      | int16      | 0       | minimum value of the indicator
 | max      | int16      | 100     | maximum value of the indicator
 | val      | int16      | 0       | current value of the indicator
-| value_str | string     | ""      | textual display for the value
 
 
 ### Switch

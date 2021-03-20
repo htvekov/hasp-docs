@@ -46,7 +46,11 @@ Switches the backlight on or off, independent of the set dim level. Turning the 
     `light on` Turn the backlight on 
 
 !!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
-    `dim`and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
+    `dim` and `light` commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.
+
+!!! note "<i class='fa fa-info-circle'></i>&nbsp; Note"
+    `dim 0` and `light 0` both turn off the screen, however, with `dim 0` the touching will haven an effect on the objects beneath but not wake the screen, while with `light 0` it will only wake the scren but will not affect the objects.
+
 
 `wakeup`
 

@@ -144,7 +144,11 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 </div>
 <div class="admonition note">
 <p class="admonition-title"><i class='fa fa-info-circle'></i>&nbsp; Note</p>
-<p><code>dim</code>and <code>light</code> commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.</p>
+<p><code>dim</code> and <code>light</code> commands will work only if a Backlight GPIO pin is configured to the pin required to control the display backlight.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"><i class='fa fa-info-circle'></i>&nbsp; Note</p>
+<p><code>dim 0</code> and <code>light 0</code> both turn off the screen, however, with <code>dim 0</code> the touching will haven an effect on the objects beneath but not wake the screen, while with <code>light 0</code> it will only wake the scren but will not affect the objects.</p>
 </div>
 <p><code>wakeup</code></p>
 <p>Clears the idle state of the device and publishes a <code>state/idle = OFF</code> status message.</p>

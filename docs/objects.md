@@ -25,6 +25,8 @@ but only the `id` and `obj` properties are required to create an object:
 | opacity  | 0..255    | no       | 255     | how much the the object is opaque
 | radius   | uint16    | no       | dep. on theme | the radius of the rounded corners of the object<BR>`0` = square corners<BR>`100` - pill shaped object (true circle if object has same width and height)
 
+Further customizable properties can be found in [styling](https://fvanroie.github.io/hasp-docs/#styling).
+
 If the `page` parameter is not present, the object is placed on the same page as the _previous object_. If `page` is not specified for the first object either, the _current page_ being displayed is used.
 
 The maximum number of pages and objects is limited by the memory available in the MCU.
@@ -177,6 +179,9 @@ p2b1.options ["#FF0000 Red Text#","#0000FF Cyan Text#","\n","#FFFF00 Yellow Text
 
 !!! note
     Zero degree is at the middle right (3 o'clock) of the object and the degrees are increasing in a clockwise direction. The angles should be in the [0-360] range.
+
+!!! note
+    Check out [value styling](https://fvanroie.github.io/hasp-docs/#styling/#value) to display a textual value in the middle of the arc.
 
 Example:
 ```json

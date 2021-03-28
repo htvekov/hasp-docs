@@ -18,9 +18,10 @@ Switches the display to show the objects from a different page and return the pa
 Calling the `page` command without a parameter will return the value of the current page in `state/page`.
 
 `clearpage`     
-value: `[0-12]`
+value: `[0-12]` or `all`
 
 Deletes all objects on a given page. If no page number is specified, it clears the current page.
+Use `clearpage all` to clear all objects on all pages.
 
 To delete individual objects, you can issue the `pxby.delete` command.
 
@@ -60,10 +61,10 @@ An RGB moodlight can be controlled by configuring 3 [GPIO pins][3] as type `Mood
 These leds can then be controlled together using the `moodlight`command:
 
 ```json
-moodlight {"power":"off","color":"green"}
-moodlight {"power":true,"color":"#ff00e7"}
+moodlight {"state":"off","color":"green"}
+moodlight {"state":true,"color":"#ff00e7"}
 moodlight {"color":12345}
-moodlight {"power":"on","r":255,"g":0,"b":255}
+moodlight {"state":"on","r":255,"g":0,"b":255}
 ```
 
 - The `power`key accepts [boolean values][2] to turn the moodlight on or off

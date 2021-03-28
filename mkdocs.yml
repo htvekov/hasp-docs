@@ -61,7 +61,7 @@ markdown_extensions:
 
 extra:
   history_buttons: false
-  version: v0.3.4
+  version: v0.4.0
 
 plugins:
   - search

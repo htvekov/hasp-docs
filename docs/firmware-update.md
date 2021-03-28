@@ -9,11 +9,11 @@ Either use [Tasmotizer](https://github.com/tasmota/tasmotizer) or esptool.py to 
 
 ### HTTP Upload
 
-When the ESP has previously been flashed via serial, you can upload a new firmware file using the internal webserver.
+When the ESP has previously been flashed via serial, you can upload a new **ota** firmware binary using the internal webserver.
 
 ### HTTP Update
 
-When the ESP has previously been flashed via serial you can download and install new firmware directly from an external webserver.
+When the ESP has previously been flashed via serial you can download and install a new **ota** firmware binary directly from an webserver.
 
 ### OTA Upload
 

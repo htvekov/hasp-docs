@@ -120,8 +120,9 @@ value: <code>[0-12]</code>, <code>prev</code> or <code>next</code></p>
 <p>Switches the display to show the objects from a different page and return the page number in <code>state/page</code>.</p>
 <p>Calling the <code>page</code> command without a parameter will return the value of the current page in <code>state/page</code>.</p>
 <p><code>clearpage</code>   <br />
-value: <code>[0-12]</code></p>
-<p>Deletes all objects on a given page. If no page number is specified, it clears the current page.</p>
+value: <code>[0-12]</code> or <code>all</code></p>
+<p>Deletes all objects on a given page. If no page number is specified, it clears the current page.
+Use <code>clearpage all</code> to clear all objects on all pages.</p>
 <p>To delete individual objects, you can issue the <code>pxby.delete</code> command.</p>
 <h2 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h2>
 <p><code>dim</code> <br />
@@ -156,10 +157,10 @@ values: <code>on</code>/<code>off</code>, <code>true</code>/<code>false</code>, 
 <h3 id="moodlight">Moodlight<a class="headerlink" href="#moodlight" title="Permanent link">~</a></h3>
 <p>An RGB moodlight can be controlled by configuring 3 <a href="../configuration/gpio/">GPIO pins</a> as type <code>Mood Red</code>, <code>Mood Green</code> and <code>Mood blue</code>.
 These leds can then be controlled together using the <code>moodlight</code>command:</p>
-<pre><code class="language-json">moodlight {&quot;power&quot;:&quot;off&quot;,&quot;color&quot;:&quot;green&quot;}
-moodlight {&quot;power&quot;:true,&quot;color&quot;:&quot;#ff00e7&quot;}
+<pre><code class="language-json">moodlight {&quot;state&quot;:&quot;off&quot;,&quot;color&quot;:&quot;green&quot;}
+moodlight {&quot;state&quot;:true,&quot;color&quot;:&quot;#ff00e7&quot;}
 moodlight {&quot;color&quot;:12345}
-moodlight {&quot;power&quot;:&quot;on&quot;,&quot;r&quot;:255,&quot;g&quot;:0,&quot;b&quot;:255}
+moodlight {&quot;state&quot;:&quot;on&quot;,&quot;r&quot;:255,&quot;g&quot;:0,&quot;b&quot;:255}
 </code></pre>
 <ul>
 <li>The <code>power</code>key accepts <a href="../styling/#boolean">boolean values</a> to turn the moodlight on or off</li>

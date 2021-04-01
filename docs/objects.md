@@ -229,6 +229,8 @@ p2b3.color=#C0C0C0
 | max      | int16      | 100     | maximum value of the indicator
 | val      | int16      | 0       | current value of the indicator
 
+Vertical sliders can be created if the width of the object is smaller than its height.
+
 ### Double Slider
 **objid:30**
 
@@ -294,6 +296,7 @@ Only these values are allowed, arbitrary numbers are not supported.
 | max      | int16      | 100     | maximum value of the indicator
 | val      | int16      | 0       | current value of the indicator
 
+Vertical bars can be created if the width of the object is smaller than its height.
 
 ### Switch
 **obj:`switch`**
